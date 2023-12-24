@@ -11,12 +11,12 @@ DOT_DIR="$DENV_DIR/dotfiles"
 # ME
 ZV_DIR="$HOME/Documents/zv"
 MAT_DIR="$ZV_DIR/materials"
-# DOMAINS_DIR="$ZV_DIR/notes/domains"
-# SW_DIR="$ZV_DIR/notes/sw"
+DOMAINS_DIR="$ZV_DIR/notes/domains"
+SW_DIR="$ZV_DIR/notes/sw"
 PER_DIR="$ZV_DIR/personal"
 # TRACK_DIR="$ZV_DIR/personal/tracking"
-# KB_REGEX_NOW="## now\n\n[\w|\*]"
-# KB_REGEX_NEXT="## next\n\n[\w|\*]"
+KB_REGEX_NOW="## now\n\n[\w|\*]"
+KB_REGEX_NEXT="## next\n\n[\w|\*]"
 
 ###
 # 🌇  PROFILE
@@ -29,32 +29,32 @@ alias upzp="source $HOME/.zprofile"
 export MANPAGER=bat
 # export EDITOR=nvim
 # export PYTHONDONTWRITEBYTECODE=1
-# export CLICOLOR=1
-# export EXA_COLORS="ga=38;5;213:gm=32:*.py=38;5;114:Dockerfile=38;5;074;1:docker-compose.*=38;5;074;1:*.pdf=38;5;208:*.txt=38;5;244:*.html=38;5;137;1:*.env*=31;0;01:*.sql*=38;5;28"
-# export LSCOLORS=gxfxcxdxbxegedabaggagx
+export CLICOLOR=1
+export EXA_COLORS="ga=38;5;213:gm=32:*.py=38;5;114:Dockerfile=38;5;074;1:docker-compose.*=38;5;074;1:*.pdf=38;5;208:*.txt=38;5;244:*.html=38;5;137;1:*.env*=31;0;01:*.sql*=38;5;28"
+export LSCOLORS=gxfxcxdxbxegedabaggagx
 export RIPGREP_CONFIG_PATH="$DOT_DIR/.ripgreprc"
 
 # POWERLINE-SHELL
-# function powerline_precmd() {
-#     PS1="$(powerline-shell --shell zsh $?)"
-# }
-# function install_powerline_precmd() {
-#   for s in "${precmd_functions[@]}"; do
-#     if [ "$s" = "powerline_precmd" ]; then
-#       return
-#     fi
-#   done
-#   precmd_functions+=(powerline_precmd)
-# }
-# if [ "$TERM" != "linux" ]; then
-#     install_powerline_precmd
-# fi
+function powerline_precmd() {
+    PS1="$(powerline-shell --shell zsh $?)"
+}
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
+fi
 
 ###
 # 🏔 WORKFLOW
 ###
 
-# alias wf="rg 'WF' $HOME/.zprofile -A18 -B5"
+alias wf="rg 'WF' $HOME/.zprofile -A18 -B5"
 # alias sch="clear; bat $PER_DIR/people/schedule.md"
 
 # alias kb="clear; rg -UA 1 '$KB_REGEX_NOW' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NOW' $SW_DIR; rg -UA 1 '$KB_REGEX_NOW' $PER_DIR/people"
@@ -88,8 +88,8 @@ alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
 
 # DOCS
-# alias dom="\cd $DOMAINS_DIR; jbdom"
-# alias sw="\cd $SW_DIR; jbsw"
+alias dom="\cd $DOMAINS_DIR; jbdom"
+alias sw="\cd $SW_DIR; jbsw"
 # alias shu="cd $ZV_DIR/notes/bookcase; br"
 # alias mat="cd $MAT_DIR; t 2"
 alias yin="cd $ZV_DIR/yin"
