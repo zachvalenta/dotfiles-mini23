@@ -14,7 +14,7 @@ MAT_DIR="$ZV_DIR/materials"
 DOMAINS_DIR="$ZV_DIR/notes/domains"
 SW_DIR="$ZV_DIR/notes/sw"
 PER_DIR="$ZV_DIR/personal"
-# TRACK_DIR="$ZV_DIR/personal/tracking"
+TRACK_DIR="$ZV_DIR/personal/tracking"
 KB_REGEX_NOW="## now\n\n[\w|\*]"
 KB_REGEX_NEXT="## next\n\n[\w|\*]"
 
@@ -28,7 +28,7 @@ alias zp="vsc $HOME/.zprofile"
 alias upzp="source $HOME/.zprofile"
 export MANPAGER=bat
 export EDITOR=nvim
-# export PYTHONDONTWRITEBYTECODE=1
+export PYTHONDONTWRITEBYTECODE=1
 export CLICOLOR=1
 export EXA_COLORS="ga=38;5;213:gm=32:*.py=38;5;114:Dockerfile=38;5;074;1:docker-compose.*=38;5;074;1:*.pdf=38;5;208:*.txt=38;5;244:*.html=38;5;137;1:*.env*=31;0;01:*.sql*=38;5;28"
 export LSCOLORS=gxfxcxdxbxegedabaggagx
@@ -54,15 +54,15 @@ fi
 # 🏔 WORKFLOW
 ###
 
-alias wf="rg 'WF' $HOME/.zprofile -A18 -B5"
-# alias sch="clear; bat $PER_DIR/people/schedule.md"
+alias wf="clear; rg 'WF' $HOME/.zprofile -A3 -B5"
+alias sch="clear; bat $PER_DIR/people/schedule.md"
+alias kb="clear; rg -UA 1 '$KB_REGEX_NOW' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NOW' $SW_DIR; rg -UA 1 '$KB_REGEX_NOW' $PER_DIR/people"
 
-# alias kb="clear; rg -UA 1 '$KB_REGEX_NOW' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NOW' $SW_DIR; rg -UA 1 '$KB_REGEX_NOW' $PER_DIR/people"
-# alias kbn="clear; rg -UA 2 '$KB_REGEX_NEXT' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NEXT' $SW_DIR; rg -UA 1 '$KB_REGEX_NEXT' $PER_DIR/people"
-# alias wen="rg -A 5 KATA $DOMAINS_DIR/art/aesthetics.md"
-# alias qt="clear; bat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
-# alias tz="clear; label "orangered" "WEIGHT"; cat $TRACK_DIR/weight.dat | asciigraph -h 10 -w 120 red 2>/dev/null"
-# alias tm="bat $TRACK_DIR/23/12.dat"  # why is this opening broot?
+alias kbn="clear; rg -UA 2 '$KB_REGEX_NEXT' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NEXT' $SW_DIR; rg -UA 1 '$KB_REGEX_NEXT' $PER_DIR/people"
+alias wen="rg -A 5 KATA $DOMAINS_DIR/art/aesthetics.md"
+alias qt="clear; bat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
+alias tz="clear; label "orangered" "WEIGHT"; cat $TRACK_DIR/weight.dat | asciigraph -h 10 -w 120 red 2>/dev/null"
+alias tm="bat $TRACK_DIR/23/12.dat"
 
 ###
 # 🚁 NAVIGATION
@@ -99,7 +99,7 @@ alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
 alias mat="cd $MAT_DIR; t 2"
-# alias ml="cd $MAT_DIR/music/za/music-library; nv README.md"
+alias ml="cd $MAT_DIR/music/za/music-library; nv README.md"
 alias ms="cd $MAT_DIR/sw/db/shujuku/hiring"
 alias sk8="\cd $MAT_DIR/art/skate; t 2"
 alias tw="\cd $MAT_DIR/art/dance; t 2"
@@ -109,7 +109,7 @@ alias yin="cd $ZV_DIR/yin"
 # 🛠 UTILS
 ###
 
-# alias bpy="bpython"
+alias bpy="bpython"
 alias cd='function cdl(){ cd "$1"; pwd; l;}; cdl'
 alias cppath='pwd | pbcopy'
 alias ic="imgcat"
@@ -123,8 +123,7 @@ alias oo="open ."
 alias v="vimv"
 alias vsc="open -a 'Visual Studio Code'"
 alias vsconf="cd $HOME/Library/Application\ Support/Code/User"
-# alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
-# alias tm="b $PER_DIR/tracking/23/10.dat"
+alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
 
 # EXA
 alias lh="l | head"
@@ -168,13 +167,13 @@ function kai(){
     open "$cwd/$fname";
 }
 
-# function label(){
-#     update_bg="$1"
-#     update_fg="$(pastel textcolor "$update_bg")"
-#     echo -en "\n"
-#     pastel paint "$update_fg" --on "$update_bg" "$2"
-#     echo -en "\n"
-# }
+function label(){
+    update_bg="$1"
+    update_fg="$(pastel textcolor "$update_bg")"
+    echo -en "\n"
+    pastel paint "$update_fg" --on "$update_bg" "$2"
+    echo -en "\n"
+}
 
 function br {
     local cmd cmd_file code
