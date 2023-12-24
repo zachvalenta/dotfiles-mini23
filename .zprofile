@@ -26,7 +26,7 @@ echo -n "$(tput setaf 5) updating ~/.zprofile at$(tput sgr0): "; date
 set -o emacs
 alias zp="vsc $HOME/.zprofile"
 alias upzp="source $HOME/.zprofile"
-# export MANPAGER=bat
+export MANPAGER=bat
 # export EDITOR=nvim
 # export PYTHONDONTWRITEBYTECODE=1
 # export CLICOLOR=1
@@ -92,7 +92,7 @@ alias zv="cd $ZV_DIR"
 # alias sw="\cd $SW_DIR; jbsw"
 # alias shu="cd $ZV_DIR/notes/bookcase; br"
 # alias mat="cd $MAT_DIR; t 2"
-# alias yin="cd $ZV_DIR/yin"
+alias yin="cd $ZV_DIR/yin"
 # alias per="cd $PER_DIR"
 # alias logs="cd $PER_DIR/logs"
 # alias ml="cd $MAT_DIR/music/za/music-library; nv README.md"
@@ -104,55 +104,56 @@ alias zv="cd $ZV_DIR"
 
 # alias b="br"
 # alias bpy="bpython"
-# alias cd='function cdl(){ cd "$1"; pwd; l;}; cdl'
+alias cd='function cdl(){ cd "$1"; pwd; l;}; cdl'
 # alias cppath='pwd | pbcopy'
-# alias ic="imgcat"
+alias ic="imgcat"
 # alias gr="\cd $PER_DIR/tracking; gds"
 # alias gz="nvim $PER_DIR/tracking/23/11.dat; gr; ga; gds"
 # alias m="make"
-# alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
+alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
 # alias nv="nvim"
 # alias o="open"
-# alias oo="open ."
+alias oo="open ."
 # alias v="vimv"
 alias vsc="open -a 'Visual Studio Code'"
+alias vsconf="cd $HOME/Library/Application\ Support/Code/User"
 # alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
 # alias tm="b $PER_DIR/tracking/23/10.dat"
 
 # EXA
-# alias lh="l | head"
-# function l(){
-#     if [ "$1" ]; then
-#         exa -al --icons --classify --git --git-ignore -I '.git|.DS_Store' "$1" 
-#     else
-#         exa -al --icons --classify --git --git-ignore -I '.git|.DS_Store'
-#     fi
-# }
-# function ll(){
-#     if [ "$1" ]; then
-#         exa --icons --classify --git -I '.git|.DS_Store|.localized' "$1"
-#     else
-#         exa --icons --classify --git -I '.git|.DS_Store|.localized'
-#     fi
-# }
-# function t(){
-#     # t <depth> <dir>
-#     if [ $# -eq 2 ]; then
-#         exa -al --icons --tree --level="$1" --git-ignore -I '.git|.DS_Store' "$2"
-#     # t <depth>
-#     elif [ $# -eq 1 ]
-#     then
-#         # break on dir prepended w/ digits e.g. logs/2019
-#         if [[ "$1" =~ ^-?[0-9]+[.,]?[0-9]*$ ]]; then  # break on dir prepended w/ digits e.g. `logs/2019`
-#             exa -al --icons --tree --level="$1" --git-ignore -I '.git|.DS_Store'
-#         else
-#             exa -al --icons --tree --git-ignore -I '.git|.DS_Store' "$1"
-#         fi
-#     # t
-#     else
-#         exa -al --icons --tree --git-ignore -I '.git|.DS_Store'
-#     fi
-# }
+alias lh="l | head"
+function l(){
+    if [ "$1" ]; then
+        exa -al --icons --classify --git --git-ignore -I '.git|.DS_Store' "$1" 
+    else
+        exa -al --icons --classify --git --git-ignore -I '.git|.DS_Store'
+    fi
+}
+function ll(){
+    if [ "$1" ]; then
+        exa --icons --classify --git -I '.git|.DS_Store|.localized' "$1"
+    else
+        exa --icons --classify --git -I '.git|.DS_Store|.localized'
+    fi
+}
+function t(){
+    # t <depth> <dir>
+    if [ $# -eq 2 ]; then
+        exa -al --icons --tree --level="$1" --git-ignore -I '.git|.DS_Store' "$2"
+    # t <depth>
+    elif [ $# -eq 1 ]
+    then
+        # break on dir prepended w/ digits e.g. logs/2019
+        if [[ "$1" =~ ^-?[0-9]+[.,]?[0-9]*$ ]]; then  # break on dir prepended w/ digits e.g. `logs/2019`
+            exa -al --icons --tree --level="$1" --git-ignore -I '.git|.DS_Store'
+        else
+            exa -al --icons --tree --git-ignore -I '.git|.DS_Store' "$1"
+        fi
+    # t
+    else
+        exa -al --icons --tree --git-ignore -I '.git|.DS_Store'
+    fi
+}
 
 function kai(){
     fname="$1.md";
