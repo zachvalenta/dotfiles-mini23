@@ -1,0 +1,18 @@
+{
+	"checkbox": {
+		"prefix": "mch",
+		"description": "checkbox",
+		"body": [
+			"- [ ] $1"
+		]
+	},
+    "code": {
+		"prefix": "mdc",
+		"description": "code block",
+		"body": [
+			"```$1",
+			"$2",
+			"```"
+		]
+	}
+}
