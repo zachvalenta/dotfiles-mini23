@@ -27,7 +27,7 @@ set -o emacs
 alias zp="vsc $HOME/.zprofile"
 alias upzp="source $HOME/.zprofile"
 export MANPAGER=bat
-# export EDITOR=nvim
+export EDITOR=nvim
 # export PYTHONDONTWRITEBYTECODE=1
 export CLICOLOR=1
 export EXA_COLORS="ga=38;5;213:gm=32:*.py=38;5;114:Dockerfile=38;5;074;1:docker-compose.*=38;5;074;1:*.pdf=38;5;208:*.txt=38;5;244:*.html=38;5;137;1:*.env*=31;0;01:*.sql*=38;5;28"
@@ -68,53 +68,59 @@ alias wf="rg 'WF' $HOME/.zprofile -A18 -B5"
 # 🚁 NAVIGATION
 ###
 
-# CODE
-# alias vc="cd $HOME/.config/nvim/lua/zv"
-# alias plug="cd $HOME/.local/share/nvim/plugged"
-# alias ws="cd $TELESCOPE_WORKSPACE_DIR; nv"
-# alias ms="\cd $MAT_DIR/sw/hiring; broot"
+# ROOT
+alias home="cd $HOME"
+alias desk="cd $HOME/Desktop"
+alias zv="cd $ZV_DIR"
 
 # DENV
 alias denv="cd $DENV_DIR"
 alias bin="cd $DENV_DIR/bin"
 alias dot="cd $DOT_DIR"
 
+# NOTES
+alias dom="\cd $DOMAINS_DIR; jbdom"
+alias sw="\cd $SW_DIR; jbsw"
+alias shu="cd $ZV_DIR/notes/bookcase; br"
+
+# PERSONAL
+alias per="cd $PER_DIR"
+alias logs="cd $PER_DIR/logs"
+alias ren="cd $PER_DIR/people"
+
+# NEOVIM
+# alias vc="cd $HOME/.config/nvim/lua/zv"
+# alias plug="cd $HOME/.local/share/nvim/plugged"
+# alias ws="cd $TELESCOPE_WORKSPACE_DIR; nv"
+
+# PKGS
 alias brewfr="brew ls --versions > $DENV_DIR/logs/brew/brew-pkgs.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
-# ROOT
-alias home="cd $HOME"
-alias desk="cd $HOME/Desktop"
-alias zv="cd $ZV_DIR"
-
-# DOCS
-alias dom="\cd $DOMAINS_DIR; jbdom"
-alias sw="\cd $SW_DIR; jbsw"
-# alias shu="cd $ZV_DIR/notes/bookcase; br"
-# alias mat="cd $MAT_DIR; t 2"
-alias yin="cd $ZV_DIR/yin"
-# alias per="cd $PER_DIR"
-# alias logs="cd $PER_DIR/logs"
+# ZA
+alias mat="cd $MAT_DIR; t 2"
 # alias ml="cd $MAT_DIR/music/za/music-library; nv README.md"
-# alias ren="cd $PER_DIR/people"
+alias ms="cd $MAT_DIR/sw/db/shujuku/hiring"
+alias sk8="\cd $MAT_DIR/art/skate; t 2"
+alias tw="\cd $MAT_DIR/art/dance; t 2"
+alias yin="cd $ZV_DIR/yin"
 
 ###
 # 🛠 UTILS
 ###
 
-# alias b="br"
 # alias bpy="bpython"
 alias cd='function cdl(){ cd "$1"; pwd; l;}; cdl'
-# alias cppath='pwd | pbcopy'
+alias cppath='pwd | pbcopy'
 alias ic="imgcat"
-# alias gr="\cd $PER_DIR/tracking; gds"
-# alias gz="nvim $PER_DIR/tracking/23/11.dat; gr; ga; gds"
-# alias m="make"
+alias gr="\cd $PER_DIR/tracking; gds"
+alias gz="nvim $PER_DIR/tracking/23/12.dat; gr; ga; gds"
+alias m="make"
 alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
-# alias nv="nvim"
-# alias o="open"
+alias nv="nvim"
+alias o="open"
 alias oo="open ."
-# alias v="vimv"
+alias v="vimv"
 alias vsc="open -a 'Visual Studio Code'"
 alias vsconf="cd $HOME/Library/Application\ Support/Code/User"
 # alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
@@ -169,6 +175,21 @@ function kai(){
 #     pastel paint "$update_fg" --on "$update_bg" "$2"
 #     echo -en "\n"
 # }
+
+function br {
+    local cmd cmd_file code
+    cmd_file=$(mktemp)
+    if broot --outcmd "$cmd_file" "$@"; then
+        cmd=$(<"$cmd_file")
+        command rm -f "$cmd_file"
+        eval "$cmd"
+    else
+        code=$?
+        command rm -f "$cmd_file"
+        return "$code"
+    fi
+}
+alias b="br"
 
 ###
 # 💾  GIT
