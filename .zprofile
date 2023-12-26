@@ -27,7 +27,7 @@ set -o emacs
 alias zp="vsc $HOME/.zprofile"
 alias upzp="source $HOME/.zprofile"
 export MANPAGER=bat
-export EDITOR=nvim
+export EDITOR=vim
 export PYTHONDONTWRITEBYTECODE=1
 export CLICOLOR=1
 export EXA_COLORS="ga=38;5;213:gm=32:*.py=38;5;114:Dockerfile=38;5;074;1:docker-compose.*=38;5;074;1:*.pdf=38;5;208:*.txt=38;5;244:*.html=38;5;137;1:*.env*=31;0;01:*.sql*=38;5;28"
@@ -62,7 +62,13 @@ alias kbn="clear; rg -UA 2 '$KB_REGEX_NEXT' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NE
 alias wen="rg -A 5 KATA $DOMAINS_DIR/art/aesthetics.md"
 alias qt="clear; bat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
 alias tz="clear; label "orangered" "WEIGHT"; cat $TRACK_DIR/weight.dat | asciigraph -h 10 -w 120 red 2>/dev/null"
+alias fz="clear; termgraph $TRACK_DIR/23/goals.dat --color {green,blue}"
 alias tm="bat $TRACK_DIR/23/12.dat"
+function agg(){
+    YEAR=${1:-23}
+    label "skyblue" "TOTALS"
+    rg -IN "^(guitar|piano|dance|skate)" $TRACK_DIR/"$YEAR"/??.dat | awk "NF" | awk '{a[$1]+=$2;}END{for(i in a)print i", "a[i]/4;}' | sort | termgraph --color green
+}
 
 ###
 # 🚁 NAVIGATION
@@ -79,8 +85,8 @@ alias bin="cd $DENV_DIR/bin"
 alias dot="cd $DOT_DIR"
 
 # NOTES
-alias dom="\cd $DOMAINS_DIR; jbdom"
-alias sw="\cd $SW_DIR; jbsw"
+alias dom="clear; \cd $DOMAINS_DIR; jbdom"
+alias sw="clear; \cd $SW_DIR; jbsw"
 alias shu="cd $ZV_DIR/notes/bookcase; br"
 
 # PERSONAL
@@ -95,11 +101,13 @@ alias ren="cd $PER_DIR/people"
 
 # PKGS
 alias brewfr="brew ls --versions > $DENV_DIR/logs/brew/brew-pkgs.txt"
+alias pipfr="python -m pip freeze > $DENV_DIR/logs/pyenv/pip-pkgs.txt"
+alias pipxfr="python -m pipx list > $DENV_DIR/logs/pyenv/pipx/pipx-pkgs.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
 alias mat="cd $MAT_DIR; t 2"
-alias ml="cd $MAT_DIR/music/za/music-library; nv README.md"
+alias ml="cd $MAT_DIR/music/za/music-library; vim README.md"
 alias ms="cd $MAT_DIR/sw/db/shujuku/hiring"
 alias sk8="\cd $MAT_DIR/art/skate; t 2"
 alias tw="\cd $MAT_DIR/art/dance; t 2"
@@ -114,7 +122,8 @@ alias cd='function cdl(){ cd "$1"; pwd; l;}; cdl'
 alias cppath='pwd | pbcopy'
 alias ic="imgcat"
 alias gr="\cd $PER_DIR/tracking; gds"
-alias gz="nvim $PER_DIR/tracking/23/12.dat; gr; ga; gds"
+alias gz="vim $PER_DIR/tracking/23/12.dat; gr; ga; gds"
+alias mb="vim $PER_DIR/tracking/23/goals.dat"
 alias m="make"
 alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
 alias nv="nvim"
