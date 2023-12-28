@@ -52,9 +52,12 @@ fi
 
 ###
 # 🏔 WORKFLOW
+# 🎵 Mary https://www.youtube.com/watch?v=gIH-Yptxf54 Tyler https://www.youtube.com/watch?v=o7PEnj-8NHw
+# 💃🏻 Bouboo https://www.youtube.com/watch?v=uz-SYAY-cfg Tony https://www.youtube.com/watch?v=ukHvM6npEOw
+# ⛸ Sparkles https://www.youtube.com/watch?v=sO8k77AxxXA
 ###
 
-alias wf="clear; rg 'WF' $HOME/.zprofile -A3 -B5"
+alias wf="clear; rg 'WF' $HOME/.zprofile -A3 -B8"
 alias sch="clear; bat $PER_DIR/people/schedule.md"
 alias kb="clear; rg -UA 1 '$KB_REGEX_NOW' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NOW' $SW_DIR; rg -UA 1 '$KB_REGEX_NOW' $PER_DIR/people"
 
@@ -112,6 +115,18 @@ alias ms="cd $MAT_DIR/sw/db/shujuku/hiring"
 alias sk8="\cd $MAT_DIR/art/skate; t 2"
 alias tw="\cd $MAT_DIR/art/dance; t 2"
 alias yin="cd $ZV_DIR/yin"
+
+###
+# 🎹 MUSIC
+###
+
+alias mh="rg -UA 7 'alias mh' $DOT_DIR/.zprofile"
+alias clef="imgcat $MAT_DIR/music/theory/clef.png"
+alias keys="imgcat $MAT_DIR/music/theory/30-keys.jpg; imgcat $MAT_DIR/music/theory/circle-of-fifths.png; rg -UA 6 '## key' $DOMAINS_DIR/music/theory.md"
+alias modes="rg -U '## modes\n' -A 11 -B 1 $DOMAINS_DIR/music"
+alias chords="rg -A 28 -B 1 '## chords' $DOMAINS_DIR/music/theory.md"
+alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
+alias gq="cd $MAT_DIR/music/piano/harrison\ -\ pop/01\ theory"
 
 ###
 # 🛠 UTILS
