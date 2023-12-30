@@ -33,6 +33,7 @@ export CLICOLOR=1
 export EXA_COLORS="ga=38;5;213:gm=32:*.py=38;5;114:Dockerfile=38;5;074;1:docker-compose.*=38;5;074;1:*.pdf=38;5;208:*.txt=38;5;244:*.html=38;5;137;1:*.env*=31;0;01:*.sql*=38;5;28"
 export LSCOLORS=gxfxcxdxbxegedabaggagx
 export RIPGREP_CONFIG_PATH="$DOT_DIR/cli/.ripgreprc"
+export EXA_IGNORE=".git|.DS_Store|.localized"
 
 # POWERLINE-SHELL
 function powerline_precmd() {
@@ -90,7 +91,7 @@ alias dot="cd $DOT_DIR"
 # NOTES
 alias dom="clear; \cd $DOMAINS_DIR; jbdom"
 alias sw="clear; \cd $SW_DIR; jbsw"
-alias shu="cd $ZV_DIR/notes/bookcase; br"
+alias shu="cd $ZV_DIR/notes/bookcase"
 
 # PERSONAL
 alias per="cd $PER_DIR"
@@ -104,7 +105,7 @@ alias ren="cd $PER_DIR/people"
 
 # PKGS
 alias brewfr="brew ls --versions > $DENV_DIR/logs/brew/brew-pkgs.txt"
-alias pipfr="python -m pip freeze > $DENV_DIR/logs/pyenv/pip-pkgs.txt"
+alias pipfr="python -m pip freeze > $DENV_DIR/logs/pyenv/pip/pip-pkgs.txt"
 alias pipxfr="python -m pipx list > $DENV_DIR/logs/pyenv/pipx/pipx-pkgs.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
@@ -153,34 +154,34 @@ alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
 alias lh="l | head"
 function l(){
     if [ "$1" ]; then
-        exa -al --icons --classify --git --git-ignore -I '.git|.DS_Store' "$1" 
+        exa -al --icons --classify --git --git-ignore -I $EXA_IGNORE "$1" 
     else
-        exa -al --icons --classify --git --git-ignore -I '.git|.DS_Store'
+        exa -al --icons --classify --git --git-ignore -I $EXA_IGNORE
     fi
 }
 function ll(){
     if [ "$1" ]; then
-        exa --icons --classify --git -I '.git|.DS_Store|.localized' "$1"
+        exa --icons --classify --git -I $EXA_IGNORE "$1"
     else
-        exa --icons --classify --git -I '.git|.DS_Store|.localized'
+        exa --icons --classify --git -I $EXA_IGNORE
     fi
 }
 function t(){
     # t <depth> <dir>
     if [ $# -eq 2 ]; then
-        exa -al --icons --tree --level="$1" --git-ignore -I '.git|.DS_Store' "$2"
+        exa -al --icons --tree --level="$1" --git-ignore -I $EXA_IGNORE "$2"
     # t <depth>
     elif [ $# -eq 1 ]
     then
         # break on dir prepended w/ digits e.g. logs/2019
         if [[ "$1" =~ ^-?[0-9]+[.,]?[0-9]*$ ]]; then  # break on dir prepended w/ digits e.g. `logs/2019`
-            exa -al --icons --tree --level="$1" --git-ignore -I '.git|.DS_Store'
+            exa -al --icons --tree --level="$1" --git-ignore -I $EXA_IGNORE
         else
-            exa -al --icons --tree --git-ignore -I '.git|.DS_Store' "$1"
+            exa -al --icons --tree --git-ignore -I $EXA_IGNORE "$1"
         fi
     # t
     else
-        exa -al --icons --tree --git-ignore -I '.git|.DS_Store'
+        exa -al --icons --tree --git-ignore -I $EXA_IGNORE
     fi
 }
 
