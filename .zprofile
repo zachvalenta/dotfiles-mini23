@@ -149,6 +149,7 @@ alias v="vimv"
 alias vsc="open -a 'Visual Studio Code'"
 alias vsconf="cd $HOME/Library/Application\ Support/Code/User"
 alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
+alias ytd='yt-dlp "$1"'
 
 # EXA
 alias lh="l | head"
