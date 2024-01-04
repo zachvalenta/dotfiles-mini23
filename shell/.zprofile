@@ -66,10 +66,14 @@ alias kbn="clear; rg -UA 2 '$KB_REGEX_NEXT' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NE
 alias wen="rg -A 5 KATA $DOMAINS_DIR/art/aesthetics.md"
 alias qt="clear; bat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
 alias tz="clear; label "orangered" "WEIGHT"; cat $TRACK_DIR/weight.dat | asciigraph -h 10 -w 120 red 2>/dev/null"
-alias fz="clear; termgraph $TRACK_DIR/23/goals.dat --color {green,blue}"
-alias tm="bat $TRACK_DIR/23/12.dat"
+alias tm="bat $TRACK_DIR/24/01.dat"
+function fz(){
+    YEAR=${1:-24}
+    clear;
+    termgraph $TRACK_DIR/"$YEAR"/goals.dat --color {green,blue}
+}
 function agg(){
-    YEAR=${1:-23}
+    YEAR=${1:-24}
     label "skyblue" "TOTALS"
     rg -IN "^(guitar|piano|dance|skate)" $TRACK_DIR/"$YEAR"/??.dat | awk "NF" | awk '{a[$1]+=$2;}END{for(i in a)print i", "a[i]/4;}' | sort | termgraph --color green
 }
