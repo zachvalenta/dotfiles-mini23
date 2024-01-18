@@ -58,7 +58,7 @@ fi
 # ⛸ Sparkles https://www.youtube.com/watch?v=sO8k77AxxXA
 ###
 
-alias wf="clear; rg 'WF' $HOME/.zprofile -A3 -B8"
+alias wf="clear; rg 'WF' $HOME/.zprofile -A3 -B8; timer"
 alias sch="clear; bat $PER_DIR/people/schedule.md"
 alias kb="clear; rg -UA 1 '$KB_REGEX_NOW' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NOW' $SW_DIR; rg -UA 1 '$KB_REGEX_NOW' $PER_DIR/people"
 
@@ -72,6 +72,7 @@ function fz(){
     clear;
     termgraph $TRACK_DIR/"$YEAR"/goals.dat --color {green,blue}
 }
+
 function agg(){
     YEAR=${1:-24}
     label "skyblue" "TOTALS"
@@ -125,13 +126,14 @@ alias yin="cd $ZV_DIR/yin"
 # 🎹 MUSIC
 ###
 
-alias mh="rg -UA 7 'alias mh' $DOT_DIR/.zprofile"
+alias mh="rg -UA 7 'alias mh' $DOT_DIR/shell/.zprofile"
 alias clef="imgcat $MAT_DIR/music/theory/clef.png"
 alias keys="imgcat $MAT_DIR/music/theory/30-keys.jpg; imgcat $MAT_DIR/music/theory/circle-of-fifths.png; rg -UA 6 '## key' $DOMAINS_DIR/music/theory.md"
-alias modes="rg -U '## modes\n' -A 11 -B 1 $DOMAINS_DIR/music"
-alias chords="rg -A 28 -B 1 '## chords' $DOMAINS_DIR/music/theory.md"
+alias modes="rg -U '## modes\n' -A 15 -B 1 $DOMAINS_DIR/music"
+alias chords="rg -A 37 -B 1 '## chords' $DOMAINS_DIR/music/theory.md"
 alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
 alias gq="cd $MAT_DIR/music/piano/harrison\ -\ pop/01\ theory"
+alias jt="cd $MAT_DIR/music/guitar/acpg/01-basics"
 
 ###
 # 🛠 UTILS
@@ -142,7 +144,7 @@ alias cd='function cdl(){ cd "$1"; pwd; l;}; cdl'
 alias cppath='pwd | pbcopy'
 alias ic="imgcat"
 alias gr="\cd $PER_DIR/tracking; gds"
-alias gz="vim $PER_DIR/tracking/24/01.dat; gr; ga; gds"
+alias gz="vim $PER_DIR/tracking/24/01.dat; \cd $PER_DIR/tracking; ga; cd -"
 alias mb="vim $PER_DIR/tracking/24/goals.dat"
 alias m="make"
 alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
@@ -203,6 +205,11 @@ function label(){
     echo -en "\n"
     pastel paint "$update_fg" --on "$update_bg" "$2"
     echo -en "\n"
+}
+
+function timer(){
+    year_past="$(python -c 'from datetime import datetime as dt; print(round(float(abs((dt.strptime("2024-01-01", "%Y-%m-%d") - dt.today()).days)) / float(365), 2))')"
+    label "darkmagenta" "% of year past so far: ${year_past}"
 }
 
 function br {
