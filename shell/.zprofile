@@ -58,7 +58,7 @@ fi
 # ⛸ Sparkles https://www.youtube.com/watch?v=sO8k77AxxXA
 ###
 
-alias wf="clear; rg 'WF' $HOME/.zprofile -A3 -B8; timer"
+alias wf="clear; rg 'WF' $HOME/.zprofile -A3 -B8"
 alias sch="clear; bat $PER_DIR/people/schedule.md"
 alias kb="clear; rg -UA 1 '$KB_REGEX_NOW' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NOW' $SW_DIR; rg -UA 1 '$KB_REGEX_NOW' $PER_DIR/people"
 
@@ -66,14 +66,36 @@ alias kbn="clear; rg -UA 2 '$KB_REGEX_NEXT' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NE
 alias wen="rg -A 5 KATA $DOMAINS_DIR/art/aesthetics.md"
 alias qt="clear; bat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
 alias tz="clear; label "orangered" "WEIGHT"; cat $TRACK_DIR/weight.dat | asciigraph -h 10 -w 120 red 2>/dev/null"
-alias tm="bat $TRACK_DIR/24/01.dat"
-function fz(){
-    YEAR=${1:-24}
-    clear;
-    termgraph $TRACK_DIR/"$YEAR"/goals.dat --color {green,blue}
-}
 
+alias gr="\cd $PER_DIR/tracking; gds"
+alias gz="vim $PER_DIR/tracking/24/01.dat; \cd $PER_DIR/tracking; ga; cd -"
+alias mb="vim $PER_DIR/tracking/24/goals.dat"
+function hm(){
+    fname="$1.dat";
+    vim $PER_DIR/tracking/24/heatmap/"$fname";
+    \cd $PER_DIR/tracking;
+    git add -A;
+    cd -;
+}
+function fz(){
+    # idky cant variablize termgraph args
+    YEAR=${1:-24}
+    dir="24/heatmap"
+    timer;
+    termgraph $TRACK_DIR/"$YEAR"/goals.dat --color {green,blue};
+    label "gold" "DANCE"
+    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/dance.dat
+    label "darkmagenta" "GUITAR"
+    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/guitar.dat
+    label "darkcyan" "PIANO"
+    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/piano.dat
+    label "darkorange" "SKATE"
+    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/skate.dat
+    label "crimson" "TRAIN"
+    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/train.dat
+}
 function agg(){
+    # components: totals, goals, expected, headers
     YEAR=${1:-24}
     label "skyblue" "TOTALS"
     rg -IN "^(guitar|piano|dance|skate)" $TRACK_DIR/"$YEAR"/??.dat | awk "NF" | awk '{a[$1]+=$2;}END{for(i in a)print i", "a[i]/4;}' | sort | termgraph --color green
@@ -133,7 +155,8 @@ alias modes="rg -U '## modes\n' -A 15 -B 1 $DOMAINS_DIR/music"
 alias chords="rg -A 37 -B 1 '## chords' $DOMAINS_DIR/music/theory.md"
 alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
 alias gq="cd $MAT_DIR/music/piano/harrison\ -\ pop/01\ theory"
-alias jt="cd $MAT_DIR/music/guitar/acpg/01-basics"
+alias jt="cd $MAT_DIR/music/guitar"
+alias ge="cd $MAT_DIR/art/songwriting"
 
 ###
 # 🛠 UTILS
@@ -143,9 +166,6 @@ alias bpy="export PYTHONSTARTUP='$DOT_DIR/cli/python_startup.py'; bpython"
 alias cd='function cdl(){ cd "$1"; pwd; l;}; cdl'
 alias cppath='pwd | pbcopy'
 alias ic="imgcat"
-alias gr="\cd $PER_DIR/tracking; gds"
-alias gz="vim $PER_DIR/tracking/24/01.dat; \cd $PER_DIR/tracking; ga; cd -"
-alias mb="vim $PER_DIR/tracking/24/goals.dat"
 alias m="make"
 alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
 alias nv="nvim"
@@ -208,8 +228,9 @@ function label(){
 }
 
 function timer(){
+    # grab the hours you should have at this point
     year_past="$(python -c 'from datetime import datetime as dt; print(round(float(abs((dt.strptime("2024-01-01", "%Y-%m-%d") - dt.today()).days)) / float(365), 2))')"
-    label "darkmagenta" "% of year past so far: ${year_past}"
+    label "magenta" "YEAR PAST: ${year_past}%"
 }
 
 function br {
