@@ -68,7 +68,7 @@ alias qt="clear; bat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
 alias tz="clear; label "orangered" "WEIGHT"; cat $TRACK_DIR/weight.dat | asciigraph -h 10 -w 120 red 2>/dev/null"
 
 alias gr="\cd $PER_DIR/tracking; gds"
-alias gz="vim $PER_DIR/tracking/24/01.dat; \cd $PER_DIR/tracking; ga; cd -"
+alias gz="vim $PER_DIR/tracking/24/02.dat; \cd $PER_DIR/tracking; ga; cd -"
 alias mb="vim $PER_DIR/tracking/24/goals.dat"
 function hm(){
     fname="$1.dat";
@@ -78,20 +78,21 @@ function hm(){
     cd -;
 }
 function fz(){
-    # idky cant variablize termgraph args
+    # TODO: idky cant variablize termgraph args
+    # TODO: rewrite in Textual; components incl: Python, fs, output (Rich), graph (terminalplotlib, uniplot); not sure what I'd use for grep; maybe the better move is just redoing this with Golang framework
     YEAR=${1:-24}
     dir="24/heatmap"
     timer;
     termgraph $TRACK_DIR/"$YEAR"/goals.dat --color {green,blue};
-    label "gold" "DANCE"
-    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/dance.dat
     label "darkmagenta" "GUITAR"
     termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/guitar.dat
-    label "darkcyan" "PIANO"
+    label "deeppink" "PIANO"
     termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/piano.dat
-    label "darkorange" "SKATE"
-    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/skate.dat
-    label "crimson" "TRAIN"
+    # label "gold" "DANCE"
+    # termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/dance.dat
+    # label "darkorange" "SKATE"
+    # termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/skate.dat
+    label "peru" "TRAIN"
     termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/train.dat
 }
 function agg(){
@@ -142,7 +143,7 @@ alias ml="cd $MAT_DIR/music/za/music-library; vim README.md"
 alias ms="cd $MAT_DIR/sw/db/shujuku/hiring"
 alias sk8="\cd $MAT_DIR/art/skate; t 2"
 alias tw="\cd $MAT_DIR/art/dance; t 2"
-alias yin="cd $ZV_DIR/yin"
+alias yin="cd $ZV_DIR/AV/yin"
 
 ###
 # 🎹 MUSIC
@@ -228,9 +229,9 @@ function label(){
 }
 
 function timer(){
-    # grab the hours you should have at this point
-    year_past="$(python -c 'from datetime import datetime as dt; print(round(float(abs((dt.strptime("2024-01-01", "%Y-%m-%d") - dt.today()).days)) / float(365), 2))')"
-    label "magenta" "YEAR PAST: ${year_past}%"
+    year_past="$(python -c 'from datetime import datetime as dt; days_past = float(abs((dt.strptime("2024-01-01", "%Y-%m-%d") - dt.today()).days)); year_past = round(days_past / 365 * 100, 2); print(year_past)')"
+    target_hours="$(python -c 'from datetime import datetime as dt; days_past = float(abs((dt.strptime("2024-01-01", "%Y-%m-%d") - dt.today()).days)); target_hours = round((days_past / 365) * 150); print(target_hours)')"
+    label "red" "YEAR PAST: ${year_past}% ||| TARGET HOURS: ${target_hours}"
 }
 
 function br {
