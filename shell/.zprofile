@@ -59,12 +59,12 @@ fi
 ###
 
 alias wf="clear; rg 'WF' $HOME/.zprofile -A3 -B8"
-alias sch="clear; bat $PER_DIR/people/schedule.md"
-alias kb="clear; rg -UA 1 '$KB_REGEX_NOW' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NOW' $SW_DIR; rg -UA 1 '$KB_REGEX_NOW' $PER_DIR/people"
+alias sch="clear; mdcat $PER_DIR/people/schedule.md"
+alias kb="clear; rg -U '$KB_REGEX_NOW' $DOMAINS_DIR; rg -U '$KB_REGEX_NOW' $SW_DIR; rg -U '$KB_REGEX_NOW' $PER_DIR/people"
 
 alias kbn="clear; rg -UA 2 '$KB_REGEX_NEXT' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NEXT' $SW_DIR; rg -UA 1 '$KB_REGEX_NEXT' $PER_DIR/people"
 alias wen="rg -A 5 KATA $DOMAINS_DIR/art/aesthetics.md"
-alias qt="clear; bat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
+alias qt="clear; mdcat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
 
 alias gr="\cd $PER_DIR/tracking; gds"
 alias gz="vim $PER_DIR/tracking/24/02.dat; \cd $PER_DIR/tracking; ga; cd -"
@@ -89,14 +89,14 @@ function fz(){
     dir="24/heatmap"
     timer;
     termgraph $TRACK_DIR/"$YEAR"/goals.dat --color {green,blue};
-    label "darkmagenta" "GUITAR"
+    label "deeppink" "GUITAR"
     termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/guitar.dat
-    label "deeppink" "PIANO"
+    label "darkmagenta" "PIANO"
     termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/piano.dat
-    # label "gold" "DANCE"
-    # termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/dance.dat
-    # label "darkorange" "SKATE"
-    # termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/skate.dat
+    label "gold" "DANCE"
+    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/dance.dat
+    label "darkorange" "SKATE"
+    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/skate.dat
     label "peru" "TRAIN"
     termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/train.dat
 }
@@ -157,7 +157,7 @@ alias yin="cd $ZV_DIR/AV/yin"
 alias mh="rg -UA 7 'alias mh' $DOT_DIR/shell/.zprofile"
 alias clef="imgcat $MAT_DIR/music/theory/clef.png"
 alias keys="imgcat $MAT_DIR/music/theory/30-keys.jpg; imgcat $MAT_DIR/music/theory/circle-of-fifths.png; rg -UA 6 '## key' $DOMAINS_DIR/music/theory.md"
-alias modes="rg -U '## modes\n' -A 15 -B 1 $DOMAINS_DIR/music"
+alias modes="rg -UNI 'MODES\n' -A 6 -B 1 $DOMAINS_DIR/music | mdcat"
 alias chords="rg -A 37 -B 1 '## chords' $DOMAINS_DIR/music/theory.md"
 alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
 alias gq="cd $MAT_DIR/music/piano/harrison\ -\ pop/01\ theory"
@@ -235,7 +235,7 @@ function label(){
 
 function timer(){
     year_past="$(python -c 'from datetime import datetime as dt; days_past = float(abs((dt.strptime("2024-01-01", "%Y-%m-%d") - dt.today()).days)); year_past = round(days_past / 365 * 100, 2); print(year_past)')"
-    target_hours="$(python -c 'from datetime import datetime as dt; days_past = float(abs((dt.strptime("2024-01-01", "%Y-%m-%d") - dt.today()).days)); target_hours = round((days_past / 365) * 150); print(target_hours)')"
+    target_hours="$(python -c 'from datetime import datetime as dt; days_past = float(abs((dt.strptime("2024-01-01", "%Y-%m-%d") - dt.today()).days)); target_hours = round((days_past / 365) * 150, 1); print(target_hours)')"
     label "red" "YEAR PAST: ${year_past}% ||| TARGET HOURS: ${target_hours}"
 }
 
