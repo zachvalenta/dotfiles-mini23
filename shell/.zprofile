@@ -67,7 +67,7 @@ alias wen="rg -A 5 KATA $DOMAINS_DIR/art/aesthetics.md"
 alias qt="clear; mdcat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
 
 alias gr="\cd $PER_DIR/tracking; gds"
-alias gz="vim $PER_DIR/tracking/24/02.dat; \cd $PER_DIR/tracking; ga; cd -"
+alias gz="vim $PER_DIR/tracking/24/03.dat; \cd $PER_DIR/tracking; ga; cd -"
 alias mb="vim $PER_DIR/tracking/24/goals.dat"
 function hm(){
     fname="$1.dat";
@@ -85,10 +85,9 @@ function tz(){
 function fz(){
     # TODO: idky cant variablize termgraph args
     # TODO: rewrite in Textual; components incl: Python, fs, output (Rich), graph (terminalplotlib, uniplot); not sure what I'd use for grep; maybe the better move is just redoing this with Golang framework
+    # TODO: mv to hm
     YEAR=${1:-24}
     dir="24/heatmap"
-    timer;
-    termgraph $TRACK_DIR/"$YEAR"/goals.dat --color {green,blue};
     label "deeppink" "GUITAR"
     termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/guitar.dat
     label "darkmagenta" "PIANO"
@@ -101,9 +100,11 @@ function fz(){
     termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/train.dat
 }
 function agg(){
-    # components: totals, goals, expected, headers
+    clear;
     YEAR=${1:-24}
-    label "skyblue" "TOTALS"
+    timer;
+    termgraph $TRACK_DIR/"$YEAR"/goals.dat --color {green,blue};
+    label "red" "TOTALS"
     rg -IN "^(guitar|piano|dance|skate)" $TRACK_DIR/"$YEAR"/??.dat | awk "NF" | awk '{a[$1]+=$2;}END{for(i in a)print i", "a[i]/4;}' | sort | termgraph --color green
 }
 
@@ -230,7 +231,6 @@ function label(){
     update_fg="$(pastel textcolor "$update_bg")"
     echo -en "\n"
     pastel paint "$update_fg" --on "$update_bg" "$2"
-    echo -en "\n"
 }
 
 function timer(){
