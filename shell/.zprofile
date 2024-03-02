@@ -168,6 +168,7 @@ alias bpy="export PYTHONSTARTUP='$DOT_DIR/cli/python_startup.py'; bpython"
 alias cd='function cdl(){ cd "$1"; pwd; l;}; cdl'
 alias cppath='pwd | pbcopy'
 alias ic="imgcat"
+alias hq="harlequin"
 alias m="make"
 alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
 alias nv="nvim"

@@ -1,0 +1,6 @@
+default_profile = "zjv-sqlite"
+
+[profiles.zjv-sqlite]
+adapter = "sqlite"
+limit = 100_000
+theme = "inkpot"
