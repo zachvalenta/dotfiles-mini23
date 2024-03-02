@@ -53,51 +53,24 @@ fi
 
 ###
 # 🏔 WORKFLOW
-# 🎵 Mary https://www.youtube.com/watch?v=gIH-Yptxf54 Tyler https://www.youtube.com/watch?v=o7PEnj-8NHw
-# 💃🏻 Bouboo https://www.youtube.com/watch?v=uz-SYAY-cfg Tony https://www.youtube.com/watch?v=ukHvM6npEOw
-# ⛸ Sparkles https://www.youtube.com/watch?v=sO8k77AxxXA
 ###
 
 alias wf="clear; rg 'WF' $HOME/.zprofile -A3 -B8"
 alias sch="clear; mdcat $PER_DIR/people/schedule.md"
 alias kb="clear; rg -U '$KB_REGEX_NOW' $DOMAINS_DIR; rg -U '$KB_REGEX_NOW' $SW_DIR; rg -U '$KB_REGEX_NOW' $PER_DIR/people"
 
-alias kbn="clear; rg -UA 2 '$KB_REGEX_NEXT' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NEXT' $SW_DIR; rg -UA 1 '$KB_REGEX_NEXT' $PER_DIR/people"
 alias wen="rg -A 5 KATA $DOMAINS_DIR/art/aesthetics.md"
 alias qt="clear; mdcat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
+alias kbn="clear; rg -UA 2 '$KB_REGEX_NEXT' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NEXT' $SW_DIR; rg -UA 1 '$KB_REGEX_NEXT' $PER_DIR/people"
 
 alias gr="\cd $PER_DIR/tracking; gds"
 alias gz="vim $PER_DIR/tracking/24/03.dat; \cd $PER_DIR/tracking; ga; cd -"
 alias mb="vim $PER_DIR/tracking/24/goals.dat"
-function hm(){
-    fname="$1.dat";
-    vim $PER_DIR/tracking/24/heatmap/"$fname";
-    \cd $PER_DIR/tracking;
-    git add -A;
-    cd -;
-}
 function tz(){
     clear;
     label "orangered" "WEIGHT"
     YEAR=${1:-24}
     cat $TRACK_DIR/"$YEAR"/weight.dat | asciigraph -h 10 -w 120 red 2>/dev/null
-}
-function fz(){
-    # TODO: idky cant variablize termgraph args
-    # TODO: rewrite in Textual; components incl: Python, fs, output (Rich), graph (terminalplotlib, uniplot); not sure what I'd use for grep; maybe the better move is just redoing this with Golang framework
-    # TODO: mv to hm
-    YEAR=${1:-24}
-    dir="24/heatmap"
-    label "deeppink" "GUITAR"
-    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/guitar.dat
-    label "darkmagenta" "PIANO"
-    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/piano.dat
-    label "gold" "DANCE"
-    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/dance.dat
-    label "darkorange" "SKATE"
-    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/skate.dat
-    label "peru" "TRAIN"
-    termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/train.dat
 }
 function agg(){
     clear;
@@ -106,6 +79,28 @@ function agg(){
     termgraph $TRACK_DIR/"$YEAR"/goals.dat --color {green,blue};
     label "red" "TOTALS"
     rg -IN "^(guitar|piano|dance|skate)" $TRACK_DIR/"$YEAR"/??.dat | awk "NF" | awk '{a[$1]+=$2;}END{for(i in a)print i", "a[i]/4;}' | sort | termgraph --color green
+}
+function hm(){
+    if [ $# -eq 0 ]; then
+        YEAR=${1:-24}
+        dir="24/heatmap"
+        label "deeppink" "GUITAR"
+        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/guitar.dat
+        label "darkmagenta" "PIANO"
+        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/piano.dat
+        label "gold" "DANCE"
+        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/dance.dat
+        label "darkorange" "SKATE"
+        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/skate.dat
+        label "peru" "TRAIN"
+        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/train.dat
+    else
+        fname="$1.dat";
+        vim $PER_DIR/tracking/24/heatmap/"$fname";
+        \cd $PER_DIR/tracking;
+        git add -A;
+        cd -;
+    fi
 }
 
 ###
