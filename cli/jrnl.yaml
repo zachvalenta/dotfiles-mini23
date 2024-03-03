@@ -3,17 +3,17 @@ colors:
   date: black
   tags: yellow
   title: cyan
-default_hour: 9
-default_minute: 0
+default_hour: None
+default_minute: None
 editor: vim
 encrypt: false
 highlight: true
 indent_character: '|'
 journals:
   default:
-    journal: /Users/zach/Documents/zv/personal/journal
-linewrap: 79
+    journal: /Users/zach/Documents/zv/personal/journal/journal.txt
+linewrap: false
 tagsymbols: '#@'
 template: false
-timeformat: '%F %r'
+timeformat: '%F'
 version: v4.1
