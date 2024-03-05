@@ -64,15 +64,50 @@ alias qt="clear; mdcat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
 alias kbn="clear; rg -UA 2 '$KB_REGEX_NEXT' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NEXT' $SW_DIR; rg -UA 1 '$KB_REGEX_NEXT' $PER_DIR/people"
 
 alias gr="\cd $PER_DIR/tracking; gds"
-alias gz="vim $PER_DIR/tracking/24/03.dat; \cd $PER_DIR/tracking; ga; cd -"
-alias mb="vim $PER_DIR/tracking/24/goals.dat"
+alias gz="vim $PER_DIR/tracking/24/za.dat; \cd $PER_DIR/tracking; ga; cd -"
+function agg(){
+    # prefer this approach: partitions arts, one file instead of three
+    timer;
+    YEAR=${1:-24}
+    DANCE="$(cat $TRACK_DIR/$YEAR/dance.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum/4;}')"
+    SKATE="$(cat $TRACK_DIR/$YEAR/skate.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum/4;}')"
+    GUITAR="$(cat $TRACK_DIR/$YEAR/guitar.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum/4;}')"
+    PIANO="$(cat $TRACK_DIR/$YEAR/piano.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum/4;}')"
+    TRAIN="$(cat $TRACK_DIR/$YEAR/train.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum;}')"
+    echo "guitar,${GUITAR},150" | termgraph --color {green,blue}
+    echo "piano,${PIANO},150" | termgraph --color {green,blue}
+    echo "dance,${DANCE},150" | termgraph --color {green,blue}
+    echo "skate,${SKATE},150" | termgraph --color {green,blue}
+    echo "train,${TRAIN},200" | termgraph --color {green,blue}
+}
+function hm(){
+    # TODO: branch on arg (two-digit int, string)
+    if [ $# -eq 0 ]; then
+        label "deeppink" "GUITAR"
+        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/24/guitar.dat
+        label "darkmagenta" "PIANO"
+        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/24/piano.dat
+        label "gold" "DANCE"
+        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/24/dance.dat
+        label "darkorange" "SKATE"
+        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/24/skate.dat
+        label "peru" "TRAIN"
+        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/24/train.dat
+    else
+        fname="$1.dat";
+        vim $PER_DIR/tracking/24/"$fname";
+        \cd $PER_DIR/tracking;
+        git add -A;
+        cd -;
+    fi
+}
 function tz(){
     clear;
     label "orangered" "WEIGHT"
     YEAR=${1:-24}
     cat $TRACK_DIR/"$YEAR"/weight.dat | asciigraph -h 10 -w 120 red 2>/dev/null
 }
-function agg(){
+function agg_prev(){
     clear;
     YEAR=${1:-24}
     timer;
@@ -80,29 +115,6 @@ function agg(){
     label "red" "TOTALS"
     rg -IN "^(guitar|piano|dance|skate)" $TRACK_DIR/"$YEAR"/??.dat | awk "NF" | awk '{a[$1]+=$2;}END{for(i in a)print i", "a[i]/4;}' | sort | termgraph --color green
 }
-function hm(){
-    if [ $# -eq 0 ]; then
-        YEAR=${1:-24}
-        dir="24/heatmap"
-        label "deeppink" "GUITAR"
-        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/guitar.dat
-        label "darkmagenta" "PIANO"
-        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/piano.dat
-        label "gold" "DANCE"
-        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/dance.dat
-        label "darkorange" "SKATE"
-        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/skate.dat
-        label "peru" "TRAIN"
-        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/"$dir"/train.dat
-    else
-        fname="$1.dat";
-        vim $PER_DIR/tracking/24/heatmap/"$fname";
-        \cd $PER_DIR/tracking;
-        git add -A;
-        cd -;
-    fi
-}
-
 ###
 # 🚁 NAVIGATION
 ###
