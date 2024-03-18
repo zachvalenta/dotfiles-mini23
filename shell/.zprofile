@@ -263,17 +263,22 @@ alias b="br"
 # 💾  GIT
 ###
 
+# LOGS
+alias gl="git log --pretty=format:'%C(black #c0c0c0 ul) %<|(10) %cd %C(auto) %d %s' --date=short"
+alias gshow="git log --format=%B -n 1"  # show msg description for commit
+
+# COMMIT
+alias gc="git c"                        # commit
+alias gca="git c --amend"               # commit amend
+alias gcne="git c --amend --no-edit"    # commit amend no edit
+
+# ZA
 alias gb="git b"                        # show current branch
 alias gs="clear; git s"                 # show status
-alias gl="git l"                        # show prettified log of previous 10 commits
-alias gshow="git log --format=%B -n 1"  # show msg description for commit
 alias gd="git d"                        # diff working directory and repo
 alias gds="git ds"                      # diff staging area and repo
 alias ga="git add -A"                   # stage all
 alias gai="git ai"                      # stage interactive
-alias gc="git c"                        # commit
-alias gca="git c --amend"               # commit amend
-alias gcne="git c --amend --no-edit"    # commit amend no edit
 
 ###
 # 🛣 PATH

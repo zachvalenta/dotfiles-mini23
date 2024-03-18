@@ -17,7 +17,6 @@
 	far = remote -v show
 	conf = config --global --list
 	nb = checkout -b
-	l = log --pretty=format:'%C(auto)%h %C(white yellow bold) %<|(20) %as %C(auto) %d %s'
 	s = status -s  # shorter output
 [color]
 	ui = always
