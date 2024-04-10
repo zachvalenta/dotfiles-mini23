@@ -56,9 +56,9 @@ fi
 ###
 
 alias sch="clear; mdcat $PER_DIR/people/schedule.md"
-alias plan="rg -UNI 'BIG PLAN' -A 5 $DOMAINS_DIR | mdcat"
+alias plan="clear; rg -UNI 'START GETTING GOOD' -A 5 -B 2 $PER_DIR/logs | mdcat; rg -UNI 'BIG PLAN' -A 5 -B 2 $DOMAINS_DIR | mdcat"
 alias kb="clear; rg -U '$KB_REGEX_NOW' $DOMAINS_DIR; rg -U '$KB_REGEX_NOW' $SW_DIR; rg -U '$KB_REGEX_NOW' $PER_DIR/people"
-alias kbn="clear; rg -UA 2 '$KB_REGEX_NEXT' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NEXT' $SW_DIR; rg -UA 1 '$KB_REGEX_NEXT' $PER_DIR/people"
+alias kbn="clear; rg -UA 1 '$KB_REGEX_NEXT' $DOMAINS_DIR; rg -UA 1 '$KB_REGEX_NEXT' $SW_DIR; rg -UA 1 '$KB_REGEX_NEXT' $PER_DIR/people"
 alias wen="rg -A 5 KATA $DOMAINS_DIR/art/aesthetics.md"
 alias rj="\cd $PER_DIR/journal; vim journal.txt"
 alias com="vim +/commits $SW_DIR/za/profile.md"
@@ -197,9 +197,9 @@ alias ytdv='yt-dlp --format mp4 "$1"'
 alias lh="l | head"
 function l(){
     if [ "$1" ]; then
-        exa -al --icons --classify --git --git-ignore -I $EXA_IGNORE "$1" 
+        exa -al --icons --classify --no-user --no-filesize --no-time --no-permissions --git --git-ignore -I $EXA_IGNORE "$1" 
     else
-        exa -al --icons --classify --git --git-ignore -I $EXA_IGNORE
+        exa -al --icons --classify --no-user --no-filesize --no-time --no-permissions --git --git-ignore -I $EXA_IGNORE
     fi
 }
 function ll(){
