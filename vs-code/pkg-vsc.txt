@@ -1,6 +1,7 @@
-catppuccin.catppuccin-vsc-3.8.2
+catppuccin.catppuccin-vsc-3.14.0
+catppuccin.catppuccin-vsc-icons-1.13.0
 extensions.json
-liviuschera.noctis-10.43.1
+liviuschera.noctis-10.43.3
 tamasfe.even-better-toml-0.19.2
-vscodevim.vim-1.27.2
-yzhang.markdown-all-in-one-3.5.1
+vscodevim.vim-1.27.3
+yzhang.markdown-all-in-one-3.6.2
