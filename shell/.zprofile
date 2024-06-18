@@ -56,10 +56,10 @@ fi
 ###
 
 alias sch="clear; mdcat $PER_DIR/people/schedule.md"
-alias plan="clear; rg -UNI 'GOOD ENOUGH TO PLAY' -A 6 -B 2 $PER_DIR/logs | mdcat; rg -UNI 'BIG PLAN' -A 5 -B 2 $DOMAINS_DIR | mdcat"
+alias plan="clear; rg -UNI '🌱 SPRING' -A 9 $PER_DIR/logs/24.md | mdcat; rg -UNI 'BIG PLAN' -A 5 -B 2 $DOMAINS_DIR | mdcat"
 alias kb="clear; rg -UA 1 '$KB_NOW' $DOMAINS_DIR; rg -UA 1 '$KB_NOW' $SW_DIR; rg -UA 1 '$KB_NOW' $PER_DIR/people"
 alias kbn="clear; rg -U '$KB_NEXT' $DOMAINS_DIR; rg -U '$KB_NEXT' $SW_DIR; rg -U '$KB_NEXT' $PER_DIR/people"
-alias wen="rg -A 5 KATA $DOMAINS_DIR/art/aesthetics.md"
+alias wen="rg -A 5 KATA $DOMAINS_DIR/art/writing.md"
 alias rj="\cd $PER_DIR/journal; vim journal.txt"
 alias com="vim +/commits $SW_DIR/za/profile.md"
 alias qt="clear; mdcat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
@@ -152,9 +152,10 @@ alias pipxfr="python -m pipx list > $DENV_DIR/logs/pyenv/pipx/pipx-pkgs.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
+alias ger="cd $MAT_DIR/za/golf; t 2"
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library; vim README.md"
-alias ms="cd $MAT_DIR/sw/db/shujuku/hiring"
+alias ms="cd $MAT_DIR/sw/za/profile/leads"
 alias sk8="\cd $MAT_DIR/art/skate; t 2"
 alias tw="\cd $MAT_DIR/art/dance; t 2"
 alias yin="cd $ZV_DIR/AV/yin"
@@ -163,14 +164,16 @@ alias yin="cd $ZV_DIR/AV/yin"
 # 🎹 MUSIC
 ###
 
-alias mh="rg -UA 7 'alias mh' $DOT_DIR/shell/.zprofile"
+alias mh="rg -UA 11 'alias mh' $DOT_DIR/shell/.zprofile"
 alias clef="imgcat $MAT_DIR/music/theory/clef.png"
 alias keys="imgcat $MAT_DIR/music/theory/30-keys.jpg; imgcat $MAT_DIR/music/theory/circle-of-fifths.png; rg -UA 6 '## key' $DOMAINS_DIR/music/theory.md"
-alias modes="rg -UNI 'MODES\n' -A 6 -B 1 $DOMAINS_DIR/music | mdcat"
+alias modes="rg -UNI 'MODES\n' -A 25 -B 1 $DOMAINS_DIR/music | mdcat"
+alias int="rg -UNI '## intervals' -A 15 -B 1 $DOMAINS_DIR/music | mdcat"
 alias chords="rg -A 37 -B 1 '## chords' $DOMAINS_DIR/music/theory.md"
 alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
-alias gq="cd $MAT_DIR/music/piano"
-alias jt="cd $MAT_DIR/music/guitar; t 2"
+alias gq="cd $MAT_DIR/music/piano/harrison\ -\ pop/02-applied"
+alias jt="\cd $MAT_DIR/music/guitar; t 2"
+alias caged="ic $MAT_DIR/music/guitar/scale-systems/caged.png"
 alias ge="cd $MAT_DIR/art/songwriting"
 
 ###
