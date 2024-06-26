@@ -34,6 +34,7 @@ export EXA_COLORS="ga=38;5;213:gm=32:*.py=38;5;114:Dockerfile=38;5;074;1:docker-
 export LSCOLORS=gxfxcxdxbxegedabaggagx
 export RIPGREP_CONFIG_PATH="$DOT_DIR/cli/.ripgreprc"
 export EXA_IGNORE=".git|.DS_Store|.localized"
+export ZELLIJ_CONFIG_DIR="~/.config/zellij"
 
 # POWERLINE-SHELL
 function powerline_precmd() {
@@ -59,7 +60,6 @@ alias sch="clear; mdcat $PER_DIR/people/schedule.md"
 alias plan="clear; rg -UNI '🌱 SPRING' -A 9 $PER_DIR/logs/24.md | mdcat; rg -UNI 'BIG PLAN' -A 5 -B 2 $DOMAINS_DIR | mdcat"
 alias kb="clear; rg -UA 1 '$KB_NOW' $DOMAINS_DIR; rg -UA 1 '$KB_NOW' $SW_DIR; rg -UA 1 '$KB_NOW' $PER_DIR/people"
 alias kbn="clear; rg -U '$KB_NEXT' $DOMAINS_DIR; rg -U '$KB_NEXT' $SW_DIR; rg -U '$KB_NEXT' $PER_DIR/people"
-alias wen="rg -A 5 KATA $DOMAINS_DIR/art/writing.md"
 alias rj="\cd $PER_DIR/journal; vim journal.txt"
 alias com="vim +/commits $SW_DIR/za/profile.md"
 alias qt="clear; mdcat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
@@ -154,8 +154,8 @@ alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 # ZA
 alias ger="cd $MAT_DIR/za/golf; t 2"
 alias mat="cd $MAT_DIR; t 2"
-alias ml="cd $MAT_DIR/music/za/music-library; vim README.md"
-alias ms="cd $MAT_DIR/sw/za/profile/leads"
+alias ml="cd $MAT_DIR/music/za/music-library"
+alias ms="cd $MAT_DIR/sw/za/profile"
 alias sk8="\cd $MAT_DIR/art/skate; t 2"
 alias tw="\cd $MAT_DIR/art/dance; t 2"
 alias yin="cd $ZV_DIR/AV/yin"
