@@ -152,6 +152,7 @@ alias pipxfr="python -m pipx list > $DENV_DIR/logs/pyenv/pipx/pipx-pkgs.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
+alias algos="cd $MAT_DIR/sw/comp-sci/algos/algo-sandbox"
 alias ger="cd $MAT_DIR/za/golf; t 2"
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
@@ -180,7 +181,7 @@ alias ge="cd $MAT_DIR/art/songwriting"
 # 🛠 UTILS
 ###
 
-alias bpy="export PYTHONSTARTUP='$DOT_DIR/python/python_startup.py'; bpython"
+alias bpy="export PYTHONSTARTUP='$DOT_DIR/python/python_startup.py'; bpython -q"
 alias cd='function cdl(){ cd "$1"; pwd; l;}; cdl'
 alias cppath='pwd | pbcopy'
 alias ic="imgcat"
