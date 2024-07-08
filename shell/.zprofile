@@ -29,6 +29,7 @@ alias upzp="source $HOME/.zprofile"
 export MANPAGER=bat
 export EDITOR=vim
 export PYTHONDONTWRITEBYTECODE=1
+export PYTHONSTARTUP="$DOT_DIR/python/python_startup.py"
 export CLICOLOR=1
 export EXA_COLORS="ga=38;5;213:gm=32:*.py=38;5;114:Dockerfile=38;5;074;1:docker-compose.*=38;5;074;1:*.pdf=38;5;208:*.txt=38;5;244:*.html=38;5;137;1:*.env*=31;0;01:*.sql*=38;5;28"
 export LSCOLORS=gxfxcxdxbxegedabaggagx
@@ -149,6 +150,7 @@ alias ren="cd $PER_DIR/people"
 alias brewfr="brew ls --versions > $DENV_DIR/logs/brew/brew-pkgs.txt"
 alias pipfr="python -m pip freeze > $DENV_DIR/logs/pyenv/pip/pip-pkgs.txt"
 alias pipxfr="python -m pipx list --short > $DENV_DIR/logs/pyenv/pipx/pipx-pkgs.txt"
+alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
@@ -181,7 +183,8 @@ alias ge="cd $MAT_DIR/art/songwriting"
 # 🛠 UTILS
 ###
 
-alias bpy="export PYTHONSTARTUP='$DOT_DIR/python/python_startup.py'; bpython -q"
+alias bpy="bpython -q"
+alias ipy="ipython"
 alias cd='function cdl(){ cd "$1"; pwd; l;}; cdl'
 alias cppath='pwd | pbcopy'
 alias ic="imgcat"
@@ -194,7 +197,6 @@ alias oo="open ."
 alias v="vimv"
 alias vsc="open -a 'Visual Studio Code'"
 alias vsconf="cd $HOME/Library/Application\ Support/Code/User"
-alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
 alias ytd='yt-dlp "$1"'
 alias ytdv='yt-dlp --format mp4 "$1"'
 
