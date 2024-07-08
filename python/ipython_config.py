@@ -1,2 +1,2 @@
-c.TerminalInteractiveShell.true_color = True
-c.TerminalInteractiveShell.highlighting_style = "catppuccin-mocha"
+c = get_config()
+c.TerminalIPythonApp.display_banner = False
