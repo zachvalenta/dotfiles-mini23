@@ -27,3 +27,4 @@ https://www.benkuhn.net/index.xml
 https://news.ycombinator.com/user?id=rsj_hn
 https://www.scattered-thoughts.net/atom.xml
 https://martinheinz.dev/rss/
+https://notes.eatonphil.com/rss.xml
