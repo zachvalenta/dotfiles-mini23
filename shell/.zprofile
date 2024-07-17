@@ -23,7 +23,7 @@ KB_NEXT="TODO NEXT"
 ###
 
 echo -n "$(tput setaf 5) updating ~/.zprofile at$(tput sgr0): "; date
-set -o emacs
+set -o vi
 alias zp="vsc $HOME/.zprofile"
 alias upzp="source $HOME/.zprofile"
 export MANPAGER=bat
