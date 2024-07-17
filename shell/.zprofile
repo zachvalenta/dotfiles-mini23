@@ -37,22 +37,6 @@ export RIPGREP_CONFIG_PATH="$DOT_DIR/cli/.ripgreprc"
 export EXA_IGNORE=".git|.DS_Store|.localized"
 export ZELLIJ_CONFIG_DIR="~/.config/zellij"
 
-# POWERLINE-SHELL
-function powerline_precmd() {
-    PS1="$(powerline-shell --shell zsh $?)"
-}
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
-if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
-fi
-
 ###
 # 🏔 WORKFLOW
 ###
@@ -84,6 +68,7 @@ function agg(){
 }
 function hm(){
     # TODO: branch on arg (two-digit int, string)
+    # replace with python + bullet: subprocess.run("termgraph --calendar --start-dt 2024-01-01 ~/Documents/zv/personal/tracking/24/guitar.dat", shell=True, check=True)
     if [ $# -eq 0 ]; then
         label "deeppink" "GUITAR"
         termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/24/guitar.dat
