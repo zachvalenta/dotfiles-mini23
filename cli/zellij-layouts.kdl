@@ -1,8 +1,9 @@
 layout {
-    pane
     pane split_direction="vertical" {
-        pane command="echo" {
-            args "hello"
+        pane
+        pane split_direction="horizontal" {
+            pane
+            pane
         }
     }
 }
