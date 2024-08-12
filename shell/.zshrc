@@ -1,6 +1,6 @@
-# pipx
+# PIPX
 export PATH="$PATH:/Users/zach/.local/bin"
-# broot
+# BROOT
 source /Users/zach/.config/broot/launcher/bash/br
-# nodenv
+# NODENV
 eval "$(nodenv init -)"
