@@ -2,8 +2,10 @@ layout {
     pane split_direction="vertical" {
         pane
         pane split_direction="horizontal" {
-            pane
-            pane
+            pane command="cmus"
+            pane command="cd" {
+                args "/Users/zach/Documents/zv/av/yin"
+            }
         }
     }
 }
