@@ -180,9 +180,9 @@ alias nv="nvim"
 alias o="open"
 alias oo="open ."
 alias v="vimv"
+alias vd="visidata"
 alias vsc="open -a 'Visual Studio Code'"
 alias vsconf="cd $HOME/Library/Application\ Support/Code/User"
-alias vd="visidata"
 alias ytd='yt-dlp "$1"'
 alias ytdv='yt-dlp --format mp4 "$1"'
 
