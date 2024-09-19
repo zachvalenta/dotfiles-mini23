@@ -31,10 +31,9 @@ export EDITOR=vim
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONSTARTUP="$DOT_DIR/python/python_startup.py"
 export CLICOLOR=1
-export EXA_COLORS="ga=38;5;213:gm=32:*.py=38;5;114:Dockerfile=38;5;074;1:docker-compose.*=38;5;074;1:*.pdf=38;5;208:*.txt=38;5;244:*.html=38;5;137;1:*.env*=31;0;01:*.sql*=38;5;28"
 export LSCOLORS=gxfxcxdxbxegedabaggagx
+EZA_IGNORE=".DS_Store|.git|.localized|*.code-workspace"
 export RIPGREP_CONFIG_PATH="$DOT_DIR/cli/.ripgreprc"
-export EXA_IGNORE=".git|.DS_Store|.localized"
 export ZELLIJ_CONFIG_DIR="~/.config/zellij"
 
 ###
@@ -144,6 +143,7 @@ alias ger="cd $MAT_DIR/za/golf; t 2"
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
 alias ms="cd $MAT_DIR/sw/za/profile"
+alias site="cd $MAT_DIR/sw/lang/html-css"
 alias sk8="\cd $MAT_DIR/art/skate; t 2"
 alias tw="\cd $MAT_DIR/art/dance; t 2"
 alias yin="cd $ZV_DIR/AV/yin"
@@ -190,34 +190,27 @@ alias ytdv='yt-dlp --format mp4 "$1"'
 alias lh="l | head"
 function l(){
     if [ "$1" ]; then
-        exa -al --icons --classify --no-user --no-filesize --no-time --no-permissions --git --git-ignore -I $EXA_IGNORE "$1" 
+        eza -al --icons --git --git-ignore -I $EZA_IGNORE "$1"
     else
-        exa -al --icons --classify --no-user --no-filesize --no-time --no-permissions --git --git-ignore -I $EXA_IGNORE
+        eza -al --icons --git --git-ignore -I $EZA_IGNORE
     fi
 }
-function ll(){
-    if [ "$1" ]; then
-        exa --icons --classify --git -I $EXA_IGNORE "$1"
-    else
-        exa --icons --classify --git -I $EXA_IGNORE
-    fi
-}
+
 function t(){
-    # t <depth> <dir>
     if [ $# -eq 2 ]; then
-        exa -al --icons --tree --level="$1" --git-ignore -I $EXA_IGNORE "$2"
+        eza -al --icons --tree --git-ignore -I $EZA_IGNORE --level="$1" "$2"
     # t <depth>
     elif [ $# -eq 1 ]
     then
         # break on dir prepended w/ digits e.g. logs/2019
         if [[ "$1" =~ ^-?[0-9]+[.,]?[0-9]*$ ]]; then  # break on dir prepended w/ digits e.g. `logs/2019`
-            exa -al --icons --tree --level="$1" --git-ignore -I $EXA_IGNORE
+            eza -al --icons --tree --git-ignore -I $EZA_IGNORE --level="$1"
         else
-            exa -al --icons --tree --git-ignore -I $EXA_IGNORE "$1"
+            eza -al --icons --tree --git-ignore -I $EZA_IGNORE "$1"
         fi
     # t
     else
-        exa -al --icons --tree --git-ignore -I $EXA_IGNORE
+        eza -al --icons --tree --git-ignore -I $EZA_IGNORE
     fi
 }
 
