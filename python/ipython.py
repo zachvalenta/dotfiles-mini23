@@ -10,3 +10,4 @@ c.TerminalInteractiveShell.highlighting_style = "catppuccin-mocha"
 
 # ZA
 c.TerminalInteractiveShell.auto_match = True
+c.TerminalInteractiveShell.editing_mode = 'vi'
