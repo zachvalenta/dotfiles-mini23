@@ -1,3 +1,5 @@
+echo -n "$(tput setaf 5) sourcing ~/.zprofile at$(tput sgr0): "; date
+
 ###
 # 🗂 FS
 ###
@@ -22,7 +24,6 @@ KB_NEXT="TODO NEXT"
 # 🌇  PROFILE
 ###
 
-echo -n "$(tput setaf 5) updating ~/.zprofile at$(tput sgr0): "; date
 set -o vi
 alias zp="vsc $HOME/.zprofile"
 alias upzp="source $HOME/.zprofile"
@@ -30,7 +31,6 @@ export MANPAGER=bat
 export EDITOR=vim
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONSTARTUP="$DOT_DIR/python/python_startup.py"
-export LS_COLORS="$(vivid generate catppuccin-mocha)"
 EZA_IGNORE=".DS_Store|.git|.localized|*.code-workspace"
 export RIPGREP_CONFIG_PATH="$DOT_DIR/cli/.ripgreprc"
 export ZELLIJ_CONFIG_DIR="~/.config/zellij"
