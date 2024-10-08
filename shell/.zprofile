@@ -191,9 +191,9 @@ alias ytdv='yt-dlp --format mp4 "$1"'
 alias lh="l | head"
 function l(){
     if [ "$1" ]; then
-        eza -al --icons --no-quotes --git --git-ignore -I $EZA_IGNORE "$1"
+        eza -al --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
     else
-        eza -al --icons --no-quotes --git --git-ignore -I $EZA_IGNORE
+        eza -al --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE
     fi
 }
 
