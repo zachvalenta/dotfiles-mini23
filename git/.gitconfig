@@ -33,7 +33,7 @@
 [interactive]
     diffFilter = delta --color-only
 [include]
-    path = /Users/zach/Documents/denv/dotfiles/delta-themes.ini
+    path = /Users/zach/Documents/denv/dotfiles/git/delta-themes.ini
 [delta]
     navigate = true  # use n and N to move between diff sections
     features = platypus
