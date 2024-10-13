@@ -34,6 +34,7 @@ export PYTHONSTARTUP="$DOT_DIR/python/python_startup.py"
 EZA_IGNORE=".DS_Store|.git|.localized|*.code-workspace"
 export RIPGREP_CONFIG_PATH="$DOT_DIR/cli/.ripgreprc"
 export ZELLIJ_CONFIG_DIR="~/.config/zellij"
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 ###
 # 🏔 WORKFLOW
@@ -112,7 +113,7 @@ alias zv="cd $ZV_DIR"
 # DENV
 alias denv="cd $DENV_DIR"
 alias bin="cd $DENV_DIR/bin"
-alias dot="cd $DOT_DIR"
+alias dot="\cd $DOT_DIR; t"
 
 # NOTES
 alias dom="clear; \cd $DOMAINS_DIR; jbdom"

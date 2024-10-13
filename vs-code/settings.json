@@ -38,6 +38,5 @@
     "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.iconTheme": "catppuccin-mocha",
     "workbench.editor.openPositioning": "last",
-    "workbench.startupEditor": "newUntitledFile",
-    "python.defaultInterpreterPath": "/Users/zach/Documents/zv/materials/sw/lang/python/mianshi/.venv"
+    "workbench.startupEditor": "newUntitledFile"
 }
