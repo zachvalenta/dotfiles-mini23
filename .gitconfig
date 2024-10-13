@@ -1,12 +1,12 @@
 [user]
 	name = zachvalenta
 	email = zjv5002@gmail.com
+[init]
+	defaultBranch = main
 [pull]
 	ff = only
 [push]
 	default = simple
-[init]
-	defaultBranch = main
 [alias]
 	ai = add -p
 	b = branch -v
@@ -20,18 +20,6 @@
 	s = status -s  # shorter output
 [color]
 	ui = always
-[color "diff"]
-	meta = yellow bold
-	commit = green bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = "red bold 52"
-	newNormal = "green bold"
-	newHighlight = "green bold 22"
 [color "branch"]
 	current = yellow reverse
 	local = yellow
@@ -41,6 +29,15 @@
 	changed = green
 	untracked = cyan
 [core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
-[init]
-	defaultBranch = main
+	pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[include]
+    path = /Users/zach/Documents/denv/dotfiles/delta-themes.ini
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    features = platypus
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
