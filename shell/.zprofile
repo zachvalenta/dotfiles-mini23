@@ -125,6 +125,11 @@ alias per="cd $PER_DIR"
 alias logs="cd $PER_DIR/logs"
 alias ren="cd $PER_DIR/people"
 
+# 🟥 CAPP
+alias hb="clear; \cd $ZV_DIR/notes/capp/handbook; t"
+alias pw="cd $ZV_DIR/notes/capp/product-workflow"
+alias wl="clear; \cd $ZV_DIR/notes/capp/worklogs; t"
+
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
 # alias plug="cd $HOME/.local/share/nvim/plugged"
