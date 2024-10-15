@@ -126,9 +126,9 @@ alias logs="cd $PER_DIR/logs"
 alias ren="cd $PER_DIR/people"
 
 # 🟥 CAPP
-alias hb="clear; \cd $ZV_DIR/notes/capp/handbook; t"
-alias pw="cd $ZV_DIR/notes/capp/product-workflow"
-alias wl="clear; \cd $ZV_DIR/notes/capp/worklogs; t"
+alias hb="clear; \cd $ZV_DIR/capp/handbook; t"
+alias pw="cd $ZV_DIR/capp/product-workflow"
+alias wl="clear; \cd $ZV_DIR/capp/worklogs; t"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
@@ -196,6 +196,13 @@ alias ytdv='yt-dlp --format mp4 "$1"'
 # EXA
 alias lh="l | head"
 function l(){
+    if [ "$1" ]; then
+        eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
+    else
+        eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE
+    fi
+}
+function ll(){
     if [ "$1" ]; then
         eza -al --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
     else
