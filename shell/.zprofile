@@ -126,10 +126,11 @@ alias logs="cd $PER_DIR/logs"
 alias ren="cd $PER_DIR/people"
 
 # 🟥 CAPP
+alias cap="cd $ZV_DIR/capp"
 alias hb="clear; \cd $ZV_DIR/capp/handbook; t"
 alias pw="cd $ZV_DIR/capp/product-workflow"
 alias tm="clear; \cd $ZV_DIR/capp/task-mgmt; t"
-alias wl="clear; \cd $ZV_DIR/capp/worklogs; t"
+alias wl="vim $ZV_DIR/capp/worklogs/24/10/10.14.md"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
