@@ -186,6 +186,7 @@ alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
 alias nv="nvim"
 alias o="open"
 alias oo="open ."
+alias unx="chmod u-x *; l"
 alias v="vimv"
 alias vd="visidata"
 alias vsc="open -a 'Visual Studio Code'"
