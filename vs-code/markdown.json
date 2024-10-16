@@ -27,5 +27,19 @@
             "```",
             ""
         ]
+    },
+    "capp_mgmt": {
+		"prefix": "mtm",
+		"description": "task mgmt note for Capp",
+		"body": [
+            "# $1",
+            "",
+			"## 参考",
+			"",
+			"## 进步",
+            "",
+            "# 🟨 ZA",
+            ""
+        ]
     }
 }
