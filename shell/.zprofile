@@ -176,7 +176,7 @@ alias ge="cd $MAT_DIR/art/songwriting"
 
 alias bpy="bpython -q"
 alias ipy="ipython"
-alias cd='function cdl(){ cd "$1"; pwd; l;}; cdl'
+alias cd='function cdl(){ cd "$1"; pwd; sl;}; cdl'
 alias cppath='pwd | pbcopy'
 alias ic="imgcat"
 alias hq="harlequin"
@@ -197,16 +197,16 @@ alias ytdv='yt-dlp --format mp4 "$1"'
 alias lh="l | head"
 function l(){
     if [ "$1" ]; then
+        eza -al --icons --no-quotes --no-user --no-time --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
+    else
+        eza -al --icons --no-quotes --no-user --no-time --no-permissions --git --git-ignore -I $EZA_IGNORE
+    fi
+}
+function sl(){
+    if [ "$1" ]; then
         eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
     else
         eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE
-    fi
-}
-function ll(){
-    if [ "$1" ]; then
-        eza -al --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
-    else
-        eza -al --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE
     fi
 }
 
