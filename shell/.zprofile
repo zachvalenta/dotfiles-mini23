@@ -45,7 +45,7 @@ alias plan="clear; rg -UNI '🌱 SPRING' -A 9 $PER_DIR/logs/24.md | mdcat; rg -U
 alias kb="clear; rg -UA 1 '$KB_NOW' $DOMAINS_DIR; rg -UA 1 '$KB_NOW' $SW_DIR; rg -UA 1 '$KB_NOW' $PER_DIR/people"
 alias kbn="clear; rg -U '$KB_NEXT' $DOMAINS_DIR; rg -U '$KB_NEXT' $SW_DIR; rg -U '$KB_NEXT' $PER_DIR/people"
 alias rj="\cd $PER_DIR/journal; vim journal.txt"
-alias com="vim +/commits $SW_DIR/za/profile.md"
+alias com="vim +/commits $SW_DIR/za/work.md"
 alias qt="clear; mdcat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
 alias gr="\cd $PER_DIR/tracking/24; gds"
 alias gz="vim $PER_DIR/tracking/24/za.dat; \cd $PER_DIR/tracking; ga; cd -"
@@ -128,6 +128,7 @@ alias ren="cd $PER_DIR/people"
 # 🟥 CAPP
 alias hb="clear; \cd $ZV_DIR/capp/handbook; t"
 alias pw="cd $ZV_DIR/capp/product-workflow"
+alias tm="clear; \cd $ZV_DIR/capp/task-mgmt; t"
 alias wl="clear; \cd $ZV_DIR/capp/worklogs; t"
 
 # NEOVIM
