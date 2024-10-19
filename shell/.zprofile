@@ -131,6 +131,7 @@ alias hb="clear; \cd $ZV_DIR/capp/handbook; t"
 alias pw="cd $ZV_DIR/capp/product-workflow"
 alias tm="clear; \cd $ZV_DIR/capp/task-mgmt; t"
 alias wl="vim $ZV_DIR/capp/worklogs/24/10/10.14.md"
+alias wlr="\cd $ZV_DIR/capp/worklogs; t"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
@@ -210,6 +211,13 @@ function sl(){
         eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
     else
         eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE
+    fi
+}
+function ll(){
+    if [ "$1" ]; then
+        eza -al --icons --no-user --no-time --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
+    else
+        eza -al --icons --no-user --no-time --no-permissions --git --git-ignore -I $EZA_IGNORE
     fi
 }
 
