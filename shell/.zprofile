@@ -33,7 +33,6 @@ export PYTHONDONTWRITEBYTECODE=1
 export PYTHONSTARTUP="$DOT_DIR/python/python_startup.py"
 
 # CONFIG PATHS
-# export GIT_CONFIG="/Users/zach/Documents/denv/dotfiles/git/conf-delta.ini"
 export RIPGREP_CONFIG_PATH="$DOT_DIR/cli/.ripgreprc"
 export ZELLIJ_CONFIG_DIR="~/.config/zellij"
 
@@ -190,7 +189,7 @@ alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
 alias nv="nvim"
 alias o="open"
 alias oo="open ."
-alias unx="chmod u-x *; l"
+alias anx="chmod a-x *; eza -al --icons --no-quotes --no-user --no-time"
 alias upzp="source $HOME/.zprofile"
 alias v="vimv"
 alias vd="visidata"
