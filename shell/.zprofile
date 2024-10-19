@@ -25,16 +25,17 @@ KB_NEXT="TODO NEXT"
 ###
 
 set -o vi
-alias zp="vsc $HOME/.zprofile"
-alias upzp="source $HOME/.zprofile"
-export MANPAGER=bat
 export EDITOR=vim
+EZA_IGNORE=".DS_Store|.git|.localized|*.code-workspace"
+export HOMEBREW_NO_AUTO_UPDATE=1
+export MANPAGER=bat
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONSTARTUP="$DOT_DIR/python/python_startup.py"
-EZA_IGNORE=".DS_Store|.git|.localized|*.code-workspace"
+
+# CONFIG PATHS
+# export GIT_CONFIG="/Users/zach/Documents/denv/dotfiles/git/conf-delta.ini"
 export RIPGREP_CONFIG_PATH="$DOT_DIR/cli/.ripgreprc"
 export ZELLIJ_CONFIG_DIR="~/.config/zellij"
-export HOMEBREW_NO_AUTO_UPDATE=1
 
 ###
 # 🏔 WORKFLOW
@@ -190,12 +191,14 @@ alias nv="nvim"
 alias o="open"
 alias oo="open ."
 alias unx="chmod u-x *; l"
+alias upzp="source $HOME/.zprofile"
 alias v="vimv"
 alias vd="visidata"
 alias vsc="open -a 'Visual Studio Code'"
 alias vsconf="cd $HOME/Library/Application\ Support/Code/User"
 alias ytd='yt-dlp "$1"'
 alias ytdv='yt-dlp --format mp4 "$1"'
+alias zp="vsc $HOME/.zprofile"
 
 # EXA
 alias lh="l | head"
