@@ -127,10 +127,11 @@ alias ren="cd $PER_DIR/people"
 
 # 🟥 CAPP
 alias cap="cd $ZV_DIR/capp"
+alias edi="cd $ZV_DIR/capp/edi"
 alias hb="clear; \cd $ZV_DIR/capp/handbook; t"
 alias pw="cd $ZV_DIR/capp/product-workflow"
 alias tm="clear; \cd $ZV_DIR/capp/task-mgmt; t"
-alias wl="vim $ZV_DIR/capp/worklogs/24/10/10.14.md"
+alias wl="vim $ZV_DIR/capp/worklogs/24/10/10.21.md"
 alias wlr="\cd $ZV_DIR/capp/worklogs; t"
 
 # NEOVIM
@@ -184,6 +185,7 @@ alias cppath='pwd | pbcopy'
 alias ic="imgcat"
 alias hq="harlequin"
 alias jl="jless -r"
+alias lg="lazygit"
 alias m="make"
 alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
 alias nv="nvim"
