@@ -152,10 +152,12 @@ alias ger="cd $MAT_DIR/za/golf; t 2"
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
 alias ms="cd $MAT_DIR/sw/za/profile"
+alias myb="\cd $MAT_DIR/sw/lang/html-css/myblog; vsc tmp.md"
 alias site="cd $MAT_DIR/sw/lang/html-css"
 alias snip="cd /Users/zach/Library/Application\ Support/Code/User/snippets"
 alias sk8="\cd $MAT_DIR/art/skate; t 2"
 alias tw="\cd $MAT_DIR/art/dance; t 2"
+alias ur="cd $MAT_DIR/sw/svc/ur-repo; t"
 alias yin="cd $ZV_DIR/AV/yin"
 
 ###
