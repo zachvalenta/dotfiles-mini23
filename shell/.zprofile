@@ -127,11 +127,11 @@ alias ren="cd $PER_DIR/people"
 
 # 🟥 CAPP
 alias cap="cd $ZV_DIR/capp"
-alias edi="cd $ZV_DIR/capp/edi"
+alias edi="cd $ZV_DIR/capp/edi/capp-edi"
 alias hb="clear; \cd $ZV_DIR/capp/handbook; t"
 alias pw="cd $ZV_DIR/capp/product-workflow"
 alias tm="clear; \cd $ZV_DIR/capp/task-mgmt; t"
-alias wl="vim $ZV_DIR/capp/worklogs/24/10/10.21.md"
+alias wl="vim $ZV_DIR/capp/worklogs/24/10/10.28.md"
 alias wlr="\cd $ZV_DIR/capp/worklogs; t"
 
 # NEOVIM
@@ -229,19 +229,19 @@ function ll(){
 
 function t(){
     if [ $# -eq 2 ]; then
-        eza -al --icons --tree --git-ignore -I $EZA_IGNORE --level="$1" "$2"
+        eza -al --icons --tree --no-quotes --git-ignore -I $EZA_IGNORE --level="$1" "$2"
     # t <depth>
     elif [ $# -eq 1 ]
     then
         # break on dir prepended w/ digits e.g. logs/2019
         if [[ "$1" =~ ^-?[0-9]+[.,]?[0-9]*$ ]]; then  # break on dir prepended w/ digits e.g. `logs/2019`
-            eza -al --icons --tree --git-ignore -I $EZA_IGNORE --level="$1"
+            eza -al --icons --tree --no-quotes --git-ignore -I $EZA_IGNORE --level="$1"
         else
-            eza -al --icons --tree --git-ignore -I $EZA_IGNORE "$1"
+            eza -al --icons --tree --no-quotes --git-ignore -I $EZA_IGNORE "$1"
         fi
     # t
     else
-        eza -al --icons --tree --git-ignore -I $EZA_IGNORE
+        eza -al --icons --tree --no-quotes --git-ignore -I $EZA_IGNORE
     fi
 }
 
