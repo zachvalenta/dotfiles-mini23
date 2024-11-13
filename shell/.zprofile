@@ -241,7 +241,7 @@ function t(){
         fi
     # t
     else
-        eza -al --icons --tree --no-quotes --git-ignore -I $EZA_IGNORE
+        eza -al --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE
     fi
 }
 
