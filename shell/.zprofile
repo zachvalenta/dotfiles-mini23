@@ -221,9 +221,9 @@ function sl(){
 }
 function ll(){
     if [ "$1" ]; then
-        eza -al --icons --no-user --no-time --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
+        eza -alo --icons --git --git-ignore -I $EZA_IGNORE "$1"
     else
-        eza -al --icons --no-user --no-time --no-permissions --git --git-ignore -I $EZA_IGNORE
+        eza -alo --icons --git --git-ignore -I $EZA_IGNORE
     fi
 }
 
