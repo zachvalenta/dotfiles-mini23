@@ -33,6 +33,10 @@
     {
       "passKeys": "b,t",
       "pattern": "https?://github.com/*"
+    },
+    {
+      "passKeys": "b,h,n",
+      "pattern": "https://livebook.manning.com/*"
     }
   ]
 }
