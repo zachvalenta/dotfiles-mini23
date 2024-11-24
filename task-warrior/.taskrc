@@ -20,12 +20,19 @@ report.tree.columns=project,description
 report.tree.labels=Project,Task
 report.tree.sort=project+
 
-# ALL
-report.zjv.description=All tasks grouped by project, including completed, with dependencies, status, urgency, and task IDs
-report.zjv.columns=project,description,id,depends,end,status,priority,urgency
-report.zjv.labels=PROJ,TASK,ID,DEP,COMP_DATE,STATUS,PRIO,URG
-report.zjv.filter=(status:pending or status:completed)
-report.zjv.sort=project+,urgency-
+# PENDING
+report.pend.description=pending tasks by project
+report.pend.columns=project,description,id,depends,status,priority,urgency
+report.pend.labels=PROJ,TASK,ID,DEP,STATUS,PRIO,URG
+report.pend.filter=(status:pending)
+report.pend.sort=project+,urgency-
+
+# COMPLETED
+report.full.description=all tasks by project
+report.full.columns=project,description,id,depends,end,status,priority,urgency
+report.full.labels=PROJ,TASK,ID,DEP,COMP_DATE,STATUS,PRIO,URG
+report.full.filter=(status:pending or status:completed)
+report.full.sort=project+,urgency-
 
 ###
 # THEMES

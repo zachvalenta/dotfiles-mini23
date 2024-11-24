@@ -182,7 +182,8 @@ alias ge="cd $MAT_DIR/art/songwriting"
 
 # task warrior
 alias tw="task"
-alias ty="task zjv"
+alias rn="task pend"
+alias quan="task full"
 alias twfr="sqlite3 ~/.task/taskchampion.sqlite3 .dump > $DOT_DIR/task-warrior/db.sql"
 
 alias bpy="bpython -q"
