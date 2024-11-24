@@ -22,10 +22,8 @@ report.tree.sort=project+
 
 # ALL
 report.zjv.description=All tasks grouped by project, including completed, with dependencies, status, urgency, and task IDs
-report.zjv.columns=project,description,id,depends,end,status,urgency
-; report.project_tasks.columns=project,end,id,description,depends,status,urgency
-report.zjv.labels=PROJ,TASK,ID,DEP,COMP_DATE,STATUS,URG
-; report.project_tasks.labels=Project,Completed,ID,Task,Dependencies,Status,Urgency
+report.zjv.columns=project,description,id,depends,end,status,priority,urgency
+report.zjv.labels=PROJ,TASK,ID,DEP,COMP_DATE,STATUS,PRIO,URG
 report.zjv.filter=(status:pending or status:completed)
 report.zjv.sort=project+,urgency-
 
