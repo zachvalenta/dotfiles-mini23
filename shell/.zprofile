@@ -180,7 +180,7 @@ alias ge="cd $MAT_DIR/art/songwriting"
 # 🛠 UTILS
 ###
 
-# task warrior
+# TASK WARRIOR: tw for urgency, summary for big picture, twt for tree + rn/quan
 alias tw="task"
 alias rn="task pend"
 alias quan="task full"
