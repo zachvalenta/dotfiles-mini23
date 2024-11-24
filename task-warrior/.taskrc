@@ -22,15 +22,15 @@ report.tree.sort=project+
 
 # PENDING
 report.pend.description=pending tasks by project
-report.pend.columns=project,description,id,depends,status,priority,urgency
-report.pend.labels=PROJ,TASK,ID,DEP,STATUS,PRIO,URG
+report.pend.columns=project,tags,description,id,depends,status,priority,urgency
+report.pend.labels=PROJ,TAG,TASK,ID,DEP,STATUS,PRIO,URG
 report.pend.filter=(status:pending)
 report.pend.sort=project+,urgency-
 
 # COMPLETED
 report.full.description=all tasks by project
-report.full.columns=project,description,id,depends,end,status,priority,urgency
-report.full.labels=PROJ,TASK,ID,DEP,COMP_DATE,STATUS,PRIO,URG
+report.full.columns=project,tags,description,id,depends,end,status,priority,urgency
+report.full.labels=PROJ,TAG,TASK,ID,DEP,COMP_DATE,STATUS,PRIO,URG
 report.full.filter=(status:pending or status:completed)
 report.full.sort=project+,urgency-
 
