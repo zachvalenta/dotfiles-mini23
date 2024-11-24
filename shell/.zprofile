@@ -150,15 +150,14 @@ alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
 alias algos="cd $MAT_DIR/sw/comp-sci/algos/algo-sandbox"
+alias blog="\cd $MAT_DIR/sw/lang/html-css/myblog"
 alias ger="cd $MAT_DIR/za/golf; t 2"
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
 alias ms="cd $MAT_DIR/sw/za/profile"
-alias myb="\cd $MAT_DIR/sw/lang/html-css/myblog; vsc tmp.md"
 alias site="cd $MAT_DIR/sw/lang/html-css"
 alias snip="cd /Users/zach/Library/Application\ Support/Code/User/snippets"
 alias sk8="\cd $MAT_DIR/art/skate; t 2"
-alias tw="\cd $MAT_DIR/art/dance; t 2"
 alias ur="cd $MAT_DIR/sw/svc/ur-repo; t"
 alias yin="cd $ZV_DIR/AV/yin"
 
@@ -195,7 +194,7 @@ alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
 alias nv="nvim"
 alias o="open"
 alias oo="open ."
-alias anx="chmod a-x *; eza -al --icons --no-quotes --no-user --no-time"
+alias tw="task"
 alias upzp="source $HOME/.zprofile"
 alias v="vimv"
 alias vd="visidata"
@@ -319,3 +318,4 @@ fi
 export PATH="$PATH:/Users/zach/.local/bin"  # pipx
 export PATH="$DENV_DIR/bin:${PATH}"         # my bin
 export PATH=$PATH:$HOME/go/bin              # golang
+# . "$HOME/.cargo/env"

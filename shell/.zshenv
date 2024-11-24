@@ -8,3 +8,4 @@ eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/multiver
 eval "$(atuin init zsh)"
 # LS_COLORS FOR EZA
 export LS_COLORS="$(vivid generate catppuccin-mocha)"
+. "$HOME/.cargo/env"
