@@ -1,3 +1,7 @@
+###
+# CORE
+###
+
 # [Created by task 3.1.0 11/17/2024 19:22:24]
 data.location=/Users/zach/.task
 news.version=3.1.0
@@ -6,18 +10,33 @@ news.version=3.1.0
 #data.location=~/.local/share/task
 #hooks.location=~/.config/task/hooks
 
+###
 # REPORTS
+###
+
+# TREE
 report.tree.description=Tree view of projects and tasks
 report.tree.columns=project,description
 report.tree.labels=Project,Task
 report.tree.sort=project+
 
-# CUSTOM THEMES
+# ALL
+report.project_tasks.description=All tasks grouped by project, including completed
+report.project_tasks.columns=project,end,description
+report.project_tasks.labels=Project,Completed,Task
+report.project_tasks.filter=(status:pending or status:completed)
+report.project_tasks.sort=project+,end-
+
+###
+# THEMES
+###
+
+# CUSTOM
 #include bubblegum.theme
 #include solarized-dark-256.theme
 #include solarized-light-256.theme
 
-# STOCK THEMES
+# STOCK
 #include light-16.theme
 #include light-256.theme
 #include dark-16.theme
