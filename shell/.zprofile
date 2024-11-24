@@ -144,7 +144,6 @@ alias brewfr="brew ls --versions > $DENV_DIR/logs/brew/brew-pkgs.txt"
 alias pipfr="python -m pip freeze > $DENV_DIR/logs/pyenv/pip/pip-pkgs.txt"
 alias pipxfr="python -m pipx list --short > $DENV_DIR/logs/pyenv/pipx/pipx-pkgs.txt"
 alias rustfr="cargo install --list > $DENV_DIR/logs/rust/rust-pkgs.txt"
-alias twfr="sqlite3 ~/.task/taskchampion.sqlite3 .dump > $DOT_DIR/task-warrior/db.sql"
 alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
@@ -181,6 +180,11 @@ alias ge="cd $MAT_DIR/art/songwriting"
 # 🛠 UTILS
 ###
 
+# task warrior
+alias tw="task"
+alias ty="task zjv"
+alias twfr="sqlite3 ~/.task/taskchampion.sqlite3 .dump > $DOT_DIR/task-warrior/db.sql"
+
 alias bpy="bpython -q"
 alias ipy="ipython"
 alias cd='function cdl(){ cd "$1"; pwd; sl;}; cdl'
@@ -194,7 +198,6 @@ alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
 alias nv="nvim"
 alias o="open"
 alias oo="open ."
-alias tw="task"
 alias upzp="source $HOME/.zprofile"
 alias v="vimv"
 alias vd="visidata"

@@ -21,17 +21,20 @@ report.tree.labels=Project,Task
 report.tree.sort=project+
 
 # ALL
-report.project_tasks.description=All tasks grouped by project, including completed
-report.project_tasks.columns=project,end,description
-report.project_tasks.labels=Project,Completed,Task
-report.project_tasks.filter=(status:pending or status:completed)
-report.project_tasks.sort=project+,end-
+report.zjv.description=All tasks grouped by project, including completed, with dependencies, status, urgency, and task IDs
+report.zjv.columns=project,description,id,depends,end,status,urgency
+; report.project_tasks.columns=project,end,id,description,depends,status,urgency
+report.zjv.labels=PROJ,TASK,ID,DEP,COMP_DATE,STATUS,URG
+; report.project_tasks.labels=Project,Completed,ID,Task,Dependencies,Status,Urgency
+report.zjv.filter=(status:pending or status:completed)
+report.zjv.sort=project+,urgency-
 
 ###
 # THEMES
 ###
 
 # CUSTOM
+#include catppuccin.theme
 #include bubblegum.theme
 #include solarized-dark-256.theme
 #include solarized-light-256.theme
