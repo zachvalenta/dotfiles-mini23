@@ -106,7 +106,7 @@ function agg_prev(){
 ###
 
 # ROOT
-alias home="cd $HOME"
+alias home="cd $HOME; ll"
 alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
 
@@ -144,7 +144,7 @@ alias brewfr="brew ls --versions > $DENV_DIR/logs/brew/brew-pkgs.txt"
 alias pipfr="python -m pip freeze > $DENV_DIR/logs/pyenv/pip/pip-pkgs.txt"
 alias pipxfr="python -m pipx list --short > $DENV_DIR/logs/pyenv/pipx/pipx-pkgs.txt"
 alias rustfr="cargo install --list > $DENV_DIR/logs/rust/rust-pkgs.txt"
-alias twfr="sqlite3 ~/.task/taskchampion.sqlite3 .dump > $DOT_DIR/cli/taskwarrior.sql"
+alias twfr="sqlite3 ~/.task/taskchampion.sqlite3 .dump > $DOT_DIR/task-warrior/db.sql"
 alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
