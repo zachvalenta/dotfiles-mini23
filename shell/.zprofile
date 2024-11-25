@@ -127,6 +127,7 @@ alias ren="cd $PER_DIR/people"
 
 # 🟥 CAPP
 alias cap="cd $ZV_DIR/capp"
+alias capd="cd $ZV_DIR/capp/data"
 alias edi="cd $ZV_DIR/capp/edi/capp-edi"
 alias hb="clear; \cd $ZV_DIR/capp/handbook; t"
 alias pw="cd $ZV_DIR/capp/product-workflow"
