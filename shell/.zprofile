@@ -127,7 +127,7 @@ alias ren="cd $PER_DIR/people"
 
 # 🟥 CAPP
 alias cap="cd $ZV_DIR/capp"
-alias capd="cd $ZV_DIR/capp/data"
+alias capd="cd $ZV_DIR/capp/data; t"
 alias edi="cd $ZV_DIR/capp/edi/capp-edi"
 alias hb="clear; \cd $ZV_DIR/capp/handbook; t"
 alias pw="cd $ZV_DIR/capp/product-workflow"
@@ -235,15 +235,15 @@ function ll(){
 
 function t(){
     if [ $# -eq 2 ]; then
-        eza -al --icons --tree --no-quotes --git-ignore -I $EZA_IGNORE --level="$1" "$2"
+        eza -al --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE --level="$1" "$2"
     # t <depth>
     elif [ $# -eq 1 ]
     then
         # break on dir prepended w/ digits e.g. logs/2019
         if [[ "$1" =~ ^-?[0-9]+[.,]?[0-9]*$ ]]; then  # break on dir prepended w/ digits e.g. `logs/2019`
-            eza -al --icons --tree --no-quotes --git-ignore -I $EZA_IGNORE --level="$1"
+            eza -al --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE --level="$1"
         else
-            eza -al --icons --tree --no-quotes --git-ignore -I $EZA_IGNORE "$1"
+            eza -al --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE "$1"
         fi
     # t
     else
