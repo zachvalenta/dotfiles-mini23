@@ -128,11 +128,12 @@ alias ren="cd $PER_DIR/people"
 # 🟥 CAPP
 alias cap="cd $ZV_DIR/capp"
 alias capd="cd $ZV_DIR/capp/data; t"
+alias dt="\cd $ZV_DIR/capp/mapper; t"
 alias edi="cd $ZV_DIR/capp/edi/capp-edi"
 alias hb="clear; \cd $ZV_DIR/capp/handbook; t"
 alias pw="cd $ZV_DIR/capp/product-workflow"
 alias tm="clear; \cd $ZV_DIR/capp/task-mgmt; t"
-alias wl="vim $ZV_DIR/capp/worklogs/24/10/10.28.md"
+alias wl="vim $ZV_DIR/capp/worklogs/24/12/12.02.md"
 alias wlr="\cd $ZV_DIR/capp/worklogs; t"
 
 # NEOVIM

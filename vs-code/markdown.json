@@ -3,7 +3,7 @@
 		"prefix": "mch",
 		"description": "checkbox",
 		"body": [
-			"- [ ] $1"
+			"- [ ]$1"
 		]
 	},
     "code": {
