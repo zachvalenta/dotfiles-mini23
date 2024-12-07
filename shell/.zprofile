@@ -152,6 +152,7 @@ alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 # ZA
 alias algos="cd $MAT_DIR/sw/comp-sci/algos/algo-sandbox"
 alias blog="\cd $MAT_DIR/sw/lang/html-css/myblog"
+alias ldj="cd $MAT_DIR/sw/lang/python/django/ld; t"
 alias ger="cd $MAT_DIR/za/golf; t 2"
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
