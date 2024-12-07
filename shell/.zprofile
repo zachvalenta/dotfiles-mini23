@@ -187,6 +187,7 @@ alias tw="task"
 alias rn="task pend"
 alias quan="task full"
 alias twfr="sqlite3 ~/.task/taskchampion.sqlite3 .dump > $DOT_DIR/task-warrior/db.sql"
+alias kbtfr="sqlite3 ~/Library/Application\ Support/kanban-tui/database.db .dump > $DOT_DIR/tui/kanban-tui.sql"
 
 alias bpy="bpython -q"
 alias ipy="ipython"
