@@ -1,12 +1,21 @@
 ##########################################################
-# Sample .aider.conf.yml
 # This file lists *all* the valid configuration entries.
 # Place in your home dir, or at the root of your git repo.
-##########################################################
-
 # Note: You can only put OpenAI and Anthropic API keys in the yaml
 # config file. Keys for all APIs can be stored in a .env file
 # https://aider.chat/docs/config/dotenv.html
+##########################################################
+
+###
+# stop aider from getting involved in Git workflow
+###
+
+# disable looking for repo + autocommit
+git: false
+auto-commits: true
+# attribute aider code changes to git author/committer name
+attribute-author: false
+attribute-committer: false
 
 ##########
 # options:
@@ -227,9 +236,6 @@
 ###############
 # Git settings:
 
-## Enable/disable looking for a git repo (default: True)
-git: false
-
 ## Enable/disable adding .aider* to .gitignore (default: True)
 #gitignore: true
 
@@ -239,17 +245,8 @@ git: false
 ## Only consider files in the current subtree of the git repository
 #subtree-only: false
 
-## Enable/disable auto commit of LLM changes (default: True)
-#auto-commits: true
-
 ## Enable/disable commits when repo is found dirty (default: True)
 #dirty-commits: true
-
-## Attribute aider code changes in the git author name (default: True)
-#attribute-author: true
-
-## Attribute aider commits in the git committer name (default: True)
-#attribute-committer: true
 
 ## Prefix commit messages with 'aider: ' if aider authored the changes (default: False)
 #attribute-commit-message-author: false
@@ -264,7 +261,7 @@ git: false
 #commit-prompt: xxx
 
 ## Perform a dry run without modifying files (default: False)
-#dry-run: false
+dry-run: true
 
 ## Skip the sanity check for the git repository (default: False)
 #skip-sanity-check-repo: false
@@ -427,4 +424,3 @@ git: false
 
 ## Specify which editor to use for the /editor command
 #editor: xxx
-
