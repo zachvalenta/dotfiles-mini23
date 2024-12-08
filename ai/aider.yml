@@ -7,7 +7,18 @@
 ##########################################################
 
 ###
-# stop aider from getting involved in Git workflow
+# CONVENTIONS
+###
+
+## specify a read-only file (can be used multiple times)
+#read: xxx
+## Specify multiple values like this:
+read:
+ - /Users/zach/Documents/denv/dotfiles/ai/aider-conventions-python.md
+ - /Users/zach/Documents/denv/dotfiles/ai/aider-conventions-general.md
+
+###
+# STOP AIDER FROM GETTING INVOLVED IN GIT WORKFLOW
 ###
 
 # disable looking for repo + autocommit
@@ -377,14 +388,6 @@ dry-run: true
 #file: xxx
 ## Specify multiple values like this:
 #file:
-#  - xxx
-#  - yyy
-#  - zzz
-
-## specify a read-only file (can be used multiple times)
-#read: xxx
-## Specify multiple values like this:
-#read:
 #  - xxx
 #  - yyy
 #  - zzz
