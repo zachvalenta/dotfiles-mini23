@@ -198,6 +198,7 @@ alias ic="imgcat"
 alias hq="harlequin"
 alias jl="jless -r"
 alias lg="lazygit"
+alias lh="l | head"
 alias m="make"
 alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
 alias nv="nvim"
@@ -212,15 +213,11 @@ alias ytd='yt-dlp "$1"'
 alias ytdv='yt-dlp --format mp4 "$1"'
 alias zp="vsc $HOME/.zprofile"
 
-# EXA
-alias lh="l | head"
-function l(){
-    if [ "$1" ]; then
-        eza -al --icons --total-size --no-quotes --no-user --no-time --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
-    else
-        eza -al --icons --total-size --no-quotes --no-user --no-time --no-permissions --git --git-ignore -I $EZA_IGNORE
-    fi
-}
+###
+# EZA
+###
+
+# default
 function sl(){
     if [ "$1" ]; then
         eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
@@ -228,11 +225,20 @@ function sl(){
         eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE
     fi
 }
+# dir/file sizes
+function l(){
+    if [ "$1" ]; then
+        eza -al --icons --total-size --no-quotes --no-user --no-time --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
+    else
+        eza -al --icons --total-size --no-quotes --no-user --no-time --no-permissions --git --git-ignore -I $EZA_IGNORE
+    fi
+}
+# perms / user / timestamp + show gitignore
 function ll(){
     if [ "$1" ]; then
-        eza -alo --icons --no-quotes --git --git-ignore -I $EZA_IGNORE "$1"
+        eza -alo --icons --no-quotes --git -I $EZA_IGNORE "$1"
     else
-        eza -alo --icons --no-quotes --git --git-ignore -I $EZA_IGNORE
+        eza -alo --icons --no-quotes --git -I $EZA_IGNORE
     fi
 }
 
