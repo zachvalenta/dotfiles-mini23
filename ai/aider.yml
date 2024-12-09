@@ -28,7 +28,14 @@ auto-commits: true
 attribute-author: false
 attribute-committer: false
 
-##########
+###
+# MISC
+###
+
+# warning msg color
+tool-warning-color: #FFA500
+
+##########################################################
 # options:
 
 ## show this help message and exit
@@ -219,9 +226,6 @@ attribute-committer: false
 
 ## Set the color for tool error messages (default: #FF2222)
 #tool-error-color: #FF2222
-
-## Set the color for tool warning messages (default: #FFA500)
-#tool-warning-color: #FFA500
 
 ## Set the color for assistant output (default: #0088ff)
 #assistant-output-color: #0088ff
