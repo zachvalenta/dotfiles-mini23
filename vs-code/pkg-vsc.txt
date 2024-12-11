@@ -1,7 +1,13 @@
-catppuccin.catppuccin-vsc-3.14.0
-catppuccin.catppuccin-vsc-icons-1.13.0
+catppuccin.catppuccin-vsc-3.16.0
+catppuccin.catppuccin-vsc-icons-1.17.0
 extensions.json
 liviuschera.noctis-10.43.3
+ms-python.debugpy-2024.0.0-darwin-arm64
+ms-python.python-2024.2.1
+ms-python.vscode-pylance-2024.3.2
+svelte.svelte-vscode-109.3.2
+svelte.svelte-vscode-109.3.3
 tamasfe.even-better-toml-0.19.2
-vscodevim.vim-1.27.3
+vscodevim.vim-1.28.1
+vscodevim.vim-1.29.0
 yzhang.markdown-all-in-one-3.6.2
