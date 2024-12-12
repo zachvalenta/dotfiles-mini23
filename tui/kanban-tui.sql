@@ -32,7 +32,7 @@ INSERT INTO tasks VALUES(15,'dataclerk','Ready',NULL,'','2024-12-09T11:44:19',NU
 INSERT INTO tasks VALUES(16,'canonical datasets','Ready',NULL,replace('* Iris\n* Sakila','\n',char(10)),'2024-12-09T11:44:45',NULL,NULL,NULL,0,5);
 INSERT INTO tasks VALUES(17,'containerization','Ready',NULL,replace('* read Evans zines\n* Colima / OCI / CRI\n* uv support','\n',char(10)),'2024-12-09T11:45:23',NULL,NULL,NULL,0,5);
 INSERT INTO tasks VALUES(18,'PIM','Ready',NULL,'* Django','2024-12-09T11:47:28',NULL,NULL,NULL,0,5);
-INSERT INTO tasks VALUES(19,'ecommerce for Jack','Ready',NULL,'* Jack','2024-12-09T11:47:44',NULL,NULL,NULL,0,5);
+INSERT INTO tasks VALUES(19,'ecommerce for Jack','Ready',NULL,'* "Flame depot was the site, and it was just Wordpress and woo commerce."','2024-12-09T11:47:44',NULL,NULL,NULL,0,5);
 CREATE TABLE boards (
     board_id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
