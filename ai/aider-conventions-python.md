@@ -11,3 +11,4 @@
 
 * Don't use types unless it's crucial to the problem at hand i.e. we're fixing some code that is currently failing due to an issue that stronger typing would solve.
 * Include docstrings and doctest for all generated functions and methods.
+* Prefer to use single quotes.

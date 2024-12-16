@@ -4,6 +4,9 @@ import sys
 
 from rich import pretty, traceback, print as rprint
 from rich import inspect as ins
+import polars as pl
+
+
 pretty.install()
 traceback.install(show_locals=False)
 
