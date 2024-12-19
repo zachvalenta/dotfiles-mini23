@@ -49,7 +49,6 @@ alias com="vim +/commits $SW_DIR/za/work.md"
 alias qt="clear; mdcat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
 alias gr="\cd $PER_DIR/tracking/24; gds"
 alias gz="vim $PER_DIR/tracking/24/za.dat; \cd $PER_DIR/tracking; ga; cd -"
-alias proj="rg ZVPROJ $ZV_DIR/personal/people; rg ZVPROJ $ZV_DIR/notes"
 function agg(){
     # prefer this approach: partitions arts, one file instead of three
     timer;
@@ -109,6 +108,7 @@ function agg_prev(){
 alias home="cd $HOME; ll"
 alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
+alias xm="\cd $ZV_DIR/projects; l"  # algos compiler-time dataclerk drawing finance jay-valenta mini-erp modeling perrota-ml-from-scratch python-from-the-guts rag stat system vincent-django worklog writing
 
 # DENV
 alias denv="cd $DENV_DIR"
