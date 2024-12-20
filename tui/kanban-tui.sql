@@ -23,7 +23,7 @@ INSERT INTO tasks VALUES(6,'back to cooking','Done',NULL,'','2024-12-07T15:56:24
 INSERT INTO tasks VALUES(7,'exercise schedule','Ready',NULL,'','2024-12-07T15:57:14',NULL,NULL,NULL,0,4);
 INSERT INTO tasks VALUES(8,'start boxing','Ready',NULL,'','2024-12-07T16:00:38',NULL,NULL,NULL,0,4);
 INSERT INTO tasks VALUES(9,'buy/learn k8','Done',NULL,'','2024-12-07T16:00:58','2024-12-07T16:00:59','2024-12-07T16:00:59',NULL,1,2);
-INSERT INTO tasks VALUES(10,'buy/learn v8','Ready',NULL,'learn how to program','2024-12-07T16:01:15',NULL,NULL,NULL,0,2);
+INSERT INTO tasks VALUES(10,'buy/learn v8','Done',NULL,'learn how to program','2024-12-07T16:01:15','2024-12-20T18:43:18','2024-12-20T18:43:20',NULL,1,2);
 INSERT INTO tasks VALUES(11,'RAG for Dror','Ready',NULL,'','2024-12-09T11:40:52',NULL,NULL,NULL,0,3);
 INSERT INTO tasks VALUES(12,'personal site','Doing',NULL,'','2024-12-09T11:42:10','2024-12-09T11:42:12',NULL,NULL,0,5);
 INSERT INTO tasks VALUES(13,'feedback','Ready',NULL,replace('affected projects\n\n* posts on personal site?\n* Ramalho\n* query sandbox\n* algos\n* grokking concurrency','\n',char(10)),'2024-12-09T11:43:31',NULL,NULL,NULL,0,5);
