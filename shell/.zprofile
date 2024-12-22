@@ -185,6 +185,7 @@ alias ge="cd $MAT_DIR/art/songwriting"
 ###
 
 # TASK WARRIOR: tw for urgency, summary for big picture, twt for tree + rn/quan
+alias ds='bash -c "tv | while read -r line; do code -g \"\$line\"; done"'
 alias tw="task"
 alias rn="task pend"
 alias quan="task full"
