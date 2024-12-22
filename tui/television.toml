@@ -1,40 +1,11 @@
-# Ui settings
-# ----------------------------------------------------------------------------
 [ui]
-# Whether to use nerd font icons in the UI
-# This option requires a font patched with Nerd Font in order to properly
-# display glyphs (see https://www.nerdfonts.com/ for more information)
 use_nerd_font_icons = true
-# How much space to allocate for the UI (in percentage of the screen)
-# ┌───────────────────────────────────────┐
-# │                                       │
-# │            Terminal screen            │
-# │    ┌─────────────────────────────┐    │
-# │    │                             │    │
-# │    │                             │    │
-# │    │                             │    │
-# │    │       Television UI         │    │
-# │    │                             │    │
-# │    │                             │    │
-# │    │                             │    │
-# │    │                             │    │
-# │    └─────────────────────────────┘    │
-# │                                       │
-# │                                       │
-# └───────────────────────────────────────┘
-ui_scale = 100
-# Whether to show the top help bar in the UI
+ui_scale = 100  # how much space to allocate for the ui (in percentage of the screen)
 show_help_bar = true
-# Where to place the input bar in the UI (top or bottom)
 input_bar_position = "bottom"
 
-# Previewers settings
-# ----------------------------------------------------------------------------
 [previewers.file]
-# The theme to use for syntax highlighting
-# A list of available themes can be found in the https://github.com/sharkdp/bat
-# repository which uses the same syntax highlighting engine as television
-theme = "Catppuccin-mocha"
+theme = "Catppuccin-mocha"  # list of available themes, uses the same syntax highlighting engine as television https://github.com/sharkdp/bat
 
 # Keybindings
 # ----------------------------------------------------------------------------
@@ -45,8 +16,8 @@ theme = "Catppuccin-mocha"
 # Quit the application
 quit = "esc"
 # Scrolling through entries
-select_next_entry = "down"
-select_prev_entry = "up"
+select_next_entry = "ctrl-n"  # previously 'down'
+select_prev_entry = "ctrl-p"  # previously 'up'
 select_next_page = "pagedown"
 select_prev_page = "pageup"
 # Scrolling the preview pane
