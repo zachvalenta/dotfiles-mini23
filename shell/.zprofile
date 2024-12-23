@@ -134,7 +134,7 @@ alias edi="cd $ZV_DIR/capp/edi/capp-edi"
 alias hb="clear; \cd $ZV_DIR/capp/handbook; t"
 alias pw="cd $ZV_DIR/capp/product-workflow"
 alias tm="clear; \cd $ZV_DIR/capp/task-mgmt; t"
-alias wl="vim $ZV_DIR/capp/worklogs/24/12/12.16.md"
+alias wl="vim $ZV_DIR/capp/worklogs/24/12/12.23.md"
 alias wlr="\cd $ZV_DIR/capp/worklogs; t"
 
 # NEOVIM
@@ -297,6 +297,15 @@ function br {
     fi
 }
 alias b="br"
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 ###
 # 💾  GIT

@@ -33,6 +33,9 @@ INSERT INTO tasks VALUES(16,'canonical datasets','Ready',NULL,replace('* Iris\n*
 INSERT INTO tasks VALUES(17,'containerization','Ready',NULL,replace('* read Evans zines\n* Colima / OCI / CRI\n* uv support','\n',char(10)),'2024-12-09T11:45:23',NULL,NULL,NULL,0,5);
 INSERT INTO tasks VALUES(18,'PIM','Ready',NULL,'* Django','2024-12-09T11:47:28',NULL,NULL,NULL,0,5);
 INSERT INTO tasks VALUES(19,'ecommerce for Jack','Ready',NULL,'* "Flame depot was the site, and it was just Wordpress and woo commerce."','2024-12-09T11:47:44',NULL,NULL,NULL,0,5);
+INSERT INTO tasks VALUES(20,'inputrc for readline','Ready',NULL,'','2024-12-23T15:41:16',NULL,NULL,NULL,0,6);
+INSERT INTO tasks VALUES(21,'yazi','Ready',NULL,'','2024-12-23T15:41:21',NULL,NULL,NULL,0,6);
+INSERT INTO tasks VALUES(22,'gfold','Ready',NULL,'','2024-12-23T15:44:30',NULL,NULL,NULL,0,6);
 CREATE TABLE boards (
     board_id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
@@ -45,6 +48,7 @@ INSERT INTO boards VALUES(2,'keeb',':⌨️:','2024-12-07T15:26:50');
 INSERT INTO boards VALUES(3,'AI',':🧠:','2024-12-07T15:28:03');
 INSERT INTO boards VALUES(4,'health',':👟:','2024-12-07T15:56:01');
 INSERT INTO boards VALUES(5,'projects',':🏗️:','2024-12-09T11:41:57');
+INSERT INTO boards VALUES(6,'quality of life',':💻:','2024-12-23T15:41:06');
 CREATE TABLE columns (
     column_id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
@@ -74,4 +78,8 @@ INSERT INTO columns VALUES(17,'Ready',1,1,5);
 INSERT INTO columns VALUES(18,'Doing',1,2,5);
 INSERT INTO columns VALUES(19,'Done',1,3,5);
 INSERT INTO columns VALUES(20,'Archive',0,4,5);
+INSERT INTO columns VALUES(21,'Ready',1,1,6);
+INSERT INTO columns VALUES(22,'Doing',1,2,6);
+INSERT INTO columns VALUES(23,'Done',1,3,6);
+INSERT INTO columns VALUES(24,'Archive',0,4,6);
 COMMIT;
