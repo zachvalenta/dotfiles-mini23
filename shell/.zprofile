@@ -344,3 +344,4 @@ export PATH="$PATH:/Users/zach/.local/bin"  # pipx
 export PATH="$DENV_DIR/bin:${PATH}"         # my bin
 export PATH=$PATH:$HOME/go/bin              # golang
 # . "$HOME/.cargo/env"
+export LLM_USER_PATH="$HOME/.config/llm"
