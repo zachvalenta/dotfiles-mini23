@@ -1,5 +1,5 @@
-# LLA Configuration File
-# This file controls the behavior and appearance of the lla command
+show_icons = true
+theme = "catppuccin_mocha"
 
 # Default sorting method for file listings
 # Possible values:
@@ -21,21 +21,11 @@ default_sort = "name"
 #   - "table": Structured data display
 default_format = "default"
 
-# Whether to show icons by default
-# When true, file and directory icons will be displayed in all views
-# Default: false
-show_icons = false
-
 # Whether to include directory sizes in file listings
 # When true, directory sizes will be calculated recursively
 # This may impact performance for large directories
 # Default: false
 include_dirs = false
-
-# The theme to use for coloring
-# Place custom themes in ~/.config/lla/themes/
-# Default: "default"
-theme = "default"
 
 # List of enabled plugins
 # Each plugin provides additional functionality
