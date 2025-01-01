@@ -108,7 +108,7 @@ function agg_prev(){
 alias home="cd $HOME; ll"
 alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
-alias xm="\cd $ZV_DIR/projects; l"  # algos compiler-time dataclerk drawing finance jay-valenta mini-erp modeling perrota-ml-from-scratch python-from-the-guts rag stat system vincent-django worklog writing
+alias xm="cd $ZV_DIR/projects"
 
 # DENV
 alias denv="cd $DENV_DIR"
@@ -194,7 +194,7 @@ alias kbtfr="sqlite3 ~/Library/Application\ Support/kanban-tui/database.db .dump
 
 alias bpy="bpython -q"
 alias ipy="ipython"
-alias cd='function cdl(){ cd "$1"; pwd; sl;}; cdl'
+alias cd='function cdl(){ cd "$1"; sl;}; cdl'
 alias cppath='pwd | pbcopy'
 alias ic="imgcat"
 alias hq="harlequin"
@@ -268,6 +268,16 @@ function kai(){
     cwd="$(pwd)";
     touch "$cwd/$fname";
     open "$cwd/$fname";
+}
+
+function jsj(){
+    dname="$1";
+    fpath="$(pwd)/$dname"
+    mkdir "$fpath";
+    cp -r $DOC_DIR/zv/projects/repo-scaffold/* "$fpath";
+    \cd "$fpath";
+    sed -i '' "s/name = \"\"/name = \"$dname\"/" pyproject.toml
+    t;
 }
 
 function label(){
