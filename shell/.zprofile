@@ -206,6 +206,7 @@ alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
 alias nv="nvim"
 alias o="open"
 alias oo="open ."
+alias rm="qing"
 alias upzp="source $HOME/.zprofile"
 alias v="vimv"
 alias vd="visidata"
