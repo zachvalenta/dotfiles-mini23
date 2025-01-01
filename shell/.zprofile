@@ -276,7 +276,8 @@ function jsj(){
     mkdir "$fpath";
     cp -r $DOC_DIR/zv/projects/repo-scaffold/* "$fpath";
     \cd "$fpath";
-    sed -i '' "s/name = \"\"/name = \"$dname\"/" pyproject.toml
+    escaped_dname=$(printf '%s\n' "$dname" | sed 's/[&/\]/\\&/g')
+    sed -i '' "s|name = \"\"|name = \"$escaped_dname\"|" pyproject.toml
     t;
 }
 
