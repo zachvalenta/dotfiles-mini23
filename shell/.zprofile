@@ -109,6 +109,7 @@ alias home="cd $HOME; ll"
 alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
 alias xm="cd $ZV_DIR/projects"
+alias jc="\cd $DOC_DIR/zv/projects/jian-cha; make run"
 
 # DENV
 alias denv="cd $DENV_DIR"
