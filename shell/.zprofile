@@ -241,9 +241,9 @@ function l(){
 # perms / user / timestamp + show gitignore
 function ll(){
     if [ "$1" ]; then
-        eza -alo --icons --no-quotes --git -I $EZA_IGNORE "$1"
+        eza -alo --icons --no-quotes --git --git-ignore -I $EZA_IGNORE "$1"
     else
-        eza -alo --icons --no-quotes --git -I $EZA_IGNORE
+        eza -alo --icons --no-quotes --git --git-ignore -I $EZA_IGNORE
     fi
 }
 
