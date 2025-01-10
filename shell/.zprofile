@@ -26,7 +26,7 @@ KB_NEXT="TODO NEXT"
 
 set -o vi
 export EDITOR=vim
-EZA_IGNORE=".DS_Store|.git|.localized|*.code-workspace"
+EZA_IGNORE=".DS_Store|.git|.localized|.venv|*.code-workspace"
 export HOMEBREW_NO_AUTO_UPDATE=1
 export MANPAGER=bat
 export PYTHONDONTWRITEBYTECODE=1
@@ -245,6 +245,10 @@ function ll(){
     else
         eza -alo --icons --no-quotes --git --git-ignore -I $EZA_IGNORE
     fi
+}
+
+function tt(){
+    eza -al --icons --tree --no-quotes --no-user --no-time -I $EZA_IGNORE
 }
 
 function t(){
