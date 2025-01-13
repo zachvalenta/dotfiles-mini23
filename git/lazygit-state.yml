@@ -1,5 +1,6 @@
 lastupdatecheck: 0
 recentrepos:
+    - /Users/zach/Documents/zv/capp/brand-enablement
     - /Users/zach/Documents/zv/notes/domains
     - /Users/zach/Documents/zv/notes/sw
     - /Users/zach/Documents/zv/materials/sw/lang/html-css/myblog
@@ -10,7 +11,6 @@ recentrepos:
     - /Users/zach/Documents/zv/capp/task-mgmt
     - /Users/zach/Documents/zv/capp/handbook
     - /Users/zach/Documents/zv/capp/edi/capp-edi
-    - /Users/zach/Documents/zv/capp/brand-enablement
 startuppopupversion: 5
 lastversion: 0.44.1
 customcommandshistory: []

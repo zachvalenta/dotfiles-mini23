@@ -1,13 +1,15 @@
 import json
-import inspect
+from pathlib import Path
+import os
 import sys
 
-import polars as pl
+from loguru import logger
 from rich import pretty, traceback, print as rprint
 from rich import inspect as ins
 
 pretty.install()
 traceback.install(show_locals=False)
+logger.info(f"loading base startup @ {Path(__file__).resolve()}")
 
 ###
 # EXTERNAL
@@ -55,3 +57,17 @@ def jk():
         if module not in stdlib_modules and not module.startswith('_')
     )
     rprint(user_defined_modules)
+
+###
+# REPO-SPECIFIC STARTUP
+###
+
+project_startup = Path('./repl/startup.py')
+if project_startup.exists():
+    logger.info(f"loading proj startup @ {Path.cwd()}/{project_startup}")
+    base_startup = os.environ.get('PYTHONSTARTUP')
+    os.environ['PYTHONSTARTUP'] = ''
+    from runpy import run_path
+    run_path(str(project_startup))
+    if base_startup:
+        os.environ['PYTHONSTARTUP'] = base_startup

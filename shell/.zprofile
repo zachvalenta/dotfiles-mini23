@@ -128,7 +128,7 @@ alias logs="cd $PER_DIR/logs"
 alias ren="cd $PER_DIR/people"
 
 # 🟥 CAPP
-alias brand="cd $ZV_DIR/capp/brand-enablement"
+alias brand="\cd $ZV_DIR/capp/brand-enablement; tt"
 alias cap="cd $ZV_DIR/capp"
 alias capd="cd $ZV_DIR/capp/data; t"
 alias crud="\cd $ZV_DIR/capp/crud/capp-crud; t"
@@ -136,7 +136,7 @@ alias edi="cd $ZV_DIR/capp/edi/capp-edi"
 alias hb="clear; \cd $ZV_DIR/capp/handbook; t"
 alias pw="cd $ZV_DIR/capp/product-workflow"
 alias tm="clear; \cd $ZV_DIR/capp/task-mgmt; t"
-alias wl="vim $ZV_DIR/capp/worklogs/24/12/12.23.md"
+alias wl="vim $ZV_DIR/capp/worklogs/25/01/01.13.md"
 alias wlr="\cd $ZV_DIR/capp/worklogs; t"
 
 # NEOVIM
@@ -194,6 +194,7 @@ alias quan="task full"
 alias twfr="sqlite3 ~/.task/taskchampion.sqlite3 .dump > $DOT_DIR/task-warrior/db.sql"
 alias kbtfr="sqlite3 ~/Library/Application\ Support/kanban-tui/database.db .dump > $DOT_DIR/tui/kanban-tui.sql"
 
+alias bk="vim $PER_DIR/people/backlog.md"
 alias bpy="bpython -q"
 alias ipy="ipython"
 alias cd='function cdl(){ cd "$1"; sl;}; cdl'
@@ -280,7 +281,7 @@ function jsj(){
     dname="$1";
     fpath="$(pwd)/$dname"
     mkdir "$fpath";
-    cp -r $DOC_DIR/zv/projects/repo-scaffold/* "$fpath";
+    cp -r $DOC_DIR/zv/projects/meta/repo-scaffold/* "$fpath";
     \cd "$fpath";
     escaped_dname=$(printf '%s\n' "$dname" | sed 's/[&/\]/\\&/g')
     sed -i '' "s|name = \"\"|name = \"$escaped_dname\"|" pyproject.toml
