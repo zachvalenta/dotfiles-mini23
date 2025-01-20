@@ -31,6 +31,12 @@ def dump(arg):
 # STARTUP ITSELF
 ###
 
+def reload():
+    ipy = get_ipython()
+    if not ipy.find_magic('autoreload'):
+        ipy.run_line_magic('load_ext', 'autoreload')
+    ipy.run_line_magic('autoreload', '2')
+
 def qiu():
     """view startup module help"""
     rprint(help(__name__))
