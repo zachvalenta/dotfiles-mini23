@@ -30,6 +30,17 @@
     "update.mode": "none",
     "vim.debug.silent": true,
     "vim.useSystemClipboard": true,
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "j"],
+            "commands": ["cursorPageDown", "center-editor-window"]
+        },
+        {
+            "before": ["<leader>", "k"],
+            "commands": ["cursorPageUp", "center-editor-window"]
+        }
+    ],
     "window.restoreWindows": "one",
     "workbench.colorCustomizations": {
         "activityBar.activeBorder": "#8A2BE2"

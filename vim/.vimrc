@@ -32,3 +32,8 @@ function! OpenURLUnderCursor()
   endif
 endfunction
 nnoremap gx :call OpenURLUnderCursor()<CR>
+
+" more ergo keybindings for paging
+let mapleader=" "
+nnoremap <leader>j <C-d>zz
+nnoremap <leader>k <C-u>zz
