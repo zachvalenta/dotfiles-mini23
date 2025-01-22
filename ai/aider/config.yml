@@ -14,8 +14,9 @@
 #read: xxx
 ## Specify multiple values like this:
 read:
- - /Users/zach/Documents/denv/dotfiles/ai/aider-conventions-python.md
- - /Users/zach/Documents/denv/dotfiles/ai/aider-conventions-general.md
+ - /Users/zach/Documents/denv/dotfiles/ai/aider/conventions/general.md
+ - /Users/zach/Documents/denv/dotfiles/ai/aider/conventions/style.md
+ - /Users/zach/Documents/denv/dotfiles/ai/aider/conventions/python.md
 
 ###
 # STOP AIDER FROM GETTING INVOLVED IN GIT WORKFLOW
