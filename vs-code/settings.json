@@ -3,6 +3,7 @@
     "editor.accessibilitySupport": "off",
     "editor.detectIndentation": false,
     "editor.fontSize": 11,
+    "editor.fontFamily": "BlexMono Nerd Font",
     "editor.lineNumbers": "relative",
     "editor.wordWrap": "on",
     "extensions.ignoreRecommendations": true,
