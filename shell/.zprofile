@@ -25,7 +25,7 @@ KB_NEXT="TODO NEXT"
 ###
 
 set -o vi
-export EDITOR=vim
+export EDITOR=nvim
 EZA_IGNORE=".DS_Store|.git|.localized|.venv|*.code-workspace|.ruff_cache"
 export HOMEBREW_NO_AUTO_UPDATE=1
 export MANPAGER=bat
@@ -140,6 +140,7 @@ alias crud="\cd $ZV_DIR/capp/src/crud; tt"
 # alias vc="cd $HOME/.config/nvim/lua/zv"
 # alias plug="cd $HOME/.local/share/nvim/plugged"
 # alias ws="cd $TELESCOPE_WORKSPACE_DIR; nv"
+alias nv="nvim"
 
 # PKGS
 alias brewfr="brew ls --versions > $DENV_DIR/logs/brew/brew-pkgs.txt"
