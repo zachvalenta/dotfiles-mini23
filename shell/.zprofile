@@ -26,7 +26,7 @@ KB_NEXT="TODO NEXT"
 
 set -o vi
 export EDITOR=vim
-EZA_IGNORE=".DS_Store|.git|.localized|.venv|*.code-workspace"
+EZA_IGNORE=".DS_Store|.git|.localized|.venv|*.code-workspace|.ruff_cache"
 export HOMEBREW_NO_AUTO_UPDATE=1
 export MANPAGER=bat
 export PYTHONDONTWRITEBYTECODE=1
@@ -128,16 +128,13 @@ alias logs="cd $PER_DIR/logs"
 alias ren="cd $PER_DIR/people"
 
 # 🟥 CAPP
-alias brand="\cd $ZV_DIR/capp/brand-enablement; tt"
-alias cap="cd $ZV_DIR/capp"
-alias capd="cd $ZV_DIR/capp/data; t"
-alias crud="\cd $ZV_DIR/capp/crud/capp-crud; t"
-alias edi="cd $ZV_DIR/capp/edi/capp-edi"
-alias hb="clear; \cd $ZV_DIR/capp/handbook; t"
-alias pw="cd $ZV_DIR/capp/product-workflow"
-alias tm="clear; \cd $ZV_DIR/capp/task-mgmt; t"
-alias wl="vim $ZV_DIR/capp/worklogs/25/01/01.13.md"
-alias wlr="\cd $ZV_DIR/capp/worklogs; t"
+alias cap="cd $ZV_DIR/capp; t 2"
+alias wl="vim $ZV_DIR/capp/notes/worklogs/25/01/01.27.md"
+alias wlr="\cd $ZV_DIR/capp/notes/worklogs; t"
+alias hb="clear; \cd $ZV_DIR/capp/notes/handbook; t"
+alias tm="clear; \cd $ZV_DIR/capp/notes/task-mgmt; t"
+alias gj="\cd $ZV_DIR/capp/src/cleanup; tt"
+alias crud="\cd $ZV_DIR/capp/src/crud; tt"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
