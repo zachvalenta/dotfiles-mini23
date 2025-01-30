@@ -100,6 +100,26 @@ function agg_prev(){
     label "red" "TOTALS"
     rg -IN "^(guitar|piano|dance|skate)" $TRACK_DIR/"$YEAR"/??.dat | awk "NF" | awk '{a[$1]+=$2;}END{for(i in a)print i", "a[i]/4;}' | sort | termgraph --color green
 }
+
+###
+# 🟥 CAPP
+###
+
+CAPP_DIR="$DOC_DIR/zv/capp"
+alias cap="\cd $CAPP_DIR; t 2"
+alias pdr="vd $CAPP_DIR/src/cleanup/data/pdr.csv"
+
+# notes
+alias wl="vim $CAPP_DIR/notes/worklogs/25/01/01.27.md"
+alias wlr="clear; \cd $CAPP_DIR/notes/worklogs; lla -t 25; gl"
+alias hb="clear; \cd $ZV_DIR/capp/notes/handbook; t"
+alias tm="clear; \cd $ZV_DIR/capp/notes/task-mgmt; t"
+
+# src
+alias gj="\cd $CAPP_DIR/src/cleanup; tt"
+alias crud="cd $CAPP_DIR/src/crud; tt"
+alias jg="\cd $CAPP_DIR/src/pricing; tt"
+
 ###
 # 🚁 NAVIGATION
 ###
@@ -118,23 +138,14 @@ alias bin="cd $DENV_DIR/bin"
 alias dot="\cd $DOT_DIR; t"
 
 # NOTES
-alias dom="clear; \cd $DOMAINS_DIR; jbdom"
-alias sw="clear; \cd $SW_DIR; jbsw"
+alias dom="clear; \cd $DOMAINS_DIR; jb"
+alias sw="clear; \cd $SW_DIR; jb"
 alias shu="cd $ZV_DIR/notes/bookcase"
 
 # PERSONAL
 alias per="cd $PER_DIR"
 alias logs="cd $PER_DIR/logs"
 alias ren="cd $PER_DIR/people"
-
-# 🟥 CAPP
-alias cap="cd $ZV_DIR/capp; t 2"
-alias wl="vim $ZV_DIR/capp/notes/worklogs/25/01/01.27.md"
-alias wlr="\cd $ZV_DIR/capp/notes/worklogs; t"
-alias hb="clear; \cd $ZV_DIR/capp/notes/handbook; t"
-alias tm="clear; \cd $ZV_DIR/capp/notes/task-mgmt; t"
-alias gj="\cd $ZV_DIR/capp/src/cleanup; tt"
-alias crud="\cd $ZV_DIR/capp/src/crud; tt"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
