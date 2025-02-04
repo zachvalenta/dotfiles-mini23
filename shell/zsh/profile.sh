@@ -110,7 +110,7 @@ alias cap="\cd $CAPP_DIR; t 2"
 alias pdr="vd $CAPP_DIR/src/cleanup/data/pdr.csv"
 
 # notes
-alias wl="vim $CAPP_DIR/notes/worklogs/25/01/01.27.md"
+alias wl="vim $CAPP_DIR/notes/worklogs/25/02/02.03.md"
 alias wlr="clear; \cd $CAPP_DIR/notes/worklogs; lla -t 25; gl"
 alias hb="clear; \cd $ZV_DIR/capp/notes/handbook; t"
 alias tm="clear; \cd $ZV_DIR/capp/notes/task-mgmt; t"
