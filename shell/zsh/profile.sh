@@ -116,7 +116,8 @@ alias hb="clear; \cd $ZV_DIR/capp/notes/handbook; t"
 alias tm="clear; \cd $ZV_DIR/capp/notes/task-mgmt; t"
 
 # src
-alias dl="\cd $CAPP_DIR/src/datalab; tt"
+alias dl="clear; \cd $CAPP_DIR/src/datalab; tt"
+alias qiu="\cd ~/Desktop/pricing_requests; tt"
 alias gj="\cd $CAPP_DIR/src/cleanup; tt"
 alias crud="cd $CAPP_DIR/src/crud; tt"
 alias jg="\cd $CAPP_DIR/src/pricing; tt"

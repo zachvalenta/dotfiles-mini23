@@ -5,9 +5,10 @@ liviuschera.noctis-10.43.3
 ms-python.debugpy-2024.0.0-darwin-arm64
 ms-python.python-2024.2.1
 ms-python.vscode-pylance-2024.3.2
-rust-lang.rust-analyzer-0.3.2228-darwin-arm64
-svelte.svelte-vscode-109.3.3
-svelte.svelte-vscode-109.4.0
+rust-lang.rust-analyzer-0.3.2284-darwin-arm64
+rust-lang.rust-analyzer-0.3.2291-darwin-arm64
+svelte.svelte-vscode-109.5.2
 tamasfe.even-better-toml-0.19.2
+terrastruct.d2-0.8.8
 vscodevim.vim-1.29.0
 yzhang.markdown-all-in-one-3.6.2
