@@ -2,7 +2,7 @@
     "editor.acceptSuggestionOnEnter": "off",
     "editor.accessibilitySupport": "off",
     "editor.detectIndentation": false,
-    "editor.fontSize": 11,
+    "editor.fontSize": 9.8,
     "editor.fontFamily": "FiraCode Nerd Font",
     "editor.lineNumbers": "relative",
     "editor.wordWrap": "on",
@@ -43,12 +43,12 @@
         }
     ],
     "window.restoreWindows": "one",
+    "window.zoomLevel": 1,
     "workbench.colorCustomizations": {
         "activityBar.activeBorder": "#8A2BE2"
     },
     "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.iconTheme": "catppuccin-mocha",
     "workbench.editor.openPositioning": "last",
-    "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": 1
+    "workbench.startupEditor": "newUntitledFile"
 }
