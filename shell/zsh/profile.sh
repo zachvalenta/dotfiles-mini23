@@ -121,6 +121,7 @@ alias qiu="\cd ~/Desktop/pricing_requests; tt"
 alias gj="\cd $CAPP_DIR/src/cleanup; tt"
 alias crud="cd $CAPP_DIR/src/crud; tt"
 alias jg="\cd $CAPP_DIR/src/pricing; tt"
+alias jf="\cd $CAPP_DIR/src/pricing_requests; tt"
 
 ###
 # 🚁 NAVIGATION
