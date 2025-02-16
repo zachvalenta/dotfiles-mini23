@@ -199,7 +199,6 @@ alias ge="cd $MAT_DIR/art/songwriting"
 ###
 
 # TASK WARRIOR: tw for urgency, summary for big picture, twt for tree + rn/quan
-alias ds='bash -c "tv text | while read -r line; do code -g \"\$line\"; done"'
 alias tw="task"
 alias rn="task pend"
 alias quan="task full"
@@ -228,6 +227,7 @@ alias v="vimv"
 alias vd="visidata"
 alias vsc="open -a 'Visual Studio Code'"
 alias vsconf="cd $HOME/Library/Application\ Support/Code/User"
+alias wy='bash -c "tv text | while read -r line; do code -g \"\$line\"; done"'
 alias ytd='yt-dlp "$1"'
 alias ytdv='yt-dlp --format mp4 "$1"'
 alias zp="vsc $HOME/.zprofile"
