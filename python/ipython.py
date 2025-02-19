@@ -10,6 +10,9 @@ c.InteractiveShell.warn_venv = True
 
 # STYLE
 c.TerminalInteractiveShell.highlighting_style = "catppuccin-mocha"
+# TODO trying to get catppuccin for docstrings https://github.com/catppuccin/python#ipython
+# from pygments.styles import get_style_by_name
+# c.TerminalInteractiveShell.highlighting_style = get_style_by_name("catppuccin-mocha")
 c.TerminalInteractiveShell.term_title_format = '🐍 IPython @ {cwd}'
 c.TerminalInteractiveShell.term_title = True
 c.TerminalInteractiveShell.true_color = True
