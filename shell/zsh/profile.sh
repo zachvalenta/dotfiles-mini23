@@ -25,7 +25,7 @@ KB_NEXT="TODO NEXT"
 ###
 
 set -o vi
-export EDITOR=nvim
+export EDITOR=vim
 EZA_IGNORE=".DS_Store|.git|.localized|.venv|*.code-workspace|.ruff_cache"
 export HOMEBREW_NO_AUTO_UPDATE=1
 export MANPAGER=bat
@@ -217,7 +217,6 @@ alias lg="lazygit"
 alias lh="l | head"
 alias m="make"
 alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
-alias nv="nvim"
 alias o="open"
 alias oo="open ."
 alias rm="qing"
