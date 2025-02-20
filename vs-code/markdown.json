@@ -10,8 +10,8 @@
 		"prefix": "mdc",
 		"description": "code block",
 		"body": [
-			"```python",
-			"$1",
+			"```$1",
+			"$2",
 			"```"
 		]
 	},
