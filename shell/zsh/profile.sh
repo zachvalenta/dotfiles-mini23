@@ -106,22 +106,22 @@ function agg_prev(){
 ###
 
 CAPP_DIR="$DOC_DIR/zv/capp"
-alias cap="\cd $CAPP_DIR; t 2"
+alias cap="\cd $CAPP_DIR; t 3"
 alias pdr="vd $CAPP_DIR/src/cleanup/data/pdr.csv"
 
-# notes
-alias wl="vim $CAPP_DIR/notes/worklogs/25/02/02.03.md"
+# NOTES
+alias wl="vim $CAPP_DIR/notes/worklogs/25/02/02.24.md"
 alias wlr="clear; \cd $CAPP_DIR/notes/worklogs; lla -t 25; gl"
 alias hb="clear; \cd $ZV_DIR/capp/notes/handbook; t"
 alias tm="clear; \cd $ZV_DIR/capp/notes/task-mgmt; t"
 
-# src
-alias dl="clear; \cd $CAPP_DIR/src/datalab; tt"
-alias qiu="\cd ~/Desktop/pricing_requests; tt"
-alias gj="\cd $CAPP_DIR/src/cleanup; tt"
-alias crud="cd $CAPP_DIR/src/crud; tt"
-alias jg="\cd $CAPP_DIR/src/pricing; tt"
-alias jf="\cd $CAPP_DIR/src/pricing_requests; tt"
+# SRC
+alias lab="clear; \cd $CAPP_DIR/src/rn/datalab; tt"
+alias pu="\cd $CAPP_DIR/src/rn/price-updates; t 2"
+alias dl="clear; \cd $CAPP_DIR/src/backlog/dataload; tt"
+alias jg="\cd $CAPP_DIR/src/backlog/pricing; tt"
+alias fuzz="\cd $CAPP_DIR/src/backlog/fuzzy-match; tt"
+alias rfq="\cd $CAPP_DIR/src/backlog/rfq; tt"
 
 ###
 # 🚁 NAVIGATION
