@@ -118,7 +118,7 @@ alias tm="clear; \cd $ZV_DIR/capp/notes/task-mgmt; t"
 # SRC
 alias lab="clear; \cd $CAPP_DIR/src/rn/datalab; tt"
 alias pu="\cd $CAPP_DIR/src/rn/price-updates; t 2"
-alias dg="\cd $CAPP_DIR/src/rn/price-updates/brands/dongan; t 2"
+alias dg="\cd $CAPP_DIR/src/rn/price-updates/brands/dongan; t"
 alias dl="clear; \cd $CAPP_DIR/src/backlog/dataload; tt"
 alias jg="\cd $CAPP_DIR/src/backlog/pricing; tt"
 alias fuzz="\cd $CAPP_DIR/src/backlog/fuzzy-match; tt"
