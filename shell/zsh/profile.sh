@@ -108,14 +108,9 @@ function agg_prev(){
 CAPP_DIR="$DOC_DIR/zv/capp"
 alias cap="\cd $CAPP_DIR; t 3"
 alias pdr="vd $CAPP_DIR/src/cleanup/data/pdr.csv"
-
-# NOTES
 alias wl="vim $CAPP_DIR/notes/worklogs/25/02/02.24.md"
 alias wlr="clear; \cd $CAPP_DIR/notes/worklogs; lla -t 25; gl"
 alias hb="clear; \cd $ZV_DIR/capp/notes/handbook; t"
-alias tm="clear; \cd $ZV_DIR/capp/notes/task-mgmt; t"
-
-# SRC
 alias lab="clear; \cd $CAPP_DIR/src/rn/datalab; tt"
 alias pu="\cd $CAPP_DIR/src/rn/price-updates; t 2"
 alias dg="\cd $CAPP_DIR/src/rn/price-updates/brands/dongan; t"
@@ -176,7 +171,7 @@ alias ms="cd $MAT_DIR/sw/za/profile"
 alias site="cd $MAT_DIR/sw/lang/html-css"
 alias snip="cd /Users/zach/Library/Application\ Support/Code/User"
 alias sk8="\cd $MAT_DIR/art/skate; t 2"
-alias ur="cd $MAT_DIR/sw/svc/ur-repo; t"
+alias ur="cd $ZV_DIR/projects/meta/ur-repo; t"
 alias yin="cd $ZV_DIR/AV/yin"
 
 ###

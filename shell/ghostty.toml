@@ -11,6 +11,7 @@ background-opacity = 0.9
 # window-padding-y=10
 window-decoration = true
 window-save-state = always
+split-divider-color = #666666
 
 # SPLITS
 # adw-toolbar-style = raised
