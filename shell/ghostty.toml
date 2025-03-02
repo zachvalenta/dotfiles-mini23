@@ -15,6 +15,12 @@ split-divider-color = #666666
 
 # SPLITS
 # adw-toolbar-style = raised
-keybind = cmd+l=new_split:right
-keybind = cmd+j=new_split:down
+keybind = alt+l=new_split:right
+keybind = alt+h=new_split:left
+keybind = alt+j=new_split:down
+keybind = alt+k=new_split:up
 keybind = cmd+w=close_surface
+keybind = cmd+h=goto_split:left
+keybind = cmd+l=goto_split:right
+keybind = cmd+j=goto_split:bottom
+keybind = cmd+k=goto_split:top
