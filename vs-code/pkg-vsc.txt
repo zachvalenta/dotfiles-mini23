@@ -1,6 +1,5 @@
-catppuccin.catppuccin-vsc-3.16.0
 catppuccin.catppuccin-vsc-3.16.1
-catppuccin.catppuccin-vsc-icons-1.17.0
+catppuccin.catppuccin-vsc-icons-1.18.0
 extensions.json
 liviuschera.noctis-10.43.3
 ms-python.debugpy-2024.0.0-darwin-arm64
@@ -12,9 +11,7 @@ ms-toolsai.jupyter-keymap-1.1.2
 ms-toolsai.jupyter-renderers-1.0.19
 ms-toolsai.vscode-jupyter-cell-tags-0.1.8
 ms-toolsai.vscode-jupyter-slideshow-0.1.5
-rust-lang.rust-analyzer-0.3.2284-darwin-arm64
-rust-lang.rust-analyzer-0.3.2291-darwin-arm64
-rust-lang.rust-analyzer-0.3.2299-darwin-arm64
+rust-lang.rust-analyzer-0.3.2319-darwin-arm64
 svelte.svelte-vscode-109.5.2
 tamasfe.even-better-toml-0.19.2
 terrastruct.d2-0.8.8
