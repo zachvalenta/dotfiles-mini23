@@ -21,6 +21,7 @@
     },
     "markdown.extension.italic.indicator": "_",
     "notebook.markup.fontFamily": "JetBrainsMono Nerd Font",
+    "notebook.inlineValues": true,
     "outline.showModules": false,
     "outline.showVariables": false,
     "search.exclude": {
