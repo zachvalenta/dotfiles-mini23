@@ -20,6 +20,7 @@
         }
     },
     "markdown.extension.italic.indicator": "_",
+    "notebook.markup.fontFamily": "JetBrainsMono Nerd Font",
     "outline.showModules": false,
     "outline.showVariables": false,
     "search.exclude": {
