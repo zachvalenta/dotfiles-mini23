@@ -107,13 +107,13 @@ function agg_prev(){
 
 CAPP_DIR="$DOC_DIR/zv/capp"
 alias cap="\cd $CAPP_DIR; t 3"
+alias gg="oo /Users/zach/Library/CloudStorage/GoogleDrive-zvalenta@cappusa.com/Shared\ drives"
 alias pdr="vd $CAPP_DIR/src/cleanup/data/pdr.csv"
-alias wl="vim $CAPP_DIR/notes/worklogs/25/02/03.03.md"
+alias wl="vim $CAPP_DIR/notes/worklogs/25/03/03.03.md"
 alias wlr="clear; \cd $CAPP_DIR/notes/worklogs; lla -t 25; gl"
 alias hb="clear; \cd $ZV_DIR/capp/notes/handbook; t"
 alias lab="clear; \cd $CAPP_DIR/src/rn/datalab; eza -al --icons --tree --no-quotes --no-user --no-time -I 'data|.git'"
-# vd $CAPP_DIR/src/rn/datalab/data/products.parquet attribute_updates.csv dupes.csv new_products.csv non_matches.csv possible_matches.csv price_updates.csv prospective_stock_items.csv to_discontinue_attribute.csv to_discontinue_pricing.csv
-alias dg="\cd $CAPP_DIR/src/rn/price-updates/brands/dongan; t pfp"
+alias pu="\cd $CAPP_DIR/src/rn/price-updates/brands; t 3"
 alias dl="clear; \cd $CAPP_DIR/src/backlog/dataload; tt"
 alias fuzz="\cd $CAPP_DIR/src/backlog/fuzzy-match; tt"
 alias pfp="\cd $CAPP_DIR/src/backlog/pfp; tt"
