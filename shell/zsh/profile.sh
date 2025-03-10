@@ -108,7 +108,7 @@ function agg_prev(){
 CAPP_DIR="$DOC_DIR/zv/capp"
 alias cap="\cd $CAPP_DIR; t 3"
 alias gg="oo /Users/zach/Library/CloudStorage/GoogleDrive-zvalenta@cappusa.com/Shared\ drives"
-alias pdr="vd $CAPP_DIR/src/cleanup/data/pdr.csv"
+alias pdr="vd $CAPP_DIR/src/rn/datalab/data/pdr.csv"
 alias wl="vim $CAPP_DIR/notes/worklogs/25/03/03.03.md"
 alias wlr="clear; \cd $CAPP_DIR/notes/worklogs; lla -t 25; gl"
 alias hb="clear; \cd $ZV_DIR/capp/notes/handbook; t"
