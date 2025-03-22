@@ -109,17 +109,22 @@ CAPP_DIR="$DOC_DIR/zv/capp"
 alias cap="\cd $CAPP_DIR; t 3"
 alias gg="oo /Users/zach/Library/CloudStorage/GoogleDrive-zvalenta@cappusa.com/Shared\ drives"
 alias pdr="vd $CAPP_DIR/src/rn/datalab/data/pdr.csv"
-alias wl="vim $CAPP_DIR/notes/worklogs/25/03/03.17.md"
-alias wlr="clear; \cd $CAPP_DIR/notes/worklogs; lla -t 25; gl"
-alias hb="clear; \cd $ZV_DIR/capp/notes/handbook; t"
+
+# SRC - RN
 alias kern="clear; \cd $CAPP_DIR/src/rn/kern; eza -al --icons --tree --no-quotes --no-user --no-time -I '.venv|data|.git|.pytest_cache'"
 alias lab="clear; \cd $CAPP_DIR/src/rn/datalab; eza -al --icons --tree --no-quotes --no-user --no-time -I 'data|.git|.pytest_cache'"
 alias pu="\cd $CAPP_DIR/src/rn/price-updates/brands; t 2"
+
+# SRC - FIX
 alias dl="clear; \cd $CAPP_DIR/src/backlog/dataload; tt"
 alias fuzz="\cd $CAPP_DIR/src/backlog/fuzzy-match; tt"
 alias pfp="\cd $CAPP_DIR/src/backlog/pfp; tt"
 alias jg="\cd $CAPP_DIR/src/backlog/pricing; tt"
 alias rfq="\cd $CAPP_DIR/src/backlog/rfq; tt"
+
+# worklogs
+alias wl="vim $CAPP_DIR/worklogs/25/03/03.17.md"
+alias wlr="clear; \cd $CAPP_DIR/worklogs; lla -t 25; gl"
 
 ###
 # 🚁 NAVIGATION
