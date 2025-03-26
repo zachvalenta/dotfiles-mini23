@@ -123,7 +123,7 @@ alias jg="\cd $CAPP_DIR/src/backlog/pricing; tt"
 alias rfq="\cd $CAPP_DIR/src/backlog/rfq; tt"
 
 # worklogs
-alias wl="vim $CAPP_DIR/worklogs/25/03/03.17.md"
+alias wl="vim $CAPP_DIR/worklogs/25/03/03.31.md"
 alias wlr="clear; \cd $CAPP_DIR/worklogs; lla -t 25; gl"
 
 ###
