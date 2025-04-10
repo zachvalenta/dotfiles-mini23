@@ -114,16 +114,18 @@ alias pdr="vd $CAPP_DIR/src/rn/datalab/data/pdr.csv"
 alias kern="clear; \cd $CAPP_DIR/src/rn/kern; eza -al --icons --tree --no-quotes --no-user --no-time -I '.venv|data|.git|.pytest_cache'"
 alias lab="clear; \cd $CAPP_DIR/src/rn/datalab; eza -al --icons --tree --no-quotes --no-user --no-time -I 'data|.git|.pytest_cache'"
 alias pu="\cd $CAPP_DIR/src/rn/price-updates/brands; t 2"
+alias pu="\cd $CAPP_DIR/src/rn/price-updates/brands; t 2"
+alias rfq="\cd $CAPP_DIR/src/rn/rfq-notebook; tt"
+alias yy="\cd $CAPP_DIR/src/rn/quotes; t 2"
 
 # SRC - FIX
 alias dl="clear; \cd $CAPP_DIR/src/backlog/dataload; tt"
 alias fuzz="\cd $CAPP_DIR/src/backlog/fuzzy-match; tt"
 alias pfp="\cd $CAPP_DIR/src/backlog/pfp; tt"
 alias jg="\cd $CAPP_DIR/src/backlog/pricing; tt"
-alias rfq="\cd $CAPP_DIR/src/backlog/rfq; tt"
 
 # worklogs
-alias wl="vim $CAPP_DIR/worklogs/25/03/03.31.md"
+alias wl="vim $CAPP_DIR/worklogs/25/04/04.07.md"
 alias wlr="clear; \cd $CAPP_DIR/worklogs; lla -t 25; gl"
 
 ###
@@ -135,7 +137,7 @@ alias f="z"
 alias home="cd $HOME; ll"
 alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
-alias xm="cd $ZV_DIR/projects; t 2"
+alias xm="cd $ZV_DIR/projects; t 2; t 2 design"
 alias jc="\cd $DOC_DIR/zv/projects/meta/jian-cha; make run"
 
 # DENV
@@ -146,6 +148,7 @@ alias dot="\cd $DOT_DIR; t"
 # NOTES
 alias dom="clear; \cd $DOMAINS_DIR; jb"
 alias sw="clear; \cd $SW_DIR; jb"
+alias swt="clear; \cd $SW_DIR; eza -al --icons --tree --no-quotes --no-user --no-time comp-sci design lang/python"
 alias shu="cd $ZV_DIR/notes/bookcase"
 
 # PERSONAL
