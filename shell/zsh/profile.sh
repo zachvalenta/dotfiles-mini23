@@ -107,15 +107,16 @@ function agg_prev(){
 
 CAPP_DIR="$DOC_DIR/zv/capp"
 alias cap="\cd $CAPP_DIR; t 3"
-alias gg="oo /Users/zach/Library/CloudStorage/GoogleDrive-zvalenta@cappusa.com/Shared\ drives"
+alias gg="cd /Users/zach/Library/CloudStorage/GoogleDrive-zvalenta@cappusa.com/Shared\ drives; oo; cd -"
 alias pdr="vd $CAPP_DIR/src/rn/datalab/data/pdr.csv"
 
 # SRC - RN
-alias kern="clear; \cd $CAPP_DIR/src/rn/kern; eza -al --icons --tree --no-quotes --no-user --no-time -I '.venv|data|.git|.pytest_cache'"
+# alias kern="clear; \cd $CAPP_DIR/src/rn/kern; eza -al --icons --tree --no-quotes --no-user --no-time -I '.venv|data|.git|.pytest_cache'"
+alias kern="clear; \cd $CAPP_DIR/src/rn/kern; t 3"
 alias lab="clear; \cd $CAPP_DIR/src/rn/datalab; eza -al --icons --tree --no-quotes --no-user --no-time -I 'data|.git|.pytest_cache'"
 alias pu="\cd $CAPP_DIR/src/rn/price-updates/brands; t 2"
 alias pu="\cd $CAPP_DIR/src/rn/price-updates/brands; t 2"
-alias rfq="\cd $CAPP_DIR/src/rn/rfq-notebook; tt"
+alias rfq="clear; \cd $CAPP_DIR/src/rn/rfq-notebook; t 1 docs; t src"
 alias yy="\cd $CAPP_DIR/src/rn/quotes; t 2"
 
 # SRC - FIX
