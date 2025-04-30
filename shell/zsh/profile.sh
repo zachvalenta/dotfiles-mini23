@@ -40,7 +40,6 @@ export ZELLIJ_CONFIG_DIR="~/.config/zellij"
 # 🏔 WORKFLOW
 ###
 
-alias sch="clear; mdcat $PER_DIR/people/schedule.md"
 alias plan="clear; rg -UNI '🌱 SPRING' -A 9 $PER_DIR/logs/24.md | mdcat; rg -UNI 'BIG PLAN' -A 5 -B 2 $DOMAINS_DIR | mdcat"
 alias kb="clear; rg -UA 1 '$KB_NOW' $DOMAINS_DIR; rg -UA 1 '$KB_NOW' $SW_DIR; rg -UA 1 '$KB_NOW' $PER_DIR/people"
 alias kbn="clear; rg -U '$KB_NEXT' $DOMAINS_DIR; rg -U '$KB_NEXT' $SW_DIR; rg -U '$KB_NEXT' $PER_DIR/people"
@@ -107,27 +106,12 @@ function agg_prev(){
 
 CAPP_DIR="$DOC_DIR/zv/capp"
 alias cap="\cd $CAPP_DIR; t 3"
-alias gg="cd /Users/zach/Library/CloudStorage/GoogleDrive-zvalenta@cappusa.com/Shared\ drives; oo; cd -"
-alias pdr="vd $CAPP_DIR/src/rn/datalab/data/pdr.csv"
-
-# SRC - RN
-# alias kern="clear; \cd $CAPP_DIR/src/rn/kern; eza -al --icons --tree --no-quotes --no-user --no-time -I '.venv|data|.git|.pytest_cache'"
+alias pdr="vd $CAPP_DIR/src/rn/price-updates/clean/rewrite/data/pdr.csv"
 alias kern="clear; \cd $CAPP_DIR/src/rn/kern; t 3"
+alias rfq="clear; \cd $CAPP_DIR/src/rn/rfq-notebook; t 1 docs; t src"
 alias lab="clear; \cd $CAPP_DIR/src/rn/datalab; eza -al --icons --tree --no-quotes --no-user --no-time -I 'data|.git|.pytest_cache'"
 alias pu="\cd $CAPP_DIR/src/rn/price-updates/brands; t 2"
-alias pu="\cd $CAPP_DIR/src/rn/price-updates/brands; t 2"
-alias rfq="clear; \cd $CAPP_DIR/src/rn/rfq-notebook; t 1 docs; t src"
 alias yy="\cd $CAPP_DIR/src/rn/quotes; t 2"
-
-# SRC - FIX
-alias dl="clear; \cd $CAPP_DIR/src/backlog/dataload; tt"
-alias fuzz="\cd $CAPP_DIR/src/backlog/fuzzy-match; tt"
-alias pfp="\cd $CAPP_DIR/src/backlog/pfp; tt"
-alias jg="\cd $CAPP_DIR/src/backlog/pricing; tt"
-
-# worklogs
-alias wl="vim $CAPP_DIR/worklogs/25/04/04.07.md"
-alias wlr="clear; \cd $CAPP_DIR/worklogs; lla -t 25; gl"
 
 ###
 # 🚁 NAVIGATION
@@ -172,24 +156,21 @@ alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
-alias algos="cd $MAT_DIR/sw/comp-sci/algos/algo-sandbox"
 alias blog="\cd $MAT_DIR/sw/lang/html-css/myblog"
-alias ldj="cd $MAT_DIR/sw/lang/python/django/ld; t"
-alias ger="cd $MAT_DIR/za/golf; t 2"
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
 alias ms="cd $MAT_DIR/sw/za/profile"
-alias site="cd $MAT_DIR/sw/lang/html-css"
 alias snip="cd /Users/zach/Library/Application\ Support/Code/User"
 alias sk8="\cd $MAT_DIR/art/skate; t 2"
-alias ur="cd $ZV_DIR/projects/meta/ur-repo; t"
 alias yin="cd $ZV_DIR/AV/yin"
 
 ###
 # 🎹 MUSIC
 ###
 
-alias mh="rg -UA 11 'alias mh' $DOT_DIR/shell/.zprofile"
+alias jt="\cd $MAT_DIR/music/guitar; t 2"
+alias caged="ic $MAT_DIR/music/guitar/scale-systems/caged.png"
+alias mh="rg -UA 11 'alias mh' $DOT_DIR/shell/zsh/profile.sh"
 alias clef="imgcat $MAT_DIR/music/theory/clef.png"
 alias keys="imgcat $MAT_DIR/music/theory/30-keys.jpg; imgcat $MAT_DIR/music/theory/circle-of-fifths.png; rg -UA 6 '## key' $DOMAINS_DIR/music/theory.md"
 alias modes="rg -UNI 'MODES\n' -A 25 -B 1 $DOMAINS_DIR/music | mdcat"
@@ -197,8 +178,6 @@ alias int="rg -UNI '## intervals' -A 15 -B 1 $DOMAINS_DIR/music | mdcat"
 alias chords="rg -A 37 -B 1 '## chords' $DOMAINS_DIR/music/theory.md"
 alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
 alias gq="cd $MAT_DIR/music/piano/harrison\ -\ pop/02-applied"
-alias jt="\cd $MAT_DIR/music/guitar; t 2"
-alias caged="ic $MAT_DIR/music/guitar/scale-systems/caged.png"
 alias ge="cd $MAT_DIR/art/songwriting"
 
 ###
@@ -294,17 +273,6 @@ function kai(){
     cwd="$(pwd)";
     touch "$cwd/$fname";
     open "$cwd/$fname";
-}
-
-function jsj(){
-    dname="$1";
-    fpath="$(pwd)/$dname"
-    mkdir "$fpath";
-    cp -r $DOC_DIR/zv/projects/meta/repo-scaffold/* "$fpath";
-    \cd "$fpath";
-    escaped_dname=$(printf '%s\n' "$dname" | sed 's/[&/\]/\\&/g')
-    sed -i '' "s|name = \"\"|name = \"$escaped_dname\"|" pyproject.toml
-    t;
 }
 
 function label(){
