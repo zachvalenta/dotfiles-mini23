@@ -17,8 +17,6 @@ DOMAINS_DIR="$ZV_DIR/notes/domains"
 SW_DIR="$ZV_DIR/notes/sw"
 PER_DIR="$ZV_DIR/personal"
 TRACK_DIR="$ZV_DIR/personal/tracking"
-KB_NOW="TODO NOW"
-KB_NEXT="TODO NEXT"
 
 ###
 # 🌇  PROFILE
@@ -40,46 +38,45 @@ export ZELLIJ_CONFIG_DIR="~/.config/zellij"
 # 🏔 WORKFLOW
 ###
 
-alias plan="clear; rg -UNI '🌱 SPRING' -A 9 $PER_DIR/logs/24.md | mdcat; rg -UNI 'BIG PLAN' -A 5 -B 2 $DOMAINS_DIR | mdcat"
-alias kb="clear; rg -UA 1 '$KB_NOW' $DOMAINS_DIR; rg -UA 1 '$KB_NOW' $SW_DIR; rg -UA 1 '$KB_NOW' $PER_DIR/people"
-alias kbn="clear; rg -U '$KB_NEXT' $DOMAINS_DIR; rg -U '$KB_NEXT' $SW_DIR; rg -U '$KB_NEXT' $PER_DIR/people"
+alias qt="clear; mdcat $MAT_DIR/sw/lang/html-css/myblog/content/quotes.md"
+alias plan="clear; rg -UNI '## 05' -A 12 $PER_DIR/logs/25.md | mdcat; rg -UNI 'BIG PLAN' -A 5 -B 2 $DOMAINS_DIR | mdcat"
 alias rj="\cd $PER_DIR/journal; vim journal.txt"
 alias com="vim +/commits $SW_DIR/za/work.md"
-alias qt="clear; mdcat $MAT_DIR/sw/lang/html-css/content/about/quotes.md"
-alias gr="\cd $PER_DIR/tracking/24; gds"
-alias gz="vim $PER_DIR/tracking/24/za.dat; \cd $PER_DIR/tracking; ga; cd -"
+alias gr="\cd $PER_DIR/tracking/25; gds"
+alias gz="vim $PER_DIR/tracking/25/za.dat; \cd $PER_DIR/tracking; ga; cd -"
+
 function agg(){
     # prefer this approach: partitions arts, one file instead of three
     timer;
-    YEAR=${1:-24}
+    YEAR=${1:-25}
     DANCE="$(cat $TRACK_DIR/$YEAR/dance.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum/4;}')"
     SKATE="$(cat $TRACK_DIR/$YEAR/skate.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum/4;}')"
     GUITAR="$(cat $TRACK_DIR/$YEAR/guitar.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum/4;}')"
     PIANO="$(cat $TRACK_DIR/$YEAR/piano.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum/4;}')"
     TRAIN="$(cat $TRACK_DIR/$YEAR/train.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum;}')"
-    echo "jeeta,${GUITAR},150" | termgraph --color {green,blue}
-    echo "piano,${PIANO},150" | termgraph --color {green,blue}
-    echo "dance,${DANCE},150" | termgraph --color {green,blue}
-    echo "skate,${SKATE},150" | termgraph --color {green,blue}
-    echo "train,${TRAIN},200" | termgraph --color {green,blue}
+    echo "jeeta,${GUITAR},100" | termgraph --color {green,blue}
+    echo "piano,${PIANO},100" | termgraph --color {green,blue}
+    echo "dance,${DANCE},100" | termgraph --color {green,blue}
+    echo "skate,${SKATE},100" | termgraph --color {green,blue}
+    echo "train,${TRAIN},100" | termgraph --color {green,blue}
 }
 function hm(){
     # TODO: branch on arg (two-digit int, string)
     # replace with python + bullet: subprocess.run("termgraph --calendar --start-dt 2024-01-01 ~/Documents/zv/personal/tracking/24/guitar.dat", shell=True, check=True)
     if [ $# -eq 0 ]; then
         label "deeppink" "GUITAR"
-        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/24/guitar.dat
+        termgraph --calendar --start-dt 2025-01-01 $TRACK_DIR/25/guitar.dat
         label "darkmagenta" "PIANO"
-        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/24/piano.dat
+        termgraph --calendar --start-dt 2025-01-01 $TRACK_DIR/25/piano.dat
         label "gold" "DANCE"
-        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/24/dance.dat
+        termgraph --calendar --start-dt 2025-01-01 $TRACK_DIR/25/dance.dat
         label "darkorange" "SKATE"
-        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/24/skate.dat
+        termgraph --calendar --start-dt 2025-01-01 $TRACK_DIR/25/skate.dat
         label "peru" "TRAIN"
-        termgraph --calendar --start-dt 2024-01-01 $TRACK_DIR/24/train.dat
+        termgraph --calendar --start-dt 2025-01-01 $TRACK_DIR/25/train.dat
     else
         fname="$1.dat";
-        vim '+normal G$' $PER_DIR/tracking/24/"$fname";
+        vim '+normal G$' $PER_DIR/tracking/25/"$fname";
         \cd $PER_DIR/tracking;
         git add -A;
         cd -;
@@ -88,16 +85,8 @@ function hm(){
 function tz(){
     clear;
     label "orangered" "WEIGHT"
-    YEAR=${1:-24}
+    YEAR=${1:-25}
     cat $TRACK_DIR/"$YEAR"/weight.dat | asciigraph -h 10 -w 120 red 2>/dev/null
-}
-function agg_prev(){
-    clear;
-    YEAR=${1:-24}
-    timer;
-    termgraph $TRACK_DIR/"$YEAR"/goals.dat --color {green,blue};
-    label "red" "TOTALS"
-    rg -IN "^(guitar|piano|dance|skate)" $TRACK_DIR/"$YEAR"/??.dat | awk "NF" | awk '{a[$1]+=$2;}END{for(i in a)print i", "a[i]/4;}' | sort | termgraph --color green
 }
 
 ###
@@ -283,9 +272,9 @@ function label(){
 }
 
 function timer(){
-    year_past="$(python -c 'from datetime import datetime as dt; days_past = float(abs((dt.strptime("2024-01-01", "%Y-%m-%d") - dt.today()).days)); year_past = round(days_past / 365 * 100, 2); print(year_past)')"
-    target_hours="$(python -c 'from datetime import datetime as dt; days_past = float(abs((dt.strptime("2024-01-01", "%Y-%m-%d") - dt.today()).days)); target_hours = round((days_past / 365) * 150, 1); print(target_hours)')"
-    days_left="$(python -c 'from datetime import datetime as dt; days_past = float(abs((dt.strptime("2024-01-01", "%Y-%m-%d") - dt.today()).days)); days_left = int(365 - days_past); print(days_left)')"
+    year_past="$(python -c 'from datetime import datetime as dt; days_past = float(abs((dt.strptime("2025-01-01", "%Y-%m-%d") - dt.today()).days)); year_past = round(days_past / 365 * 100, 2); print(year_past)')"
+    target_hours="$(python -c 'from datetime import datetime as dt; days_past = float(abs((dt.strptime("2025-01-01", "%Y-%m-%d") - dt.today()).days)); target_hours = round((days_past / 365) * 100, 1); print(target_hours)')"
+    days_left="$(python -c 'from datetime import datetime as dt; days_past = float(abs((dt.strptime("2025-01-01", "%Y-%m-%d") - dt.today()).days)); days_left = int(365 - days_past); print(days_left)')"
     label "red" "YEAR PAST: ${year_past}% ||| TARGET HOURS: ${target_hours} ||| DAYS LEFT: ${days_left}"
 }
 
