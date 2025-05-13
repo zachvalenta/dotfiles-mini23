@@ -38,8 +38,8 @@ export ZELLIJ_CONFIG_DIR="~/.config/zellij"
 # 🏔 WORKFLOW
 ###
 
-alias qt="clear; mdcat $MAT_DIR/sw/lang/html-css/myblog/content/quotes.md"
-alias plan="clear; rg -UNI '## 05' -A 12 $PER_DIR/logs/25.md | mdcat; rg -UNI 'BIG PLAN' -A 5 -B 2 $DOMAINS_DIR | mdcat"
+alias qt="clear; glow $MAT_DIR/sw/lang/html-css/myblog/content/quotes.md"
+alias plan="clear; rg -UNI '## 05' -A 12 $PER_DIR/logs/25.md | glow -; rg -UNI 'BIG PLAN' -A 5 -B 2 $DOMAINS_DIR | glow -"
 alias rj="\cd $PER_DIR/journal; vim journal.txt"
 alias com="vim +/commits $SW_DIR/za/work.md"
 alias gr="\cd $PER_DIR/tracking/25; gds"
@@ -157,13 +157,13 @@ alias yin="cd $ZV_DIR/AV/yin"
 # 🎹 MUSIC
 ###
 
+alias mh="rg -UA 11 'alias mh' $DOT_DIR/shell/zsh/profile.sh"
 alias jt="\cd $MAT_DIR/music/guitar; t 2"
 alias caged="ic $MAT_DIR/music/guitar/scale-systems/caged.png"
-alias mh="rg -UA 11 'alias mh' $DOT_DIR/shell/zsh/profile.sh"
 alias clef="imgcat $MAT_DIR/music/theory/clef.png"
 alias keys="imgcat $MAT_DIR/music/theory/30-keys.jpg; imgcat $MAT_DIR/music/theory/circle-of-fifths.png; rg -UA 6 '## key' $DOMAINS_DIR/music/theory.md"
-alias modes="rg -UNI 'MODES\n' -A 25 -B 1 $DOMAINS_DIR/music | mdcat"
-alias int="rg -UNI '## intervals' -A 15 -B 1 $DOMAINS_DIR/music | mdcat"
+alias modes="rg -UNI '## modes\n' -A 8 -B 1 $DOMAINS_DIR/music | glow -"
+alias int="rg -UNI '## intervals' -A 15 -B 1 $DOMAINS_DIR/music | glow -"
 alias chords="rg -A 37 -B 1 '## chords' $DOMAINS_DIR/music/theory.md"
 alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
 alias gq="cd $MAT_DIR/music/piano/harrison\ -\ pop/02-applied"
@@ -180,7 +180,6 @@ alias quan="task full"
 alias twfr="sqlite3 ~/.task/taskchampion.sqlite3 .dump > $DOT_DIR/task-warrior/db.sql"
 alias kbtfr="sqlite3 ~/Library/Application\ Support/kanban-tui/database.db .dump > $DOT_DIR/tui/kanban-tui.sql"
 
-alias bk="vim $PER_DIR/people/backlog.md"
 alias bpy="bpython -q"
 alias ipy="ipython"
 alias cd='function cdl(){ cd "$1"; sl;}; cdl'
