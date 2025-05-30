@@ -39,8 +39,8 @@ export ZELLIJ_CONFIG_DIR="~/.config/zellij"
 ###
 
 alias qt="clear; glow $MAT_DIR/sw/lang/html-css/myblog/content/quotes.md"
-alias plan="clear; rg -UNI '## 05' -A 12 $PER_DIR/logs/25.md | glow -; rg -UNI 'BIG PLAN' -A 5 -B 2 $DOMAINS_DIR | glow -"
-alias rj="\cd $PER_DIR/journal; vim journal.txt"
+# alias plan="clear; rg -UNI '## 05' -A 12 $PER_DIR/logs/25.md | glow -; rg -UNI 'BIG PLAN' -A 5 -B 2 $DOMAINS_DIR | glow -"
+# alias rj="\cd $PER_DIR/journal; vim journal.txt"
 alias com="vim +/commits $SW_DIR/za/work.md"
 alias gr="\cd $PER_DIR/tracking/25; gds"
 alias gz="vim $PER_DIR/tracking/25/za.dat; \cd $PER_DIR/tracking; ga; cd -"
@@ -120,6 +120,7 @@ alias bin="cd $DENV_DIR/bin"
 alias dot="\cd $DOT_DIR; t"
 
 # NOTES
+alias jbj="\cd $ZV_DIR/notes"
 alias dom="clear; \cd $DOMAINS_DIR; jb"
 alias sw="clear; \cd $SW_DIR; jb"
 alias swt="clear; \cd $SW_DIR; eza -al --icons --tree --no-quotes --no-user --no-time comp-sci design lang/python"
@@ -158,16 +159,18 @@ alias yin="cd $ZV_DIR/AV/yin"
 ###
 
 alias mh="rg -UA 11 'alias mh' $DOT_DIR/shell/zsh/profile.sh"
-alias jt="\cd $MAT_DIR/music/guitar; t 2"
-alias caged="ic $MAT_DIR/music/guitar/scale-systems/caged.png"
+alias int="rg -UNI '## intervals' -A 15 -B 1 $DOMAINS_DIR/art/music | glow -"
+alias yj="rg -UNI '## scales' -A 7 -B 1 $DOMAINS_DIR/art/music | glow -"
 alias clef="imgcat $MAT_DIR/music/theory/clef.png"
-alias keys="imgcat $MAT_DIR/music/theory/30-keys.jpg; imgcat $MAT_DIR/music/theory/circle-of-fifths.png; rg -UA 6 '## key' $DOMAINS_DIR/music/theory.md"
-alias modes="rg -UNI '## modes\n' -A 8 -B 1 $DOMAINS_DIR/music | glow -"
-alias int="rg -UNI '## intervals' -A 15 -B 1 $DOMAINS_DIR/music | glow -"
-alias chords="rg -A 37 -B 1 '## chords' $DOMAINS_DIR/music/theory.md"
-alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
-alias gq="cd $MAT_DIR/music/piano/harrison\ -\ pop/02-applied"
-alias ge="cd $MAT_DIR/art/songwriting"
+alias keys="imgcat $MAT_DIR/music/theory/30-keys.jpg; imgcat $MAT_DIR/music/theory/circle-of-fifths.png"
+alias modes="rg -UNI '## modes\n' -A 6 -B 1 $DOMAINS_DIR/art/music | glow -"
+alias chords="rg -A 10 -B 1 '## chords' $DOMAINS_DIR/art/music/theory.md | glow -"
+
+# alias caged="ic $MAT_DIR/music/guitar/scale-systems/caged.png; echo 'https://songnotes.net/tools/fret-monster'"
+# alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
+# alias jt="\cd $MAT_DIR/music/guitar; t 2"
+# alias gq="cd $MAT_DIR/music/piano/harrison\ -\ pop/02-applied"
+# alias ge="cd $MAT_DIR/art/songwriting"
 
 ###
 # 🛠 UTILS
