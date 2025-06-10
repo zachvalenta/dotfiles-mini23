@@ -54,11 +54,12 @@ function agg(){
     GUITAR="$(cat $TRACK_DIR/$YEAR/guitar.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum/4;}')"
     PIANO="$(cat $TRACK_DIR/$YEAR/piano.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum/4;}')"
     TRAIN="$(cat $TRACK_DIR/$YEAR/train.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum;}')"
+    DRAW="$(cat $TRACK_DIR/$YEAR/draw.dat | awk 'NF>1{print $NF}' | awk '{sum+=$1;}END{print sum/4;}')"
     echo "jeeta,${GUITAR},100" | termgraph --color {green,blue}
     echo "piano,${PIANO},100" | termgraph --color {green,blue}
     echo "dance,${DANCE},100" | termgraph --color {green,blue}
     echo "skate,${SKATE},100" | termgraph --color {green,blue}
-    echo "train,${TRAIN},100" | termgraph --color {green,blue}
+    echo "draw,${DRAW},100" | termgraph --color {green,blue}
 }
 function hm(){
     # TODO: branch on arg (two-digit int, string)
@@ -74,6 +75,8 @@ function hm(){
         termgraph --calendar --start-dt 2025-01-01 $TRACK_DIR/25/skate.dat
         label "peru" "TRAIN"
         termgraph --calendar --start-dt 2025-01-01 $TRACK_DIR/25/train.dat
+        label "saddlebrown" "DRAW"
+        termgraph --calendar --start-dt 2025-01-01 $TRACK_DIR/25/draw.dat
     else
         fname="$1.dat";
         vim '+normal G$' $PER_DIR/tracking/25/"$fname";
@@ -164,7 +167,7 @@ alias yj="rg -UNI '## scales' -A 7 -B 1 $DOMAINS_DIR/art/music | glow -"
 alias clef="imgcat $MAT_DIR/music/theory/clef.png"
 alias keys="imgcat $MAT_DIR/music/theory/30-keys.jpg; imgcat $MAT_DIR/music/theory/circle-of-fifths.png"
 alias modes="rg -UNI '## modes\n' -A 6 -B 1 $DOMAINS_DIR/art/music | glow -"
-alias chords="rg -A 10 -B 1 '## chords' $DOMAINS_DIR/art/music/theory.md | glow -"
+alias chords="rg -A 12 -B 1 '## chords' $DOMAINS_DIR/art/music/theory.md | glow -"
 
 # alias caged="ic $MAT_DIR/music/guitar/scale-systems/caged.png; echo 'https://songnotes.net/tools/fret-monster'"
 # alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
