@@ -59,6 +59,7 @@ function agg(){
     echo "piano,${PIANO},100" | termgraph --color {green,blue}
     echo "dance,${DANCE},100" | termgraph --color {green,blue}
     echo "skate,${SKATE},100" | termgraph --color {green,blue}
+    echo "train,${TRAIN},100" | termgraph --color {green,blue}
     echo "draw,${DRAW},100" | termgraph --color {green,blue}
 }
 function hm(){
@@ -91,19 +92,6 @@ function tz(){
     YEAR=${1:-25}
     cat $TRACK_DIR/"$YEAR"/weight.dat | asciigraph -h 10 -w 120 red 2>/dev/null
 }
-
-###
-# 🟥 CAPP
-###
-
-CAPP_DIR="$DOC_DIR/zv/capp"
-alias cap="\cd $CAPP_DIR; t 3"
-alias pdr="vd $CAPP_DIR/src/rn/price-updates/clean/rewrite/data/pdr.csv"
-alias kern="clear; \cd $CAPP_DIR/src/rn/kern; t 3"
-alias rfq="clear; \cd $CAPP_DIR/src/rn/rfq-notebook; t 1 docs; t src"
-alias lab="clear; \cd $CAPP_DIR/src/rn/datalab; eza -al --icons --tree --no-quotes --no-user --no-time -I 'data|.git|.pytest_cache'"
-alias pu="\cd $CAPP_DIR/src/rn/price-updates/brands; t 2"
-alias yy="\cd $CAPP_DIR/src/rn/quotes; t 2"
 
 ###
 # 🚁 NAVIGATION
