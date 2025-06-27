@@ -102,7 +102,7 @@ alias f="z"
 alias home="cd $HOME; ll"
 alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
-alias xm="cd $ZV_DIR/projects; t 2; t 2 design"
+alias xm="cd $ZV_DIR/projects; t 2"
 alias jc="\cd $DOC_DIR/zv/projects/meta/jian-cha; make run"
 
 # DENV

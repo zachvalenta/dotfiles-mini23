@@ -1,8 +1,21 @@
 # general
 
-* Include docstrings and doctest for all generated functions and methods.
 * Prefer to use single quotes.
 * Don't use typing unless it's crucial to the problem at hand i.e. we're fixing some code that is currently failing due to an issue that stronger typing would solve.
+
+
+# documentation
+
+* include docstrings and doctest for all generated functions and methods
+* use the Jetbrains standard:
+```python
+"""
+This line is for an overview
+
+:param arg1: desc of arg1
+:return: desc of return
+"""
+```
 
 # libraries
 
