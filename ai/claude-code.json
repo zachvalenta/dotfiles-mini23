@@ -1,4 +1,9 @@
 {
     "defaultMode": "acceptEdits",
-    "vimMode": true
+    "vimMode": true,
+    "permissions": {
+        "allow": [
+            "WebFetch(*)"
+        ]
+  }
 }
