@@ -103,6 +103,7 @@ alias home="cd $HOME; ll"
 alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
 alias xm="cd $ZV_DIR/projects; t 2"
+alias act="cd $ZV_DIR/projects/active; t 2"
 alias jc="\cd $DOC_DIR/zv/projects/meta/jian-cha; make run"
 
 # DENV
@@ -137,6 +138,7 @@ alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
+alias rfq="\cd $ZV_DIR/projects/active/rfq; t; o README.md"
 alias blog="\cd $MAT_DIR/sw/lang/html-css/myblog"
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
@@ -151,14 +153,14 @@ alias yin="cd $ZV_DIR/AV/yin"
 
 alias mh="rg -UA 11 'alias mh' $DOT_DIR/shell/zsh/profile.sh"
 alias int="rg -UNI '## intervals' -A 15 -B 1 $DOMAINS_DIR/art/music | glow -"
+alias hx="clear; rg -A 17 -B 1 '## chords' $DOMAINS_DIR/art/music/theory.md | glow -"
 alias yj="rg -UNI '## scales' -A 7 -B 1 $DOMAINS_DIR/art/music | glow -"
 alias clef="imgcat $MAT_DIR/music/theory/clef.png"
 alias keys="imgcat $MAT_DIR/music/theory/30-keys.jpg; imgcat $MAT_DIR/music/theory/circle-of-fifths.png"
 alias modes="rg -UNI '## modes\n' -A 6 -B 1 $DOMAINS_DIR/art/music | glow -"
-alias chords="rg -A 12 -B 1 '## chords' $DOMAINS_DIR/art/music/theory.md | glow -"
+alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
 
 # alias caged="ic $MAT_DIR/music/guitar/scale-systems/caged.png; echo 'https://songnotes.net/tools/fret-monster'"
-# alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
 # alias jt="\cd $MAT_DIR/music/guitar; t 2"
 # alias gq="cd $MAT_DIR/music/piano/harrison\ -\ pop/02-applied"
 # alias ge="cd $MAT_DIR/art/songwriting"

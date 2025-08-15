@@ -1,20 +1,16 @@
 lastupdatecheck: 0
 recentrepos:
-    - /Users/zach/Documents/zv/notes/domains
     - /Users/zach/Documents/zv/notes/sw
+    - /Users/zach/Documents/zv/materials/sw/za/profile
+    - /Users/zach/Documents/zv/notes/domains
     - /Users/zach/Documents/zv/materials/sw/lang/html-css/myblog
     - /Users/zach/Documents/denv/bin
     - /Users/zach/Documents/denv/dotfiles
     - /Users/zach/Documents/denv/logs
-    - /Users/zach/Documents/zv/capp/notes/worklogs
-    - /Users/zach/Documents/zv/capp/notes/handbook
     - /Users/zach/Documents/zv/capp/src/rn/datalab
-    - /Users/zach/Documents/zv/capp/src/rn/price-updates/brands/dongan
     - /Users/zach/Documents/zv/capp/src/backlog/dataload
     - /Users/zach/Documents/zv/capp/src/backlog/fuzzy-match
     - /Users/zach/Documents/zv/capp/src/backlog/pfp
-    - /Users/zach/Documents/zv/capp/src/backlog/pricing
-    - /Users/zach/Documents/zv/capp/src/backlog/rfq
 startuppopupversion: 5
 lastversion: 0.44.1
 customcommandshistory: []
