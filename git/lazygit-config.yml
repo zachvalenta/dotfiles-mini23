@@ -1,3 +1,7 @@
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
 gui:
   scrollHeight: 10  # LOC scrolled in main window
   theme: # peach (alternatives: pink, mauve, flamingo, blue, sapphire)
