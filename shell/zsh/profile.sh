@@ -17,6 +17,7 @@ DOMAINS_DIR="$ZV_DIR/notes/domains"
 SW_DIR="$ZV_DIR/notes/sw"
 PER_DIR="$ZV_DIR/personal"
 TRACK_DIR="$ZV_DIR/personal/tracking"
+KERO_DIR="$ZV_DIR/work/kero"
 
 ###
 # 🌇  PROFILE
@@ -105,6 +106,13 @@ alias zv="cd $ZV_DIR"
 alias xm="cd $ZV_DIR/projects; t 2"
 alias act="cd $ZV_DIR/projects/active; t 2"
 alias jc="\cd $DOC_DIR/zv/projects/meta/jian-cha; make run"
+
+# KERO
+alias ke="\cd $ZV_DIR/work/kero; t 2"
+alias ji="\cd $KERO_DIR/rush; t 2 ml_app"
+alias wl="\cd $KERO_DIR/worklogs; t"
+alias jx="\cd $KERO_DIR/docs; t"
+alias kb="\cd $KERO_DIR/tickets; t"
 
 # DENV
 alias denv="cd $DENV_DIR"
