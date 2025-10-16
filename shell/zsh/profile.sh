@@ -147,7 +147,7 @@ alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
 alias rfq="\cd $ZV_DIR/projects/active/rfq; t; o README.md"
-alias blog="\cd $MAT_DIR/sw/lang/html-css/myblog"
+alias blog="\cd $ZV_DIR/projects/active/sites/myblog; t2"
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
 alias ms="cd $MAT_DIR/sw/za/profile"
