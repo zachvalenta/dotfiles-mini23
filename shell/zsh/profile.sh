@@ -206,7 +206,7 @@ function mtl(){  # list all
     echo -e "\n";
 }
 # stop containers, rm (stopped containers, unused volumes, dangling images), rm unused images
-alias mtp="docker compose down -v; docker ps -qa | xargs -r docker stop; docker system prune --volumes -f; docker image prune -af; mtl"
+alias mtp="docker ps -qa | xargs docker stop; docker system prune --volumes -f; docker image prune -af; mtl"
 alias mtpc="docker ps -qa | xargs docker stop; docker system prune --volumes -f"
 
 ###
