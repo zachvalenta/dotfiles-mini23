@@ -110,7 +110,7 @@ alias jc="\cd $DOC_DIR/zv/projects/meta/jian-cha; make run"
 # KERO
 alias ke="\cd $ZV_DIR/work/kero; t 2"
 alias kd="\cd $ZV_DIR/work/kero/denv; t 2"
-alias sim="\cd $ZV_DIR/work/kero/denv/sims; t; tt"
+alias sim="\cd $ZV_DIR/work/kero/denv/sims; t"
 alias ji="\cd $KERO_DIR/rush; t 2 ml_app"
 alias wl="\cd $KERO_DIR/worklogs; t"
 alias jx="\cd $KERO_DIR/docs; t"
