@@ -103,9 +103,12 @@ alias f="z"
 alias home="cd $HOME; ll"
 alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
+alias jc="\cd $DOC_DIR/zv/projects/meta/jian-cha; make run"
+
+# PROJECTS
 alias xm="cd $ZV_DIR/projects; t 2"
 alias act="cd $ZV_DIR/projects/active; t 2"
-alias jc="\cd $DOC_DIR/zv/projects/meta/jian-cha; make run"
+alias bt="cd $ZV_DIR/projects/active/baby-track; make run"
 
 # KERO
 alias ke="\cd $ZV_DIR/work/kero; t 2"
@@ -203,7 +206,7 @@ function mtl(){  # list all
     echo -e "\n";
 }
 # stop containers, rm (stopped containers, unused volumes, dangling images), rm unused images
-alias mtp="docker ps -qa | xargs docker stop; docker system prune --volumes -f; docker image prune -af; mtl"
+alias mtp="docker compose down -v; docker ps -qa | xargs -r docker stop; docker system prune --volumes -f; docker image prune -af; mtl"
 alias mtpc="docker ps -qa | xargs docker stop; docker system prune --volumes -f"
 
 ###
