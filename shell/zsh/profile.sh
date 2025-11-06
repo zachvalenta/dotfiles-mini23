@@ -103,7 +103,7 @@ alias f="z"
 alias home="cd $HOME; ll"
 alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
-alias jc="\cd $DOC_DIR/zv/projects/meta/jian-cha; make run"
+alias jc="\cd $DOC_DIR/zv/projects/active/za/jian-cha; ./jian-cha"
 
 # PROJECTS
 alias xm="cd $ZV_DIR/projects; t 2"
@@ -152,7 +152,7 @@ alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
 alias rfq="\cd $ZV_DIR/projects/active/rfq; t; o README.md"
-alias blog="\cd $ZV_DIR/projects/active/sites/myblog; t 2"
+alias blog="\cd $ZV_DIR/projects/active/personal/sites/myblog; t 2"
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
 alias ms="cd $MAT_DIR/sw/za/profile"
@@ -208,6 +208,7 @@ function mtl(){  # list all
 # stop containers, rm (stopped containers, unused volumes, dangling images), rm unused images
 alias mtp="docker ps -qa | xargs docker stop; docker system prune --volumes -f; docker image prune -af; mtl"
 alias mtpc="docker ps -qa | xargs docker stop; docker system prune --volumes -f"
+alias dstop="docker ps -qa | xargs docker stop"
 
 ###
 # 🛠 UTILS
@@ -227,6 +228,7 @@ alias cppath='pwd | pbcopy'
 alias ic="imgcat"
 alias hq="harlequin"
 alias jl="jless -r"
+alias ld="lazydocker"
 alias lg="lazygit"
 alias lh="l | head"
 alias m="make"
