@@ -1,9 +1,10 @@
 {
-    "defaultMode": "acceptEdits",
-    "vimMode": true,
-    "permissions": {
-        "allow": [
-            "WebFetch(*)"
-        ]
-  }
+  "defaultMode": "acceptEdits",
+  "vimMode": true,
+  "permissions": {
+    "allow": [
+      "WebFetch(*)"
+    ]
+  },
+  "alwaysThinkingEnabled": true
 }
