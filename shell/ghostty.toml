@@ -5,7 +5,7 @@ auto-update-channel = stable
 
 # VIZ
 font-size = 18
-theme = catppuccin-mocha
+# theme = catppuccin-mocha
 background-opacity = 0.9
 # window-padding-x=10
 # window-padding-y=10

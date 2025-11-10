@@ -108,7 +108,7 @@ alias jc="\cd $DOC_DIR/zv/projects/active/za/jian-cha; ./jian-cha"
 # PROJECTS
 alias xm="cd $ZV_DIR/projects; t 2"
 alias act="cd $ZV_DIR/projects/active; t 2"
-alias bt="cd $ZV_DIR/projects/active/baby-track; make run"
+alias bt="cd $ZV_DIR/projects/active/za/baby-track; make run"
 
 # KERO
 alias ke="\cd $ZV_DIR/work/kero; t 2"
@@ -117,7 +117,7 @@ alias sim="\cd $ZV_DIR/work/kero/denv/sims; t"
 alias ji="\cd $KERO_DIR/rush; t 2 ml_app"
 alias wl="\cd $KERO_DIR/worklogs; t"
 alias jx="\cd $KERO_DIR/docs; t"
-alias kb="\cd $KERO_DIR/tickets; t"
+alias kb="\cd $KERO_DIR/tickets; t 03-now; t 04-test; t 05-PR"
 
 # DENV
 alias denv="cd $DENV_DIR"
@@ -135,6 +135,7 @@ alias shu="cd $ZV_DIR/notes/bookcase"
 alias per="cd $PER_DIR"
 alias logs="cd $PER_DIR/logs"
 alias ren="cd $PER_DIR/people"
+alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
@@ -152,7 +153,7 @@ alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
 alias rfq="\cd $ZV_DIR/projects/active/rfq; t; o README.md"
-alias blog="\cd $ZV_DIR/projects/active/personal/sites/myblog; t 2"
+alias blog="\cd $ZV_DIR/projects/active/sites/myblog; t 2"
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
 alias ms="cd $MAT_DIR/sw/za/profile"
