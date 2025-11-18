@@ -135,7 +135,8 @@ alias shu="cd $ZV_DIR/notes/bookcase"
 alias per="cd $PER_DIR"
 alias logs="cd $PER_DIR/logs"
 alias ren="cd $PER_DIR/people"
-alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
+# alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
+alias fu="clear; rg -UNI '## routine' -A 12 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
@@ -366,6 +367,7 @@ alias gd="git d"                        # diff working directory and repo
 alias gds="git ds"                      # diff staging area and repo
 alias ga="git add -A"                   # stage all
 alias gai="git ai"                      # stage interactive
+alias gt="git tag"                      # list tags
 
 ###
 # 🛣 PATH
