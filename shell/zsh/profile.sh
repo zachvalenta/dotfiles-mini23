@@ -111,13 +111,13 @@ alias act="cd $ZV_DIR/projects/active; t 2"
 alias bt="cd $ZV_DIR/projects/active/za/baby-track; make run"
 
 # KERO
-alias ke="\cd $ZV_DIR/work/kero; t 2"
+alias ke="\cd $ZV_DIR/work/kero; ll"
 alias kd="\cd $ZV_DIR/work/kero/denv; t 2"
 alias sim="\cd $ZV_DIR/work/kero/denv/sims; t"
 alias ji="\cd $KERO_DIR/rush; t 2 ml_app"
 alias wl="\cd $KERO_DIR/worklogs; t"
 alias jx="\cd $KERO_DIR/docs; t"
-alias kb="\cd $KERO_DIR/tickets; t 03-now; t 04-test; t 05-PR"
+alias kb="\cd $KERO_DIR/tickets; t 2"
 
 # DENV
 alias denv="cd $DENV_DIR"
@@ -278,8 +278,8 @@ function ll(){
     fi
 }
 
-function tt(){
-    # show gitignore
+# SHOW GITIGNORE
+function ti(){
     eza -al --icons --tree --no-quotes --no-user --no-time -I $EZA_IGNORE
 }
 
