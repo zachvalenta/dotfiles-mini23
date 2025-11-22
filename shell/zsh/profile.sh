@@ -111,13 +111,14 @@ alias act="cd $ZV_DIR/projects/active; t 2"
 alias bt="cd $ZV_DIR/projects/active/za/baby-track; make run"
 
 # KERO
-alias ke="\cd $ZV_DIR/work/kero; ll"
+alias ke="\cd $ZV_DIR/work/kero; t 2"
 alias kd="\cd $ZV_DIR/work/kero/denv; t 2"
 alias sim="\cd $ZV_DIR/work/kero/denv/sims; t"
-alias ji="\cd $KERO_DIR/rush; t 2 ml_app"
-alias wl="\cd $KERO_DIR/worklogs; t"
-alias jx="\cd $KERO_DIR/docs; t"
-alias kb="\cd $KERO_DIR/tickets; t 2"
+alias ks="\cd $KERO_DIR/src; t 2"
+alias ji="\cd $KERO_DIR/src/automation/rush; t 2 ml_app"
+alias wl="\cd $KERO_DIR/docs/worklogs; t"
+alias jx="\cd $KERO_DIR/docs/eng; t"
+alias kb="\cd $KERO_DIR/docs/tickets; t 2"
 
 # DENV
 alias denv="cd $DENV_DIR"
@@ -160,7 +161,7 @@ alias ml="cd $MAT_DIR/music/za/music-library"
 alias ms="cd $MAT_DIR/sw/za/profile"
 alias snip="cd /Users/zach/Library/Application\ Support/Code/User"
 alias sk8="\cd $MAT_DIR/art/skate; t 2"
-alias yin="cd $ZV_DIR/AV/yin"
+alias yin="\cd $ZV_DIR/AV/yin; eza -al"
 
 ###
 # 🎹 MUSIC
