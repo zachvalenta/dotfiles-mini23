@@ -361,7 +361,31 @@ alias gshow="git log --format=%B -n 1"  # show msg description for commit
 alias gc="git c"                        # commit
 alias gca="git c --amend"               # commit amend
 alias gcne="git c --amend --no-edit"    # commit amend no edit
-alias gp="ga; gcne; git push -f"            # commit + force push
+function gp() {
+    # Stage all changes
+    git add -A
+
+    # Show what will be committed
+    echo "\n📝 Files staged:"
+    git status --short
+
+    echo "\n📋 Current commit message:"
+    git log -1 --pretty=%B
+
+    # Ask for confirmation
+    echo "\n⚠️  This will amend the current commit and force push!"
+    echo "Press Enter to continue, ESC to cancel..."
+    read -s -k 1 key
+    echo ""
+
+    if [[ $key == "" || $key == $'\n' ]]; then
+        git c --amend --no-edit
+        git push -f
+        echo "✅ Done!"
+    else
+        echo "❌ Aborted. Changes are staged but not committed/pushed."
+    fi
+}
 
 # ZA
 alias gb="git b"                        # show current branch
