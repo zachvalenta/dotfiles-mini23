@@ -121,6 +121,7 @@ alias ka="\cd $KERO_DIR/docs/agentic; t"
 alias ke="\cd $KERO_DIR/docs/eng; t"
 alias kt="\cd $KERO_DIR/docs/tickets; t 2"
 alias kl="\cd $KERO_DIR/docs/worklogs; t"
+alias tt="ticket-track"
 
 # DENV
 alias denv="cd $DENV_DIR"

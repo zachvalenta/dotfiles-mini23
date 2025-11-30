@@ -3,7 +3,12 @@
   "vimMode": true,
   "permissions": {
     "allow": [
-      "WebFetch(*)"
+      "WebFetch(*)",
+	  "ReadFile(~/Documents/zv/work/kero/**)",
+      "Bash(cat:*)",
+      "Bash(find:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(git log:*)"
     ]
   },
   "alwaysThinkingEnabled": true,
