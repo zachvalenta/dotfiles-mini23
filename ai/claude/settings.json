@@ -1,6 +1,6 @@
 {
+  "alwaysThinkingEnabled": true,
   "defaultMode": "acceptEdits",
-  "vimMode": true,
   "permissions": {
     "allow": [
       "WebFetch(*)",
@@ -11,5 +11,5 @@
       "Bash(git log:*)"
     ]
   },
-  "alwaysThinkingEnabled": true
+  "vimMode": true
 }
