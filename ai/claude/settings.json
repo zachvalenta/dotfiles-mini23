@@ -4,7 +4,7 @@
   "permissions": {
     "allow": [
       "WebFetch(*)",
-	  "ReadFile(~/Documents/zv/work/kero/**)",
+	  "ReadFile(/Users/zach/Documents/zv/work/kero/**)",
       "Bash(cat:*)",
       "Bash(find:*)",
       "Bash(git ls-tree:*)",
