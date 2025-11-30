@@ -11,16 +11,5 @@
       "Bash(git log:*)"
     ]
   },
-  "alwaysThinkingEnabled": true,
-  "mcpServers": {
-        "filesystem": {
-        "command": "npx",
-        "args": [
-            "-y",
-            "@modelcontextprotocol/server-filesystem",
-            "/Users/zach/Documents/zv/work/kero/docs/agentic",
-            "/Users/zach/Documents/zv/work/kero/docs/eng"
-        ]
-        }
-  }
+  "alwaysThinkingEnabled": true
 }
