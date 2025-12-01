@@ -1,11 +1,22 @@
-# GENERAL
+# 🟨 GENERAL
 
 ## completions
 
 * Give multiple options when it comes to solutions. You think more clearly when you do.
 * Back your claims up with specifics.
 
-# PYTHON
+## Markdown
+
+NESTING
+* I disagree w/ the idea of a single top-level header per file. That is a waste of namespace. The file name itself tells one the main topic. No need to repeat with a single top-level header.
+* Instead, treat headers like a file system. Top-level, second-level and so on.
+* The goal is to have no more than two levels of nesting (top-level, second-level) per document. Typically - but not always - more nesting than that is a sign that your domain is complex enough to merit multiple files vs. greater nesting.
+
+STYLE
+* Use single underscore for italics, double underscore for bold.
+* Favor shorter codeblocks.
+
+# 🐍 PYTHON
 
 ## general
 
