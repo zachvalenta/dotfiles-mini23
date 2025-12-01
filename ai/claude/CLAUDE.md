@@ -1,5 +1,15 @@
 # 🟨 GENERAL
 
+## context
+
+Address me as zjv so that I know you're reading this doc.
+
+At the start of every session, list:
+
+* any `CLAUDE.md` files you've loaded
+* any docs you've read as per those `CLAUDE.md` files
+* the user-provided slash commands you have available to you
+
 ## completions
 
 * Give multiple options when it comes to solutions. You think more clearly when you do.
