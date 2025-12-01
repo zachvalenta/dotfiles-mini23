@@ -10,6 +10,16 @@ At the start of every session, list:
 * any docs you've read as per those `CLAUDE.md` files
 * the user-provided slash commands you have available to you
 
+## tools & permissions
+
+* Bash should ONLY be used for actual shell operations (git, npm, python, etc)
+* Do not ask permission for standard read operations - just do them.
+* Use the right tool for the job - this avoids permission prompts:
+    - File reading: use `Read` tool (not `cat` or `Bash`)
+    - File searching: use `Glob` tool (not `find` or `ls`)
+    - Content searching: use `Grep` tool (not `grep` via Bash)
+    - File operations: use `Edit` / `Write` tools (not `sed` / `echo` / etc via Bash)
+
 ## completions
 
 * Give multiple options when it comes to solutions. You think more clearly when you do.
