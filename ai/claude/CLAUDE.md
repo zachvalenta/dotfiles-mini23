@@ -18,6 +18,11 @@ STYLE
 
 # 🐍 PYTHON
 
+## env
+
+* Use `python`, not `python3`.
+* More details on the Python env - Python itself, pip, pipx - is available @ `/Users/zach/Documents/denv/logs/pyenv`.
+
 ## general
 
 * Prefer to use single quotes.
