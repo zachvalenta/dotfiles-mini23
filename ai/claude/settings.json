@@ -1,18 +1,19 @@
 {
   "alwaysThinkingEnabled": true,
 //   "defaultMode": "acceptEdits",  -> currently ignored due to CC bug? https://claude.ai/chat/f9f8aa18-31ac-4097-84a7-fe5cdf09ee2c
-  "planMode": true,
+//   "planMode": true,
   "permissions": {
     "allow": [
       "Edit(**)",
       "WebFetch(*)",
 	  "ReadFile(/Users/zach/Documents/zv/work/kero/**)",
+	  "ReadFile(/Users/zach/Documents/zv/work/kero/**)",
       "Bash(* 2>/dev/null)",
-      "Bash(cat:*)",
-      "Bash(find:*)",
-      "Bash(git ls-tree:*)",
-      "Bash(git log:*)",
-      "Bash(ls:*)"
+      "Bash(cat *)",
+      "Bash(find *)",
+      "Bash(git ls-tree *)",
+      "Bash(git log *)",
+      "Bash(ls *)"
     ]
   },
   "vimMode": true
