@@ -236,7 +236,8 @@ alias kbtfr="sqlite3 ~/Library/Application\ Support/kanban-tui/database.db .dump
 
 alias bpy="bpython -q"
 alias ipy="ipython"
-alias cd='function cdl(){ cd "$1"; sl;}; cdl'
+# in background shell, using sl hangs, which was tripping up Claude Code
+alias cd='function cdl(){ builtin cd "$1"; [[ -o interactive ]] && sl;}; cdl'
 alias cppath='pwd | pbcopy'
 alias ic="imgcat"
 alias hq="harlequin"
