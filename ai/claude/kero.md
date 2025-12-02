@@ -17,4 +17,4 @@ KERO_ENG="$KERO_DIR/docs/eng"
 # DO AND DON'T
 
 * Read the docs before we start.
-* Don't ask "did you deploy the code?" Yes, yes I did deploy the code.
+* Deployment is (almost) never the problem. Do not suggest "check if the code was actually deployed to $ENV".
