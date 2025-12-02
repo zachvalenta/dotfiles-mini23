@@ -4,20 +4,26 @@ echo -n "$(tput setaf 5) sourcing ~/.zprofile at$(tput sgr0): "; date
 # 🗂 FS
 ###
 
-# MACHINE-SPECIFIC
+# 🖥️ MACHINE-SPECIFIC
 DOC_DIR="$HOME/Documents"
 DENV_DIR="$DOC_DIR/denv"
 DOT_DIR="$DENV_DIR/dotfiles"
 # TELESCOPE_WORKSPACE_DIR="$HOME/Documents/telescope-workspace"
 
-# ME
+# 🙈 ME
 ZV_DIR="$HOME/Documents/zv"
 MAT_DIR="$ZV_DIR/materials"
 DOMAINS_DIR="$ZV_DIR/notes/domains"
 SW_DIR="$ZV_DIR/notes/sw"
 PER_DIR="$ZV_DIR/personal"
 TRACK_DIR="$ZV_DIR/personal/tracking"
+
+# 🟧 KERO
 KERO_DIR="$ZV_DIR/work/kero"
+KERO_RUSH="$KERO_DIR/src/automation/rush"
+KERO_SRC="$KERO_DIR/src"
+KERO_AGENTIC="$KERO_DIR/docs/agentic"
+KERO_ENG="$KERO_DIR/docs/eng"
 
 ###
 # 🌇  PROFILE
@@ -115,9 +121,9 @@ alias kero="\cd $ZV_DIR/work/kero; t 2"
 alias kenv="\cd $ZV_DIR/work/kero/denv; t 2"
 alias sim="\cd $ZV_DIR/work/kero/denv/sims; t"
 alias ks="\cd $KERO_DIR/src; t 2"
-alias ji="\cd $KERO_DIR/src/automation/rush; t 2 ml_app"
+alias ji="\cd $KERO_RUSH; t 2 ml_app"
 alias kd="\cd $KERO_DIR/docs; t 2"
-alias ka="\cd $KERO_DIR/docs/agentic; t commands; t impl"
+alias ka="\cd $KERO_AGENTIC; t commands; t impl"
 alias ke="\cd $KERO_DIR/docs/eng; t"
 alias kt="\cd $KERO_DIR/docs/tickets; t 2"
 alias kl="\cd $KERO_DIR/docs/worklogs; t"
