@@ -12,13 +12,19 @@ At the start of every session, list:
 
 ## tools & permissions
 
-* Bash should ONLY be used for actual shell operations (git, npm, python, etc)
+__CRITICAL: NEVER use Bash for file operations__
+
+These commands are BLOCKED and will be rejected:
+* ❌ `ls` / `find` → ✅ Use `Glob` tool
+* ❌ `cat` / `head` / `tail` → ✅ Use `Read` tool
+* ❌ `grep` / `rg` → ✅ Use `Grep` tool
+* ❌ `sed` / `awk` / `echo >` → ✅ Use `Edit` / `Write` tools
+
+Bash is ONLY for actual shell operations: git, npm, python, docker, etc.
+
+PERMISSIONS
 * Do not ask permission for standard read operations - just do them.
-* Use the right tool for the job - this avoids permission prompts:
-    - File reading: use `Read` tool (not `cat` or `Bash`)
-    - File searching: use `Glob` tool (not `find` or `ls`)
-    - Content searching: use `Grep` tool (not `grep` via Bash)
-    - File operations: use `Edit` / `Write` tools (not `sed` / `echo` / etc via Bash)
+* Using specialized tools (Glob, Grep, Read, Edit, Write) avoids permission prompts entirely.
 
 ## completions
 

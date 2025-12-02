@@ -15,5 +15,18 @@
       "WebFetch(*)"
     ]
   },
-  "vimMode": true
+  "vimMode": true,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/block_file_ops.sh"
+          }
+        ]
+      }
+    ]
+  }
 }
