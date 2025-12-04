@@ -9,6 +9,7 @@
       "Grep(*)",
       "Read(*)",
       "ReadFile(*)",
+      "ReadFile(/Users/zach/Documents/zv/work/kero/*)",
       "SlashCommand(*)",
       "Task(*)",
       "Write(*)",
