@@ -118,8 +118,8 @@ alias bt="cd $ZV_DIR/projects/active/za/baby-track; make run"
 
 # KERO
 alias kero="\cd $ZV_DIR/work/kero; t 2"
-alias kenv="\cd $ZV_DIR/work/kero/denv; t 2"
-alias sim="\cd $ZV_DIR/work/kero/denv/sims; t"
+alias kenv="\cd $KERO_DIR/denv/denv; t 2"
+alias sim="\cd $KERO_DIR/denv/sims; t"
 alias ks="\cd $KERO_DIR/src; t 2"
 alias ji="\cd $KERO_RUSH; t 2 ml_app"
 alias kd="\cd $KERO_DIR/docs; t 2"
@@ -147,7 +147,7 @@ alias per="cd $PER_DIR"
 alias logs="cd $PER_DIR/logs"
 alias ren="cd $PER_DIR/people"
 # alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
-alias fu="clear; rg -UNI '## routine' -A 12 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
+alias fu="clear; rg -UNI '## routine' -A 15 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
@@ -239,6 +239,7 @@ alias ipy="ipython"
 # in background shell, using sl hangs, which was tripping up Claude Code
 # -o interactive -> didn't fix
 # alias cd='function cdl(){ builtin cd "$1"; [[ -o interactive ]] && sl;}; cdl'
+alias cd='function cdl(){builtin cd "$1"; ls;}; cdl'
 alias cppath='pwd | pbcopy'
 alias ic="imgcat"
 alias hq="harlequin"

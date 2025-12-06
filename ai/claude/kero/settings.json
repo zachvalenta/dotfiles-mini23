@@ -6,7 +6,10 @@
       "Grep",
       "Glob",
       "Task",
-      "SlashCommand"
+      "SlashCommand",
+      "Edit",
+      "Write",
+      "Bash"
     ]
   },
   "vimMode": true,
