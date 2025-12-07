@@ -118,7 +118,7 @@ alias bt="cd $ZV_DIR/projects/active/za/baby-track; make run"
 
 # KERO
 alias kero="\cd $ZV_DIR/work/kero; t 2"
-alias kenv="\cd $KERO_DIR/denv/denv; t 2"
+alias kenv="\cd $KERO_DIR/denv; t 2"
 alias sim="\cd $KERO_DIR/denv/sims; t"
 alias ks="\cd $KERO_DIR/src; t 2"
 alias ji="\cd $KERO_RUSH; t 2 ml_app"
