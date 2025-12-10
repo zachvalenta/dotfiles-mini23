@@ -8,7 +8,9 @@
       "Grep",
       "Glob",
       "Task",
-      "SlashCommand"
+      "SlashCommand",
+      "WebFetch",
+      "WebSearch"
     ]
   },
   "hooks": {
