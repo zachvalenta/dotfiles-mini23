@@ -2,14 +2,14 @@
   "alwaysThinkingEnabled": true,
   "permissions": {
     "allow": [
-      "Read",
-      "Grep",
-      "Glob",
-      "Task",
-      "SlashCommand",
+      "Bash",
       "Edit",
-      "Write",
-      "Bash"
+      "Glob",
+      "Grep",
+      "Read",
+      "SlashCommand",
+      "Task",
+      "Write"
     ]
   },
   "vimMode": true,

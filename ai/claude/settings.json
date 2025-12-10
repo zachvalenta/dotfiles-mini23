@@ -4,11 +4,11 @@
   "vimMode": true,
   "permissions": {
     "allow": [
-      "Read",
-      "Grep",
       "Glob",
-      "Task",
+      "Grep",
+      "Read",
       "SlashCommand",
+      "Task",
       "WebFetch",
       "WebSearch"
     ]
