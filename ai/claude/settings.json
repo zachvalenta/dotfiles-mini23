@@ -4,13 +4,16 @@
   "vimMode": true,
   "permissions": {
     "allow": [
+      "Bash",
+      "Edit",
       "Glob",
       "Grep",
       "Read",
       "SlashCommand",
       "Task",
       "WebFetch",
-      "WebSearch"
+      "WebSearch",
+      "Write"
     ]
   },
   "hooks": {
