@@ -128,6 +128,7 @@ alias ke="\cd $KERO_DIR/docs/eng; t"
 alias kt="\cd $KERO_DIR/docs/tickets; t 2"
 alias kl="\cd $KERO_DIR/docs/worklogs; t"
 alias tt="ticket-track"
+alias wq="\cd $ZV_DIR/projects/active/za/tennis-weekend; t"
 
 # DENV
 alias denv="cd $DENV_DIR"
