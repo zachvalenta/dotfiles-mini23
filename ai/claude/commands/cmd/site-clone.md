@@ -1,19 +1,77 @@
 ---
-description: replicate visual system from a reference site
+description: replicate visual system from a reference site (user)
 ---
 
 # META
 
-Generate and use an evidence bundle from a reference URL to replicate its reading-layout visual system (typography + layout + in-body components) in our codebase.
+Extract a specific visual element from a reference URL and apply it to myblog.
+
+GOAL: Help iterate through visual styles from admired sites, cherry-picking small elements one at a time.
 
 # INSTRUCTIONS
 
-1. Ask the user for the reference URL ($URL) if not already provided in the conversation.
-2. Ask the user what page type they want to match (default: "reading page / prose"): "docs", "blog/article", or "other".
-3. Ask the user what the main content root selector should be (default: `main, article, .prose, [role=main], body`).
-4. Ask the user what styling approach to use (default: CSS variables):
-   - `css-vars` (vanilla CSS vars + `.prose` / `ContentLayout`)
-   - `tailwind` (theme tokens + prose wrapper)
-5. Ask the user where changes are allowed (dirs/files). If they don't specify, assume a minimal safe surface (new files only + the target page).
-6. Generate the evidence bundle by running:
+1. Take URL as argument (required).
 
+2. Ask: "What element do you want to clone?" Options:
+   - `header` / `nav`
+   - `typography` (fonts, sizes, line-height)
+   - `colors` (palette)
+   - `blockquotes`
+   - `code blocks`
+   - `links`
+   - `layout` (content width, spacing)
+   - `full page` (everything - use sparingly)
+
+3. Screenshot the reference site (desktop viewport):
+```sh
+mkdir -p artifacts/screenshots
+```
+Save to `artifacts/screenshots/reference.png`
+
+4. Extract styles for ONLY the requested element using Playwright's `page.evaluate()`.
+
+5. Show the user:
+   - Screenshot of reference
+   - Extracted values for that element
+   - Proposed changes (SCSS + template if needed)
+
+6. Ask: "Apply?" Only modify after confirmation.
+
+7. Screenshot the result and show comparison.
+
+# MYBLOG CONTEXT
+
+PROJECT: `/Users/zach/Documents/zv/projects/active/sites/myblog`
+SSG: Zola (use `zola build`, `zola serve --port XXXX`)
+STYLES: `sass/styles.scss`
+TEMPLATES: `templates/*.html` (base.html has nav)
+
+# EXAMPLES
+
+EXAMPLE 1: Clone just the header
+```
+/site-clone https://sethmlarson.dev/
+```
+User says: "header"
+→ Screenshot Seth's site
+→ See: black bar, white underlined links, colon separators
+→ Update `.main-nav` in SCSS + nav links in base.html
+→ Result: matching header
+
+EXAMPLE 2: Clone typography
+```
+/site-clone https://macwright.com/
+```
+User says: "typography"
+→ Extract: font-family, font-size, line-height from body/headings
+→ Update SCSS variables only
+→ Result: matching typography
+
+EXAMPLE 3: Clone blockquotes
+```
+/site-clone https://danluu.com/
+```
+User says: "blockquotes"
+→ Extract: blockquote styles (bg, border, padding)
+→ Update just the `blockquote` rule in SCSS
+→ Result: matching blockquotes
