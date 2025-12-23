@@ -2,11 +2,6 @@
 
 LOCATION: `/Users/zach/Documents/zv/notes/bookcase`
 
-PURPOSE
-* track books/films read/watched
-* store reading notes (quotes, summaries, reactions)
-* maintain reading lists by topic
-
 ## 🏗️ redesign
 
 Notes on books I've read.
@@ -15,60 +10,80 @@ Should it be a bibliography mgmt system? Maybe.
 
 Should everything here just be in domains | sw notes instead? Maybe.
 
-# STRUCTURE
+# INDEX
 
-## notes
+## books.md
 
-Reading notes live in `notes/<media>/<country>/<year-author-title>.md`
+Reading lists organized by category.
 
-MEDIA
-* _fiction_: novels, short stories, plays, poetry
-* _movies_: film notes
+```
+├── STEM
+│   ├── dev
+│   │   └── algos, architecture, data, language, ML, networking, system
+│   │   └── SEARCH: Bhargava, Skiena, nand2tetris, Kleppmann, sql, DDD
+│   ├── math
+│   │   └── general, school, stat, forecasting, game theory, poker
+│   │   └── SEARCH: Huff, Silver, Tetlock, superforecasting, Bayes
+│   └── science
+│       └── medicine, genetics, IQ, biology, physics
+│       └── SEARCH: Gawande, Oster, Caplan, bell curve, Mukherjee
+├── LIT
+│   ├── fiction by region
+│   │   └── African (Ghana, Nigeria, South Africa, Sudan)
+│   │   └── American (Franzen, Highsmith, McCarthy, Melville, Morrison)
+│   │   └── English (Austen, Ishiguro, Maugham, Tolkien, Woolf)
+│   │   └── Europe (France, Italy, Germany, Ireland, Russia)
+│   │   └── Japan (Kawabata, Tanizaki, Soseki)
+│   ├── essays
+│   │   └── SEARCH: Didion, Montaigne, Klosterman, Hickey
+│   ├── half-realism
+│   │   └── SEARCH: Barthelme, Borges, Calvino, Kafka, Marquez
+│   ├── poetry
+│   │   └── SEARCH: Carson, Whitman, Neruda, haiku
+│   └── theatre
+│       └── SEARCH: Shakespeare, Sophocles, Aeschylus, Beckett
+├── NON-FICTION
+│   ├── criticism
+│   │   └── SEARCH: Wood, Moretti, distant reading, Auerbach
+│   ├── business
+│   │   └── SEARCH: Lewis, lean startup, scientific mgmt
+│   ├── econ
+│   │   └── SEARCH: Hayek, Taleb, Cowen, progress studies, Thiel
+│   ├── history
+│   │   └── SEARCH: Fukuyama, Diamond, Zeihan, Fischer, Judt
+│   ├── music
+│   │   └── SEARCH: theory, Levine, Felts, Gioia, recording, guitar, piano
+│   ├── philosophy
+│   │   └── SEARCH: stoicism, Farnsworth, epistemology, aesthetics
+│   ├── politics
+│   │   └── SEARCH: identity, institutions, polarization, Scott
+│   ├── psychology
+│   │   └── SEARCH: Kahneman, Cialdini, influence, social
+│   ├── religion
+│   │   └── SEARCH: Buddhism, Daoism, Confucius, Bible, Koran
+│   └── sociology
+│       └── SEARCH: parenting, linguistics, Chinese language
+```
 
-COUNTRIES
-* england, france, greece, japan, nigeria, russia, usa
-* _za_: miscellaneous (杂) - German, Irish, Chinese, Norwegian authors
+RELATED
+* `domains/humanities/philosophy.md` - philosophy notes
+* `domains/art/music/theory.md` - music theory
+* `domains/stem/math/stat.md` - statistics
+* `sw/design/data/sql.md` - for database design ideas
 
-FILENAME CONVENTION
-* `<year> - <author> <title>.md` (usa/england)
-* `<year>-<author>-<title>.md` (elsewhere)
-* ancient works use approximate dates: `0800-homer-iliad.md`
+## notes/
 
-## reading lists
+Individual reading notes: `notes/<media>/<country>/<year-author-title>.md`
 
-`books.md` contains reading lists organized by domain:
+FICTION (~65 notes)
+* england, france, greece, japan, nigeria, russia, usa, za
 
-STEM
-* dev (algos, architecture, data, language, ML, networking, system)
-* math (general, school, stat, forecasting, game theory, poker)
-
-Other domains include: science, humanities, business, etc.
-
-FORMAT
-* `✅` = read
-* bare entry = to read / owned
+MOVIES (~30 notes)
+* france (Nouvelle Vague: Godard, Truffaut, Malle, Melville)
+* japan (Kurosawa, Ozu)
+* usa (Linklater, Coppola, Tarantino, Mann)
 
 ## tooling
 
-* `cli.py`: CLI for managing entries
-* `er-model.sql`: database schema for books, authors, readings, genres
-* `Makefile`: build/maintenance tasks
-* `seed.sql`: sample data
-
-# ER MODEL
-
-Core entities from `er-model.sql`:
-* _book_: title, pub_date, publisher, favorite, location (mine/parents/friends)
-* _author_: gname, sname, nationality, gender, active dates
-* _reading_: book_id, is_active, complete, occasion, comments (jsonb)
-* _genre_: genre taxonomy
-* _location_: where physical copy lives
-
-# USE CASES
-
-When working with bookcase:
-* adding notes for a new book/film
-* querying reading history
-* maintaining reading lists in `books.md`
-* cross-referencing with domain notes (e.g. `🗄️ sociology.md`)
-* exporting to site (book reviews section)
+* `cli.py`, `er-model.sql`, `Makefile`, `seed.sql`
+* ER model: book, author, reading, genre, location
