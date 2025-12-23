@@ -41,3 +41,31 @@ $ ext OLTP.md  # tool I wrote to extract headers from Markdown files
 * `>` blockquotes: passages from the text
 * bullet points: commentary, cross-references (📙 for book refs)
 * `🗄️`: cross-reference to other notes
+
+All notes follow this structure:
+
+```markdown
+# ⛩️
+
+## 参考
+
+🔍 <search/reference sites>
+📚 <reading list>
+* ✅ = read
+* ⭐️ = priority
+
+## 进步
+
+* _YY_: what I learned/did that year
+
+# <TOPIC SECTIONS>
+```
+
+CONVENTIONS
+* `🗄️` cross-reference to other notes
+* `📙` inline book reference with page: `📙 Author [page]`
+* `📻` music example
+* `📹` video reference
+* `>` blockquotes for passages/quotes
+* `---` horizontal rule separates subsections
+* ALL CAPS for categorical labels within sections
