@@ -20,8 +20,7 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │       └── SEARCH: GPT, Claude, Llama, transformer, context window, tokens
 ├── algos.md
 │   └── TOPICS: algorithms, complexity, interview prep
-│   └── SEARCH: time complexity, Big O, NP, sorting, graphs, Dijkstra, BFS, DFS
-│   └── SEARCH: difflib, flashtext, bm25, LeetCode, Bhargava, Skiena
+│   └── SEARCH: time complexity, Big O, NP, sorting, graphs, Dijkstra, BFS, DFS, difflib, flashtext, bm25, LeetCode, Bhargava, Skiena
 │   └── RELATED: data-structures.md, lang/python/collections.md
 ├── compilers.md
 │   └── TOPICS: lexers, parsers, AST, code generation
@@ -48,8 +47,9 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── TOPICS: REST, GraphQL, API design
 │   │   └── SEARCH: OpenAPI, Swagger, HATEOAS, versioning, rate limiting
 │   ├── django.md
-│   │   └── TOPICS: Django framework, ORM, admin
-│   │   └── SEARCH: models, views, templates, migrations, DRF, Celery
+│   │   └── TOPICS: Django framework, ORM, admin, auth
+│   │   └── SEARCH: models, views, templates, migrations, DRF, Celery, middleware, signals, allauth, channels, htmx, Vincent, Layman
+│   │   └── RELATED: infra.md, architecture/test.md
 │   ├── flask.md
 │   │   └── TOPICS: Flask framework, blueprints
 │   │   └── SEARCH: Werkzeug, Jinja, SQLAlchemy, gunicorn
@@ -79,9 +79,9 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 ├── data/
 │   ├── #meta.md
 │   ├── analytics.md
-│   │   └── TOPICS: data analysis, metrics, dashboards
-│   │   └── SEARCH: pandas, DuckDB, metrics, KPIs
-│   │   └── RELATED: domains/stem/math/stat.md, dataframes.md
+│   │   └── TOPICS: data analysis, metrics, dashboards, EDA
+│   │   └── SEARCH: pandas, DuckDB, metrics, KPIs, visidata, xsv, xan, Harlequin, TablePlus, regression
+│   │   └── RELATED: domains/stem/math/stat.md, dataframes.md, OLAP.md
 │   ├── BI.md
 │   │   └── TOPICS: business intelligence, reporting
 │   │   └── SEARCH: Metabase, Superset, Tableau, dashboards
@@ -96,8 +96,9 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── TOPICS: document stores, key-value, graph DBs
 │   │   └── SEARCH: MongoDB, Redis, Neo4j, DynamoDB, Cassandra
 │   ├── OLAP.md
-│   │   └── TOPICS: analytics databases, columnar storage
-│   │   └── SEARCH: ClickHouse, Snowflake, BigQuery, star schema, fact table
+│   │   └── TOPICS: analytics databases, columnar storage, data engineering, pipelines
+│   │   └── SEARCH: ClickHouse, Snowflake, BigQuery, star schema, fact table, DuckDB, Spark, Iceberg, Parquet, DBT, ETL, ELT, lakehouse, Databricks, Trino, miller, Kleppmann, Reis
+│   │   └── RELATED: infra.md, dataframes.md
 │   ├── OLTP.md
 │   │   └── TOPICS: transactional databases, ACID
 │   │   └── SEARCH: Postgres, MySQL, SQLite, transactions, indexes, vacuum
@@ -122,8 +123,9 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
     │   └── SEARCH: Raft, Paxos, CRDT, eventual consistency, Lamport, Kleppmann
     │   └── RELATED: computation.md
     ├── infra.md
-    │   └── TOPICS: infrastructure, queues, caching
-    │   └── SEARCH: Kafka, RabbitMQ, Redis, Celery, nginx, load balancer
+    │   └── TOPICS: infrastructure, queues, caching, workflow orchestration
+    │   └── SEARCH: Kafka, RabbitMQ, Redis, Celery, nginx, load balancer, Airflow, Dagster, Prefect, Gunicorn, cron, CDN, feature flags, HAProxy
+    │   └── RELATED: OLAP.md, django.md
     └── telemetry.md
         └── TOPICS: observability, logging, metrics, tracing
         └── SEARCH: Prometheus, Grafana, OpenTelemetry, ELK, Datadog
@@ -244,8 +246,7 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   └── SEARCH: QMK, Colemak, split, ergonomic
 ├── vim.md
 │   └── TOPICS: Vim/Neovim, modal editing
-│   └── SEARCH: Neovim, LazyVim, Telescope, LSP, motions, registers
-│   └── SEARCH: Neil practical vim, buffers, windows
+│   └── SEARCH: Neovim, LazyVim, Telescope, LSP, motions, registers, Neil practical vim, buffers, windows
 └── work.md
     └── TOPICS: career, workplace
 ```
