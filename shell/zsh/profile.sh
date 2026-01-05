@@ -49,8 +49,8 @@ alias qt="clear; glow $MAT_DIR/sw/lang/html-css/myblog/content/quotes.md"
 # alias plan="clear; rg -UNI '## 05' -A 12 $PER_DIR/logs/25.md | glow -; rg -UNI 'BIG PLAN' -A 5 -B 2 $DOMAINS_DIR | glow -"
 # alias rj="\cd $PER_DIR/journal; vim journal.txt"
 alias com="vim +/commits $SW_DIR/za/work.md"
-alias gr="\cd $PER_DIR/tracking/25; gds"
-alias gz="vim $PER_DIR/tracking/25/za.dat; \cd $PER_DIR/tracking; ga; cd -"
+alias gr="\cd $PER_DIR/tracking/26; gds"
+alias gz="vim $PER_DIR/tracking/26/za.dat; \cd $PER_DIR/tracking; ga; cd -"
 
 function agg(){
     # prefer this approach: partitions arts, one file instead of three
@@ -96,7 +96,7 @@ function hm(){
 function tz(){
     clear;
     label "orangered" "WEIGHT"
-    YEAR=${1:-25}
+    YEAR=${1:-26}
     cat $TRACK_DIR/"$YEAR"/weight.dat | asciigraph -h 10 -w 120 red 2>/dev/null
 }
 
@@ -109,12 +109,10 @@ alias f="z"
 alias home="cd $HOME; ll"
 alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
-alias jc="\cd $DOC_DIR/zv/projects/active/za/jian-cha; ./jian-cha"
 
 # PROJECTS
-alias xm="cd $ZV_DIR/projects; t 2"
-alias act="cd $ZV_DIR/projects/active; t 2"
-alias bt="cd $ZV_DIR/projects/active/za/baby-track; make run"
+alias xm="\cd $ZV_DIR/projects; t 2; t 2 design"
+alias jc="jiancha"
 
 # KERO
 alias kero="\cd $ZV_DIR/work/kero; t 2"

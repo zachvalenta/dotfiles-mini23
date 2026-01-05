@@ -39,7 +39,7 @@ Save to `artifacts/screenshots/reference.png`
 
 7. Screenshot the result and show comparison.
 
-# MYBLOG CONTEXT
+# CONTEXT
 
 PROJECT: `/Users/zach/Documents/zv/projects/active/sites/myblog`
 SSG: Zola (use `zola build`, `zola serve --port XXXX`)
@@ -75,3 +75,8 @@ User says: "blockquotes"
 → Extract: blockquote styles (bg, border, padding)
 → Update just the `blockquote` rule in SCSS
 → Result: matching blockquotes
+
+# for further research
+
+*️ oringal idea from https://chatgpt.com/c/69469b40-be60-8328-81ec-abd8b3ae8670
+* https://www.reddit.com/r/ClaudeCode/comments/1ps6wfe/seer_a_claude_code_skill_that_adds_visual/ https://github.com/w00ing/seer-skill
