@@ -24,7 +24,10 @@ INDEX LOCATION: `/Users/zach/Documents/denv/dotfiles/ai/claude/context/notes`
    - Cross-domain connections (e.g., "site redesign" → `site.md` + `frontend.md` + `design.md`)
    - If in a project directory, check for spec files to understand tech stack
 
-3. Use SEARCH terms in index to match query keywords.
+3. Match query against index metadata:
+   - TOPICS: High-level themes and subject areas
+   - SEARCH: Keywords and terms not in HEADERS
+   - HEADERS: Actual section structure and organization of each file
 
 4. Follow RELATED links to pull in connected files.
 
@@ -77,6 +80,7 @@ User: /inject-context I want to analyze my reading habits statistically
 # NOTES
 
 - Prefer loading fewer, more relevant files over many tangentially related ones
-- The index SEARCH terms are your primary lookup mechanism
+- Match against TOPICS (themes), SEARCH (keywords), and HEADERS (file structure)
+- HEADERS show you the actual organization and sections within each file
 - RELATED links help you find connected concepts across domains
 - If uncertain, ask user to clarify before loading
