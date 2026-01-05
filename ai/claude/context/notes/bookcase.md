@@ -16,6 +16,8 @@ Should everything here just be in domains | sw notes instead? Maybe.
 
 Reading lists organized by category.
 
+└── HEADERS: STEM (dev, math, science), LIT (African, 🇺🇸 American, English, Europe, essays, half-realism, 🇯🇵 Japan, poetry, prose fiction, Russian, theatre), NON-FICTION (criticism, business, econ, games, history, music, philosophy, politics, psychology, religion, sociology, viz, writing)
+
 ```
 ├── STEM
 │   ├── dev
