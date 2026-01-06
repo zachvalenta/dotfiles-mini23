@@ -32,6 +32,7 @@ KERO_ENG="$KERO_DIR/docs/eng"
 set -o vi
 export EDITOR=vim
 EZA_IGNORE=".DS_Store|.git|.localized|.venv|*.code-workspace|.ruff_cache"
+export PLS_CONFIG="$DOT_DIR/shell/pls.yml"
 export HOMEBREW_NO_AUTO_UPDATE=1
 export MANPAGER=bat
 export PYTHONDONTWRITEBYTECODE=1

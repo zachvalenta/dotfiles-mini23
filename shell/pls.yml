@@ -1,0 +1,35 @@
+# Generated from vivid catppuccin-mocha via python/ls_colors_to_pls.py
+# Date: 2026-01-05
+
+entry_const:
+  typ:
+    dir:
+      style: "#89b4fa"
+    symlink:
+      style: "#f5c2e7"
+    block_device:
+      style: "#74c7ec"
+    char_device:
+      style: "#f5c2e7"
+    fifo:
+      style: "#11111b"
+    socket:
+      style: "#11111b"
+
+specs:
+  - pattern: "\\.(o|bc|hi|la|lo|aux|bak|bbl|bcf|blg|fls|git|idx|ilg|ind|log|out|pid|pyc|pyd|pyo|sty|swp|tmp|toc|lock|orig|rlib|cache|class|ctags|dyn_o|rmeta|dyn_hi|DS_Store|localized|scons_opt|timestamp|synctex.gz|fdb_latexmk|sconsign.dblite|CFUserTextEncoding)$"
+    style: "#585b70"
+  - pattern: "\\.(z|7z|bz|db|gz|xz|apk|arj|bag|bin|bz2|deb|dmg|img|iso|jar|msi|pkg|rar|rpm|tar|tbz|tgz|vcd|zip|zst|tbz2|xbps|toast)$"
+    style: "#74c7ec"
+  - pattern: "\\.(mk|dox|pro|hgrc|make|cmake|flake8|ignore|gemspec|mailmap|cmake.in|fdignore|kdevelop|rgignore|tfignore|gitconfig|gitignore|gitmodules|clang-format|editorconfig|gitattributes)$"
+    style: "#94e2d5"
+  - pattern: "\\.(c|d|h|m|p|r|t|v|as|cc|cp|cr|cs|di|el|ex|fs|go|gv|ha|hh|hs|jl|js|kt|ll|ml|mn|nb|nu|pl|pm|pp|py|rb|rs|sh|td|ts|vb|adb|ads|asa|asm|awk|bsh|c++|cgi|clj|cpp|css|csx|cxx|def|dot|dpr|elc|elm|epp|erl|exs|fsi|fsx|gvy|h++|hpp|htc|hxx|inc|inl|ino|ipp|jsx|kts|ltx|lua|mir|mli|nim|pas|php|pod|ps1|sbt|sql|tcl|tex|tsx|vim|vsh|zig|zsh|bash|dart|diff|fish|hack|java|less|lisp|mojo|nims|prql|psd1|psm1|purs|raku|sass|scad|scss|cabal|gcode|ipynb|patch|scala|swift|bashrc|gradle|groovy|matlab|nimble|cirrus.yml|travis.yml|applescript|bash_profile|gitlab-ci.yml)$"
+    style: "#a6e3a1"
+  - pattern: "\\.(ai|ma|mb|rm|wv|3ds|3fr|3mf|aif|amf|ape|ari|arw|avi|bay|bmp|cap|cr2|cr3|crw|dae|dcr|dcs|dng|drf|dxf|eip|eps|erf|exr|fbx|fff|flv|fnt|fon|gif|gpr|hda|hip|ico|igs|iiq|jpg|jxl|k25|kdc|kra|m3u|m4a|m4v|mdc|mef|mid|mkv|mos|mov|mp3|mp4|mpg|mrw|mtl|nef|nrw|obj|obm|ogg|ogv|orf|otf|otl|pbm|pcx|pef|pgm|png|ppm|psd|ptx|pxn|qoi|r3d|raf|raw|rw2|rwl|rwz|sr2|srf|srw|stl|stp|svg|swf|tga|tif|ttf|usd|vob|wav|wma|wmv|wrl|x3d|x3f|xpm|xvf|avif|braw|data|flac|h264|heif|iges|jpeg|mpeg|opus|step|tiff|usda|usdc|usdz|webm|webp|woff|blend|woff2|alembic)$"
+    style: "#f2cdcd"
+  - pattern: "\\.(ps|doc|ics|kex|odp|ods|odt|pdf|pps|ppt|rtf|sxi|sxw|xlr|xls|docx|epub|pptx|xlsx)$"
+    style: "#f38ba8"
+  - pattern: "\\.(1|md|ui|bib|bst|cfg|csv|htm|ini|nix|org|rst|tml|txt|typ|xml|xmp|yml|conf|html|info|json|toml|yaml|mdown|shtml|xhtml|config|desktop|markdown|webmanifest)$"
+    style: "#f9e2af"
+  - pattern: "\\.(a|ko|so|bat|com|dll|exe|dylib)$"
+    style: "bold #f38ba8"
