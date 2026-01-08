@@ -32,7 +32,7 @@ KERO_ENG="$KERO_DIR/docs/eng"
 set -o vi
 export EDITOR=vim
 EZA_IGNORE=".DS_Store|.git|.localized|.venv|*.code-workspace|.ruff_cache"
-EZA_TREE_FLAGS="--icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE"
+EZA_TREE_FLAGS=(--icons --tree --no-quotes --no-user --no-time --git-ignore -I "$EZA_IGNORE")
 export PLS_CONFIG="$DOT_DIR/shell/pls.yml"
 export HOMEBREW_NO_AUTO_UPDATE=1
 export MANPAGER=bat
@@ -168,7 +168,7 @@ alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
 alias rfq="\cd $ZV_DIR/projects/active/rfq; t; o README.md"
-alias blog="\cd $ZV_DIR/projects/active/sites/myblog; t 2"
+alias blog="\cd $ZV_DIR/projects/design/ux/myblog; t 2"
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
 alias ms="cd $MAT_DIR/sw/za/profile"
@@ -273,31 +273,31 @@ alias zp="vsc $HOME/.zprofile"
 # default
 function sl(){
     if [ "$1" ]; then
-        eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
+        eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I "$EZA_IGNORE" "$1"
     else
-        eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I $EZA_IGNORE
+        eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I "$EZA_IGNORE"
     fi
 }
 # dir/file sizes
 function l(){
     if [ "$1" ]; then
-        eza -al --icons --total-size --no-quotes --no-user --no-time --no-permissions --git --git-ignore -I $EZA_IGNORE "$1"
+        eza -al --icons --total-size --no-quotes --no-user --no-time --no-permissions --git --git-ignore -I "$EZA_IGNORE" "$1"
     else
-        eza -al --icons --total-size --no-quotes --no-user --no-time --no-permissions --git --git-ignore -I $EZA_IGNORE
+        eza -al --icons --total-size --no-quotes --no-user --no-time --no-permissions --git --git-ignore -I "$EZA_IGNORE"
     fi
 }
 # perms / user / timestamp + show gitignore
 function ll(){
     if [ "$1" ]; then
-        eza -alo --icons --no-quotes --git --git-ignore -I $EZA_IGNORE "$1"
+        eza -alo --icons --no-quotes --git --git-ignore -I "$EZA_IGNORE" "$1"
     else
-        eza -alo --icons --no-quotes --git --git-ignore -I $EZA_IGNORE
+        eza -alo --icons --no-quotes --git --git-ignore -I "$EZA_IGNORE"
     fi
 }
 
 # SHOW GITIGNORE
 function ti(){
-    eza -al --icons --tree --no-quotes --no-user --no-time -I $EZA_IGNORE
+    eza -al --icons --tree --no-quotes --no-user --no-time -I "$EZA_IGNORE"
 }
 
 function t() {
@@ -308,15 +308,16 @@ function t() {
     fi
 
     if [ $# -eq 2 ]; then
-        eza -al $DIRS_ONLY $EZA_TREE_FLAGS --level="$1" "$2"
+        eza -al $DIRS_ONLY "${EZA_TREE_FLAGS[@]}" --level="$1" "$2"
     elif [ $# -eq 1 ]; then
         if [[ "$1" =~ ^-?[0-9]+[.,]?[0-9]*$ ]]; then
-            eza -al $DIRS_ONLY $EZA_TREE_FLAGS --level="$1"
+            eza -al $DIRS_ONLY "${EZA_TREE_FLAGS[@]}" --level="$1"
         else
-            eza -al $DIRS_ONLY $EZA_TREE_FLAGS "$1"
+            eza -al $DIRS_ONLY "${EZA_TREE_FLAGS[@]}" "$1"
         fi
     else
-        eza -al $DIRS_ONLY $EZA_TREE_FLAGS
+        eza -al $DIRS_ONLY "${EZA_TREE_FLAGS[@]}"
+        
     fi
 }
 
