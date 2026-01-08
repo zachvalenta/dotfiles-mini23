@@ -112,7 +112,7 @@ alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
 
 # PROJECTS
-alias xm="\cd $ZV_DIR/projects; t 2; t 2 design"
+alias xm="\cd $ZV_DIR/projects; t -d 3"
 alias jc="jiancha"
 
 # KERO
@@ -148,6 +148,8 @@ alias logs="cd $PER_DIR/logs"
 alias ren="cd $PER_DIR/people"
 # alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
 alias fu="clear; rg -UNI '## routine' -A 15 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
+alias falu="\cd $PER_DIR/.falu"
+
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
@@ -297,21 +299,23 @@ function ti(){
     eza -al --icons --tree --no-quotes --no-user --no-time -I $EZA_IGNORE
 }
 
-function t(){
+function t() {
+    local DIRS_ONLY=""
+    if [[ "$1" == "-d" ]]; then
+        DIRS_ONLY="-D"
+        shift
+    fi
+
     if [ $# -eq 2 ]; then
-        eza -al --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE --level="$1" "$2"
-    # t <depth>
-    elif [ $# -eq 1 ]
-    then
-        # break on dir prepended w/ digits e.g. logs/2019
-        if [[ "$1" =~ ^-?[0-9]+[.,]?[0-9]*$ ]]; then  # break on dir prepended w/ digits e.g. `logs/2019`
-            eza -al --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE --level="$1"
+        eza -al $DIRS_ONLY --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE --level="$1" "$2"
+    elif [ $# -eq 1 ]; then
+        if [[ "$1" =~ ^-?[0-9]+[.,]?[0-9]*$ ]]; then
+            eza -al $DIRS_ONLY --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE --level="$1"
         else
-            eza -al --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE "$1"
+            eza -al $DIRS_ONLY --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE "$1"
         fi
-    # t
     else
-        eza -al --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE
+        eza -al $DIRS_ONLY --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE
     fi
 }
 
