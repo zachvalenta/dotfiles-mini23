@@ -32,6 +32,7 @@ KERO_ENG="$KERO_DIR/docs/eng"
 set -o vi
 export EDITOR=vim
 EZA_IGNORE=".DS_Store|.git|.localized|.venv|*.code-workspace|.ruff_cache"
+EZA_TREE_FLAGS="--icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE"
 export PLS_CONFIG="$DOT_DIR/shell/pls.yml"
 export HOMEBREW_NO_AUTO_UPDATE=1
 export MANPAGER=bat
@@ -307,15 +308,15 @@ function t() {
     fi
 
     if [ $# -eq 2 ]; then
-        eza -al $DIRS_ONLY --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE --level="$1" "$2"
+        eza -al $DIRS_ONLY $EZA_TREE_FLAGS --level="$1" "$2"
     elif [ $# -eq 1 ]; then
         if [[ "$1" =~ ^-?[0-9]+[.,]?[0-9]*$ ]]; then
-            eza -al $DIRS_ONLY --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE --level="$1"
+            eza -al $DIRS_ONLY $EZA_TREE_FLAGS --level="$1"
         else
-            eza -al $DIRS_ONLY --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE "$1"
+            eza -al $DIRS_ONLY $EZA_TREE_FLAGS "$1"
         fi
     else
-        eza -al $DIRS_ONLY --icons --tree --no-quotes --no-user --no-time --git-ignore -I $EZA_IGNORE
+        eza -al $DIRS_ONLY $EZA_TREE_FLAGS
     fi
 }
 
