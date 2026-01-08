@@ -115,9 +115,12 @@ alias zv="cd $ZV_DIR"
 # PROJECTS
 alias xm="\cd $ZV_DIR/projects; t -d 3"
 alias jc="jiancha"
+alias blog="\cd $ZV_DIR/projects/design/ux/myblog; t -d"
+alias wq="\cd $ZV_DIR/projects/design/system/tennis-weekend; t"
+alias tt="ticket-track"
 
 # KERO
-alias kero="\cd $ZV_DIR/work/kero; t 2"
+alias kero="\cd $ZV_DIR/work/kero; t -d 2 docs src"
 alias kenv="\cd $KERO_DIR/denv; t 2"
 alias sim="\cd $KERO_DIR/denv/sims; t"
 alias ks="\cd $KERO_DIR/src; t 2"
@@ -127,8 +130,6 @@ alias ka="\cd $KERO_AGENTIC; t commands; t impl"
 alias ke="\cd $KERO_DIR/docs/eng; t"
 alias kt="\cd $KERO_DIR/docs/tickets; t 2"
 alias kl="\cd $KERO_DIR/docs/worklogs; t"
-alias tt="ticket-track"
-alias wq="\cd $ZV_DIR/projects/active/za/tennis-weekend; t"
 
 # DENV
 alias denv="cd $DENV_DIR"
@@ -138,19 +139,17 @@ alias ccc="\cd $DOT_DIR/ai/claude; t"
 
 # NOTES
 alias jbj="\cd $ZV_DIR/notes"
-alias dom="clear; \cd $DOMAINS_DIR; jb"
-alias sw="clear; \cd $SW_DIR; jb"
-alias swt="clear; \cd $SW_DIR; eza -al --icons --tree --no-quotes --no-user --no-time comp-sci design lang/python"
-alias shu="cd $ZV_DIR/notes/bookcase"
+alias dom="clear; \cd $DOMAINS_DIR; t -d; jb"
+alias sw="clear; \cd $SW_DIR; t design guts; jb"
+alias shu="cd $ZV_DIR/notes/bookcase; t -d"
 
 # PERSONAL
 alias per="cd $PER_DIR"
 alias logs="cd $PER_DIR/logs"
-alias ren="cd $PER_DIR/people"
+# alias ren="cd $PER_DIR/people"
 # alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
 alias fu="clear; rg -UNI '## routine' -A 15 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
-alias falu="\cd $PER_DIR/.falu"
-
+alias falu="\cd $PER_DIR/.falu; t"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
@@ -167,13 +166,11 @@ alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
-alias rfq="\cd $ZV_DIR/projects/active/rfq; t; o README.md"
-alias blog="\cd $ZV_DIR/projects/design/ux/myblog; t 2"
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
-alias ms="cd $MAT_DIR/sw/za/profile"
+alias ms="cd $MAT_DIR/sw/za/profile; t -d"
 alias snip="cd /Users/zach/Library/Application\ Support/Code/User"
-alias sk8="\cd $MAT_DIR/art/skate; t 2"
+alias sk8="\cd $MAT_DIR/art/skate; t -d"
 alias yin="\cd $ZV_DIR/AV/yin; eza -al"
 
 ###
