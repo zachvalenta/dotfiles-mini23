@@ -133,7 +133,7 @@ alias wq="\cd $ZV_DIR/projects/active/za/tennis-weekend; t"
 # DENV
 alias denv="cd $DENV_DIR"
 alias bin="cd $DENV_DIR/bin"
-alias dot="\cd $DOT_DIR; t"
+alias dot="\cd $DOT_DIR; t -d"
 alias ccc="\cd $DOT_DIR/ai/claude; t"
 
 # NOTES
@@ -379,28 +379,30 @@ alias gc="git c"                        # commit
 alias gca="git c --amend"               # commit amend
 alias gcne="git c --amend --no-edit"    # commit amend no edit
 function gp() {
-    # Stage all changes
     git add -A
 
-    # Show what will be committed
-    echo "\n📝 Files staged:"
+    # Show staged changes in pager (q to exit, ESC aborts)
+    git diff --cached --color=always | less -R -+F -K --quit-on-intr || {
+        gum style --foreground 9 "❌ Aborted."
+        return 1
+    }
+
+    echo ""
+    gum style --border double --padding "1 2" "📝 Files staged:"
     git status --short
 
-    echo "\n📋 Current commit message:"
+    echo ""
+    gum style --border double --padding "1 2" "📋 Current commit message:"
     git log -1 --pretty=%B
 
-    # Ask for confirmation
-    echo "\n⚠️  This will amend the current commit and force push!"
-    echo "Press Enter to continue, ESC to cancel..."
-    read -s -k 1 key
-    echo ""
-
-    if [[ $key == "" || $key == $'\n' ]]; then
-        git c --amend --no-edit
-        git push -f
-        echo "✅ Done!"
+    if gum confirm "⚠️  Amend current commit and force push?"; then
+        gum spin --spinner dot --title "Amending commit..." -- \
+            git c --amend --no-edit
+        gum spin --spinner dot --title "Force pushing..." -- \
+            git push -f
+        gum style --foreground 10 --bold "✅ Done!"
     else
-        echo "❌ Aborted. Changes are staged but not committed/pushed."
+        gum style --foreground 9 "❌ Aborted. Changes staged but not committed/pushed."
     fi
 }
 
