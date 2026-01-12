@@ -1,21 +1,32 @@
-[kero]
-agentic = "/Users/zach/Documents/zv/work/kero/docs/agentic"
-eng = "/Users/zach/Documents/zv/work/kero/docs/eng"
-tickets = "/Users/zach/Documents/zv/work/kero/docs/tickets"
-worklogs = "/Users/zach/Documents/zv/work/kero/docs/worklogs"
-rush = "/Users/zach/Documents/zv/work/kero/src/automation/rush"
-
-[denv]
-# bin = "/Users/zach/Documents/denv/bin"
-# logs = "/Users/zach/Documents/denv/logs"
-# dotfiles = "/Users/zach/Documents/denv/dotfiles"
-
 [notes]
 sw = "/Users/zach/Documents/zv/notes/sw"
 domains = "/Users/zach/Documents/zv/notes/domains"
+# bookcase ="/Users/zach/Documents/zv/notes/bookcase"
 
-[projects]
-# myblog = "/Users/zach/Documents/zv/projects/active/sites/myblog"
-# baby-track = "/Users/zach/Documents/zv/projects/active/personal/baby-track"
-# jmore = "/Users/zach/Documents/zv/projects/active/data/mongo/jmore"
-# wt-nosql = "/Users/zach/Documents/zv/projects/active/mongo/wt-nosql"
+[denv]
+# bin = "/Users/zach/Documents/denv/bin"
+dot = "/Users/zach/Documents/denv/dotfiles"
+# logs = "/Users/zach/Documents/denv/logs"
+
+[workflow]
+jiancha = "/Users/zach/Documents/zv/projects/lang/rust/jian-cha"
+jina = "/Users/zach/Documents/zv/projects/design/architecture/jina"
+md-book = "/Users/zach/Documents/zv/projects/design/app/md-book"
+sympop = "/Users/zach/Documents/zv/projects/design/app/sympop"
+
+[arts]
+ceemuz = "/Users/zach/Documents/zv/projects/design/app/ceemuz"
+sgt = "/Users/zach/Documents/zv/projects/design/system/sgt"
+site = "/Users/zach/Documents/zv/projects/design/ux/myblog"
+
+[data]
+# dataclerk = "/Users/zach/Documents/zv/projects/design/data/tooling/dataclerk"
+# jmore = "/Users/zach/Documents/zv/projects/guts/jmore"
+# wtfk = "/Users/zach/Documents/zv/projects/design/data/tooling/wtfk"
+
+[kero]
+# agentic = "/Users/zach/Documents/zv/work/kero/docs/agentic"
+# tickets = "/Users/zach/Documents/zv/work/kero/docs/tickets"
+# worklogs = "/Users/zach/Documents/zv/work/kero/docs/worklogs"
+# rush = "/Users/zach/Documents/zv/work/kero/src/automation/rush"
+# eng = "/Users/zach/Documents/zv/work/kero/docs/eng"
