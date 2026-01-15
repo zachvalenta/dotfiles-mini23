@@ -114,10 +114,12 @@ alias zv="cd $ZV_DIR"
 
 # PROJECTS
 alias xm="\cd $ZV_DIR/projects; t -d 3"
-alias jc="jiancha"
 alias blog="\cd $ZV_DIR/projects/design/ux/myblog; t -d"
+alias cm="\cd $ZV_DIR/projects/design/app/ceemuz; t"
+alias doc="\cd $ZV_DIR/projects/design/architecture/documentation; t"
+alias jc="jiancha"
+alias sgt="\cd $ZV_DIR/projects/design/system/sgt; t"
 alias wq="\cd $ZV_DIR/projects/design/system/tennis-weekend; t"
-alias tt="ticket-track"
 
 # KERO
 alias kero="\cd $ZV_DIR/work/kero; t -d 2 docs src"
