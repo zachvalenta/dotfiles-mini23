@@ -87,6 +87,18 @@ suppress_preload = false
 
 [plugin]
 
+# Temporarily disabled - symbol plugin not working yet
+# prepend_previewers = [
+# 	{ name = "*.md", run = "symbol" },
+# 	{ name = "*.py", run = "symbol" },
+# 	{ name = "*.lua", run = "symbol" },
+# 	{ name = "*.{js,ts,jsx,tsx,mjs}", run = "symbol" },
+# 	{ name = "*.rs", run = "symbol" },
+# 	{ name = "*.go", run = "symbol" },
+# 	{ name = "*.rb", run = "symbol" },
+# 	{ name = "*.{sh,bash,zsh}", run = "symbol" },
+# ]
+
 fetchers = [
 	# Mimetype
 	{ id = "mime", name = "*", run = "mime", if = "!mime", prio = "high" },
