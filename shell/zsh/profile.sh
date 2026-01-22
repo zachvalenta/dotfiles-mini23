@@ -1,31 +1,6 @@
 echo -n "$(tput setaf 5) sourcing ~/.zprofile at$(tput sgr0): "; date
 
 ###
-# 🗂 FS
-###
-
-# 🖥️ MACHINE-SPECIFIC
-DOC_DIR="$HOME/Documents"
-DENV_DIR="$DOC_DIR/denv"
-DOT_DIR="$DENV_DIR/dotfiles"
-# TELESCOPE_WORKSPACE_DIR="$HOME/Documents/telescope-workspace"
-
-# 🙈 ME
-ZV_DIR="$HOME/Documents/zv"
-MAT_DIR="$ZV_DIR/materials"
-DOMAINS_DIR="$ZV_DIR/notes/domains"
-SW_DIR="$ZV_DIR/notes/sw"
-PER_DIR="$ZV_DIR/personal"
-TRACK_DIR="$ZV_DIR/personal/tracking"
-
-# 🟧 KERO
-KERO_DIR="$ZV_DIR/work/kero"
-KERO_RUSH="$KERO_DIR/src/automation/rush"
-KERO_SRC="$KERO_DIR/src"
-KERO_AGENTIC="$KERO_DIR/docs/agentic"
-KERO_ENG="$KERO_DIR/docs/eng"
-
-###
 # 🌇  PROFILE
 ###
 
