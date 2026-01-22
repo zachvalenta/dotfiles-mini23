@@ -142,16 +142,17 @@ alias ccc="\cd $DOT_DIR/ai/claude; t"
 # NOTES
 alias jbj="\cd $ZV_DIR/notes"
 alias dom="clear; \cd $DOMAINS_DIR; t -d; jb"
-alias sw="clear; \cd $SW_DIR; t design guts; jb"
+alias sw="clear; \cd $SW_DIR; t -d; jb"
 alias shu="cd $ZV_DIR/notes/bookcase; t -d"
 
 # PERSONAL
 alias per="cd $PER_DIR"
 alias logs="cd $PER_DIR/logs"
+alias falu="\cd $PER_DIR/.falu; t"
 # alias ren="cd $PER_DIR/people"
 # alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
-alias fu="clear; rg -UNI '## routine' -A 15 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
-alias falu="\cd $PER_DIR/.falu; t"
+# alias fu="clear; rg -UNI '## routine' -A 15 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
+alias fu="clear; ic /Users/zach/Documents/zv/personal/.photos/20-21\ wilm/20/john-flea-monk.png; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
@@ -163,7 +164,7 @@ alias nv="nvim"
 alias brewfr="brew ls --versions > $DENV_DIR/logs/brew/brew-pkgs.txt"
 alias pipfr="python -m pip freeze > $DENV_DIR/logs/pyenv/pip/pip-pkgs.txt"
 alias pipxfr="python -m pipx list --short > $DENV_DIR/logs/pyenv/pipx/pipx-pkgs.txt"
-alias rustfr="cargo install --list > $DENV_DIR/logs/rust/rust-pkgs.txt"
+alias rustfr="cargo install --list > $DENV_DIR/logs/rust/#meta/rust-pkgs.txt"
 alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
@@ -384,10 +385,10 @@ function gp() {
     git add -A
 
     # Show staged changes in pager (q to exit, ESC aborts)
-    git diff --cached --color=always | less -R -+F -K --quit-on-intr || {
-        gum style --foreground 9 "❌ Aborted."
-        return 1
-    }
+    # git diff --cached --color=always | less -R -+F -K --quit-on-intr || {
+    #     gum style --foreground 9 "❌ Aborted."
+    #     return 1
+    # }
 
     echo ""
     gum style --border double --padding "1 2" "📝 Files staged:"
@@ -421,16 +422,5 @@ alias gt="git tag"                      # list tags
 # 🛣 PATH
 ###
 
-# Homebrew - set path/manpath
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init --path)"
-fi
-
-export PATH="$PATH:/Users/zach/.local/bin"  # pipx
-export PATH="$DENV_DIR/bin:${PATH}"         # my bin
-export PATH=$PATH:$HOME/go/bin              # golang
-# . "$HOME/.cargo/env"
-export LLM_USER_PATH="$HOME/.config/llm"
+# PATH setup moved to env.sh so it's available to all shells (including non-login)
+# This ensures tools like oh-my-posh, atuin, vivid can be found in .zshenv
