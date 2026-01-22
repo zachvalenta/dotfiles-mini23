@@ -1,15 +1,17 @@
 echo -n "$(tput setaf 5) sourcing ~/.zshenv at$(tput sgr0): "; date
 
-# PATH SETUP - needs to happen before oh-my-posh/atuin/vivid below
-# Homebrew - set path/manpath
+# HOMEBREW - SET PATH/MANPATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# pyenv
+# PYENV
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
 fi
 
-# Additional PATH entries
+###
+# 🛣 PATH
+###
+
 export PATH="$PATH:/Users/zach/.local/bin"                    # pipx
 export PATH="$HOME/Documents/denv/bin:${PATH}"                # my bin
 export PATH="$PATH:$HOME/go/bin"                              # golang

@@ -417,10 +417,3 @@ alias gds="git ds"                      # diff staging area and repo
 alias ga="git add -A"                   # stage all
 alias gai="git ai"                      # stage interactive
 alias gt="git tag"                      # list tags
-
-###
-# 🛣 PATH
-###
-
-# PATH setup moved to env.sh so it's available to all shells (including non-login)
-# This ensures tools like oh-my-posh, atuin, vivid can be found in .zshenv
