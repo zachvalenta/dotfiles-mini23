@@ -49,10 +49,3 @@ KERO_ENG="$KERO_DIR/docs/eng"
 if [[ ! -o login && -o interactive ]]; then
     source /Users/zach/.zprofile
 fi
-
-# OH-MY-POSH
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/multiverse-neon.omp.json)"
-# ATUIN
-eval "$(atuin init zsh)"
-# LS_COLORS FOR EZA
-export LS_COLORS="$(vivid generate catppuccin-mocha)"
