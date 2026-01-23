@@ -10,6 +10,12 @@ At the start of every session, list:
 * any docs you've read as per those `CLAUDE.md` files
 * the user-provided slash commands you have available to you
 
+## packaging
+
+I version control language runtimes and installed packages @ `/Users/zach/Documents/denv/logs`.
+
+Do not install tools on your own. If you'd like to install something new, ask me first and write a log file to the appropriate dir in the above logfiles.
+
 ## tools & permissions
 
 __CRITICAL: NEVER use Bash for file operations__
