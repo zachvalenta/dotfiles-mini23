@@ -257,8 +257,8 @@ alias vsconf="cd $HOME/Library/Application\ Support/Code/User"
 alias wy='bash -c "tv text | while read -r line; do code -g \"\$line\"; done"'
 alias ytd='yt-dlp "$1"'
 alias ytdv='yt-dlp --format mp4 "$1"'
-alias upzp="source $HOME/.zprofile"
-alias zp="vsc $HOME/.zprofile"
+alias upzr="source $HOME/.zshrc"
+alias zr="vsc $HOME/.zshrc"
 
 ###
 # EZA
