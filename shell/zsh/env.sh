@@ -43,9 +43,21 @@ KERO_SRC="$KERO_DIR/src"
 KERO_AGENTIC="$KERO_DIR/docs/agentic"
 KERO_ENG="$KERO_DIR/docs/eng"
 
-# ZELLIJ WORKAROUND - Zellij doesn't launch login shells, so manually source .zprofile
-# Only do this for interactive non-login shells to prevent double-sourcing in login shells
-# https://github.com/zellij-org/zellij/issues/1434#issuecomment-2185020449
-if [[ ! -o login && -o interactive ]]; then
-    source /Users/zach/.zprofile
-fi
+###
+# 🌐 ENVIRONMENT VARIABLES
+###
+
+export EDITOR=vim
+export MANPAGER=bat
+export HOMEBREW_NO_AUTO_UPDATE=1
+export PYTHONDONTWRITEBYTECODE=1
+export PYTHONSTARTUP="$DOT_DIR/python/python_startup.py"
+
+# CONFIG PATHS
+export RIPGREP_CONFIG_PATH="$DOT_DIR/cli/.ripgreprc"
+export ZELLIJ_CONFIG_DIR="~/.config/zellij"
+export PLS_CONFIG="$DOT_DIR/shell/pls.yml"
+
+# EZA SETTINGS (used by functions in zshrc)
+EZA_IGNORE=".DS_Store|.git|.localized|.venv|*.code-workspace|.ruff_cache"
+EZA_TREE_FLAGS=(--icons --tree --no-quotes --no-user --no-time --git-ignore -I "$EZA_IGNORE")
