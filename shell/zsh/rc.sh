@@ -22,8 +22,13 @@ eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/multiver
 # ATUIN - history
 eval "$(atuin init zsh)"
 
-# LS_COLORS - colors for eza
-export LS_COLORS="$(vivid generate catppuccin-mocha)"
+# LS_COLORS for eza
+# regen cache: rm ~/.cache/vivid-ls-colors && source ~/.zshrc
+if [[ ! -f ~/.cache/vivid-ls-colors ]]; then
+    mkdir -p ~/.cache
+    vivid generate catppuccin-mocha > ~/.cache/vivid-ls-colors
+fi
+export LS_COLORS="$(cat ~/.cache/vivid-ls-colors)"
 
 # BROOT - file navigator
 source /Users/zach/.config/broot/launcher/bash/br
@@ -174,7 +179,7 @@ alias yin="\cd $ZV_DIR/AV/yin; eza -al"
 # 🎹 MUSIC
 ###
 
-alias mh="rg -UA 11 'alias mh' $DOT_DIR/shell/zsh/profile.sh"
+alias mh="rg -UA 11 'alias mh' $DOT_DIR/shell/zsh/rc.sh"
 alias int="rg -UNI '## intervals' -A 15 -B 1 $DOMAINS_DIR/art/music | glow -"
 alias hx="clear; rg -A 17 -B 1 '## chords' $DOMAINS_DIR/art/music/theory.md | glow -"
 alias yj="rg -UNI '## scales' -A 7 -B 1 $DOMAINS_DIR/art/music | glow -"
