@@ -37,10 +37,24 @@ source /Users/zach/.config/broot/launcher/bash/br
 eval "$(zoxide init zsh)"
 
 # eval "$(nodenv init -)"
-# NVM - node version manager
+
+# NVM - takes 500ms so using placeholder func for lazy loading
 export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+nvm() {
+    unset -f nvm node npm  # rm placeholders
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # load the real nvm
+    nvm "$@"  # run actual nvm cmd w/ args
+}
+node() {
+    unset -f nvm node npm
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    node "$@"
+}
+npm() {
+    unset -f nvm node npm
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    npm "$@"
+}
 
 ###
 # 🏔 WORKFLOW
