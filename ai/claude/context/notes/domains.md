@@ -127,9 +127,9 @@ LOCATION: `/Users/zach/Documents/zv/notes/domains`
 │   └── RELATED: bookcase/books.md (history section)
 │   └── HEADERS: 🌎 AMERICAS, 🇲🇽 Mexico, 🇺🇸 United States, 🌏 ASIA, 🇨🇳 China, 🇮🇳 India, 🇯🇵 Japan, 🌍 EUROPE, history of thought, WW1, Enlightenment, 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England, 🇫🇷 France, 🇩🇪 Germany, 🇮🇹 Italy, 🕋 MUSLIM, 🇮🇱 Israel, 🇸🇦 Saudi Arabia, 🟨 ZA, Africa, historiography, 🇷🇺 Russia
 ├── law.md
-│   └── TOPICS: legal system, jurisprudence
-│   └── SEARCH: Farnsworth, Alexander, jim crow
-│   └── HEADERS: 🇺🇸 CONSTITUTION, bill of rights, civil liberties, discrimination, free speech, 🔪 CRIME, causes, stats, policing, prison, 🟨️ ZA, courts, jurisprudence, ownership, systems
+│   └── TOPICS: legal system, jurisprudence, civil law, criminal law, contracts, torts
+│   └── SEARCH: Farnsworth, Alexander, jim crow, constitutional law, statutory law, case law, litigation
+│   └── HEADERS: 🇺🇸 CONSTITUTION, sources of law (constitutional/statutory/case/administrative), bill of rights, civil liberties, discrimination, free speech, 🔪 CRIME, criminal procedure (arrest/trial/appeal), specific crimes (homicide/liability/defenses), causes, stats, policing, prison, ⚖️ CIVIL LAW, contracts, torts, domestic relations, real estate, landlord/tenant, estates & probate, insurance, liens, 🟨️ ZA, courts (civil litigation procedure), jurisprudence, ownership, systems
 ├── linguistics.md
 │   └── TOPICS: grammar, syntax, phonology, language change
 │   └── SEARCH: declension, conjugation, inflection, Pinker
