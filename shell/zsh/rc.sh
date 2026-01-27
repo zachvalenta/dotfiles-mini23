@@ -403,13 +403,13 @@ function gp() {
     #     return 1
     # }
 
-    echo ""
-    gum style --border double --padding "1 2" "📝 Files staged:"
-    git status --short
+    # echo ""
+    # gum style --border double --padding "1 2" "📝 Files staged:"
+    # git status --short
 
-    echo ""
-    gum style --border double --padding "1 2" "📋 Current commit message:"
-    git log -1 --pretty=%B
+    # echo ""
+    # gum style --border double --padding "1 2" "📋 Current commit message:"
+    # git log -1 --pretty=%B
 
     if gum confirm "⚠️  Amend current commit and force push?"; then
         gum spin --spinner dot --title "Amending commit..." -- \
