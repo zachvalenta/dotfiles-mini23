@@ -20,6 +20,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/multiverse-neon.omp.json)"
 
 # Just
+alias just="/Users/zach/Documents/zv/projects/lang/rust/just/target/release/just"  # tmp alias while waiting for PR to merge
 export JUST_LIST_RECIPE_COLOR='#fab387'  # peach
 export JUST_LIST_DOC_COLOR='#f5c2e7'     # pink
 export JUST_LIST_GROUP_COLOR='#a6e3a1'   # mint green
