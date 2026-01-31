@@ -19,6 +19,12 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # OH-MY-POSH - prompt
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/multiverse-neon.omp.json)"
 
+# Just
+export JUST_LIST_RECIPE_COLOR='#a6e3a1'
+export JUST_LIST_DOC_COLOR='#f9e2af'
+export JUST_LIST_ALIAS_COLOR='#cba6f7'
+export JUST_LIST_GROUP_COLOR='#f38ba8'
+
 # ATUIN - history
 eval "$(atuin init zsh)"
 
