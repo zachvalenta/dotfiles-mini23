@@ -37,6 +37,13 @@ PERMISSIONS
 * Give multiple options when it comes to solutions. You think more clearly when you do.
 * Back your claims up with specifics.
 
+## glossary
+
+* _rf_: refactor
+* _impl_: implement | implementation
+* _fs_: filesytem
+* _tlh_: top-level header (Markdown)
+
 # 🐍 PYTHON
 
 ## env
