@@ -119,7 +119,12 @@ function tz(){
     clear;
     label "orangered" "WEIGHT"
     YEAR=${1:-26}
-    cat $TRACK_DIR/"$YEAR"/weight.dat | asciigraph -h 10 -w 120 red 2>/dev/null
+    xan plot -LT 'date' 'weight' $TRACK_DIR/"$YEAR"/weight.csv \
+    --cols 120 --rows 12 \
+    --y-min 176 --y-max 181 \
+    --x-ticks 5 --y-ticks 6 \
+    -M halfblock \
+    -g days
 }
 
 ###
@@ -156,6 +161,7 @@ alias kl="\cd $KERO_DIR/docs/worklogs; t"
 # DENV
 alias denv="cd $DENV_DIR"
 alias bin="cd $DENV_DIR/bin"
+alias logs="cd $DENV_DIR/logs"
 alias dot="\cd $DOT_DIR; t -d"
 alias ccc="\cd $DOT_DIR/ai/claude; t"
 
@@ -167,7 +173,7 @@ alias shu="cd $ZV_DIR/notes/bookcase; t -d"
 
 # PERSONAL
 alias per="cd $PER_DIR"
-alias logs="cd $PER_DIR/logs"
+alias rb="cd $PER_DIR/logs"
 alias falu="\cd $PER_DIR/.falu; t"
 # alias ren="cd $PER_DIR/people"
 # alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
