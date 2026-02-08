@@ -174,9 +174,9 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── TOPICS: data link layer, ethernet
 │   │   └── HEADERS: 🏠 HOME INTERNET, ISP, debug, hardware, speed, config, 🟨️ ZA, data centers, hardware, telephony, transmissions
 │   └── tcp-ip.md
-│       └── TOPICS: TCP/IP stack, sockets
-│       └── SEARCH: TCP, UDP, IP, ports, handshake, congestion
-│       └── HEADERS: 📡 IP, addresses, packet, 🟨️ ZA, UDP, TCP, tooling, VPN
+│       └── TOPICS: TCP/IP stack, sockets, VPN, firewalls
+│       └── SEARCH: TCP, UDP, IP, ports, handshake, congestion, nftables, PF, iptables, packet filter
+│       └── HEADERS: 📡 IP, addresses, packet, 🟨️ ZA, UDP, TCP, tooling, VPN, firewall
 ├── operating-systems/
 │   ├── containers.md
 │   │   └── TOPICS: Docker, container runtimes

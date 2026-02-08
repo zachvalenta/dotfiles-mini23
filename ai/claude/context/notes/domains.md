@@ -175,8 +175,10 @@ LOCATION: `/Users/zach/Documents/zv/notes/domains`
 │   │   └── TOPICS: odds, expected value, Kelly criterion
 │   │   └── HEADERS: 🏢 MARKETS, point-based, moneyline, derivatives, props, futures, micro, 📰 INFO, Public, semi-public, proprietary, prohibited, 🧮 PRICING (HOW YOU IDENTIFY VALUE), absolute, comparative value, dynamic value, mkt inefficiency, 💵 STAKES, fixed, proportional, progressive (not recommended), situational sizing, ⏰ EXECUTION, pregame, in-game, sequential, 🦊 STRATS, Example 1: Sharp Value Bettor, Example 2: Arbitrage Player, Example 3: Prop Specialist, Example 4: Same Game Parlay Value Hunter, Example 5: Live Middle Chaser, Using the Framework
 │   ├── core.md
-│   │   └── TOPICS: algebra, calculus, linear algebra
-│   │   └── HEADERS: 🏟️ ALGEBRA, polynomials, linear, 🌪 COMPLEXITY, game theory, strategy, ◩ SET THEORY, combos, operations, 🟨️ ZA, calculus, logarithms, notation
+│   │   └── TOPICS: algebra, calculus, linear algebra, complex dynamics, fractals
+│   │   └── SEARCH: Julia set, Mandelbrot set, Fatou set, chaos theory, iteration, complex numbers
+│   │   └── RELATED: complexity theory
+│   │   └── HEADERS: 🏟️ ALGEBRA, polynomials, linear, 🌪 COMPLEXITY, game theory, strategy, 🌀 COMPLEX DYNAMICS, ◩ SET THEORY, combos, operations, 🟨️ ZA, calculus, logarithms, notation
 │   ├── forecasting.md
 │   │   └── TOPICS: sports betting, prediction markets
 │   │   └── SEARCH: EV, handle, odds, payout, Davidow
