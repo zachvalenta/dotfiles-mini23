@@ -117,7 +117,7 @@ function hm(){
 }
 function tz(){
     clear;
-    label "orangered" "WEIGHT"
+    label "tomato" "WEIGHT"
     YEAR=${1:-26}
     xan plot -LT 'date' 'weight' $TRACK_DIR/"$YEAR"/weight.csv \
     --cols 120 --rows 12 \
@@ -388,7 +388,8 @@ alias b="br"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
+	# Use sympop yazi with separate config (includes symbol preview plugin)
+	XDG_CONFIG_HOME="$HOME/.config/yazi-sympop" /Users/zach/Documents/zv/projects/design/app/sympop/target/release/yazi "$@" --cwd-file="$tmp"
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
 		builtin cd -- "$cwd"
 	fi

@@ -87,20 +87,22 @@ suppress_preload = false
 
 [plugin]
 
-# Temporarily disabled - symbol plugin not working yet
-# prepend_previewers = [
-# 	{ name = "*.md", run = "symbol" },
-# 	{ name = "*.py", run = "symbol" },
-# 	{ name = "*.lua", run = "symbol" },
-# 	{ name = "*.{js,ts,jsx,tsx,mjs}", run = "symbol" },
-# 	{ name = "*.rs", run = "symbol" },
-# 	{ name = "*.go", run = "symbol" },
-# 	{ name = "*.rb", run = "symbol" },
-# 	{ name = "*.{sh,bash,zsh}", run = "symbol" },
-# ]
+# Symbol preview plugin - for sympop/yazi only (stock yazi doesn't have symbol plugin)
+# Stock yazi will ignore this and use default previewers
+prepend_previewers = [
+	{ url = "**/*.md", run = "symbol" },
+	{ url = "**/*.py", run = "symbol" },
+	{ url = "**/*.lua", run = "symbol" },
+	{ url = "**/*.{js,ts,jsx,tsx,mjs}", run = "symbol" },
+	{ url = "**/*.rs", run = "symbol" },
+	{ url = "**/*.go", run = "symbol" },
+	{ url = "**/*.rb", run = "symbol" },
+	{ url = "**/*.{sh,bash,zsh}", run = "symbol" },
+]
 
+# Using old v0.4.2 syntax for compatibility with stock yazi
+# Sympop yazi (v26.1.4) is backwards compatible and can read this syntax
 fetchers = [
-	# Mimetype
 	{ id = "mime", name = "*", run = "mime", if = "!mime", prio = "high" },
 ]
 spotters = [
