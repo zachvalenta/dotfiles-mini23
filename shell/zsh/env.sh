@@ -1,4 +1,5 @@
-echo -n "$(tput setaf 5) sourcing ~/.zshenv at$(tput sgr0): "; date
+# Only print during interactive shells (not during cargo builds)
+[[ -o interactive ]] && { echo -n "$(tput setaf 5) sourcing ~/.zshenv at$(tput sgr0): "; date; }
 
 # HOMEBREW - SET PATH/MANPATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
