@@ -48,19 +48,24 @@ eval "$(zoxide init zsh)"
 # NVM - takes 500ms so using placeholder func for lazy loading
 export NVM_DIR="$HOME/.config/nvm"
 nvm() {
-    unset -f nvm node npm  # rm placeholders
+    unset -f nvm node npm gemini  # rm placeholders
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # load the real nvm
     nvm "$@"  # run actual nvm cmd w/ args
 }
 node() {
-    unset -f nvm node npm
+    unset -f nvm node npm gemini
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     node "$@"
 }
 npm() {
-    unset -f nvm node npm
+    unset -f nvm node npm gemini
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     npm "$@"
+}
+gemini() {
+    unset -f nvm node npm gemini
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    gemini "$@"
 }
 
 ###
