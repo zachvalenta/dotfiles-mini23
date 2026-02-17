@@ -1,5 +1,0 @@
-[[models]]
-id = "gpt-4o"
-name = "gpt 4o"
-display_name = "gpt 4 omni"
-# api_key set on local
