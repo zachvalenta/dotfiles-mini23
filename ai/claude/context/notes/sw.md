@@ -111,21 +111,25 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │       └── SEARCH: Prometheus, Grafana, OpenTelemetry, ELK, Datadog
 │       └── HEADERS: 📊 METRICS, bandwidth, latency, perf, throughput, load parameters, 🩻 MONITORING, Beszel, 🐶 Datadog, Grafana, Graphite, HyperDX, 🔥 Logfire, OpenTelemetry, Prometheus, 🟪 Sentry, Signoz, 🔭 PROFILING, benchmark, timeit, start here, options, types, 🔬 TRACING, bpf, 🟨 ZA, customer analytics, incidents, Honeycomb, logging, uptime / healthcheck
 └── ux/
-    ├── js.md
-    │   └── TOPICS: frontend frameworks, JS runtimes, state management, htmx alternatives
-    │   └── SEARCH: React, Vue, Svelte, htmx, Alpine, TanStack, Datastar, htmz, NiceGUI, LiveView, SPA tradeoffs, CSR vs SSR, Node, Deno, Bun
-    │   └── RELATED: design/ux/styling.md, design/ux/static.md
-    │   └── HEADERS: 🪑 FRAMEWORKS, design, state, alpine, Datastar, htmx, LiveView, NiceGUI, React, TanStack, Vue, 🥟 JAVASCRIPT, lang, packaging, runtimes, version mgmt, 📔 STDLIB, 🟨 ZA, browser, perf, mobile (tauri), i18n, search
-    ├── static.md
-    │   └── TOPICS: static site generators, personal sites, web design patterns
-    │   └── SEARCH: Zola, Quartz, Hugo, Hakyll, Hastie, Pelican, dark mode, sidenotes, RSS, SSG, Tailwind, typography
-    │   └── RELATED: design/ux/styling.md, design/ux/js.md
-    │   └── HEADERS: 🕸️ DESIGN, corporate, font/text, examples, dropdowns, ToC, images, notes, links, tables, SSG, alternatives, features, Hakyll, Hastie, Quartz, Zola
-    └── styling.md
-        └── TOPICS: CSS layout, typography, visual hierarchy, spacing, Tailwind
-        └── SEARCH: Flexbox, Grid, CSS selectors, custom properties, water.css, pico, responsive design, pseudo-selectors, HTML semantics
-        └── RELATED: design/ux/static.md, domains/art/text/design.md
-        └── HEADERS: LAYOUT & POSITIONING, SIZING, VISUAL STYLE, TYPOGRAPHY, SPACING, 🎨 CSS, Tailwind, layout, selectors, 🟨 ZA, HTML, semantics, forms
+    ├── css.md
+    │   └── TOPICS: CSS fundamentals, layout, CSS frameworks, responsive design
+    │   └── SEARCH: Flexbox, Grid, positioning, selectors, Tailwind, BEM, animations, SASS/SCSS, CSS variables, water.css, pico
+    │   └── RELATED: design/ux/html.md, domains/art/text/design.md
+    │   └── HEADERS: HOWTO, ZA, Tailwind, FRAMEWORKS, layout, selectors
+    ├── frontend.md
+    │   └── TOPICS: web frameworks, SPAs vs server-side rendering, hypermedia, progressive enhancement
+    │   └── SEARCH: htmx, Alpine, React, Vue, Svelte, Remix, Next.js, Datastar, LiveView, Django integration, SPA tradeoffs
+    │   └── RELATED: lang/productive/js.md, design/ux/html.md
+    │   └── HEADERS: 🪀 INTERACTIVE, 🐟 alpine, 🪷 jQuery, 🛜 HYPERMEDIA, 🌌 Datastar, 🟦 htmx, 🎮 LiveView, 🛁 SPA, ☢️ React, 🟩 Vue, 🟨 ZA, design, state
+    ├── html.md
+    │   └── TOPICS: HTML semantics, forms, static site generators, CMS & templating
+    │   └── SEARCH: SSG, Zola, Hakyll, Eleventy, Quartz, Hastie, forms, semantic HTML, metadata, RSS, tags, search
+    │   └── RELATED: design/ux/css.md, design/ux/frontend.md
+    │   └── HEADERS: ELEMENTS, HOWTO, SEMANTICS, FORMS, 🦾 SSG, alternatives, features, ♾️ Hakyll, ◻️ Hastie, 🪴 Quartz, 🔲 Zola, 🟨 ZA, archive
+    └── mobile.md
+        └── TOPICS: cross-platform app development, mobile frameworks, native app development
+        └── SEARCH: Tauri, Flutter, React Native, Expo, Kotlin, Apple ID, in-app purchases, app stores, Xamarin
+        └── HEADERS: Tauri, alternatives, Apple ID, native
 ```
 
 ## guts/
@@ -263,6 +267,11 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── TOPICS: Lua, embedded scripting, Neovim/game engine integration
 │   │   └── SEARCH: LuaJIT, metatables, OOP patterns, Fennel, LuaRocks, Redis scripting
 │   │   └── HEADERS: 📝 LANG, tables, self, OOP, modules, 📦 PACKAGING, 📔 STDLIB, 🟨 ZA, embedded, usage
+│   ├── js.md
+│   │   └── TOPICS: JavaScript language, package management, runtimes, browser APIs, performance
+│   │   └── SEARCH: Node.js, npm, TypeScript, Deno, Bun, Webpack, tree-shaking, bundling, service workers, fetch, browser storage, dev tools
+│   │   └── RELATED: design/ux/frontend.md, lang/productive/ts.md
+│   │   └── HEADERS: 🥟 JAVASCRIPT, lang, packaging, MANAGERS, REGISTRIES, runtimes, VERSION MGMT, 📔 STDLIB, internationalization, search, 🟨 ZA, browser, STATE, BROWSERS, perf
 │   ├── ruby.md
 │   │   └── TOPICS: Ruby language
 │   │   └── SEARCH: Ruby Under a Microscope
@@ -422,9 +431,11 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 # KEY CROSS-REFERENCES
 
 SITE / UX
-* `design/ux/static.md` → SSGs, Zola, design patterns
-* `design/ux/styling.md` → CSS, typography, Tailwind
-* `design/ux/js.md` → React, Vue, htmx, JS runtimes
+* `design/ux/html.md` → SSGs, Zola, Hakyll, semantic HTML
+* `design/ux/css.md` → CSS layout, Tailwind, selectors
+* `design/ux/frontend.md` → htmx, React, Vue, Alpine, hypermedia
+* `lang/productive/js.md` → JS language, Node, Bun, runtimes
+* `design/ux/mobile.md` → Tauri, React Native, Flutter
 * `domains/art/text/design.md` → color, typography theory
 
 DATA PIPELINE
