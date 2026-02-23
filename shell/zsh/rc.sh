@@ -20,7 +20,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/multiverse-neon.omp.json)"
 
 # Just
-alias just="/Users/zach/Documents/zv/projects/lang/rust/just/target/release/just"  # tmp alias while waiting for PR to merge
+alias just="/Users/zach/Documents/zv/projects/tools/just/target/release/just"  # tmp alias while waiting for PR to merge
 export JUST_LIST_RECIPE_COLOR='#fab387'  # peach
 export JUST_LIST_DOC_COLOR='#f5c2e7'     # pink
 export JUST_LIST_GROUP_COLOR='#a6e3a1'   # mint green
@@ -144,7 +144,7 @@ alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
 
 # PROJECTS
-alias xm="\cd $ZV_DIR/projects; t -d 3"
+alias xm="\cd $ZV_DIR/projects; t 2"
 alias blog="\cd $ZV_DIR/projects/design/ux/myblog; t -d"
 alias cm="\cd $ZV_DIR/projects/design/app/ceemuz; t"
 alias doc="\cd $ZV_DIR/projects/design/architecture/documentation; t"
@@ -183,8 +183,8 @@ alias rb="cd $PER_DIR/logs"
 alias falu="\cd $PER_DIR/.falu; t"
 # alias ren="cd $PER_DIR/people"
 # alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
-# alias fu="clear; rg -UNI '## routine' -A 15 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
-alias fu="clear; ic /Users/zach/Documents/zv/personal/.photos/20-21\ wilm/20/john-flea-monk.png; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
+alias fu="clear; rg -UNI '## routine' -A 7 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
+# alias fu="clear; ic /Users/zach/Documents/zv/personal/.photos/20-21\ wilm/20/john-flea-monk.png; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
@@ -197,13 +197,12 @@ alias brewfr="brew ls --versions > $DENV_DIR/logs/brew/brew-pkgs.txt"
 alias pipfr="python -m pip freeze > $DENV_DIR/logs/pyenv/pip/pip-pkgs.txt"
 alias pipxfr="python -m pipx list --short > $DENV_DIR/logs/pyenv/pipx/pipx-pkgs.txt"
 alias rustfr="cargo install --list > $DENV_DIR/logs/rust/#meta/rust-pkgs.txt"
-alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/vs-code/pkg-vsc.txt"
+alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/editors/vs-code/pkg-vsc.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
 alias mat="cd $MAT_DIR; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
-alias ms="cd $MAT_DIR/sw/za/profile; t -d"
 alias snip="cd /Users/zach/Library/Application\ Support/Code/User"
 alias sk8="\cd $MAT_DIR/art/skate; t -d"
 alias yin="\cd $ZV_DIR/AV/yin; eza -al"

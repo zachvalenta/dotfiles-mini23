@@ -7,7 +7,7 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 ## design/
 
 ```
-├── app/
+├── backend/
 │   ├── api.md
 │   │   └── TOPICS: REST, GraphQL, API design
 │   │   └── SEARCH: OpenAPI, Swagger, HATEOAS
@@ -17,14 +17,14 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── SEARCH: models, DRF, Celery, htmx, Vincent, Layman
 │   │   └── RELATED: design/system/middleware.md, design/architecture/test.md
 │   │   └── HEADERS: 🛰️ API, DRF, middleware, serialization, URLs, views, 🔑 AUTH, users, permissions, default, custom, magic links, allauth, ⚙️ CONFIG, deployment, denv, project structure, security, settings, static files, 🍱 DB, admin, DDL, managed, meta, DML, migrations, 💳 LIBS, code quality, debug, money, real-time (channels), tasks, 🟨 ZA, design, governance, templates, signals, testing
-│   ├── flask.md
-│   │   └── TOPICS: Flask framework, blueprints
-│   │   └── SEARCH: Werkzeug, Jinja, gunicorn
-│   │   └── HEADERS: STRUCTURE, blog, 🌱 single module, 🌿 n modules, 🍀 pkg, 🗣 Ray, 🗣 Grinberg, ZA, auth, config, context, dev server, Flask SQLAlchemy, libs, REST, routing, templates, testing
-│   └── terminal.md
-│       └── TOPICS: TUI, CLI frameworks
-│       └── SEARCH: Click, Typer, Rich, Textual, curses, ANSI
-│       └── HEADERS: 🖱️ CLICK, basic, args, default cmd, 🔣 INPUT, 🚅 bullet, questionary, 📺 TUI, 🦄 Charm, ratatui, Textual, 🟨 ZA, assorted Golang, design, 🍬 gum, 💰 rich, terminal text effects
+│   ├── fast-api.md
+│   │   └── TOPICS: FastAPI, ASGI, Python web framework
+│   │   └── SEARCH: ASGI, SGI, server gateway interface, async web API
+│   │   └── RELATED: lang/python/stdlib.md (SGI)
+│   └── flask.md
+│       └── TOPICS: Flask framework, blueprints
+│       └── SEARCH: Werkzeug, Jinja, gunicorn
+│       └── HEADERS: STRUCTURE, blog, 🌱 single module, 🌿 n modules, 🍀 pkg, 🗣 Ray, 🗣 Grinberg, ZA, auth, config, context, dev server, Flask SQLAlchemy, libs, REST, routing, templates, testing
 ├── architecture/
 │   ├── design-patterns.md
 │   │   └── TOPICS: GoF patterns, SOLID
@@ -34,6 +34,10 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── TOPICS: DDD, bounded contexts, aggregates
 │   │   └── SEARCH: value object, repository, CQRS
 │   │   └── HEADERS: 🗺️ STRATEGIC (domain), bounded context, ubiquitous language, DSLs, invariants / rule encapsulation, unit of work, 🛠️ TACTICAL, obj (entity), services, data mapper, repo, 🏗️ IMPL, rf, 🟧 Kero, Evans, Percival, Django
+│   ├── code.md
+│   │   └── TOPICS: software design principles, refactoring, OOP, functional patterns
+│   │   └── SEARCH: SOLID, composition, coupling, cohesion, DI, IoC, MVC, hexagonal architecture, clean code, method chaining
+│   │   └── HEADERS: 🖲️ STYLE, Hickey/Lisp/data-driven, functional, object-oriented, method chaining, ⠎ PATTERNS, composition, coupling/cohesion, dependency injection (DI), IoC, plugins, SOLID, 🏗️ REFACTORING, extract, inline, 🟨 ZA, comments
 │   └── test.md
 │       └── TOPICS: testing strategies, TDD, fixtures
 │       └── SEARCH: pytest, unittest, mocking, coverage, integration, e2e
@@ -45,9 +49,13 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── RELATED: domains/stem/math/stat.md, dataframes.md, OLAP.md
 │   │   └── HEADERS: 💿 DATA, canonical, generate, datasets, pedagogy, regression, seed, 🛠️ TOOLING, EDA, entry (dataclerk), spreadsheet (Excel), 💊 xan, ❎ xsv, 💻 GUI, Harlequin, TablePlus, Ultorg, 🟦 VISIDATA, ⭐️ config, ⭐️ Mongo loader, attr, DML, records, sheets
 │   ├── BI.md
-│   │   └── TOPICS: business intelligence, reporting, charting
-│   │   └── SEARCH: Metabase, Tableau, dashboards
-│   │   └── HEADERS: ⛽️ PLATFORMS, 📼 Datasette, 💄 Great Tables, Holoviz, 🔵 Quarto, 🪶 Superset, 📉 CHARTING, types, asciigraph, fastplotlib, incplot, plotext, rich, tabulate, xan, 🥗 GUI, 🎁 datawrapper, 🟩 Great Tables, 🦋 matplotlib, 💶 TradingView
+│   │   └── TOPICS: business intelligence, reporting, BI platforms
+│   │   └── SEARCH: Metabase, Tableau, dashboards, Datasette, Quarto, Superset, Great Tables
+│   │   └── HEADERS: ⛽️ PLATFORMS, 📼 Datasette, 💄 Great Tables, Holoviz, 🔵 Quarto, 🪶 Superset, 🥗 GUI, 🎁 datawrapper, 🟩 Great Tables, 🦋 matplotlib, 💶 TradingView
+│   ├── charting.md
+│   │   └── TOPICS: data visualization, terminal plotting, chart types, Python charting
+│   │   └── SEARCH: asciigraph, plotext, termgraph, xan, youplot, uniplot, sparkline, Tufte, line charts, bar charts, histogram, CSV, real-time updates, fastplotlib, incplot, plotille
+│   │   └── HEADERS: 📊 TYPES, 🛠️ TOOLS, MAYBE, NO, asciigraph, fastplotlib, incplot, plodder, plotext, plotille, rich, termgraph, uniplot, xan, youplot, 🟧 ZA, semantics
 │   ├── dataframes.md
 │   │   └── TOPICS: tabular data, pandas, Polars
 │   │   └── SEARCH: Arrow, lazy evaluation
@@ -126,10 +134,14 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
     │   └── SEARCH: SSG, Zola, Hakyll, Eleventy, Quartz, Hastie, forms, semantic HTML, metadata, RSS, tags, search
     │   └── RELATED: design/ux/css.md, design/ux/frontend.md
     │   └── HEADERS: ELEMENTS, HOWTO, SEMANTICS, FORMS, 🦾 SSG, alternatives, features, ♾️ Hakyll, ◻️ Hastie, 🪴 Quartz, 🔲 Zola, 🟨 ZA, archive
-    └── mobile.md
-        └── TOPICS: cross-platform app development, mobile frameworks, native app development
-        └── SEARCH: Tauri, Flutter, React Native, Expo, Kotlin, Apple ID, in-app purchases, app stores, Xamarin
-        └── HEADERS: Tauri, alternatives, Apple ID, native
+    ├── mobile.md
+    │   └── TOPICS: cross-platform app development, mobile frameworks, native app development
+    │   └── SEARCH: Tauri, Flutter, React Native, Expo, Kotlin, Apple ID, in-app purchases, app stores, Xamarin
+    │   └── HEADERS: Tauri, alternatives, Apple ID, native
+    └── terminal.md
+        └── TOPICS: TUI, CLI frameworks, terminal aesthetics
+        └── SEARCH: Click, Typer, Rich, Textual, Charm, Bubbletea, Ratatui, gum, readline autocomplete, Golang CLI, Rust CLI
+        └── HEADERS: 🖱️ CLICK, 🔣 INPUT, 📺 TUI, 🎆 PIZAZZ, 🍬 gum, 💰 rich, terminal text effects, 🟨 ZA, assorted Golang
 ```
 
 ## guts/
@@ -154,14 +166,43 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── TOPICS: arrays, trees, graphs, hash tables
 │   │   └── SEARCH: linked list, binary tree, heap, trie, B-tree
 │   │   └── RELATED: algos.md, design/data/internals.md
-│   ├── ml.md
-│   │   └── TOPICS: machine learning, neural nets, training
-│   │   └── SEARCH: TensorFlow, gradient descent, backprop
-│   │   └── HEADERS: ⭕️ CORE, embeddings, features, inference, labels, vectors, 🏛️ CLASSICAL, 🛖 KNN, 📈 linear regression, 🌳 random forest, 🌐 NLP, sentiment analysis, entity recognition, CRFs, HMM, SVM, 🧠 NEURAL NETWORKS, deep learning, transformers, tokens, CNNs, RNNs, ☸️ LLMs, evals, train, 🛠️ STDLIB, jax, numpy, pytorch, scikit, scipy, spacy, sympy, 🟨️ ZA, cleanup, winter / overrated
 │   └── security.md
 │       └── TOPICS: auth, encryption, vulnerabilities
 │       └── SEARCH: OAuth, JWT, HTTPS, TLS, OWASP, XSS, SQL injection, bcrypt
 │       └── HEADERS: ⚔️ EXPLOITS, file inclusion, SQL injection, XSS, 🧮 CRYPTOGRAPHY, encryption, hashing, 👽 USERS, access control, auth, Auth0, Dex, Kerberos, LDAP, OAuth, better auth, Tinyauth, passwords, ZA, culture, DMZ, privacy
+├── ml/
+│   ├── classical.md
+│   │   └── TOPICS: supervised learning, regression, ensemble methods, clustering, recommendation
+│   │   └── SEARCH: KNN, k-means, linear regression, logistic regression, random forest, Bayesian, clustering
+│   │   └── HEADERS: KNN, linear regression, random forest
+│   ├── core.md
+│   │   └── TOPICS: ML fundamentals, vectors, embeddings, features, labels, evaluation
+│   │   └── SEARCH: vector databases, word embeddings, precision/recall, F1-score, confusion matrix, pgvector, ChromaDB, Pinecone, Word2Vec, GloVe, FastText
+│   │   └── HEADERS: embeddings, features, inference, labels, vectors, evaluation
+│   ├── history.md
+│   │   └── TOPICS: AI evolution, deep learning emergence, ChatGPT discourse, LLM capabilities
+│   │   └── SEARCH: Dartmouth Summer Project, Eliza, AGI, AI winters, transformers, DALL-E, hallucination, adversarial examples
+│   │   └── HEADERS: from Eliza to LLM, TYPES, winter / overrated, ChatGPT / LLM discourse
+│   ├── llms.md
+│   │   └── TOPICS: LLM evaluation, training, fine-tuning, context windows, scaling
+│   │   └── SEARCH: Braintrust, evals, LoRA, RLHF, transfer learning, synthetic data, Ring Attention, token pricing, legal compliance
+│   │   └── HEADERS: evals, train, learn, context window, legal / data
+│   ├── neural.md
+│   │   └── TOPICS: neural network fundamentals, architectures, transformers, backpropagation
+│   │   └── SEARCH: activation functions, weights, backprop, BERT, GPT, T5, attention mechanisms, CNNs, RNNs, deep learning
+│   │   └── HEADERS: FUNCTIONS, PROPAGATION, BASICS, TYPES, deep learning, transformers, tokens, CNNs, RNNs
+│   ├── nlp.md
+│   │   └── TOPICS: text processing, NER, sentiment analysis, sequence tasks
+│   │   └── SEARCH: tokenization, stemming, CRFs, HMM, SVM, TF-IDF, bag of words, BLEU, ROUGE, perplexity, spaCy, lemmatization, dependency parsing
+│   │   └── HEADERS: tokenization, n-grams, feature engineering, evaluation, entity recognition, text classification, speech recognition, sentiment analysis
+│   ├── ops.md
+│   │   └── TOPICS: production ML, methodology, ML tooling, applied AI
+│   │   └── SEARCH: feature computation, hyperparameter tuning, CRISP-DM, RAG, LangChain, drug discovery, fraud detection, causal inference
+│   │   └── HEADERS: START HERE, tooling, methodology, repos, rf
+│   └── stdlib.md
+│       └── TOPICS: Python ML libraries, numerical computing, deep learning frameworks
+│       └── SEARCH: Keras, scikit-learn, JAX, NumPy, TensorFlow, PyTorch, SciPy, spaCy, SymPy, automatic differentiation, JIT, GPU acceleration
+│       └── HEADERS: jax, scikit, scipy, spacy, sympy, TENSORS (numpy, tensorflow, pytorch)
 ├── network/
 │   ├── application.md
 │   │   └── TOPICS: application layer protocols
@@ -239,6 +280,9 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │       └── TOPICS: OCaml, ML family, pattern matching, transpilation
 │       └── SEARCH: F#, serde, Melange, Google Drive FUSE
 ├── low-level/
+│   ├── assembly.md
+│   │   └── TOPICS: assembly language, CPU architecture, low-level programming, ARM
+│   │   └── SEARCH: x86-64, ARM, intrinsics, HLA, compiler explorer, nand2tetris, machine code, bytecode
 │   ├── c.md
 │   │   └── TOPICS: C programming, memory management, build tooling
 │   │   └── SEARCH: pointers, malloc, structs, headers, undefined behavior, linking, GDB, POSIX, assembly interop, libc, musl
@@ -267,11 +311,19 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── TOPICS: Lua, embedded scripting, Neovim/game engine integration
 │   │   └── SEARCH: LuaJIT, metatables, OOP patterns, Fennel, LuaRocks, Redis scripting
 │   │   └── HEADERS: 📝 LANG, tables, self, OOP, modules, 📦 PACKAGING, 📔 STDLIB, 🟨 ZA, embedded, usage
+│   ├── java.md
+│   │   └── TOPICS: Java language, JVM architecture, Spring framework, Maven, concurrency
+│   │   └── SEARCH: JDK/JRE/JVM, Spring Boot, Hibernate, Maven, classpath, annotations, checked exceptions, beans, dependency injection, Kotlin
+│   │   └── HEADERS: Eclipse, Kotlin scripting, HTTP client, dev env, concurrency, exceptions, governance, GUI, imports, primitives, JNDI, testing, PACKAGES, HIBERNATE, JVM, MAVEN, SPRING
 │   ├── js.md
 │   │   └── TOPICS: JavaScript language, package management, runtimes, browser APIs, performance
 │   │   └── SEARCH: Node.js, npm, TypeScript, Deno, Bun, Webpack, tree-shaking, bundling, service workers, fetch, browser storage, dev tools
 │   │   └── RELATED: design/ux/frontend.md, lang/productive/ts.md
 │   │   └── HEADERS: 🥟 JAVASCRIPT, lang, packaging, MANAGERS, REGISTRIES, runtimes, VERSION MGMT, 📔 STDLIB, internationalization, search, 🟨 ZA, browser, STATE, BROWSERS, perf
+│   ├── r.md
+│   │   └── TOPICS: R language, statistical computing, Tidyverse, data visualization
+│   │   └── SEARCH: CRAN, tidyverse, ggplot2, dplyr, tibble, tidyr, purrr, RStudio, SAS, statistical analysis
+│   │   └── RELATED: domains/stem/math/stat.md
 │   ├── ruby.md
 │   │   └── TOPICS: Ruby language
 │   │   └── SEARCH: Ruby Under a Microscope
@@ -412,6 +464,9 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   ├── databases.md
 │   ├── ds.md
 │   ├── languages.md
+│   ├── perf.md
+│   │   └── TOPICS: performance optimization, high-performance code
+│   │   └── SEARCH: ByteByteGo, performance engineering, optimization techniques
 │   └── system-design.md
 │       └── TOPICS: distributed systems architecture, scalability, system design interview prep
 │       └── SEARCH: CAP theorem, eventual consistency, sharding, replication, circuit breakers, rate limiting
@@ -446,9 +501,18 @@ DATA PIPELINE
 
 PYTHON
 * `lang/python/*.md` - split by concern (7 files)
-* `design/app/flask.md`, `design/app/django.md` → web frameworks
+* `design/backend/flask.md`, `design/backend/django.md`, `design/backend/fast-api.md` → web frameworks
 * `design/architecture/test.md` → pytest
 * `tools/feedback/debug.md`, `tools/feedback/notebooks.md`, `tools/feedback/repl.md` → dev workflow
+
+ML / AI
+* `guts/ml/core.md` → vectors, embeddings, evaluation
+* `guts/ml/classical.md` → KNN, regression, random forest
+* `guts/ml/neural.md` → networks, transformers, backprop
+* `guts/ml/llms.md` → fine-tuning, evals, context windows
+* `guts/ml/nlp.md` → text processing, NER, spaCy
+* `guts/ml/ops.md` → production ML, methodology
+* `guts/ml/stdlib.md` → JAX, PyTorch, scikit, scipy
 
 AGENTIC / AI
 * `tools/agentic/agents.md` → agent landscape, Amp, Codex, Cursor
