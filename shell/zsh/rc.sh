@@ -180,7 +180,7 @@ alias shu="cd $ZV_DIR/notes/bookcase; t -d"
 # PERSONAL
 alias per="cd $PER_DIR"
 alias rb="cd $PER_DIR/logs"
-alias falu="\cd $PER_DIR/.falu; t"
+alias falu="\cd $PER_DIR/.falu; ti"
 # alias ren="cd $PER_DIR/people"
 # alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
 alias fu="clear; rg -UNI '## routine' -A 7 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
@@ -191,6 +191,8 @@ alias fu="clear; rg -UNI '## routine' -A 7 $PER_DIR/logs/big-picture.md | glow -
 # alias plug="cd $HOME/.local/share/nvim/plugged"
 # alias ws="cd $TELESCOPE_WORKSPACE_DIR; nv"
 alias nv="nvim"
+alias cnv="nvim"                   # current config @ ~/.config/nvim
+alias nnv="NVIM_APPNAME=neo nvim"  # new config    @ ~/.config/neo
 
 # PKGS
 alias brewfr="brew ls --versions > $DENV_DIR/logs/brew/brew-pkgs.txt"
