@@ -204,6 +204,7 @@ alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 
 # ZA
 alias mat="cd $MAT_DIR; t 2"
+alias mats="cd $MAT_DIR/sw; t 2"
 alias ml="cd $MAT_DIR/music/za/music-library"
 alias snip="cd /Users/zach/Library/Application\ Support/Code/User"
 alias sk8="\cd $MAT_DIR/art/skate; t -d"
@@ -294,8 +295,8 @@ alias vd="visidata"
 alias vsc="open -a 'Visual Studio Code'"
 alias vsconf="cd $HOME/Library/Application\ Support/Code/User"
 alias wy='bash -c "tv text | while read -r line; do code -g \"\$line\"; done"'
-alias ytd='yt-dlp "$1"'
-alias ytdv='yt-dlp --format mp4 "$1"'
+alias ytd='yt-dlp -x --audio-format m4a'
+alias ytdv='yt-dlp -S "vcodec:h264" --merge-output-format mp4'
 alias upzr="source $HOME/.zshrc"
 alias zr="vsc $HOME/.zshrc"
 
