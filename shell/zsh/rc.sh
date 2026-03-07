@@ -49,7 +49,7 @@ eval "$(zoxide init zsh)"
 export NVM_DIR="$HOME/.config/nvm"
 _load_nvm() {
     # lazy load NVM to avoid 500s lag on each shell
-    unset -f nvm node npm gemini _load_nvm            # rm placeholders
+    unset -f nvm node npm gemini claude _load_nvm            # rm placeholders
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # load nvm
 }
 nvm() {
@@ -67,6 +67,10 @@ npm() {
 gemini() {
     _load_nvm
     gemini "$@"
+}
+claude() {
+    _load_nvm
+    claude "$@"
 }
 
 ###
@@ -151,6 +155,7 @@ alias doc="\cd $ZV_DIR/projects/design/architecture/documentation; t"
 alias jc="jiancha"
 alias sgt="\cd $ZV_DIR/projects/design/system/sgt; t"
 alias wq="\cd $ZV_DIR/projects/design/system/tennis-weekend; t"
+alias cork="\cd $ZV_DIR/projects/tools/corkboard; t"
 
 # KERO
 alias kero="\cd $ZV_DIR/work/kero; t -d 2 docs src"
@@ -183,8 +188,8 @@ alias rb="cd $PER_DIR/logs"
 alias falu="\cd $PER_DIR/.falu; ti"
 # alias ren="cd $PER_DIR/people"
 # alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
-alias fu="clear; rg -UNI '## routine' -A 7 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
 # alias fu="clear; ic /Users/zach/Documents/zv/personal/.photos/20-21\ wilm/20/john-flea-monk.png; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
+alias fu="clear; rg -UNI '## routine' -A 6 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
@@ -284,7 +289,7 @@ alias jl="jless -r"
 alias ld="lazydocker"
 alias lg="lazygit"
 alias lh="l | head"
-alias m="make"
+alias j="just"
 alias mkd='function mkd(){ mkdir "$1"; cd "$1";}; mkd'
 alias o="open"
 alias oo="open ."
