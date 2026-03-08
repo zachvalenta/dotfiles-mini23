@@ -26,6 +26,10 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │       └── SEARCH: Werkzeug, Jinja, gunicorn
 │       └── HEADERS: STRUCTURE, blog, 🌱 single module, 🌿 n modules, 🍀 pkg, 🗣 Ray, 🗣 Grinberg, ZA, auth, config, context, dev server, Flask SQLAlchemy, libs, REST, routing, templates, testing
 ├── architecture/
+│   ├── code.md
+│   │   └── TOPICS: software design principles, refactoring, OOP, functional patterns
+│   │   └── SEARCH: SOLID, composition, coupling, cohesion, DI, IoC, MVC, hexagonal architecture, clean code, method chaining
+│   │   └── HEADERS: 🖲️ STYLE, Hickey/Lisp/data-driven, functional, object-oriented, method chaining, ⠎ PATTERNS, composition, coupling/cohesion, dependency injection (DI), IoC, plugins, SOLID, 🏗️ REFACTORING, extract, inline, 🟨 ZA, comments
 │   ├── design-patterns.md
 │   │   └── TOPICS: GoF patterns, SOLID
 │   │   └── SEARCH: dependency injection
@@ -34,68 +38,21 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── TOPICS: DDD, bounded contexts, aggregates
 │   │   └── SEARCH: value object, repository, CQRS
 │   │   └── HEADERS: 🗺️ STRATEGIC (domain), bounded context, ubiquitous language, DSLs, invariants / rule encapsulation, unit of work, 🛠️ TACTICAL, obj (entity), services, data mapper, repo, 🏗️ IMPL, rf, 🟧 Kero, Evans, Percival, Django
-│   ├── code.md
-│   │   └── TOPICS: software design principles, refactoring, OOP, functional patterns
-│   │   └── SEARCH: SOLID, composition, coupling, cohesion, DI, IoC, MVC, hexagonal architecture, clean code, method chaining
-│   │   └── HEADERS: 🖲️ STYLE, Hickey/Lisp/data-driven, functional, object-oriented, method chaining, ⠎ PATTERNS, composition, coupling/cohesion, dependency injection (DI), IoC, plugins, SOLID, 🏗️ REFACTORING, extract, inline, 🟨 ZA, comments
-│   └── test.md
-│       └── TOPICS: testing strategies, TDD, fixtures
-│       └── SEARCH: pytest, unittest, mocking, coverage, integration, e2e
-│       └── HEADERS: 🕋 DESIGN, taxonomy, TDD, BDD, 🔬 FORMAL METHODS, constraint modeling, model checking (TLA+), theorem proving, 👾 GENERATIVE, fuzz, mutation, property, 🕳️ INTEGRATION, API, load, browser, db, 🔣 IO, doubles, factories | fixtures, golden file, snapshot
-├── data/
-│   ├── analytics.md
-│   │   └── TOPICS: data analysis, metrics, dashboards, EDA
-│   │   └── SEARCH: pandas, DuckDB, metrics, KPIs, xsv, xan
-│   │   └── RELATED: domains/stem/math/stat.md, dataframes.md, OLAP.md
-│   │   └── HEADERS: 💿 DATA, canonical, generate, datasets, pedagogy, regression, seed, 🛠️ TOOLING, EDA, entry (dataclerk), spreadsheet (Excel), 💊 xan, ❎ xsv, 💻 GUI, Harlequin, TablePlus, Ultorg, 🟦 VISIDATA, ⭐️ config, ⭐️ Mongo loader, attr, DML, records, sheets
-│   ├── BI.md
-│   │   └── TOPICS: business intelligence, reporting, BI platforms
-│   │   └── SEARCH: Metabase, Tableau, dashboards, Datasette, Quarto, Superset, Great Tables
-│   │   └── HEADERS: ⛽️ PLATFORMS, 📼 Datasette, 💄 Great Tables, Holoviz, 🔵 Quarto, 🪶 Superset, 🥗 GUI, 🎁 datawrapper, 🟩 Great Tables, 🦋 matplotlib, 💶 TradingView
-│   ├── charting.md
-│   │   └── TOPICS: data visualization, terminal plotting, chart types, Python charting
-│   │   └── SEARCH: asciigraph, plotext, termgraph, xan, youplot, uniplot, sparkline, Tufte, line charts, bar charts, histogram, CSV, real-time updates, fastplotlib, incplot, plotille
-│   │   └── HEADERS: 📊 TYPES, 🛠️ TOOLS, MAYBE, NO, asciigraph, fastplotlib, incplot, plodder, plotext, plotille, rich, termgraph, uniplot, xan, youplot, 🟧 ZA, semantics
-│   ├── dataframes.md
-│   │   └── TOPICS: tabular data, pandas, Polars
-│   │   └── SEARCH: Arrow, lazy evaluation
-│   │   └── HEADERS: ⚙️ DESIGN, 🦢 Ibis, 🐋 Narwhals, 🖥️ TLV, 🐼 PANDAS, DML, IO, 🐻‍❄️ POLARS, read, EDA, joins, predicates, select, write
-│   ├── internals.md
-│   │   └── TOPICS: database internals, query engines, storage
-│   │   └── SEARCH: B-tree, LSM, WAL, MVCC, Petrov
-│   │   └── RELATED: guts/comp-sci/data-structures.md, OLTP.md
-│   │   └── HEADERS: 🏎️ ENGINES, query, storage, logging, perf, 🛠️ MAINTENANCE, vacuuming, analyze, reindexing, checkpoint, 🔍 INDEXING, basics, data structures, usage, types, 🟨 ZA, async, BYO, connections, 🦠 FoundationDB
-│   ├── nosql.md
-│   │   └── TOPICS: document stores, key-value, graph DBs
-│   │   └── SEARCH: MongoDB, Redis, Neo4j, DynamoDB, Cassandra
-│   │   └── HEADERS: 🟩 MONGO, find, aggregation, admin, UI, existing, shell, fix, 🗺️ NON, column store, document, graph, key, time series
-│   ├── OLAP.md
-│   │   └── TOPICS: analytics databases, columnar storage, data engineering, pipelines
-│   │   └── SEARCH: BigQuery, star schema, fact table, Parquet, DBT, ETL, ELT, lakehouse, Kleppmann, Reis
-│   │   └── RELATED: design/system/middleware.md, dataframes.md
-│   │   └── HEADERS: 🦆 DUCKDB, CLI, design, lib, ✰ Spark, 🌊 PIPELINE, clean, 🐠 DBT, 🍞 miller, test, reconciliation, 🔍 QUERY ENGINES, ☢️ DataFusion, Graft, ⦊ Presto, 🐰 Trino, 🏭 WAREHOUSE, Bauplan, 🔵 Bemi, 🐿️ Crunchy, 🌕 Clickhouse, 🧱 Databricks, ❄️ Snowflake, 🟪 Materialize, ⛵️ LAKE, DuckLake, pg lake, Hadoop, Hudi, 🧊 Iceberg, mesh, 🟨 ZA, metadata (Datahub)
-│   ├── OLTP.md
-│   │   └── TOPICS: transactional databases, ACID
-│   │   └── SEARCH: transactions, indexes, vacuum
-│   │   └── RELATED: sql.md, internals.md
-│   │   └── HEADERS: 🐘 POSTGRES, auth, CLI, extensions, internals, psycopg, 🔵 psql, 🟠 pgcli, 🔴 GUI (Mathesar), 🟦 SQLITE, CLI, design, extensions, 🟠 litecli, ⚛️ sqlite-utils, 🌐️ DISTRIBUTED / NEWSQL, 🪳 CockroachDB, 🌐 PlanetScale, 🐯 TigerBeetle, 🟨 ZA, 💿 dbcli, MySQL, Oracle
-│   ├── orm.md
-│   │   └── TOPICS: object-relational mapping
-│   │   └── SEARCH: Django ORM, Prisma, N+1, eager loading
-│   │   └── HEADERS: 🟥 SQLAlchemy, alternatives, design, snippets, backrefs, 🟨️ ZA, code gen, design, n+1, impedance, query builders
-│   └── sql.md
-│       └── TOPICS: SQL syntax, queries, optimization
-│       └── SEARCH: joins, subquery, CTE, window functions, EXPLAIN, Beaulieu
-│       └── RELATED: OLTP.md, internals.md
+│   └── profiling.md
+│       └── TOPICS: Python profiling, benchmarking, performance measurement
+│       └── SEARCH: cProfile, pyinstrument, memray, py-spy, timeit, sampling profiler, memory profiler, hyperfine, tracemalloc
+│       └── RELATED: tools/feedback/debug.md, guts/operating-systems/linux.md
+│       └── HEADERS: benchmark, timeit, start here, options (memray), types
 ├── system/
 │   ├── aws.md
 │   │   └── TOPICS: AWS services
 │   │   └── SEARCH: EC2, S3, Lambda, RDS, ECS, IAM, CloudFormation
 │   │   └── HEADERS: 🤖 COMPUTE, containers, EC2, Lambda, 🕸️ NETWORK, Route53, VPC, 🧳️ STORAGE, RDS, S3, 🟨 ZA, certification, IaC, IAM, interfaces, messaging, telemetry
-│   ├── cloud.md
-│   │   └── TOPICS: cloud architecture, PaaS, managed services
-│   │   └── SEARCH: Terraform, Pulumi, serverless, multi-cloud, fly.io, Railway, Supabase, SST, Val Town, Tailscale
-│   │   └── HEADERS: 🧮 IaC, Ansible, Copilot, Sake, Terraform, 🚢 PaaS, CF, coolify, fly.io, platform.sh, pico, railway, Python Anywhere, OpenCloud, Supabase, ⭐️ SST, Val Town, 🟨 ZA, cost control, 🌈 GCP, IaaS, stack native, 🐳 Tailscale
+│   ├── caches.md
+│   │   └── TOPICS: caching layers, Redis, memcached, in-process cache
+│   │   └── SEARCH: diskcache, moka, Redis, memcached, Valkey, Dragonfly, Redka, cache invalidation, TTL, Celery, iredis
+│   │   └── RELATED: design/system/distributed.md, guts/network/http.md
+│   │   └── HEADERS: diskcache / moke, memcached, Redis
 │   ├── deployment.md
 │   │   └── TOPICS: CI/CD, IaC, secrets management, containerized deployment
 │   │   └── SEARCH: Ansible playbooks, Terraform state, Docker composition, environment variables, Gunicorn, Nginx, feature flags, blue-green deployment, dotenvx
@@ -109,15 +66,11 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── TOPICS: self-hosting, bare-metal deployment, stack-native vs cloud-native
 │   │   └── SEARCH: Dokku, Kamal, Piku, Dokploy, Ubicloud, Hetzner, oxide, cost control
 │   │   └── HEADERS: 🏡 SELF HOST, stack native, Dokploy, Dokku, Kamal, oxide, Piku, Ubicloud, 🟨 ZA, cost control
-│   ├── middleware.md
-│   │   └── TOPICS: caching, message queues, proxy & load balancing, task queues, workflow orchestration, web servers
-│   │   └── SEARCH: Redis, memcached, Kafka, RabbitMQ, Celery, Airflow, Dagster, Prefect, HAProxy, CDN, connection pooling, pub-sub, Nginx, Gunicorn, cron
-│   │   └── RELATED: design/app/django.md, design/data/OLAP.md
-│   │   └── HEADERS: Caches (diskcache, memcached, Redis), Proxy (CDN, load balancing, HAProxy), Queues (message patterns, cron, Kafka, RabbitMQ, task queues, Celery, Airflow), Web Servers (Caddy, Granian, Gunicorn, Nginx)
-│   └── telemetry.md
-│       └── TOPICS: observability, logging, metrics, tracing
-│       └── SEARCH: Prometheus, Grafana, OpenTelemetry, ELK, Datadog
-│       └── HEADERS: 📊 METRICS, bandwidth, latency, perf, throughput, load parameters, 🩻 MONITORING, Beszel, 🐶 Datadog, Grafana, Graphite, HyperDX, 🔥 Logfire, OpenTelemetry, Prometheus, 🟪 Sentry, Signoz, 🔭 PROFILING, benchmark, timeit, start here, options, types, 🔬 TRACING, bpf, 🟨 ZA, customer analytics, incidents, Honeycomb, logging, uptime / healthcheck
+│   └── queues.md
+│       └── TOPICS: message queues, task queues, event streaming, workflow engines
+│       └── SEARCH: RabbitMQ, Kafka, Celery, ARQ, Airflow, Dagster, Prefect, Temporal, pub-sub, AMQP, cron, PGMQ, Nats, n8n
+│       └── RELATED: data/analytics/OLAP.md, design/system/distributed.md
+│       └── HEADERS: cron, msg (PGMQ), task (DJT, Celery, ARQ), workflow engine (Airflow | zapier), 🐙 EVENT (KAFKA)
 └── ux/
     ├── css.md
     │   └── TOPICS: CSS fundamentals, layout, CSS frameworks, responsive design
@@ -144,6 +97,67 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
         └── HEADERS: 🖱️ CLICK, 🔣 INPUT, 📺 TUI, 🎆 PIZAZZ, 🍬 gum, 💰 rich, terminal text effects, 🟨 ZA, assorted Golang
 ```
 
+## data/
+
+```
+├── analytics/
+│   ├── BI.md
+│   │   └── TOPICS: business intelligence, reporting, BI platforms
+│   │   └── SEARCH: Metabase, Tableau, dashboards, Datasette, Quarto, Superset, Great Tables
+│   │   └── HEADERS: ⛽️ PLATFORMS, 📼 Datasette, 💄 Great Tables, Holoviz, 🔵 Quarto, 🪶 Superset, 🥗 GUI, 🎁 datawrapper, 🟩 Great Tables, 🦋 matplotlib, 💶 TradingView
+│   ├── charting.md
+│   │   └── TOPICS: data visualization, terminal plotting, chart types, Python charting
+│   │   └── SEARCH: asciigraph, plotext, termgraph, xan, youplot, uniplot, sparkline, Tufte, line charts, bar charts, histogram, CSV, real-time updates, fastplotlib, incplot, plotille
+│   │   └── HEADERS: 📊 TYPES, 🛠️ TOOLS, MAYBE, NO, asciigraph, fastplotlib, incplot, plodder, plotext, plotille, rich, termgraph, uniplot, xan, youplot, 🟧 ZA, semantics
+│   ├── dataframes.md
+│   │   └── TOPICS: tabular data, pandas, Polars
+│   │   └── SEARCH: Arrow, lazy evaluation, Narwhals, Ibis
+│   │   └── HEADERS: ⚙️ DESIGN, 🦢 Ibis, 🐋 Narwhals, 🖥️ TLV, 🐼 PANDAS, DML, IO, 🐻‍❄️ POLARS, read, EDA, joins, predicates, select, write
+│   ├── OLAP.md
+│   │   └── TOPICS: analytics databases, columnar storage, data engineering, pipelines
+│   │   └── SEARCH: BigQuery, star schema, fact table, Parquet, DBT, ETL, ELT, lakehouse, Kleppmann, Reis, DuckDB
+│   │   └── RELATED: design/system/queues.md, dataframes.md
+│   │   └── HEADERS: 🦆 DUCKDB, CLI, design, lib, ✰ Spark, 🌊 PIPELINE, clean, 🐠 DBT, 🍞 miller, test, reconciliation, 🔍 QUERY ENGINES, ☢️ DataFusion, Graft, ⦊ Presto, 🐰 Trino, 🏭 WAREHOUSE, Bauplan, 🔵 Bemi, 🐿️ Crunchy, 🌕 Clickhouse, 🧱 Databricks, ❄️ Snowflake, 🟪 Materialize, ⛵️ LAKE, DuckLake, pg lake, Hadoop, Hudi, 🧊 Iceberg, mesh, 🟨 ZA, metadata (Datahub)
+│   └── stat.md
+│       └── TOPICS: statistics, data analysis workflow, EDA tooling
+│       └── SEARCH: Bayes, regression, p-value, visidata, xan, xsv, Huff, Silver, Nield, sampling, analytics, pandas, EDA
+│       └── RELATED: domains/stem/math/stat.md, analytics/BI.md
+│       └── HEADERS: 💿 DATA, 🛠️ TOOLING, EDA, 💻 GUI, Harlequin, TablePlus, Ultorg, 🟦 VISIDATA, ⭐️ config, ⭐️ Mongo loader, attr, DML, records, sheets, 💊 xan, ❎ xsv, spreadsheet (Excel)
+├── internals/
+│   ├── byo.md
+│   │   └── TOPICS: build-your-own database, database fundamentals pedagogy
+│   │   └── SEARCH: CMU, Pavlo, FoundationDB, layered architecture, simulation testing, py-caskdb, learndb
+│   │   └── HEADERS: BYO, 🦠 FoundationDB, async
+│   ├── engines.md
+│   │   └── TOPICS: query engines, storage engines, database execution internals
+│   │   └── SEARCH: Petrov, Kleppmann, query plan, columnar, B-tree, LSM, WAL, MVCC, vacuum, analyze, checkpoint
+│   │   └── RELATED: data/transactions/sql.md, guts/comp-sci/data-structures.md
+│   │   └── HEADERS: 🏎️ ENGINES, query, storage, logging, perf, 🛠️ MAINTENANCE, vacuuming, analyze, reindexing, checkpoint
+│   └── indexing.md
+│       └── TOPICS: database indexes, expression indexes, index types
+│       └── SEARCH: Winand, partial indexes, expression index, function-based index, B-tree index, covering index
+│       └── RELATED: guts/comp-sci/data-structures.md, data/transactions/sql.md
+│       └── HEADERS: START HERE, data structures, usage, types
+└── transactions/
+    ├── nosql.md
+    │   └── TOPICS: document stores, key-value, graph DBs
+    │   └── SEARCH: MongoDB, Redis, Neo4j, DynamoDB, Cassandra
+    │   └── HEADERS: 🟩 MONGO, find, aggregation, admin, UI, existing, shell, fix, 🗺️ NON, column store, document, graph, key, time series
+    ├── OLTP.md
+    │   └── TOPICS: transactional databases, ACID
+    │   └── SEARCH: transactions, indexes, vacuum
+    │   └── RELATED: sql.md, internals/
+    │   └── HEADERS: 🐘 POSTGRES, auth, CLI, extensions, internals, psycopg, 🔵 psql, 🟠 pgcli, 🔴 GUI (Mathesar), 🟦 SQLITE, CLI, design, extensions, 🟠 litecli, ⚛️ sqlite-utils, 🌐️ DISTRIBUTED / NEWSQL, 🪳 CockroachDB, 🌐 PlanetScale, 🐯 TigerBeetle, 🟨 ZA, 💿 dbcli, MySQL, Oracle
+    ├── orm.md
+    │   └── TOPICS: object-relational mapping
+    │   └── SEARCH: Django ORM, Prisma, N+1, eager loading
+    │   └── HEADERS: 🟥 SQLAlchemy, alternatives, design, snippets, backrefs, 🟨️ ZA, code gen, design, n+1, impedance, query builders
+    └── sql.md
+        └── TOPICS: SQL syntax, queries, optimization
+        └── SEARCH: joins, subquery, CTE, window functions, EXPLAIN, Beaulieu
+        └── RELATED: transactions/OLTP.md, internals/
+```
+
 ## guts/
 
 ```
@@ -158,18 +172,10 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── SEARCH: LLVM, grammar, BNF, interpreter, Ball
 │   │   └── RELATED: lang/plt.md
 │   │   └── HEADERS: 🦠 COMPILE, lex, parse, semantic analysis, AST, IR, LLVM, WASM, backend (code gen), linking, 🔮 RUNTIME, minimal, VMs, ABI, FFI, 🔬 STATIC CODE ANALYSIS, lint (ruff), type check (pyright), symbol index (ctags), semantic analysis (jedi), LSP, 🟨 ZA, output, taxonomy, garbage collection
-│   ├── computation.md
-│   │   └── TOPICS: automata, Turing machines, computability
-│   │   └── SEARCH: state machine, halting problem, Church-Turing
-│   │   └── HEADERS: 🪨 FOUNDATIONS, logic gates, information theory, compression, entropy, models, SAT, turing machine, state machine, 🧠 PROCESSORS, ALU, cache, register, ISA, GPU, 💻 HARDWARE, chips, memory, storage
-│   ├── data-structures.md
-│   │   └── TOPICS: arrays, trees, graphs, hash tables
-│   │   └── SEARCH: linked list, binary tree, heap, trie, B-tree
-│   │   └── RELATED: algos.md, design/data/internals.md
-│   └── security.md
-│       └── TOPICS: auth, encryption, vulnerabilities
-│       └── SEARCH: OAuth, JWT, HTTPS, TLS, OWASP, XSS, SQL injection, bcrypt
-│       └── HEADERS: ⚔️ EXPLOITS, file inclusion, SQL injection, XSS, 🧮 CRYPTOGRAPHY, encryption, hashing, 👽 USERS, access control, auth, Auth0, Dex, Kerberos, LDAP, OAuth, better auth, Tinyauth, passwords, ZA, culture, DMZ, privacy
+│   └── data-structures.md
+│       └── TOPICS: arrays, trees, graphs, hash tables
+│       └── SEARCH: linked list, binary tree, heap, trie, B-tree
+│       └── RELATED: algos.md, data/internals/engines.md
 ├── ml/
 │   ├── classical.md
 │   │   └── TOPICS: supervised learning, regression, ensemble methods, clustering, recommendation
@@ -195,10 +201,6 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── TOPICS: text processing, NER, sentiment analysis, sequence tasks
 │   │   └── SEARCH: tokenization, stemming, CRFs, HMM, SVM, TF-IDF, bag of words, BLEU, ROUGE, perplexity, spaCy, lemmatization, dependency parsing
 │   │   └── HEADERS: tokenization, n-grams, feature engineering, evaluation, entity recognition, text classification, speech recognition, sentiment analysis
-│   ├── ops.md
-│   │   └── TOPICS: production ML, methodology, ML tooling, applied AI
-│   │   └── SEARCH: feature computation, hyperparameter tuning, CRISP-DM, RAG, LangChain, drug discovery, fraud detection, causal inference
-│   │   └── HEADERS: START HERE, tooling, methodology, repos, rf
 │   └── stdlib.md
 │       └── TOPICS: Python ML libraries, numerical computing, deep learning frameworks
 │       └── SEARCH: Keras, scikit-learn, JAX, NumPy, TensorFlow, PyTorch, SciPy, spaCy, SymPy, automatic differentiation, JIT, GPU acceleration
@@ -229,10 +231,6 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── SEARCH: containerd, Dockerfile
 │   │   └── RELATED: design/system/aws.md (ECS), design/system/middleware.md
 │   │   └── HEADERS: ⛵️ DOCKER, 🟩 cmd, components, compose, data mgmt, Capp, 🛠️ tooling, volumes, 🔬️ INTERNALS, approaches, 🍎 container, 🦙 Colima, 🦭 Podman, engines, Evans, images, 🚢 KUBERNETES, design, util, 🟨 ZA, 🐍 Python, secrets
-│   ├── denv.md
-│   │   └── TOPICS: development environment setup
-│   │   └── SEARCH: Nix, asdf
-│   │   └── HEADERS: 🏗️ BUILD SYSTEMS, just, make, poe, task, 📦 PACKAGING, binaries, dependencies, semver, 🍺 Homebrew, constraints, registries, managers, 🧬 Nix, 🟨 ZA, dotfiles, env var, path, profiles, XDG
 │   ├── distros.md
 │   │   └── TOPICS: Linux distributions
 │   │   └── SEARCH: Ubuntu, Debian, Alpine, Arch, NixOS
@@ -245,24 +243,17 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── TOPICS: Linux internals, syscalls
 │   │   └── SEARCH: systemd, cgroups, namespaces, procfs
 │   │   └── HEADERS: 🗃️ FILES, descriptors, fs, globbing, links, sockets, 🌊 FLOW, IO, operators, xargs, 🟨 ZA, date/time, exit codes, kernel, man pages, scripts, perms + user/group
-│   ├── threads.md
-│   │   └── TOPICS: concurrency, parallelism
-│   │   └── SEARCH: threads, GIL, asyncio
-│   │   └── HEADERS: 🐍 PYTHON, 🖖 CONCURRENCY, async, design, event loops, 🛤️ PARALLEL, goroutines, GIL, multiprocessing, threading, 🧵 PROCESSES, basics, background, creation, segments, traits, problems
-│   └── tools.md
-│       └── TOPICS: CLI tools, utilities
-│       └── SEARCH: grep, sed, awk, jq, fzf, ripgrep
-│       └── HEADERS: 📄 FILE, diff, find (fd), fuzzy find, 🌸 fzf, 🔭 Telescope, 📺 Television, explorer, 🟦 broot, 🗄️ browsr, 🦆 yazi, jump (zoxide), list, 🪨 eza, 🇲🇦 lla, watchers, 🔬 MONITORING, disk (dust/df), mem/CPU (ps/procs), ports (havn), progress bars (tqdm), psutil, ✏️ TEXT, awk, pager (bat), search (ripgrep), stream edit (sed), string processing, 🟨️ ZA, coreutils, clipboard, trash
+│   └── threads.md
+│       └── TOPICS: concurrency, parallelism
+│       └── SEARCH: threads, GIL, asyncio
+│       └── HEADERS: 🐍 PYTHON, 🖖 CONCURRENCY, async, design, event loops, 🛤️ PARALLEL, goroutines, GIL, multiprocessing, threading, 🧵 PROCESSES, basics, background, creation, segments, traits, problems
 └── protocols/
     ├── edi.md
     │   └── TOPICS: electronic data interchange
     │   └── HEADERS: 🗺️ ECOSYSTEM, standards bodies, middlemen, constraints, replacement, 🧬 SEGMENTS, semantics, sequence, ☸️ meta, ISA, GS, ST / SE, BCT (purpose), CTT / GE / IEA, 🛰️ info, LIN (ID), G53 (op), DTM (date range), CTB (order quantity), PID (desc), LDT (lead time), CTP (price), G39 (physical characteristics), 🛠️ TOOLING, pyedi, Stedi
-    ├── serde.md
-    │   └── TOPICS: serialization formats
-    │   └── SEARCH: JSON, YAML, TOML, Protobuf, MessagePack, Avro
-    └── spec.md
-        └── TOPICS: specifications, standards
-        └── HEADERS: 🗃️ CONFIG, Cuelang, INI, KDL, TOML, XML, YAML, 📜 DOCUMENTS, Canva, LaTeX, Markdown, PDF, 🪪 ENCODING, semantics, ascii, utf-8, Unicode, prefix codes, 🧮 NUMBERS, binary, hex, 🟨 ZA, identifiers, standards bodies, structure
+    └── serde.md
+        └── TOPICS: serialization formats
+        └── SEARCH: JSON, YAML, TOML, Protobuf, MessagePack, Avro
 ```
 
 ## lang/
@@ -307,10 +298,6 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── TOPICS: Go programming, concurrency, systems programming, packaging
 │   │   └── SEARCH: goroutines, channels, interfaces, defer, GOPATH, generics, chi, echo, gin, cross-compilation
 │   │   └── HEADERS: 📝 LANG, collections, design, functions, variables, 📦 PACKAGING, modules, semantics, workspaces, env var, installs, project structure, version mgmt, 📔 STDLIB, web, 🟨 ZA, CMDS
-│   ├── lua.md
-│   │   └── TOPICS: Lua, embedded scripting, Neovim/game engine integration
-│   │   └── SEARCH: LuaJIT, metatables, OOP patterns, Fennel, LuaRocks, Redis scripting
-│   │   └── HEADERS: 📝 LANG, tables, self, OOP, modules, 📦 PACKAGING, 📔 STDLIB, 🟨 ZA, embedded, usage
 │   ├── java.md
 │   │   └── TOPICS: Java language, JVM architecture, Spring framework, Maven, concurrency
 │   │   └── SEARCH: JDK/JRE/JVM, Spring Boot, Hibernate, Maven, classpath, annotations, checked exceptions, beans, dependency injection, Kotlin
@@ -320,6 +307,10 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── SEARCH: Node.js, npm, TypeScript, Deno, Bun, Webpack, tree-shaking, bundling, service workers, fetch, browser storage, dev tools
 │   │   └── RELATED: design/ux/frontend.md, lang/productive/ts.md
 │   │   └── HEADERS: 🥟 JAVASCRIPT, lang, packaging, MANAGERS, REGISTRIES, runtimes, VERSION MGMT, 📔 STDLIB, internationalization, search, 🟨 ZA, browser, STATE, BROWSERS, perf
+│   ├── lua.md
+│   │   └── TOPICS: Lua, embedded scripting, Neovim/game engine integration
+│   │   └── SEARCH: LuaJIT, metatables, OOP patterns, Fennel, LuaRocks, Redis scripting
+│   │   └── HEADERS: 📝 LANG, tables, self, OOP, modules, 📦 PACKAGING, 📔 STDLIB, 🟨 ZA, embedded, usage
 │   ├── r.md
 │   │   └── TOPICS: R language, statistical computing, Tidyverse, data visualization
 │   │   └── SEARCH: CRAN, tidyverse, ggplot2, dplyr, tibble, tidyr, purrr, RStudio, SAS, statistical analysis
@@ -394,6 +385,11 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │       └── SEARCH: Claude Opus/Sonnet/Haiku, GPT-4o/o1, Gemini, DeepSeek, open-source models, inference, fine-tuning, RAG systems, evaluation
 │       └── HEADERS: MENU (SLM, ZA, OPEN/CLOSED), hardware, ChatGPT, Claude, Grok, Perplexity, Gemini, llama, INTERFACES (CLI, mods, llm, GUI, TUI), audio, img, operationalize, Hugging Face, RAG, search
 ├── feedback/
+│   ├── data.md
+│   │   └── TOPICS: database GUIs, SQL clients, data entry tools, Visidata
+│   │   └── SEARCH: Harlequin, TablePlus, Ultorg, DBeaver, Beekeeper, DataGrip, rainfrog, Visidata, vd, dblab, lazysql
+│   │   └── RELATED: data/analytics/stat.md, data/transactions/OLTP.md
+│   │   └── HEADERS: 💻 GUI, Harlequin, TablePlus, Ultorg, 🟦 VISIDATA, config, Mongo loader, attr, DML, records, sheets, 🟨 ZA, EDA, entry (dataclerk), spreadsheet (Excel)
 │   ├── debug.md
 │   │   └── TOPICS: Python debugging, introspection, AST analysis
 │   │   └── SEARCH: debuggers, sys.settrace, ipdb, pudb, stack traces, breakpoints, inspect module
@@ -458,11 +454,17 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │       └── SEARCH: blog platforms, RSS syndication, book reviews, Manim, animation, technical writing samples
 ├── mianshi/
 │   ├── ai.md
-│   ├── app.md
+│   ├── api.md
+│   │   └── TOPICS: API interview questions, REST, rate limiting, async
+│   │   └── SEARCH: REST design, rate limiting, exponential backoff, async vs sync, tenacity
 │   ├── architecture.md
 │   ├── behavioral.md
-│   ├── databases.md
+│   ├── data.md
+│   │   └── TOPICS: data engineering interview questions
 │   ├── ds.md
+│   ├── guts.md
+│   │   └── TOPICS: systems/infra interview questions, containers, Kubernetes, load balancers
+│   │   └── SEARCH: Docker, Pod, Kubernetes, Helm, Terraform, load balancer
 │   ├── languages.md
 │   ├── perf.md
 │   │   └── TOPICS: performance optimization, high-performance code
@@ -494,15 +496,15 @@ SITE / UX
 * `domains/art/text/design.md` → color, typography theory
 
 DATA PIPELINE
-* `design/data/sql.md` ↔ `design/data/OLTP.md` ↔ `design/data/internals.md`
-* `design/data/analytics.md` ↔ `design/data/dataframes.md`
-* `design/data/OLAP.md` → warehouses, DuckDB, DBT
+* `data/transactions/sql.md` ↔ `data/transactions/OLTP.md` ↔ `data/internals/`
+* `data/analytics/stat.md` ↔ `data/analytics/dataframes.md`
+* `data/analytics/OLAP.md` → warehouses, DuckDB, DBT
 * `domains/stem/math/stat.md` → statistical concepts
 
 PYTHON
 * `lang/python/*.md` - split by concern (7 files)
 * `design/backend/flask.md`, `design/backend/django.md`, `design/backend/fast-api.md` → web frameworks
-* `design/architecture/test.md` → pytest
+* `design/architecture/profiling.md` → benchmarking, profiling
 * `tools/feedback/debug.md`, `tools/feedback/notebooks.md`, `tools/feedback/repl.md` → dev workflow
 
 ML / AI
@@ -511,7 +513,6 @@ ML / AI
 * `guts/ml/neural.md` → networks, transformers, backprop
 * `guts/ml/llms.md` → fine-tuning, evals, context windows
 * `guts/ml/nlp.md` → text processing, NER, spaCy
-* `guts/ml/ops.md` → production ML, methodology
 * `guts/ml/stdlib.md` → JAX, PyTorch, scikit, scipy
 
 AGENTIC / AI
@@ -522,9 +523,9 @@ AGENTIC / AI
 
 DEVOPS / INFRA
 * `design/system/deployment.md` → CI/CD, IaC, secrets
-* `design/system/middleware.md` → queues, caching, web servers
+* `design/system/queues.md` → message queues, Kafka, Celery, workflow engines
+* `design/system/caches.md` → Redis, memcached, diskcache
 * `design/system/infra.md` → self-hosting (Kamal, Dokku, Piku)
-* `design/system/cloud.md` → PaaS, managed services
 * `guts/operating-systems/containers.md` → Docker, Colima
 
 EDITORS
