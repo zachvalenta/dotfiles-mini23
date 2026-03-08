@@ -1,0 +1,13 @@
+[agentic]
+gemini = { status = "done" }
+
+[data]
+warehouse = { status = "next", tags = ["work"] }
+wtfk = { status = "next" }
+
+[qol]
+neovim = { status = "next" }
+
+[work]
+"personal site" = { status = "now" }
+
