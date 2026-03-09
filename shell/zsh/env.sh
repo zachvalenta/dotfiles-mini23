@@ -35,7 +35,8 @@ MAT_DIR="$ZV_DIR/materials"
 DOMAINS_DIR="$ZV_DIR/notes/domains"
 SW_DIR="$ZV_DIR/notes/sw"
 PER_DIR="$ZV_DIR/personal"
-TRACK_DIR="$ZV_DIR/personal/tracking"
+TRACK_DIR="$PER_DIR/tracking"
+WORKLOGS_DIR="$PER_DIR/worklogs"
 
 # 🟧 KERO
 KERO_DIR="$ZV_DIR/work/kero"

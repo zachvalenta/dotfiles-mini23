@@ -185,6 +185,7 @@ alias shu="cd $ZV_DIR/notes/bookcase; t -d"
 # PERSONAL
 alias per="cd $PER_DIR"
 alias rb="cd $PER_DIR/logs"
+alias wl="cd $WORKLOGS_DIR; t"
 alias falu="\cd $PER_DIR/.falu; ti"
 # alias ren="cd $PER_DIR/people"
 # alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
