@@ -79,7 +79,11 @@ function ccs() {
         [[ "$f" == *denv-dotfiles* ]] && continue
         results=$(jq -r 'select(.type == "user" and (.message.content | type == "string")) | .message.content' "$f" 2>/dev/null \
             | grep -o ".\{0,80\}${query}.\{0,80\}" 2>/dev/null | head -3)
-        [[ -n "$results" ]] && print "\n$f\n$results"
+        if [[ -n "$results" ]]; then
+            print ""
+            gum style --foreground="#cba6f7" --bold "$f"
+            echo "$results" | bat --language=md --style=plain --color=always
+        fi
     done
     return 0
 }
