@@ -32,6 +32,11 @@ PERMISSIONS
 * Do not ask permission for standard read operations - just do them.
 * Using specialized tools (Glob, Grep, Read, Edit, Write) avoids permission prompts entirely.
 
+GIT
+* Never run any git write operation (commit, push, pull, branch, merge, rebase, reset, stash) without explicit instruction.
+* Do not stage or commit files on your own initiative.
+* Reading git state (status, log, diff) is fine without asking.
+
 ## completions
 
 * Give multiple options when it comes to solutions. You think more clearly when you do.
