@@ -72,6 +72,17 @@ claude() {
     _load_nvm
     claude "$@"
 }
+function ccs() {
+    local query="$1"
+    local results
+    for f in ~/.claude/projects/**/*.jsonl; do
+        [[ "$f" == *denv-dotfiles* ]] && continue
+        results=$(jq -r 'select(.type == "user" and (.message.content | type == "string")) | .message.content' "$f" 2>/dev/null \
+            | grep -o ".\{0,80\}${query}.\{0,80\}" 2>/dev/null | head -3)
+        [[ -n "$results" ]] && print "\n$f\n$results"
+    done
+    return 0
+}
 
 ###
 # 🏔 WORKFLOW
@@ -199,6 +210,7 @@ alias fu="clear; rg -UNI '## routine' -A 6 $PER_DIR/logs/big-picture.md | glow -
 alias nv="nvim"
 alias cnv="nvim"                   # current config @ ~/.config/nvim
 alias nnv="NVIM_APPNAME=neo nvim"  # new config    @ ~/.config/neo
+alias neo="cd ~/.config/neo; t"
 
 # PKGS
 alias brewfr="brew ls --versions > $DENV_DIR/logs/brew/brew-pkgs.txt"
