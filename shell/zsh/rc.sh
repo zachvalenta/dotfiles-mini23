@@ -171,6 +171,7 @@ alias jc="jiancha"
 alias sgt="\cd $ZV_DIR/projects/design/system/sgt; t"
 alias wq="\cd $ZV_DIR/projects/design/system/tennis-weekend; t"
 alias cork="\cd $ZV_DIR/projects/tools/corkboard; t"
+alias ct="\cd $PER_DIR/corkboard-tasks; t"
 
 # KERO
 alias kero="\cd $ZV_DIR/work/kero; t -d 2 docs src"
