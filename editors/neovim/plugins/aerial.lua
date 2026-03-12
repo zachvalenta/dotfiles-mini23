@@ -10,6 +10,16 @@ return {
                 default_direction = 'prefer_left',
                 width = 0.20,
             },
+            -- all markdown headings are 'Interface' kind; map level -> rainbow highlight
+            get_highlight = function(symbol, _, _)
+                if symbol.kind == 'Interface' then
+                    return 'AerialRainbow' .. math.min(symbol.level + 1, 6)
+                end
+            end,
+            -- remove [I] icon from markdown headings
+            icons = {
+                Interface = '',
+            },
             -- keymaps for the aerial panel itself
             keymaps = {
                 ['<Tab>'] = 'actions.jump',  -- goto header, return focus to main buffer
