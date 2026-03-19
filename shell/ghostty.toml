@@ -12,6 +12,7 @@ background-opacity = 0.9
 window-decoration = true
 window-save-state = always
 split-divider-color = #666666
+keybind = cmd+k=clear_screen
 
 # SPLITS
 keybind = cmd+w=close_surface
