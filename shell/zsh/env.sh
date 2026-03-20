@@ -57,7 +57,8 @@ export PYTHONSTARTUP="$DOT_DIR/python/python_startup.py"
 
 # CONFIG PATHS
 export RIPGREP_CONFIG_PATH="$DOT_DIR/cli/.ripgreprc"
-export ZELLIJ_CONFIG_DIR="~/.config/zellij"
+export ZELLIJ_CONFIG_DIR="$HOME/.config/zellij"
+export ZELLIJ_CONFIG_FILE="$HOME/Documents/denv/dotfiles/zellij/config.kdl"
 export PLS_CONFIG="$DOT_DIR/shell/pls.yml"
 
 # EZA SETTINGS (used by functions in zshrc)
