@@ -19,6 +19,8 @@ return {
                         AerialRainbow4 = { fg = colors.green },
                         AerialRainbow5 = { fg = colors.teal },
                         AerialRainbow6 = { fg = colors.blue },
+                        -- blockquotes
+                        ['@markup.quote'] = { fg = colors.mauve, italic = true },
                     }
                 end,
             })
@@ -40,6 +42,8 @@ return {
                     for i, color in ipairs(rainbow) do
                         vim.api.nvim_set_hl(0, 'markdownH' .. i .. 'Delimiter', { fg = color })
                     end
+                    vim.api.nvim_set_hl(0, 'markdownBlockquoteLine', { fg = c.mauve, italic = true })
+                    vim.fn.matchadd('markdownBlockquoteLine', '^>.*')
                 end,
             })
         end,

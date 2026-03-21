@@ -196,7 +196,7 @@ alias ccc="\cd $DOT_DIR/ai/claude; t"
 alias jbj="\cd $ZV_DIR/notes"
 alias dom="clear; \cd $DOMAINS_DIR; t -d; jb"
 alias sw="clear; \cd $SW_DIR; t -d; jb"
-alias shu="cd $ZV_DIR/notes/bookcase; t -d"
+alias shu="cd $ZV_DIR/notes/bookcase; t 2"
 
 # PERSONAL
 alias per="cd $PER_DIR"
