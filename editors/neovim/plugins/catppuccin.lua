@@ -24,6 +24,8 @@ return {
                         -- bold / italic
                         ['@markup.italic'] = { fg = colors.red, italic = true },
                         ['@markup.bold']   = { fg = colors.red, bold = true },
+                        -- links
+                        ['@markup.link.url'] = { fg = colors.blue },
                     }
                 end,
             })
@@ -52,6 +54,9 @@ return {
                     vim.api.nvim_set_hl(0, 'markdownBoldItalic',      { fg = c.red, bold = true, italic = true })
                     vim.api.nvim_set_hl(0, 'markdownBoldDelimiter',   { fg = c.red })
                     vim.api.nvim_set_hl(0, 'markdownItalicDelimiter', { fg = c.red })
+                    vim.api.nvim_set_hl(0, 'markdownUrl',             { fg = c.blue })
+                    vim.api.nvim_set_hl(0, 'markdownUrlHighlight',    { fg = c.blue })
+                    vim.fn.matchadd('markdownUrlHighlight', 'https\\?://\\S\\+')
                 end,
             })
         end,
