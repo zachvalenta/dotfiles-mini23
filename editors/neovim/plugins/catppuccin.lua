@@ -21,6 +21,9 @@ return {
                         AerialRainbow6 = { fg = colors.blue },
                         -- blockquotes
                         ['@markup.quote'] = { fg = colors.mauve, italic = true },
+                        -- bold / italic
+                        ['@markup.italic'] = { fg = colors.red, italic = true },
+                        ['@markup.bold']   = { fg = colors.red, bold = true },
                     }
                 end,
             })
@@ -44,6 +47,11 @@ return {
                     end
                     vim.api.nvim_set_hl(0, 'markdownBlockquoteLine', { fg = c.mauve, italic = true })
                     vim.fn.matchadd('markdownBlockquoteLine', '^>.*')
+                    vim.api.nvim_set_hl(0, 'markdownBold',            { fg = c.red, bold = true })
+                    vim.api.nvim_set_hl(0, 'markdownItalic',          { fg = c.red, italic = true })
+                    vim.api.nvim_set_hl(0, 'markdownBoldItalic',      { fg = c.red, bold = true, italic = true })
+                    vim.api.nvim_set_hl(0, 'markdownBoldDelimiter',   { fg = c.red })
+                    vim.api.nvim_set_hl(0, 'markdownItalicDelimiter', { fg = c.red })
                 end,
             })
         end,
