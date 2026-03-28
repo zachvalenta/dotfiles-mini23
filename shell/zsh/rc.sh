@@ -49,7 +49,7 @@ eval "$(zoxide init zsh)"
 export NVM_DIR="$HOME/.config/nvm"
 _load_nvm() {
     # lazy load NVM to avoid 500s lag on each shell
-    unset -f nvm node npm gemini claude _load_nvm            # rm placeholders
+    unset -f nvm node npm gemini claude codex _load_nvm            # rm placeholders
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # load nvm
 }
 nvm() {
@@ -71,6 +71,10 @@ gemini() {
 claude() {
     _load_nvm
     claude "$@"
+}
+codex() {
+    _load_nvm
+    codex "$@"
 }
 
 ###
