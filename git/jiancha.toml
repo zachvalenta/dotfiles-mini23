@@ -1,23 +1,24 @@
 [notes]
 sw = "/Users/zach/Documents/zv/notes/sw"
 domains = "/Users/zach/Documents/zv/notes/domains"
-# bookcase ="/Users/zach/Documents/zv/notes/bookcase"
+bookcase ="/Users/zach/Documents/zv/notes/bookcase"
+
+[projects]
+corkboard = "/Users/zach/Documents/zv/projects/tools/corkboard"
+sgt = "/Users/zach/Documents/zv/projects/design/system/sgt"
+ceemuz = "/Users/zach/Documents/zv/projects/tools/ceemuz"
+site = "/Users/zach/Documents/zv/projects/design/ux/myblog"
 
 [denv]
+# dot = "/Users/zach/Documents/denv/dotfiles"
 # bin = "/Users/zach/Documents/denv/bin"
-dot = "/Users/zach/Documents/denv/dotfiles"
 # logs = "/Users/zach/Documents/denv/logs"
 
 [workflow]
-jiancha = "/Users/zach/Documents/zv/projects/lang/rust/jian-cha"
-jina = "/Users/zach/Documents/zv/projects/design/architecture/jina"
-md-book = "/Users/zach/Documents/zv/projects/design/app/md-book"
-sympop = "/Users/zach/Documents/zv/projects/design/app/sympop"
-
-[arts]
-ceemuz = "/Users/zach/Documents/zv/projects/design/app/ceemuz"
-sgt = "/Users/zach/Documents/zv/projects/design/system/sgt"
-site = "/Users/zach/Documents/zv/projects/design/ux/myblog"
+# jiancha = "/Users/zach/Documents/zv/projects/lang/rust/jian-cha"
+# jina = "/Users/zach/Documents/zv/projects/design/architecture/jina"
+# md-book = "/Users/zach/Documents/zv/projects/design/app/md-book"
+# sympop = "/Users/zach/Documents/zv/projects/design/app/sympop"
 
 [data]
 # dataclerk = "/Users/zach/Documents/zv/projects/design/data/tooling/dataclerk"
