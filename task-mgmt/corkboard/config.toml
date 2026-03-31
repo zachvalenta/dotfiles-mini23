@@ -1,13 +1,2 @@
-[projects.agentic]
-emoji = "👾"
-# bg    = "#1e3a5f"
-# fg    = "#89b4fa"
-
-[projects.data]
-emoji = "💿"
-
-[projects.qol]
-emoji = "🏡"
-
-[projects.work]
-emoji = "💼"
+tasks_dir = "/Users/zach/Documents/zv/personal/corkboard-tasks"
+theme     = "/Users/zach/Documents/denv/dotfiles/task-mgmt/corkboard/themes/catppuccin.toml"
