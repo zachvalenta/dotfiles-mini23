@@ -1,10 +1,10 @@
 ---
-description: replicate visual system from a reference site (user)
+description: replicate visual system from a reference site
 ---
 
 # META
 
-Extract a specific visual element from a reference URL and apply it to myblog.
+Extract a specific visual element from a reference URL.
 
 GOAL: Help iterate through visual styles from admired sites, cherry-picking small elements one at a time.
 
@@ -22,29 +22,41 @@ GOAL: Help iterate through visual styles from admired sites, cherry-picking smal
    - `layout` (content width, spacing)
    - `full page` (everything - use sparingly)
 
-3. Screenshot the reference site (desktop viewport):
+3. Run the scanner to extract computed styles and screenshots:
 ```sh
-mkdir -p artifacts/screenshots
+python /Users/zach/Documents/denv/dotfiles/ai/claude/commands/impl/site_clone.py \
+  --url "<URL>" \
+  --out /tmp/site-clone-artifacts
 ```
-Save to `artifacts/screenshots/reference.png`
+This produces:
+- `/tmp/site-clone-artifacts/screenshots/{375,768,1200}.png`
+- `/tmp/site-clone-artifacts/tokens.json` (design tokens)
+- `/tmp/site-clone-artifacts/metrics.json` (full computed styles per element)
+- `/tmp/site-clone-artifacts/report.md`
 
-4. Extract styles for ONLY the requested element using Playwright's `page.evaluate()`.
+4. Read `tokens.json` and `report.md`. Pull computed values for ONLY the requested element.
 
 5. Show the user:
-   - Screenshot of reference
-   - Extracted values for that element
-   - Proposed changes (SCSS + template if needed)
+   - Screenshot of reference (read the 1200.png)
+   - Extracted values for the requested element (exact computed px/color/font values)
+   - Proposed changes (SCSS + template if needed), translating px back to rem where appropriate
 
-6. Ask: "Apply?" Only modify after confirmation.
+6. Ask: "Apply?" Only modify files after confirmation.
 
-7. Screenshot the result and show comparison.
+> If you need to download a font, use brew and version control here: /Users/zach/Documents/denv/logs/brew/fonts
+
+7. Build and screenshot the result for comparison:
+```sh
+cd /Users/zach/Documents/zv/projects/design/ux/myblog && zola build
+```
 
 # CONTEXT
 
-PROJECT: `/Users/zach/Documents/zv/projects/active/sites/myblog`
-SSG: Zola (use `zola build`, `zola serve --port XXXX`)
-STYLES: `sass/styles.scss`
-TEMPLATES: `templates/*.html` (base.html has nav)
+* PROJECT: `/Users/zach/Documents/zv/projects/design/ux/myblog`
+* SCANNER: `/Users/zach/Documents/denv/dotfiles/ai/claude/commands/impl/site_clone.py`
+* SSG: Zola (use `zola build`, `zola serve --port XXXX`)
+* STYLES: `sass/styles.scss`
+* TEMPLATES: `templates/*.html` (base.html has nav)
 
 # EXAMPLES
 
@@ -53,8 +65,8 @@ EXAMPLE 1: Clone just the header
 /site-clone https://sethmlarson.dev/
 ```
 User says: "header"
-→ Screenshot Seth's site
-→ See: black bar, white underlined links, colon separators
+→ Run scanner → read tokens.json
+→ See: nav background-color, link color, font-weight, font-size
 → Update `.main-nav` in SCSS + nav links in base.html
 → Result: matching header
 
@@ -63,8 +75,9 @@ EXAMPLE 2: Clone typography
 /site-clone https://macwright.com/
 ```
 User says: "typography"
-→ Extract: font-family, font-size, line-height from body/headings
-→ Update SCSS variables only
+→ Run scanner → read tokens.json
+→ See: font_sans, text_base (px), leading_base, h1/h2/h3 sizes and weights
+→ Translate px → rem (divide by 16), update SCSS variables only
 → Result: matching typography
 
 EXAMPLE 3: Clone blockquotes
@@ -72,11 +85,7 @@ EXAMPLE 3: Clone blockquotes
 /site-clone https://danluu.com/
 ```
 User says: "blockquotes"
-→ Extract: blockquote styles (bg, border, padding)
+→ Run scanner → read metrics.json blockquote node
+→ See: background-color, border widths/colors, padding values
 → Update just the `blockquote` rule in SCSS
 → Result: matching blockquotes
-
-# for further research
-
-*️ oringal idea from https://chatgpt.com/c/69469b40-be60-8328-81ec-abd8b3ae8670
-* https://www.reddit.com/r/ClaudeCode/comments/1ps6wfe/seer_a_claude_code_skill_that_adds_visual/ https://github.com/w00ing/seer-skill
