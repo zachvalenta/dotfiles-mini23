@@ -29,7 +29,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 ###
 
 # OH-MY-POSH - prompt
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/multiverse-neon.omp.json)"
+eval "$(oh-my-posh init zsh --config $HOME/Documents/denv/dotfiles/shell/prompt/catty.json)"
 
 # Just
 alias just="/Users/zach/Documents/zv/projects/tools/just/target/release/just"  # tmp alias while waiting for PR to merge
