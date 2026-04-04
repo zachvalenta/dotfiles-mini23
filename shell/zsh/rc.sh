@@ -6,6 +6,18 @@ echo -n "$(tput setaf 5) sourcing ~/.zshrc at$(tput sgr0): "; date
 
 set -o vi  # vi mode for command line editing
 
+# cursor shape: beam in insert, block in normal
+function zle-keymap-select {
+  case $KEYMAP in
+    vicmd)      print -n '\e[2 q' ;;  # block
+    viins|main) print -n '\e[6 q' ;;  # beam
+  esac
+}
+zle -N zle-keymap-select
+
+# reset cursor to terminal default before any command runs (so vim starts clean)
+function preexec { print -n '\e[0 q'; }
+
 ###
 # 🌐 ENVIRONMENT
 ###
