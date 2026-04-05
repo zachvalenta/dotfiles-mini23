@@ -1,6 +1,7 @@
 {
   "author": "zachvalenta",
   "based_on": "multiverse-neon by JanDeDobbeleer (https://github.com/JanDeDobbeleer/oh-my-posh)",
+  "final_space": true,
   "blocks": [
     {
       "type": "prompt",
@@ -11,10 +12,13 @@
             "cache_duration": "none",
             "time_format": "2006.01.02 15:04"
           },
-          "template": "{{ .CurrentDate | date .Format }} ",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": " {{ .CurrentDate | date .Format }} ",
           "foreground": "#b4befe",
+          "background": "#313244",
           "type": "time",
-          "style": "plain"
+          "style": "diamond"
         },
         {
           "properties": {
