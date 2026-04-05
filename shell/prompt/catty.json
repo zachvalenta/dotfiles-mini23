@@ -25,7 +25,7 @@
             "cache_duration": "none",
             "style": "mixed"
           },
-          "leading_diamond": "\ue0b6",
+          "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
           "template": "\ue5ff {{ .Path }}",
           "foreground": "#a6e3a1",
