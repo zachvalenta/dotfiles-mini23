@@ -171,9 +171,14 @@ alias doc="\cd $ZV_DIR/projects/design/architecture/documentation; t"
 alias jc="jiancha"
 alias sgt="\cd $ZV_DIR/projects/design/system/sgt; t"
 alias wq="\cd $ZV_DIR/projects/design/system/tennis-weekend; t"
-alias cork="\cd $ZV_DIR/projects/tools/corkboard; t"
-alias ct="\cd $PER_DIR/corkboard-tasks; t"
-alias cb="\cd $ZV_DIR/projects/tools/corkboard; just run"
+alias rw="\cd $ZV_DIR/projects/tools/corkboard; just run"
+alias rwt="\cd $PER_DIR/corkboard-tasks; t"
+function mrw(){
+    # make corkboard task
+    fname="$1.md";
+    cp "$DOT_DIR/task-mgmt/corkboard/template.md" "$PER_DIR/corkboard-tasks/$fname";
+    NVIM_APPNAME=neo nvim "$PER_DIR/corkboard-tasks/$fname";
+}
 
 # KERO
 alias kero="\cd $ZV_DIR/work/kero; t -d 2 docs src"
@@ -258,7 +263,7 @@ alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
 ###
 
 alias mt="docker"
-alias docker_stat="docker ps --format 'table {{.Names}}\t{{.State}}\t{{.Status}}'"  #  https://docs.docker.com/engine/reference/commandline/ps/#formatting
+alias docker_stat="docker ps --format 'table {{.Names}}\t{{.State}}\t{{.Status}}'"  # https://docs.docker.com/engine/reference/commandline/ps/#formatting
 function mtl(){  # list all
     echo -e "\n";
 
