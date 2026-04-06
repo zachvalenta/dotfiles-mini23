@@ -8,6 +8,12 @@ tags = []
 
 # 🏮 WORKLOG
 
-# 🌩️ BRAINSTORM
+- [ ] research
+- [ ] prompt
+- [ ] impl
 
-# 🐲 IMPL
+# 🧪 RESEARCH
+
+# 📡 PROMPT
+
+# 🛰️ IMPL

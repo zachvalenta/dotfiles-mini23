@@ -176,8 +176,9 @@ alias rwt="\cd $PER_DIR/corkboard-tasks; t"
 function mrw(){
     # make corkboard task
     fname="$1.md";
-    cp "$DOT_DIR/task-mgmt/corkboard/template.md" "$PER_DIR/corkboard-tasks/$fname";
-    NVIM_APPNAME=neo nvim "$PER_DIR/corkboard-tasks/$fname";
+    cwd="$(pwd)";
+    cp "$DOT_DIR/task-mgmt/corkboard/template.md" "$cwd/$fname";
+    NVIM_APPNAME=neo nvim "$cwd/$fname";
 }
 
 # KERO
@@ -203,7 +204,7 @@ alias ccc="\cd $DOT_DIR/ai/claude; t"
 alias jbj="\cd $ZV_DIR/notes"
 alias dom="clear; \cd $DOMAINS_DIR; t -d; jb"
 alias sw="clear; \cd $SW_DIR; t -d; jb"
-alias shu="cd $ZV_DIR/notes/bookcase; t 2"
+alias shu="cd $ZV_DIR/notes/bookcase; t -d"
 
 # PERSONAL
 alias per="cd $PER_DIR"
