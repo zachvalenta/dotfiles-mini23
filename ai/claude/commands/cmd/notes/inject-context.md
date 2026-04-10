@@ -18,22 +18,28 @@ INDEX LOCATION: `/Users/zach/Documents/denv/dotfiles/ai/claude/context/notes`
    - `context/notes/domains.md` (non-software knowledge)
    - `context/notes/sw.md` (software/tech)
 
-2. Parse user's query to identify relevant topics. Consider:
+2. Inspect $CWD to understand the project context:
+   - Glob for `*.md`, `*.toml`, `*.json`, `*.yaml`, `pyproject.toml`, `Makefile`, `*.txt` etc.
+   - Read any obvious spec/config files (README, pyproject.toml, package.json, Makefile)
+   - Infer the tech stack, domain, and purpose of the project
+   - This CWD context is a primary signal — weight it alongside (or above) the prompt
+
+3. Parse user's query to identify relevant topics. Consider:
    - Explicit mentions (e.g., "SQL" → `sw/design/data/sql.md`)
    - Related concepts (e.g., "database performance" → `sql.md` + `internals.md` + `OLTP.md`)
    - Cross-domain connections (e.g., "site redesign" → `site.md` + `frontend.md` + `design.md`)
-   - If in a project directory, check for spec files to understand tech stack
+   - CWD signals (e.g., a Django project → `sw/design/backend/django.md` even if not mentioned)
 
-3. Match query against index metadata:
+4. Match query against index metadata:
    - TOPICS: High-level themes and subject areas
    - SEARCH: Keywords and terms not in HEADERS
    - HEADERS: Actual section structure and organization of each file
 
-4. Follow RELATED links to pull in connected files.
+5. Follow RELATED links to pull in connected files.
 
-5. Load the identified note files (aim for 3-7 files, not too many).
+6. Load the identified note files (aim for 3-7 files, not too many).
 
-6. Report what was loaded:
+7. Report what was loaded:
 ```
 LOADED CONTEXT:
 - sw/design/app/site.md (SSGs, layout)
@@ -41,9 +47,19 @@ LOADED CONTEXT:
 - domains/art/text/design.md (color, typography)
 ```
 
-7. Then address the user's actual question/task using the loaded context.
+8. Then address the user's actual question/task using the loaded context.
 
 # EXAMPLES
+
+EXAMPLE 0: CWD drives context (prompt is vague)
+```
+User: /inject-context help me think through this
+CWD: Django project with pyproject.toml, models.py, Makefile referencing celery
+→ Read pyproject.toml, Makefile to confirm stack
+→ Load: sw/design/backend/django.md, sw/design/system/queues.md
+→ Report loaded files
+→ Ask what specifically they want to think through, now armed with the right context
+```
 
 EXAMPLE 1: Tech stack decision
 ```
