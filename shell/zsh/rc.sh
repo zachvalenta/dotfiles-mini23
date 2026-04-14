@@ -166,13 +166,14 @@ alias zv="cd $ZV_DIR"
 # PROJECTS
 alias xm="\cd $ZV_DIR/projects; t 2"
 alias blog="\cd $ZV_DIR/projects/design/ux/myblog; t -d"
-alias cm="\cd $ZV_DIR/projects/design/app/ceemuz; t"
+alias cm="\cd $ZV_DIR/projects/tools/ceemuz; t"
 alias doc="\cd $ZV_DIR/projects/design/architecture/documentation; t"
 alias jc="jiancha"
 alias sgt="\cd $ZV_DIR/projects/design/system/sgt; t"
 alias wq="\cd $ZV_DIR/projects/design/system/tennis-weekend; t"
-alias rw="\cd $ZV_DIR/projects/tools/corkboard; just run"
-alias rwt="\cd $PER_DIR/corkboard-tasks; t"
+alias babel="cd /Users/zach/Documents/zv/projects/tools/babel; t"
+alias fj="\cd $ZV_DIR/projects/tools/corkboard; just run"
+alias jf="\cd $PER_DIR/corkboard-tasks; l"
 function mrw(){
     # make corkboard task
     fname="$1.md";
@@ -214,7 +215,7 @@ alias falu="\cd $PER_DIR/.falu; ti"
 # alias ren="cd $PER_DIR/people"
 # alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
 # alias fu="clear; ic /Users/zach/Documents/zv/personal/.photos/20-21\ wilm/20/john-flea-monk.png; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
-alias fu="clear; rg -UNI '## routine' -A 11 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
+alias fu="clear; rg -UNI '## routine' -A 15 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"

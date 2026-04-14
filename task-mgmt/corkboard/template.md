@@ -1,8 +1,10 @@
 +++
 title = ""
 project = ""
-status = ""
-prio = ""
+status = "next"
+prio = "low"
+starred = false
+present = false
 tags = []
 +++
 
