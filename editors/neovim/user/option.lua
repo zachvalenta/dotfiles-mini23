@@ -9,6 +9,8 @@ local options = {
     number         = true,  -- line numbers
     relativenumber = true,  -- relative line numbers
     cursorline     = true,  -- highlight cursor line
+    wrap           = true,  -- wrap long lines
+    linebreak      = true,  -- break at word boundaries, not mid-word
 
     -- editing
     backspace = 'indent,eol,start',  -- sane backspace behaviour
