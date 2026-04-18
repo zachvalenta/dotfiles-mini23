@@ -28,17 +28,19 @@
             ""
         ]
     },
-    "capp_mgmt": {
-		"prefix": "mtm",
-		"description": "task mgmt note for Capp",
+    "corkboard_task": {
+		"prefix": "mdt",
+		"description": "headers for corkboard task file",
 		"body": [
-            "# $1",
+            "# 🏮 WORKLOG",
             "",
-			"## 参考",
+            "- [ ] $1",
+            "",
+			"# 🧪 RESEARCH",
 			"",
-			"## 进步",
+			"# 📡 PROMPT",
             "",
-            "# 🟨 ZA",
+            "# 🛰️ IMPL",
             ""
         ]
     }
