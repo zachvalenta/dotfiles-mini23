@@ -1,8 +1,14 @@
 model = "gpt-5.4"
+
+[features]
+codex_hooks = true
 [projects."/Users/zach/Documents/denv"]
 trust_level = "trusted"
 
 [projects."/Users/zach/Documents/zv/materials/sw/lang/html-css/myblog"]
+trust_level = "trusted"
+
+[projects."/Users/zach/Documents/zv/projects/design/system/sgt"]
 trust_level = "trusted"
 
 [notice.model_migrations]
