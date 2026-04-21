@@ -11,5 +11,8 @@ trust_level = "trusted"
 [projects."/Users/zach/Documents/zv/projects/design/system/sgt"]
 trust_level = "trusted"
 
+[projects."/Users/zach/Documents/zv/projects/tools/gh-assess"]
+trust_level = "trusted"
+
 [notice.model_migrations]
 "gpt-5.3-codex" = "gpt-5.4"

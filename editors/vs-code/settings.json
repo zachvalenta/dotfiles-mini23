@@ -36,6 +36,10 @@
     "vim.leader": "<space>",
     "vim.normalModeKeyBindings": [
         {
+            "before": ["<leader>", "p"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
             "before": ["<leader>", "j"],
             "commands": ["cursorPageDown", "center-editor-window"]
         },
