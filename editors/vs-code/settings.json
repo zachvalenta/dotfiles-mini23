@@ -36,12 +36,16 @@
     "vim.leader": "<space>",
     "vim.normalModeKeyBindings": [
         {
-            "before": ["<leader>", "u"],
+            "before": ["<leader>", "y"],
             "commands": ["workbench.action.quickOpen"]
         },
         {
-            "before": ["<leader>", "i"],
+            "before": ["<leader>", "u"],
             "commands": ["workbench.action.showAllSymbols"]
+        },
+        {
+            "before": ["<leader>", "i"],
+            "commands": ["workbench.action.gotoSymbol"]
         },
         {
             "before": ["<leader>", "o"],
