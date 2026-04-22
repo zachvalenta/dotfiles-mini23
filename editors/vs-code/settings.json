@@ -36,33 +36,33 @@
     "vim.leader": "<space>",
     "vim.normalModeKeyBindings": [
         {
-            "before": ["<leader>", "y"],
+            "before": ["<leader>", "j"],
             "commands": ["workbench.action.quickOpen"]
         },
         {
-            "before": ["<leader>", "u"],
-            "commands": ["workbench.action.showAllSymbols"]
-        },
-        {
-            "before": ["<leader>", "i"],
+            "before": ["<leader>", "k"],
             "commands": ["workbench.action.gotoSymbol"]
         },
         {
-            "before": ["<leader>", "o"],
+            "before": ["<leader>", "l"],
+            "commands": ["workbench.action.showAllSymbols"]
+        },
+        {
+            "before": ["<leader>", ";"],
             "commands": ["workbench.action.closeActiveEditor"]
         },
         {
-            "before": ["<leader>", "p"],
+            "before": ["<leader>", "'"],
             "commands": ["workbench.action.reopenClosedEditor"]
         },
-        {
-            "before": ["<leader>", "j"],
-            "commands": ["cursorPageDown", "center-editor-window"]
-        },
-        {
-            "before": ["<leader>", "k"],
-            "commands": ["cursorPageUp", "center-editor-window"]
-        }
+        // {
+        //     "before": ["<leader>", "j"],
+        //     "commands": ["cursorPageDown", "center-editor-window"]
+        // },
+        // {
+        //     "before": ["<leader>", "k"],
+        //     "commands": ["cursorPageUp", "center-editor-window"]
+        // }
     ],
     "window.restoreWindows": "one",
     "window.zoomLevel": 1,
