@@ -17,5 +17,8 @@ trust_level = "trusted"
 [projects."/Users/zach/Documents/zv/personal/corkboard-tasks"]
 trust_level = "trusted"
 
+[projects."/Users/zach/Documents/zv/notes/sw"]
+trust_level = "trusted"
+
 [notice.model_migrations]
 "gpt-5.3-codex" = "gpt-5.4"

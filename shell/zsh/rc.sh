@@ -211,6 +211,7 @@ alias jbj="\cd $ZV_DIR/notes"
 alias dom="clear; \cd $DOMAINS_DIR; t -d; jb"
 alias sw="clear; \cd $SW_DIR; t -d; jb"
 alias shu="cd $ZV_DIR/notes/bookcase; t -d"
+alias fan="cd $COOK_DIR; t -d"
 
 # PERSONAL
 alias per="cd $PER_DIR"
@@ -220,7 +221,7 @@ alias falu="\cd $PER_DIR/.falu; ti"
 # alias ren="cd $PER_DIR/people"
 # alias fu="\cd $PER_DIR/.photos/25/11; ic scorecard.png; ic 复仇.png"
 # alias fu="clear; ic /Users/zach/Documents/zv/personal/.photos/20-21\ wilm/20/john-flea-monk.png; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
-alias fu="clear; rg -UNI '## routine' -A 10 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
+alias fu="clear; rg -UNI '## routine' -A 12 $PER_DIR/logs/big-picture.md | glow -; rg -UNI '## arc' -A 5 $PER_DIR/logs/big-picture.md | glow -"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
