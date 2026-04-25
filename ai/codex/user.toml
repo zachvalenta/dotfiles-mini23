@@ -1,8 +1,20 @@
-model = "gpt-5.4"
+model = "gpt-5.5"
+# model_reasoning_effort = "high"  # low, medium, high https://developers.openai.com/codex/concepts/subagents#reasoning-effort-model_reasoning_effort
 
 [features]
 codex_hooks = true
+
+###
+# PER-REPO PERMS
+###
+
+[projects."/Users/zach/Desktop"]
+trust_level = "trusted"
+
 [projects."/Users/zach/Documents/denv"]
+trust_level = "trusted"
+
+[projects."/Users/zach/Documents/zv/notes/sw"]
 trust_level = "trusted"
 
 [projects."/Users/zach/Documents/zv/materials/sw/lang/html-css/myblog"]
@@ -16,9 +28,3 @@ trust_level = "trusted"
 
 [projects."/Users/zach/Documents/zv/personal/corkboard-tasks"]
 trust_level = "trusted"
-
-[projects."/Users/zach/Documents/zv/notes/sw"]
-trust_level = "trusted"
-
-[notice.model_migrations]
-"gpt-5.3-codex" = "gpt-5.4"
