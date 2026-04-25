@@ -6,15 +6,16 @@ bookcase ="/Users/zach/Documents/zv/notes/bookcase"
 [projects]
 corkboard = "/Users/zach/Documents/zv/projects/tools/corkboard"
 corkboard-tasks = "/Users/zach/Documents/zv/personal/corkboard-tasks"
-sgt = "/Users/zach/Documents/zv/projects/design/system/sgt"
-jiancha = "/Users/zach/Documents/zv/projects/tools/jian-cha"
-ceemuz = "/Users/zach/Documents/zv/projects/tools/ceemuz"
 site = "/Users/zach/Documents/zv/projects/design/ux/myblog"
+# sgt = "/Users/zach/Documents/zv/projects/design/system/sgt"
+# jiancha = "/Users/zach/Documents/zv/projects/tools/jian-cha"
+# ceemuz = "/Users/zach/Documents/zv/projects/tools/ceemuz"
 
 [denv]
-# dot = "/Users/zach/Documents/denv/dotfiles"
-# bin = "/Users/zach/Documents/denv/bin"
-# logs = "/Users/zach/Documents/denv/logs"
+worklogs = "/Users/zach/Documents/zv/personal/worklogs"
+dot = "/Users/zach/Documents/denv/dotfiles"
+bin = "/Users/zach/Documents/denv/bin"
+logs = "/Users/zach/Documents/denv/logs"
 
 [workflow]
 # jiancha = "/Users/zach/Documents/zv/projects/lang/rust/jian-cha"
