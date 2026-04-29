@@ -60,12 +60,36 @@
             "commands": ["workbench.action.files.save"]
         },
         {
-            "before": ["<leader>", "q"],
+            "before": ["<leader>", "x"],
             "commands": ["workbench.action.closeActiveEditor"]
         },
         {
-            "before": ["<leader>", "w"],
+            "before": ["<leader>", "z"],
             "commands": ["workbench.action.reopenClosedEditor"]
+        },
+        {
+            "before": ["<leader>", "1"],
+            "commands": ["workbench.action.openEditorAtIndex1"]
+        },
+        {
+            "before": ["<leader>", "2"],
+            "commands": ["workbench.action.openEditorAtIndex2"]
+        },
+        {
+            "before": ["<leader>", "3"],
+            "commands": ["workbench.action.openEditorAtIndex3"]
+        },
+        {
+            "before": ["<leader>", "4"],
+            "commands": ["workbench.action.openEditorAtIndex4"]
+        },
+        {
+            "before": ["<leader>", "5"],
+            "commands": ["workbench.action.openEditorAtIndex5"]
+        },
+        {
+            "before": ["<leader>", "9"],
+            "commands": ["workbench.action.lastEditorInGroup"]
         }
         // {
         //     "before": ["<leader>", "j"],
