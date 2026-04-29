@@ -44,17 +44,29 @@
             "commands": ["workbench.action.gotoSymbol"]
         },
         {
-            "before": ["<leader>", "l"],
+            "before": ["<leader>", "a"],
             "commands": ["workbench.action.showAllSymbols"]
         },
         {
-            "before": ["<leader>", ";"],
+            "before": ["<leader>", "h"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["<leader>", "l"],
+            "commands": ["workbench.action.nextEditor"]
+        },
+        {
+            "before": ["<leader>", "s"],
+            "commands": ["workbench.action.files.save"]
+        },
+        {
+            "before": ["<leader>", "q"],
             "commands": ["workbench.action.closeActiveEditor"]
         },
         {
-            "before": ["<leader>", "'"],
+            "before": ["<leader>", "w"],
             "commands": ["workbench.action.reopenClosedEditor"]
-        },
+        }
         // {
         //     "before": ["<leader>", "j"],
         //     "commands": ["cursorPageDown", "center-editor-window"]
