@@ -68,6 +68,14 @@
             "commands": ["workbench.action.reopenClosedEditor"]
         },
         {
+            "before": ["<leader>", "p"],
+            "commands": ["workbench.action.pinEditor"]
+        },
+        {
+            "before": ["<leader>", "o"],
+            "commands": ["workbench.action.unpinEditor"]
+        },
+        {
             "before": ["<leader>", "1"],
             "commands": ["workbench.action.openEditorAtIndex1"]
         },
