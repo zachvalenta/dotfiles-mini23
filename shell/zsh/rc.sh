@@ -176,7 +176,7 @@ alias jc="clear; jiancha"
 alias sgt="\cd $ZV_DIR/projects/design/system/sgt; t"
 alias wq="\cd $ZV_DIR/projects/design/system/tennis-weekend; t"
 alias babel="cd /Users/zach/Documents/zv/projects/tools/babel; t"
-alias cork="\cd $ZV_DIR/projects/tools/corkboard"
+alias cork="\cd $ZV_DIR/projects/tools/corkboard; t 2"
 alias fj="corkboard"
 alias jf="\cd $PER_DIR/corkboard-tasks; t -d"
 function mrw(){
