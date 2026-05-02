@@ -28,3 +28,9 @@ trust_level = "trusted"
 
 [projects."/Users/zach/Documents/zv/personal/corkboard-tasks"]
 trust_level = "trusted"
+
+[projects."/Users/zach/Documents/denv/dotfiles"]
+trust_level = "trusted"
+
+[projects."/Users/zach/Documents/zv/notes/bookcase"]
+trust_level = "trusted"
