@@ -166,6 +166,7 @@ alias f="z"
 alias home="cd $HOME; ll"
 alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
+alias cv="\cd $ZV_DIR/resume; ti"
 
 # PROJECTS
 alias xm="\cd $ZV_DIR/projects; t 2"
@@ -186,6 +187,7 @@ function mrw(){
     cp "$DOT_DIR/task-mgmt/corkboard/template.md" "$cwd/$fname";
     NVIM_APPNAME=neo nvim "$cwd/$fname";
 }
+alias raj="\cd $ZV_DIR/projects/design/system/rajant-odoo; t"
 
 # KERO
 alias kero="\cd $ZV_DIR/work/kero; t -d 2 docs src"
