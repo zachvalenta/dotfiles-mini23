@@ -35,6 +35,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # OH-MY-POSH - prompt
 eval "$(oh-my-posh init zsh --config $HOME/Documents/denv/dotfiles/shell/prompt/catty.json)"
 
+# Bun completions
+[ -s "/Users/zach/.bun/_bun" ] && source "/Users/zach/.bun/_bun"
+
 # Just
 alias just="/Users/zach/Documents/zv/projects/tools/just/target/release/just"  # tmp alias while waiting for PR to merge
 export JUST_LIST_RECIPE_COLOR='#fab387'  # peach

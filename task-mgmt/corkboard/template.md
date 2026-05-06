@@ -10,10 +10,6 @@ tags = []
 
 # 🏮 WORKLOG
 
-- [ ] research
-- [ ] prompt
-- [ ] impl
-
 # 🧪 RESEARCH
 
 # 📡 PROMPT

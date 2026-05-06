@@ -1,4 +1,4 @@
-# Only print during interactive shells (not during cargo builds)
+# only print during interactive shells (not during cargo builds)
 [[ -o interactive ]] && { echo -n "$(tput setaf 5) sourcing ~/.zshenv at$(tput sgr0): "; date; }
 
 # HOMEBREW - SET PATH/MANPATH
@@ -18,6 +18,7 @@ export PATH="$HOME/Documents/denv/bin:${PATH}"                # my bin
 export PATH="$PATH:$HOME/go/bin"                              # golang
 . "$HOME/.cargo/env"                                          # cargo
 export LLM_USER_PATH="$HOME/.config/llm"                      # llm
+export PATH="$HOME/.bun/bin:$PATH"
 
 ###
 # 🗂 DIRECTORY VARIABLES
