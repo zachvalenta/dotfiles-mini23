@@ -37,6 +37,7 @@ require("lazy").setup({
                     MD025 = true,
                     MD032 = true,
                     MD034 = true,
+                    MD041 = true,
                 }
                 local parser = require("lint.linters.markdownlint-cli2").parser
 

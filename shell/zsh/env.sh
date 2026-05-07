@@ -51,7 +51,7 @@ KERO_ENG="$KERO_DIR/docs/eng"
 # 🌐 ENVIRONMENT VARIABLES
 ###
 
-export EDITOR=nvim
+export EDITOR=vim
 export MANPAGER=bat
 export HOMEBREW_NO_AUTO_UPDATE=1
 export PYTHONDONTWRITEBYTECODE=1

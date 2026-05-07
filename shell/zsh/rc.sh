@@ -152,11 +152,10 @@ function tz(){
     clear;
     label "tomato" "WEIGHT"
     YEAR=${1:-26}
-    xan plot -LT 'date' 'weight' $TRACK_DIR/"$YEAR"/weight.csv \
+    txy $TRACK_DIR/"$YEAR"/weight.csv --x date --y weight \
     --cols 120 --rows 14 \
     --y-min 174 --y-max 182 \
-    --x-ticks 5 --y-ticks 6 \
-    -g days
+    --x-ticks 5 --y-ticks 6
 }
 
 ###

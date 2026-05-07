@@ -34,3 +34,9 @@ trust_level = "trusted"
 
 [projects."/Users/zach/Documents/zv/notes/bookcase"]
 trust_level = "trusted"
+
+[projects."/Users/zach/Documents/zv/resume"]
+trust_level = "trusted"
+
+[projects."/Users/zach/Documents/zv/projects/design/system/rajant-odoo"]
+trust_level = "trusted"
