@@ -242,7 +242,7 @@ alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
 # ZA
 alias mat="cd $MAT_DIR; t 2"
 alias mats="cd $MAT_DIR/sw; t 2"
-alias ml="cd $MAT_DIR/music/za/music-library"
+alias ml="cd $MAT_DIR/music/za/music-library; t"
 alias snip="cd /Users/zach/Library/Application\ Support/Code/User"
 alias sk8="\cd $MAT_DIR/art/skate; t -d"
 alias yin="\cd $ZV_DIR/AV/yin; eza -al"
