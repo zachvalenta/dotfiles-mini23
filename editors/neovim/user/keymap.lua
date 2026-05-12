@@ -32,6 +32,47 @@ vim.keymap.set('n', '<leader>fi', function()
     require('telescope').extensions.aerial.aerial()
 end)
 
+local function focus_filetype(filetype)
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+        if vim.bo[vim.api.nvim_win_get_buf(win)].filetype == filetype then
+            vim.api.nvim_set_current_win(win)
+            return true
+        end
+    end
+    return false
+end
+
+local function focus_editor()
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+        local filetype = vim.bo[vim.api.nvim_win_get_buf(win)].filetype
+        if filetype ~= 'neo-tree' and filetype ~= 'aerial' then
+            vim.api.nvim_set_current_win(win)
+            return
+        end
+    end
+end
+
+vim.keymap.set('n', '<leader>e', function()
+    vim.cmd('Neotree focus filesystem left')
+end)
+vim.keymap.set('n', '<leader>E', '<cmd>Neotree toggle filesystem left<CR>')
+vim.keymap.set('n', '<leader>a', function()
+    if not focus_filetype('aerial') then
+        vim.cmd('AerialOpen! left')
+        focus_filetype('aerial')
+    end
+end)
+vim.keymap.set('n', '<leader>A', '<cmd>AerialToggle! left<CR>')
+vim.keymap.set('n', '<leader>w', focus_editor)
+vim.keymap.set('n', '<leader>q', '<cmd>qa<CR>')
+
+vim.schedule(function()
+    vim.cmd('AerialOpen! left')
+    vim.cmd('Neotree filesystem reveal left')
+    vim.cmd('wincmd l')
+    vim.cmd('wincmd l')
+end)
+
 -- MISC
 -- open URL under cursor https://vimtricks.com/p/open-url-under-cursor/
 vim.keymap.set('n', 'gx', function()

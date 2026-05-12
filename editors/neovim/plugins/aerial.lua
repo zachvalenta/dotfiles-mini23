@@ -4,25 +4,30 @@ return {
         dependencies = { 'nvim-treesitter/nvim-treesitter' },
         opts = {
             backends = { 'treesitter' },
-            open_automatic = true,
+            open_automatic = false,
             show_guides = true,
             layout = {
-                default_direction = 'prefer_left',
-                width = 0.20,
+                default_direction = 'left',
+                placement = 'window',
+                width = 30,
             },
             -- all markdown headings are 'Interface' kind; map level -> rainbow highlight
             get_highlight = function(symbol, _, _)
-                if symbol.kind == 'Interface' then
+                if symbol.kind == 'Interface' or symbol.kind == 'Text' then
                     return 'AerialRainbow' .. math.min(symbol.level + 1, 6)
                 end
             end,
             -- remove [I] icon from markdown headings
             icons = {
                 Interface = '',
+                Text = '',
             },
             -- keymaps for the aerial panel itself
             keymaps = {
                 ['<Tab>'] = 'actions.jump',  -- goto header, return focus to main buffer
+                ['/'] = function()
+                    require('telescope').extensions.aerial.aerial()
+                end,
             },
             on_attach = function(bufnr)
                 -- scroll prev/next header from main buffer
