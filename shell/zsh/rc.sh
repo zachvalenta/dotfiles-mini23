@@ -221,7 +221,9 @@ alias per="cd $PER_DIR"
 alias rb="cd $PER_DIR/logs"
 alias wl="cd $WORKLOGS_DIR; t"
 alias falu="\cd $PER_DIR/.falu; ti"
-alias fu="clear; cat $PER_DIR/logs/schedule.md | glow -"
+# alias fu="clear; cat $PER_DIR/logs/schedule.md | glow -"
+alias fu="clear; rg -UNI 'path' -A 20 $PER_DIR/logs/schedule.md | glow -"
+
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"
