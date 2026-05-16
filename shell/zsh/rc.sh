@@ -169,6 +169,11 @@ alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
 alias cv="\cd $ZV_DIR/resume; ti"
 
+# AGENTS
+alias cc="claude"
+alias oa="codex"
+alias oc="opencode"
+
 # PROJECTS
 alias xm="\cd $ZV_DIR/projects; t 2"
 alias blog="\cd $ZV_DIR/projects/design/ux/myblog; t -d"
@@ -222,8 +227,8 @@ alias rb="cd $PER_DIR/logs"
 alias wl="cd $WORKLOGS_DIR; t"
 alias falu="\cd $PER_DIR/.falu; ti"
 # alias fu="clear; cat $PER_DIR/logs/schedule.md | glow -"
-alias fu="clear; rg -UNI 'path' -A 20 $PER_DIR/logs/schedule.md | glow -"
-
+alias fu="clear; rg -UNI 'star' -A 20 $PER_DIR/logs/schedule.md | glow -"
+alias menu="vim /Users/zach/Documents/zv/cooking/menu-planning.md"
 
 # NEOVIM
 # alias vc="cd $HOME/.config/nvim/lua/zv"

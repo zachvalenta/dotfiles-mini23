@@ -241,7 +241,7 @@ LOCATION: `/Users/zach/Documents/zv/notes/sw`
 │   │   └── HEADERS: 🖥️ DESKTOP ENVIRONMENT, compositors, managers, launcher / workflows (Raycast), 🐚 SHELL, 🐠 fish, history (atuin), line editor (readline), prompt (oh-my-posh), 🦓 zsh, 🪟️ TERMINAL, color, features, ttys, 👻 ghostty, 🍎 iTerm, 🍃⭐️ Wave, multiplex, prise, 🟩 tmux, tuios, 🧩 Zellij
 │   ├── linux.md
 │   │   └── TOPICS: Linux internals, syscalls
-│   │   └── SEARCH: systemd, cgroups, namespaces, procfs
+│   │   └── SEARCH: systemd, cgroups, namespaces, procfs, symlink, hardlink, dotfiles
 │   │   └── HEADERS: 🗃️ FILES, descriptors, fs, globbing, links, sockets, 🌊 FLOW, IO, operators, xargs, 🟨 ZA, date/time, exit codes, kernel, man pages, scripts, perms + user/group
 │   └── threads.md
 │       └── TOPICS: concurrency, parallelism
