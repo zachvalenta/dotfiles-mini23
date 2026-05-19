@@ -227,7 +227,7 @@ alias rb="cd $PER_DIR/logs"
 alias wl="cd $WORKLOGS_DIR; t"
 alias falu="\cd $PER_DIR/.falu; ti"
 # alias fu="clear; cat $PER_DIR/logs/schedule.md | glow -"
-alias fu="clear; rg -UNI 'star' -A 20 $PER_DIR/logs/schedule.md | glow -"
+alias fu="clear; rg -UNI 'DAYTIME' -A 100 $PER_DIR/logs/schedule.md | glow -"
 alias menu="vim /Users/zach/Documents/zv/cooking/menu-planning.md"
 
 # NEOVIM

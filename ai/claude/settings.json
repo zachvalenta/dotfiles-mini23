@@ -1,6 +1,7 @@
 {
   "alwaysThinkingEnabled": true,
   "vimMode": true,
+  "cleanupPeriodDays": 9999999999,
   "enabledPlugins": {
     "rust-analyzer-lsp@claude-plugins-official": true
   },
