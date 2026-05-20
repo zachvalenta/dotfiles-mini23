@@ -43,5 +43,19 @@
             "# 🛰️ IMPL",
             ""
         ]
+    },
+    "md_note": {
+		"prefix": "mdn",
+		"description": "note template",
+		"body": [
+            "# ⛩️",
+            "",
+            "## 参考",
+            "",
+			"## 进步",
+			"",
+			"# 🟨 ZA",
+            ""
+        ]
     }
 }
