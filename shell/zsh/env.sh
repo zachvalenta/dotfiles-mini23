@@ -10,24 +10,24 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 ###
-# 🛣 PATH
+# 🕋 DENV
 ###
 
-export PATH="$PATH:/Users/zach/.local/bin"                    # pipx
-export PATH="$HOME/Documents/denv/bin:${PATH}"                # my bin
-export PATH="$PATH:$HOME/go/bin"                              # golang
-. "$HOME/.cargo/env"                                          # cargo
-export LLM_USER_PATH="$HOME/.config/llm"                      # llm
-export PATH="$HOME/.bun/bin:$PATH"
+DENV_DIR="$HOME/Documents/denv"
+DOT_DIR="$DENV_DIR/dotfiles"
+ZSH_CONF_DIR="$DOT_DIR/shell/zsh"
+
+###
+# 🚀 LOAD MODULES
+###
+
+source "$ZSH_CONF_DIR/path.sh"
 
 ###
 # 🗂 DIRECTORY VARIABLES
 ###
 
 # 🖥️ MACHINE-SPECIFIC
-DOC_DIR="$HOME/Documents"
-DENV_DIR="$DOC_DIR/denv"
-DOT_DIR="$DENV_DIR/dotfiles"
 # TELESCOPE_WORKSPACE_DIR="$HOME/Documents/telescope-workspace"
 
 # 🙈 ME
