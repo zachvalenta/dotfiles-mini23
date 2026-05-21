@@ -6,12 +6,18 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # 🚀 LOAD MODULES
 ###
 
+source "$ZSH_CONF_DIR/modules/broot.sh"
+source "$ZSH_CONF_DIR/modules/corkboard.sh"
 source "$ZSH_CONF_DIR/modules/cursor.sh"
 source "$ZSH_CONF_DIR/modules/docker.sh"
 source "$ZSH_CONF_DIR/modules/file-list.sh"
 source "$ZSH_CONF_DIR/modules/git-aliases.sh"
+source "$ZSH_CONF_DIR/modules/just.sh"
+source "$ZSH_CONF_DIR/modules/nav.sh"
 source "$ZSH_CONF_DIR/modules/nvm.sh"
+source "$ZSH_CONF_DIR/modules/path.sh"
 # source "$ZSH_CONF_DIR/modules/tracking.sh"
+source "$ZSH_CONF_DIR/modules/yazi.sh"
 
 ###
 # 🎨 INTERACTIVE TOOLS
@@ -33,9 +39,6 @@ if [[ ! -f ~/.cache/vivid-ls-colors ]]; then
     vivid generate catppuccin-mocha > ~/.cache/vivid-ls-colors
 fi
 export LS_COLORS="$(cat ~/.cache/vivid-ls-colors)"
-
-# BROOT - file navigator
-source /Users/zach/.config/broot/launcher/bash/br
 
 # ZOXIDE - smart cd
 eval "$(zoxide init zsh)"
@@ -60,13 +63,6 @@ function tz(){
 # 🚁 NAVIGATION
 ###
 
-# ROOT
-alias f="z"
-alias home="cd $HOME; ll"
-alias desk="cd $HOME/Desktop"
-alias zv="cd $ZV_DIR"
-alias cv="\cd $ZV_DIR/resume; ti"
-
 # AGENTS
 alias cc="claude"
 alias oa="codex"
@@ -75,23 +71,8 @@ alias oc="opencode"
 # PROJECTS
 alias xm="\cd $ZV_DIR/projects; t 2"
 alias blog="\cd $ZV_DIR/projects/design/ux/myblog; t -d"
-alias cm="\cd $ZV_DIR/projects/tools/ceemuz; t"
-alias doc="\cd $ZV_DIR/projects/design/architecture/documentation; t"
+
 alias jc="clear; jiancha"
-alias sgt="\cd $ZV_DIR/projects/design/system/sgt; t"
-alias wq="\cd $ZV_DIR/projects/design/system/tennis-weekend; t"
-alias babel="cd /Users/zach/Documents/zv/projects/tools/babel; t"
-alias cork="\cd $ZV_DIR/projects/tools/corkboard; t 2"
-alias fj="corkboard"
-alias jf="\cd $PER_DIR/corkboard-tasks; t -d"
-function mrw(){
-    # make corkboard task
-    fname="$1.md";
-    cwd="$(pwd)";
-    cp "$DOT_DIR/task-mgmt/corkboard/template.md" "$cwd/$fname";
-    NVIM_APPNAME=neo nvim "$cwd/$fname";
-}
-alias raj="\cd $ZV_DIR/projects/design/system/rajant-odoo; t"
 
 # KERO
 alias kero="\cd $ZV_DIR/work/kero; t -d 2 docs src"
