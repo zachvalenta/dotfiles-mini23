@@ -7,6 +7,7 @@ echo -n "$(tput setaf 5) sourcing ~/.zshrc at$(tput sgr0): "; date
 source "$ZSH_CONF_DIR/modules/file-list.sh"
 source "$ZSH_CONF_DIR/modules/git-aliases.sh"
 source "$ZSH_CONF_DIR/modules/docker.sh"
+source "$ZSH_CONF_DIR/modules/nvm.sh"
 
 ###
 # 🎛️ SHELL OPTIONS
@@ -72,37 +73,7 @@ eval "$(zoxide init zsh)"
 
 # eval "$(nodenv init -)"
 
-# NVM
 export NVM_DIR="$HOME/.config/nvm"
-_load_nvm() {
-    # lazy load NVM to avoid 500s lag on each shell
-    unset -f nvm node npm gemini claude codex _load_nvm            # rm placeholders
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # load nvm
-}
-nvm() {
-    _load_nvm
-    nvm "$@"  # run cmd w/ args
-}
-node() {
-    _load_nvm
-    node "$@"
-}
-npm() {
-    _load_nvm
-    npm "$@"
-}
-gemini() {
-    _load_nvm
-    gemini "$@"
-}
-claude() {
-    _load_nvm
-    claude "$@"
-}
-codex() {
-    _load_nvm
-    codex "$@"
-}
 
 ###
 # 🏔 WORKFLOW
