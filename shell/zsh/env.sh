@@ -33,19 +33,11 @@ source "$ZSH_CONF_DIR/modules/path.sh"
 # 🙈 ME
 ZV_DIR="$HOME/Documents/zv"
 MAT_DIR="$ZV_DIR/materials"
-COOK_DIR="$ZV_DIR/cooking"
 DOMAINS_DIR="$ZV_DIR/notes/domains"
 SW_DIR="$ZV_DIR/notes/sw"
 PER_DIR="$ZV_DIR/personal"
 TRACK_DIR="$PER_DIR/tracking"
 WORKLOGS_DIR="$PER_DIR/worklogs"
-
-# 🟧 KERO
-KERO_DIR="$ZV_DIR/work/kero"
-KERO_RUSH="$KERO_DIR/src/automation/rush"
-KERO_SRC="$KERO_DIR/src"
-KERO_AGENTIC="$KERO_DIR/docs/agentic"
-KERO_ENG="$KERO_DIR/docs/eng"
 
 ###
 # 🌐 ENVIRONMENT VARIABLES

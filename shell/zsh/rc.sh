@@ -60,80 +60,6 @@ function tz(){
 }
 
 ###
-# 🚁 NAVIGATION
-###
-
-# AGENTS
-alias cc="claude"
-alias oa="codex"
-alias oc="opencode"
-
-# PROJECTS
-alias xm="\cd $ZV_DIR/projects; t 2"
-alias blog="\cd $ZV_DIR/projects/design/ux/myblog; t -d"
-
-alias jc="clear; jiancha"
-
-# KERO
-alias kero="\cd $ZV_DIR/work/kero; t -d 2 docs src"
-alias kenv="\cd $KERO_DIR/denv; t 2"
-alias sim="\cd $KERO_DIR/denv/sims; t"
-alias ks="\cd $KERO_DIR/src; t 2"
-alias ji="\cd $KERO_RUSH; t 2 ml_app"
-alias kd="\cd $KERO_DIR/docs; t 2"
-alias ka="\cd $KERO_AGENTIC; t commands; t impl"
-alias ke="\cd $KERO_DIR/docs/eng; t"
-alias kt="\cd $KERO_DIR/docs/tickets; t 2"
-alias kl="\cd $KERO_DIR/docs/worklogs; t"
-
-# DENV
-alias denv="cd $DENV_DIR"
-alias bin="cd $DENV_DIR/bin; t"
-alias logs="cd $DENV_DIR/logs"
-alias dot="\cd $DOT_DIR; t -d"
-alias ccc="\cd $DOT_DIR/ai/claude; t"
-
-# NOTES
-alias jbj="\cd $ZV_DIR/notes"
-alias dom="clear; \cd $DOMAINS_DIR; t -d; jb"
-alias sw="clear; \cd $SW_DIR; t -d; jb"
-alias shu="cd $ZV_DIR/notes/bookcase; t -d"
-alias fan="cd $COOK_DIR; t -d"
-
-# PERSONAL
-alias per="cd $PER_DIR"
-alias rb="cd $PER_DIR/logs"
-alias wl="cd $WORKLOGS_DIR; t"
-alias falu="\cd $PER_DIR/.falu; ti"
-# alias fu="clear; cat $PER_DIR/logs/schedule.md | glow -"
-alias fu="clear; rg -UNI 'DAYTIME' -A 100 $PER_DIR/logs/schedule.md | glow -"
-alias menu="vim /Users/zach/Documents/zv/cooking/menu-planning.md"
-
-# NEOVIM
-# alias vc="cd $HOME/.config/nvim/lua/zv"
-# alias plug="cd $HOME/.local/share/nvim/plugged"
-# alias ws="cd $TELESCOPE_WORKSPACE_DIR; nv"
-alias nv="nvim"
-alias nnv="NVIM_APPNAME=neo nvim"  # new config    @ ~/.config/neo
-alias neo="cd ~/.config/neo; t"
-
-# PKGS
-alias brewfr="brew ls --versions > $DENV_DIR/logs/brew/brew-pkgs.txt"
-alias pipfr="python -m pip freeze > $DENV_DIR/logs/pyenv/pip/pip-pkgs.txt"
-alias pipxfr="python -m pipx list --short > $DENV_DIR/logs/pyenv/pipx/pipx-pkgs.txt"
-alias rustfr="cargo install --list > $DENV_DIR/logs/rust/#meta/rust-pkgs.txt"
-alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/editors/vs-code/pkg-vsc.txt"
-alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
-
-# ZA
-alias mat="cd $MAT_DIR; t 2"
-alias mats="cd $MAT_DIR/sw; t 2"
-alias ml="cd $MAT_DIR/music/za/music-library; t"
-alias snip="cd /Users/zach/Library/Application\ Support/Code/User"
-alias sk8="\cd $MAT_DIR/art/skate; t -d"
-alias yin="\cd $ZV_DIR/AV/yin; eza -al"
-
-###
 # 🎹 MUSIC
 ###
 
@@ -154,6 +80,23 @@ alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
 ###
 # 🛠 UTILS
 ###
+
+# AGENTS
+alias cc="claude"
+alias oa="codex"
+alias oc="opencode"
+
+alias jc="clear; jiancha"
+alias menu="vim /Users/zach/Documents/zv/cooking/menu-planning.md"
+alias fu="clear; rg -UNI 'DAYTIME' -A 100 $PER_DIR/logs/schedule.md | glow -"
+
+# NEOVIM
+# alias vc="cd $HOME/.config/nvim/lua/zv"
+# alias plug="cd $HOME/.local/share/nvim/plugged"
+# alias ws="cd $TELESCOPE_WORKSPACE_DIR; nv"
+alias nv="nvim"
+alias nnv="NVIM_APPNAME=neo nvim"  # new config    @ ~/.config/neo
+alias neo="cd ~/.config/neo; t"
 
 # TASK WARRIOR: tw for urgency, summary for big picture, twt for tree + rn/quan
 alias tw="task"
