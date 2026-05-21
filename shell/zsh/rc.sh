@@ -22,13 +22,6 @@ eval "$(oh-my-posh init zsh --config $HOME/Documents/denv/dotfiles/shell/prompt/
 # Bun completions
 [ -s "/Users/zach/.bun/_bun" ] && source "/Users/zach/.bun/_bun"
 
-# Just
-alias just="/Users/zach/Documents/zv/projects/tools/just/target/release/just"  # tmp alias while waiting for PR to merge
-export JUST_LIST_RECIPE_COLOR='#fab387'  # peach
-export JUST_LIST_DOC_COLOR='#f5c2e7'     # pink
-export JUST_LIST_GROUP_COLOR='#a6e3a1'   # mint green
-export JUST_LIST_ALIAS_COLOR='#94e2d5'   # teal
-
 # ATUIN - history
 eval "$(atuin init zsh)"
 
@@ -281,29 +274,4 @@ function timer(){
     target_hours="$(python -c 'from datetime import datetime as dt; days_past = float(abs((dt.strptime("2025-01-01", "%Y-%m-%d") - dt.today()).days)); target_hours = round((days_past / 365) * 100, 1); print(target_hours)')"
     days_left="$(python -c 'from datetime import datetime as dt; days_past = float(abs((dt.strptime("2025-01-01", "%Y-%m-%d") - dt.today()).days)); days_left = int(365 - days_past); print(days_left)')"
     label "red" "YEAR PAST: ${year_past}% ||| TARGET HOURS: ${target_hours} ||| DAYS LEFT: ${days_left}"
-}
-
-function br {
-    local cmd cmd_file code
-    cmd_file=$(mktemp)
-    if broot --outcmd "$cmd_file" "$@"; then
-        cmd=$(<"$cmd_file")
-        command rm -f "$cmd_file"
-        eval "$cmd"
-    else
-        code=$?
-        command rm -f "$cmd_file"
-        return "$code"
-    fi
-}
-alias b="br"
-
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	# Use sympop yazi with separate config (includes symbol preview plugin)
-	XDG_CONFIG_HOME="$HOME/.config/yazi-sympop" /Users/zach/Documents/zv/projects/design/app/sympop/target/release/yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
 }

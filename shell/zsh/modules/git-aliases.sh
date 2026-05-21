@@ -8,6 +8,7 @@ alias gshow="git log --format=%B -n 1"  # show msg description for commit
 ###
 # COMMIT
 ###
+
 alias gc="git c"                        # commit
 alias gca="git c --amend"               # commit amend
 alias gcne="git c --amend --no-edit"    # commit amend no edit
@@ -42,6 +43,7 @@ function gp() {
 ###
 # ZA
 ###
+
 alias gb="git b"                        # show current branch
 alias gs="clear; git s"                 # show status
 alias gd="git d"                        # diff working directory and repo
