@@ -1,5 +1,6 @@
 # lazy load NVM to avoid 500ms lag on shell startup
 _load_nvm() {
+    local NVM_DIR="$HOME/.config/nvm"
     # rm placeholders
     unset -f nvm node npm gemini claude codex _load_nvm
     # load nvm

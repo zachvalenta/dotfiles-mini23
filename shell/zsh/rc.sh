@@ -1,41 +1,16 @@
 echo -n "$(tput setaf 5) sourcing ~/.zshrc at$(tput sgr0): "; date
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 ###
 # 🚀 LOAD MODULES
 ###
 
+source "$ZSH_CONF_DIR/modules/cursor.sh"
+source "$ZSH_CONF_DIR/modules/docker.sh"
 source "$ZSH_CONF_DIR/modules/file-list.sh"
 source "$ZSH_CONF_DIR/modules/git-aliases.sh"
-source "$ZSH_CONF_DIR/modules/docker.sh"
 source "$ZSH_CONF_DIR/modules/nvm.sh"
-
-###
-# 🎛️ SHELL OPTIONS
-###
-
-set -o vi  # vi mode for command line editing
-
-# cursor shape: beam in insert, block in normal
-function zle-keymap-select {
-  case $KEYMAP in
-    vicmd)      print -n '\e[2 q' ;;  # block
-    viins|main) print -n '\e[6 q' ;;  # beam
-  esac
-}
-zle -N zle-keymap-select
-
-# set beam on new prompt (pane open starts in insert mode but keymap-select never fires)
-function zle-line-init { print -n '\e[6 q'; }
-zle -N zle-line-init
-
-# reset cursor to terminal default before any command runs (so vim starts clean)
-function preexec { print -n '\e[0 q'; }
-
-###
-# 🌐 ENVIRONMENT
-###
-
-export XDG_CONFIG_HOME="$HOME/.config"
 
 ###
 # 🎨 INTERACTIVE TOOLS
@@ -70,10 +45,6 @@ source /Users/zach/.config/broot/launcher/bash/br
 
 # ZOXIDE - smart cd
 eval "$(zoxide init zsh)"
-
-# eval "$(nodenv init -)"
-
-export NVM_DIR="$HOME/.config/nvm"
 
 ###
 # 🏔 WORKFLOW
