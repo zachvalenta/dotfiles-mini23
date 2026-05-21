@@ -6,6 +6,7 @@ echo -n "$(tput setaf 5) sourcing ~/.zshrc at$(tput sgr0): "; date
 
 source "$ZSH_CONF_DIR/modules/file-list.sh"
 source "$ZSH_CONF_DIR/modules/git-aliases.sh"
+source "$ZSH_CONF_DIR/modules/docker.sh"
 
 ###
 # 🎛️ SHELL OPTIONS
@@ -278,38 +279,6 @@ alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
 # alias jt="\cd $MAT_DIR/music/guitar; t 2"
 # alias gq="cd $MAT_DIR/music/piano/harrison\ -\ pop/02-applied"
 # alias ge="cd $MAT_DIR/art/songwriting"
-
-###
-# 🚢 DOCKER
-###
-
-alias mt="docker"
-alias docker_stat="docker ps --format 'table {{.Names}}\t{{.State}}\t{{.Status}}'"  # https://docs.docker.com/engine/reference/commandline/ps/#formatting
-function mtl(){  # list all
-    echo -e "\n";
-
-    echo "🚢 containers";
-    printf %"$COLUMNS"s | tr " " "-"
-    echo -e "\n";
-    docker ps -a;
-    echo -e "\n";
-
-    echo "💾 images";
-    printf %"$COLUMNS"s | tr " " "-"
-    echo -e "\n";
-    docker images;
-    echo -e "\n";
-
-    echo "🗄  volumes";
-    printf %"$COLUMNS"s | tr " " "-"
-    echo -e "\n";
-    docker volume ls;
-    echo -e "\n";
-}
-# stop containers, rm (stopped containers, unused volumes, dangling images), rm unused images
-alias mtp="docker ps -qa | xargs docker stop; docker system prune --volumes -f; docker image prune -af; mtl"
-alias mtpc="docker ps -qa | xargs docker stop; docker system prune --volumes -f"
-alias dstop="docker ps -qa | xargs docker stop"
 
 ###
 # 🛠 UTILS
