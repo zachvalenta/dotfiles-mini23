@@ -4,8 +4,8 @@ echo -n "$(tput setaf 5) sourcing ~/.zshrc at$(tput sgr0): "; date
 # 🚀 LOAD MODULES
 ###
 
-source "$ZSH_CONF_DIR/file-list.sh"
-source "$ZSH_CONF_DIR/git-aliases.sh"
+source "$ZSH_CONF_DIR/modules/file-list.sh"
+source "$ZSH_CONF_DIR/modules/git-aliases.sh"
 
 ###
 # 🎛️ SHELL OPTIONS

@@ -21,7 +21,7 @@ ZSH_CONF_DIR="$DOT_DIR/shell/zsh"
 # 🚀 LOAD MODULES
 ###
 
-source "$ZSH_CONF_DIR/path.sh"
+source "$ZSH_CONF_DIR/modules/path.sh"
 
 ###
 # 🗂 DIRECTORY VARIABLES
