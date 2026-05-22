@@ -1,4 +1,5 @@
 echo -n "$(tput setaf 5) sourcing ~/.zshrc at$(tput sgr0): "; date
+carl --year-progress
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
