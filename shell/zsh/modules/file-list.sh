@@ -1,4 +1,17 @@
+###
+# LS_COLORS
+###
+
+# regen cache: rm ~/.cache/vivid-ls-colors && source ~/.zshrc
+if [[ ! -f ~/.cache/vivid-ls-colors ]]; then
+    mkdir -p ~/.cache
+    vivid generate catppuccin-mocha > ~/.cache/vivid-ls-colors
+fi
+export LS_COLORS="$(cat ~/.cache/vivid-ls-colors)"
+
+###
 # default
+###
 function sl(){
     if [ "$1" ]; then
         eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I "$EZA_IGNORE" "$1"
@@ -6,7 +19,10 @@ function sl(){
         eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I "$EZA_IGNORE"
     fi
 }
+
+###
 # dir/file sizes
+###
 function l(){
     if [ "$1" ]; then
         eza -al --icons --total-size --no-quotes --no-user --no-time --no-permissions --git --git-ignore -I "$EZA_IGNORE" "$1"
@@ -14,7 +30,10 @@ function l(){
         eza -al --icons --total-size --no-quotes --no-user --no-time --no-permissions --git --git-ignore -I "$EZA_IGNORE"
     fi
 }
+
+###
 # perms / user / timestamp + show gitignore
+###
 function ll(){
     if [ "$1" ]; then
         eza -alo --icons --no-quotes --git --git-ignore -I "$EZA_IGNORE" "$1"
@@ -23,11 +42,9 @@ function ll(){
     fi
 }
 
-# show gitignore
-function ti(){
-    eza -al --icons --tree --no-quotes --no-user --no-time -I "$EZA_IGNORE"
-}
-
+###
+# tree
+###
 function t() {
     local DIRS_ONLY=""
     local LEVEL=""
@@ -50,4 +67,11 @@ function t() {
     else
         eza -al $DIRS_ONLY "${EZA_TREE_FLAGS[@]}" $LEVEL "$@"
     fi
+}
+
+###
+# tree + show gitignore
+###
+function ti(){
+    eza -al --icons --tree --no-quotes --no-user --no-time -I "$EZA_IGNORE"
 }

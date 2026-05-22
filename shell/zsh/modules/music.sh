@@ -1,0 +1,13 @@
+alias mh="rg -UA 11 'alias mh' $DOT_DIR/shell/zsh/rc.sh"
+alias int="rg -UNI '## intervals' -A 15 -B 1 $DOMAINS_DIR/art/music | glow -"
+alias hx="clear; rg -A 17 -B 1 '## chords' $DOMAINS_DIR/art/music/theory.md | glow -"
+alias yj="rg -UNI '## scales' -A 7 -B 1 $DOMAINS_DIR/art/music | glow -"
+alias clef="imgcat $MAT_DIR/music/theory/clef.png"
+alias keys="imgcat $MAT_DIR/music/theory/30-keys.jpg; imgcat $MAT_DIR/music/theory/circle-of-fifths.png"
+alias modes="rg -UNI '## modes\n' -A 6 -B 1 $DOMAINS_DIR/art/music | glow -"
+alias rhy="imgcat $MAT_DIR/music/theory/note-divisions.jpg"
+alias caged="ic $MAT_DIR/music/guitar/scale-systems/caged.png; echo 'https://songnotes.net/tools/fret-monster'"
+alias jt="\cd $MAT_DIR/music/guitar; t 2"
+alias gq="cd $MAT_DIR/music/piano/harrison\ -\ pop/02-applied"
+alias ge="cd $MAT_DIR/art/songwriting"
+

@@ -1,3 +1,4 @@
+alias j="just"
 alias just="/Users/zach/Documents/zv/projects/tools/just/target/release/just"  # alias for PR branch
 export JUST_LIST_RECIPE_COLOR='#fab387'  # peach
 export JUST_LIST_DOC_COLOR='#f5c2e7'     # pink
