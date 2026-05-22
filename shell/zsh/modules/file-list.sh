@@ -12,6 +12,7 @@ export LS_COLORS="$(cat ~/.cache/vivid-ls-colors)"
 ###
 # default
 ###
+
 function sl(){
     if [ "$1" ]; then
         eza --icons --no-quotes --no-user --no-time --no-filesize --no-permissions --git --git-ignore -I "$EZA_IGNORE" "$1"
@@ -23,6 +24,7 @@ function sl(){
 ###
 # dir/file sizes
 ###
+
 function l(){
     if [ "$1" ]; then
         eza -al --icons --total-size --no-quotes --no-user --no-time --no-permissions --git --git-ignore -I "$EZA_IGNORE" "$1"
@@ -34,6 +36,7 @@ function l(){
 ###
 # perms / user / timestamp + show gitignore
 ###
+
 function ll(){
     if [ "$1" ]; then
         eza -alo --icons --no-quotes --git --git-ignore -I "$EZA_IGNORE" "$1"
@@ -45,6 +48,7 @@ function ll(){
 ###
 # tree
 ###
+
 function t() {
     local DIRS_ONLY=""
     local LEVEL=""
@@ -72,6 +76,18 @@ function t() {
 ###
 # tree + show gitignore
 ###
+
 function ti(){
     eza -al --icons --tree --no-quotes --no-user --no-time -I "$EZA_IGNORE"
 }
+
+###
+# run ll after cd
+###
+
+autoload -Uz add-zsh-hook
+function _list_after_cd() {
+    [[ -o interactive && -t 1 ]] || return
+    ll
+}
+add-zsh-hook chpwd _list_after_cd
