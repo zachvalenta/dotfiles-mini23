@@ -1,5 +1,5 @@
 alias f="z"
-alias home="cd $HOME; ll"
+alias home="cd_quiet $HOME; ll"
 alias desk="cd $HOME/Desktop"
 alias zv="cd $ZV_DIR"
 
@@ -8,41 +8,41 @@ alias zv="cd $ZV_DIR"
 ###
 
 alias denv="cd $DENV_DIR"
-alias bin="cd $DENV_DIR/bin; t"
+alias bin="cd_quiet $DENV_DIR/bin; t"
 alias logs="cd $DENV_DIR/logs"
-alias dot="\cd $DOT_DIR; t -d"
-alias ccc="\cd $DOT_DIR/ai/claude; t"
+alias dot="cd_quiet $DOT_DIR; t -d"
+alias ccc="cd_quiet $DOT_DIR/ai/claude; t"
 
 ###
 # NOTES
 ###
 
-alias dom="clear; \cd $DOMAINS_DIR; t -d; jb"
-alias sw="clear; \cd $SW_DIR; t -d; jb"
-alias shu="cd $ZV_DIR/notes/bookcase; t -d"
+alias dom="clear; cd_quiet $DOMAINS_DIR; t -d; jb"
+alias sw="clear; cd_quiet $SW_DIR; t -d; jb"
+alias shu="cd_quiet $ZV_DIR/notes/bookcase; t -d"
 
 ###
 # PROJECTS
 ###
 
-alias xm="\cd $ZV_DIR/projects; t 2"
-alias blog="\cd $ZV_DIR/projects/design/ux/myblog; t -d"
-alias cv="\cd $ZV_DIR/resume; ti"
+alias xm="cd_quiet $ZV_DIR/projects; t 2"
+alias blog="cd_quiet $ZV_DIR/projects/design/ux/myblog; t -d"
+alias cv="cd_quiet $ZV_DIR/resume; ti"
 
 ###
 # PERSONAL
 ###
 
-alias per="cd $PER_DIR"
+alias per="cd_quiet $PER_DIR; eza -l"
 alias rb="cd $PER_DIR/logs"
-alias wl="cd $WORKLOGS_DIR; t"
-alias falu="\cd $PER_DIR/.falu; ti"
+alias wl="cd_quiet $WORKLOGS_DIR; t"
+alias falu="cd_quiet $PER_DIR/.falu; ti"
 
 ###
 # ZA
 ###
 
-alias mat="cd $MAT_DIR; t 2"
-alias ml="cd $MAT_DIR/music/za/music-library; t"
+alias mat="cd_quiet $MAT_DIR; t 2"
+alias ml="cd_quiet $MAT_DIR/music/za/music-library; t"
 alias snip="cd /Users/zach/Library/Application\ Support/Code/User"
-alias yin="\cd $ZV_DIR/AV/yin; eza -al"
+alias yin="cd_quiet $ZV_DIR/AV/yin; eza -al"

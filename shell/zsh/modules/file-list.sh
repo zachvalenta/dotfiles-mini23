@@ -86,8 +86,24 @@ function ti(){
 ###
 
 autoload -Uz add-zsh-hook
+
+function cd_quiet() {
+    # suppress the automatic chpwd listing once so callers can print their own view
+    _LIST_AFTER_CD_SKIP=1
+    if ! builtin cd "$@"; then
+        unset _LIST_AFTER_CD_SKIP
+        return 1
+    fi
+}
+
 function _list_after_cd() {
     [[ -o interactive && -t 1 ]] || return
+    # cd_quiet still triggers chpwd, so consume its one-shot skip flag here
+    if [[ -n "$_LIST_AFTER_CD_SKIP" ]]; then
+        unset _LIST_AFTER_CD_SKIP
+        return
+    fi
     ll
 }
+
 add-zsh-hook chpwd _list_after_cd
