@@ -17,7 +17,11 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
+import shutil
 from pathlib import Path
+from urllib.parse import urldefrag, urljoin, urlparse
+from urllib.request import urlopen
 
 from playwright.sync_api import sync_playwright
 
@@ -102,6 +106,21 @@ STYLE_PROPS = [
     "columnGap",
 ]
 
+ASSET_ATTR_RE = re.compile(r"""(?P<attr>href|src|srcset)=(?P<quote>["'])(?P<value>.*?)(?P=quote)""", re.I | re.S)
+CSS_URL_RE = re.compile(r"""url\((?P<quote>["']?)(?P<value>[^"')]+)(?P=quote)\)""", re.I)
+
+MIRROR_ATTRS = {"href", "src"}
+MIRROR_EXTS = {
+    ".css",
+    ".js",
+    ".mjs",
+    ".woff2",
+    ".woff",
+    ".ttf",
+    ".otf",
+    ".eot",
+}
+
 
 SCAN_JS = r"""
 (args) => {
@@ -185,6 +204,175 @@ def _ensure_dir(p: Path) -> None:
 
 def _write_json(path: Path, obj) -> None:
     path.write_text(json.dumps(obj, indent=2), encoding="utf-8")
+
+
+def _fetch_bytes(url: str, timeout: int) -> bytes:
+    with urlopen(url, timeout=timeout / 1000) as resp:
+        return resp.read()
+
+
+def _fetch_text(url: str, timeout: int) -> str:
+    data = _fetch_bytes(url, timeout)
+    return data.decode("utf-8-sig", errors="replace")
+
+
+def _is_same_origin(a: str, b: str) -> bool:
+    pa = urlparse(a)
+    pb = urlparse(b)
+    return (pa.scheme, pa.netloc) == (pb.scheme, pb.netloc)
+
+
+def _path_for_url(assets_root: Path, url: str) -> Path:
+    parsed = urlparse(url)
+    clean_path = parsed.path.lstrip("/") or "index"
+    return assets_root / clean_path
+
+
+def _local_ref_from_url(page_dir: Path, path: Path) -> str:
+    return path.relative_to(page_dir).as_posix()
+
+
+def _should_mirror_url(url: str) -> bool:
+    ext = Path(urlparse(url).path).suffix.lower()
+    return ext in MIRROR_EXTS
+
+
+def _download_asset(
+    url: str,
+    *,
+    page_dir: Path,
+    assets_root: Path,
+    page_url: str,
+    timeout: int,
+    seen: set[str],
+) -> Path | None:
+    url, _fragment = urldefrag(url)
+    if not url or not _is_same_origin(url, page_url):
+        return None
+
+    out_path = _path_for_url(assets_root, url)
+    if url in seen:
+        return out_path
+
+    seen.add(url)
+    _ensure_dir(out_path.parent)
+    data = _fetch_bytes(url, timeout)
+    out_path.write_bytes(data)
+
+    if out_path.suffix.lower() == ".css":
+        css = data.decode("utf-8-sig", errors="replace")
+        css = _rewrite_css_urls(
+            css,
+            css_url=url,
+            css_path=out_path,
+            page_dir=page_dir,
+            assets_root=assets_root,
+            page_url=page_url,
+            timeout=timeout,
+            seen=seen,
+        )
+        out_path.write_text(css, encoding="utf-8")
+
+    return out_path
+
+
+def _rewrite_css_urls(
+    css: str,
+    *,
+    css_url: str,
+    css_path: Path,
+    page_dir: Path,
+    assets_root: Path,
+    page_url: str,
+    timeout: int,
+    seen: set[str],
+) -> str:
+    def repl(m: re.Match) -> str:
+        raw = m.group("value").strip()
+        if raw.startswith(("data:", "blob:", "#")):
+            return m.group(0)
+
+        abs_url = urljoin(css_url, raw)
+        if not _should_mirror_url(abs_url) or not _is_same_origin(abs_url, page_url):
+            return f"url({abs_url})"
+
+        local_path = _download_asset(
+            abs_url,
+            page_dir=page_dir,
+            assets_root=assets_root,
+            page_url=page_url,
+            timeout=timeout,
+            seen=seen,
+        )
+        if not local_path:
+            return m.group(0)
+
+        rel = os.path.relpath(local_path, css_path.parent).replace(os.sep, "/")
+        return f"url({rel})"
+
+    return CSS_URL_RE.sub(repl, css)
+
+
+def _rewrite_srcset(value: str, base_url: str) -> str:
+    parts: list[str] = []
+    for item in value.split(","):
+        item = item.strip()
+        if not item:
+            continue
+        bits = item.split()
+        bits[0] = urljoin(base_url, bits[0])
+        parts.append(" ".join(bits))
+    return ", ".join(parts)
+
+
+def _mirror_reference_page(url: str, out_dir: Path, timeout: int) -> Path:
+    page_url, fragment = urldefrag(url)
+    html = _fetch_text(page_url, timeout)
+    page_dir = out_dir / "local-reference"
+    assets_root = page_dir
+    if page_dir.exists():
+        shutil.rmtree(page_dir)
+    _ensure_dir(page_dir)
+
+    seen: set[str] = set()
+
+    def repl(m: re.Match) -> str:
+        attr = m.group("attr").lower()
+        quote = m.group("quote")
+        value = m.group("value")
+
+        if attr == "srcset":
+            new_value = _rewrite_srcset(value, page_url)
+            return f"{attr}={quote}{new_value}{quote}"
+
+        abs_url = urljoin(page_url, value)
+        if attr in MIRROR_ATTRS and _should_mirror_url(abs_url) and _is_same_origin(abs_url, page_url):
+            local_path = _download_asset(
+                abs_url,
+                page_dir=page_dir,
+                assets_root=assets_root,
+                page_url=page_url,
+                timeout=timeout,
+                seen=seen,
+            )
+            if local_path:
+                return f"{attr}={quote}{_local_ref_from_url(page_dir, local_path)}{quote}"
+
+        if value.startswith("/"):
+            return f"{attr}={quote}{urljoin(page_url, value)}{quote}"
+        return m.group(0)
+
+    html = ASSET_ATTR_RE.sub(repl, html)
+    if fragment:
+        html = html.replace(
+            "</body>",
+            f"<script>if (!location.hash) location.replace(location.href + '#{fragment}');</script></body>",
+            1,
+        )
+
+    out_html = page_dir / "index.html"
+    out_html.write_text(html, encoding="utf-8")
+    return out_html
 
 
 def _pick(nodes: dict, key: str, prop: str, fallback=""):
@@ -288,12 +476,21 @@ def main() -> int:
         help="Navigation wait mode",
     )
     ap.add_argument("--timeout", type=int, default=45_000, help="Navigation timeout in ms")
+    ap.add_argument(
+        "--mirror-local",
+        action="store_true",
+        help="Also create a faithful local baseline page with same-origin CSS/fonts/icons/scripts mirrored.",
+    )
     args = ap.parse_args()
 
     out_dir = Path(args.out).resolve()
     ss_dir = out_dir / "screenshots"
     _ensure_dir(out_dir)
     _ensure_dir(ss_dir)
+
+    local_reference: Path | None = None
+    if args.mirror_local:
+        local_reference = _mirror_reference_page(args.url, out_dir, args.timeout)
 
     scans: dict[str, dict] = {}
     tokens: dict[str, dict] = {}
@@ -339,10 +536,11 @@ def main() -> int:
     print(f"- {out_dir / 'tokens.json'}")
     print(f"- {out_dir / 'report.md'}")
     print(f"- {ss_dir}/(375|768|1200).png")
+    if local_reference:
+        print(f"- {local_reference}")
 
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
