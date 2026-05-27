@@ -19,7 +19,7 @@ alias ccc="cd_quiet $DOT_DIR/ai/claude; t"
 
 alias dom="clear; cd_quiet $DOMAINS_DIR; t -d; jb"
 alias sw="clear; cd_quiet $SW_DIR; t -d; jb"
-alias shu="cd_quiet $ZV_DIR/notes/bookcase; t -d"
+alias shu="cd_quiet $ZV_DIR/notes/bookcase; eza -al"
 
 ###
 # PROJECTS
@@ -27,7 +27,8 @@ alias shu="cd_quiet $ZV_DIR/notes/bookcase; t -d"
 
 alias xm="cd_quiet $ZV_DIR/projects; t 2"
 alias blog="cd_quiet $ZV_DIR/projects/design/ux/myblog; t -d"
-alias cv="cd_quiet $ZV_DIR/resume; ti"
+alias cv="cd_quiet $ZV_DIR/projects/tools/resume; t content; t -d employers; t src; t static"
+alias js="\cd $PER_DIR/corkboard-tasks/sw/work; t"
 
 ###
 # PERSONAL
