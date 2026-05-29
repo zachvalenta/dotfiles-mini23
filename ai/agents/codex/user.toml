@@ -40,3 +40,19 @@ trust_level = "trusted"
 
 [projects."/Users/zach/Documents/zv/projects/design/system/rajant-odoo"]
 trust_level = "trusted"
+
+[projects."/Users/zach/Documents/zv/projects/tools/corkboard"]
+trust_level = "trusted"
+
+[projects."/Users/zach/Documents/zv/projects/design/ux/myblog"]
+trust_level = "trusted"
+
+[projects."/Users/zach/Documents/zv/notes/domains"]
+trust_level = "trusted"
+
+[projects."/Users/zach/Documents/zv/projects/tools/resume"]
+trust_level = "trusted"
+
+[projects."/Users/zach/.codex"]
+trust_level = "trusted"
+
