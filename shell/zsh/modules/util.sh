@@ -1,6 +1,6 @@
 alias jc="clear; jiancha"
 alias menu="vim /Users/zach/Documents/zv/materials/art/cooking/menu-planning.md"
-alias fu="clear; rg -UNI 'DAYTIME' -A 100 $PER_DIR/logs/schedule.md | glow -"
+alias fu="clear; cat $PER_DIR/logs/schedule.md | glow -"
 
 alias bpy="bpython -q"
 alias ipy="ipython"
