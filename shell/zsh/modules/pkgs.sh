@@ -4,4 +4,3 @@ alias pipxfr="python -m pipx list --short > $DENV_DIR/logs/pyenv/pipx/pipx-pkgs.
 alias rustfr="cargo install --list > $DENV_DIR/logs/rust/#meta/rust-pkgs.txt"
 alias vscfr="ls ~/.vscode/extensions/ > $DOT_DIR/editors/vs-code/pkg-vsc.txt"
 alias vsdir="cd $HOME/Library/Application\ Support/Code/User"
-
