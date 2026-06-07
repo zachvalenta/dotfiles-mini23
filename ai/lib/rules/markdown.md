@@ -1,3 +1,9 @@
+# howto
+
+* link to other notes / headers: `🗄️ /path/to/note > header`
+* blockquote: `>`
+* horizontal rules (`---`) split a header into stuff that is more polished (above the horizontal rule) and stuff that's more of a mess (below the horizontal rule)
+
 # example
 
 Here's an example of how I write Markdown:
@@ -37,10 +43,6 @@ $ ext OLTP.md  # tool I wrote to extract headers from Markdown files
 * Any topics that don't fit cleanly under the primary top-level headers for a document - that are miscellaneous - should be grouped under a final top-level leader `# 🟨 ZA` (杂 = miscellaneous).
 
 # cleanup
-
-* `>` blockquotes: passages from the text
-* bullet points: commentary, cross-references (📙 for book refs)
-* `🗄️`: cross-reference to other notes
 
 All notes follow this structure:
 
