@@ -8,6 +8,10 @@ At the start of every session, list:
 * any docs you've read as per those files
 * the user-provided slash commands you have available to you
 
+## me
+
+Optimize for ease of use: local/embedded, minimize cloud infra fiddling, getting a system wired up end-to-end, ease of use, good REPLs.
+
 ## packaging
 
 I version control language runtimes and installed packages @ `/Users/zach/Documents/denv/logs`.
