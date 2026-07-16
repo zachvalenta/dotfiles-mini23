@@ -3,10 +3,13 @@ sw = "/Users/zach/Documents/zv/notes/sw"
 domains = "/Users/zach/Documents/zv/notes/domains"
 bookcase ="/Users/zach/Documents/zv/notes/bookcase"
 
-[projects]
+[specs]
 corkboard = "/Users/zach/Documents/zv/projects/tools/corkboard"
-corkboard-tasks = "/Users/zach/Documents/zv/personal/corkboard-tasks"
-site = "/Users/zach/Documents/zv/projects/design/ux/myblog"
+tasks = "/Users/zach/Documents/zv/personal/corkboard-tasks"
+rdd = "/Users/zach/Documents/zv/projects/data/rdd"
+
+[projects]
+# site = "/Users/zach/Documents/zv/projects/design/ux/myblog"
 # sgt = "/Users/zach/Documents/zv/projects/design/system/sgt"
 # jiancha = "/Users/zach/Documents/zv/projects/tools/jian-cha"
 # ceemuz = "/Users/zach/Documents/zv/projects/tools/ceemuz"
