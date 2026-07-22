@@ -69,23 +69,31 @@ Reading lists organized by category.
 
 RELATED
 * `domains/humanities/philosophy.md` - philosophy notes
-* `domains/art/music/theory.md` - music theory
+* `domains/art/music/musicology/` - music theory / history
 * `domains/stem/math/stat.md` - statistics
-* `sw/design/data/sql.md` - for database design ideas
+* `sw/data/dbms/` - for database design ideas
 
-## notes/
+## reading notes
 
-Individual reading notes: `notes/<media>/<country>/<year-author-title>.md`
+Individual reading notes now live in per-media trees directly under `bookcase/` (the old `notes/<media>/...` layout is gone). Path: `<media>/<country>/<year-author-title>.md`.
 
-FICTION (~65 notes)
-* england, france, greece, japan, nigeria, russia, usa, za
-
-MOVIES (~30 notes)
-* france (Nouvelle Vague: Godard, Truffaut, Malle, Melville)
-* japan (Kurosawa, Ozu)
-* usa (Linklater, Coppola, Tarantino, Mann)
+```
+├── fiction/  (~84 notes)
+│   └── england, france, greece, japan, nigeria, russia, usa, za
+├── movies/  (~61 notes)
+│   └── france (Nouvelle Vague: Godard, Truffaut, Malle, Melville)
+│   └── japan (Kurosawa, Ozu)
+│   └── usa (Linklater, Coppola, Tarantino, Mann)
+│   └── za
+├── domains/  (~197 notes on non-fiction books)
+│   └── art, cooking, humanities, stem
+└── sw/  (~40 notes on software books)
+    └── data, design, guts, lang, ml, work
+```
 
 ## tooling
 
-* `cli.py`, `er-model.sql`, `Makefile`, `seed.sql`
-* ER model: book, author, reading, genre, location
+Rust CLI (replaced the old Python `cli.py` / `Makefile` / SQL setup).
+
+* `Cargo.toml`, `src/` (`main.rs`, `app.rs`, `index.rs`, `work.rs`), `justfile`
+* ER model concepts: book, author, reading, genre, location
