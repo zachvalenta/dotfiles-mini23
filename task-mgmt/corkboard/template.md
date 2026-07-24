@@ -1,28 +1,30 @@
 +++
 [what]
 title = ""
-domains = [ "" ]
+description = ""
 repo = ""
-description = """ """
+skills = []
+
+[criteria]
+skills = 0
+marginal = 0
+timeline = 0
+personal = 0
+useful = 0
 
 [rel]
 project = ""
 tags = []
-depends-on = []
+edges = []
 
 [when]
-status = "next"
-prio = "low"
-
-[legacy]
-starred = false
-present = false
+status = ""
 +++
 
 # 🏮 WORKLOG
-
+# 💡 IDEA
+# 📝 SPECS
+## small
+## medium
+## large
 # 🧪 RESEARCH
-
-# 📡 PROMPT
-
-# 🛰️ IMPL

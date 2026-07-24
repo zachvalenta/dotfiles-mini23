@@ -29,9 +29,8 @@ alias shu="cd_quiet $ZV_DIR/notes/bookcase; eza -al"
 alias xm="cd_quiet $ZV_DIR/projects; t 2"
 alias blog="cd_quiet $ZV_DIR/projects/design/ux/myblog; t -d"
 alias cv="cd_quiet $ZV_DIR/projects/tools/resume; t content; t -d employers; t src; t static"
-alias js="clear; cd_quiet $PER_DIR/corkboard-tasks/sw/career; t"
-alias van="\cd /Users/zach/Documents/zv/projects/ml/vanguard; t -d"
-alias rdd="cd_quiet /Users/zach/Documents/zv/projects/data/rdd; t"
+alias kd="cd_quiet /Users/zach/Documents/zv/projects/data/rdd; t"
+alias dk="clear; cd_quiet /Users/zach/Documents/zv/projects/data/rdd/context; t"
 
 ###
 # PERSONAL

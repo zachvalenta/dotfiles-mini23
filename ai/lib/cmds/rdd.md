@@ -1,8 +1,10 @@
-Use the `edges` TOML key to navigate files in order, starting with `/Users/zach/Documents/zv/personal/corkboard-tasks/sw/career/00-meta/aca.md` and ending with (inclusion) `/Users/zach/Documents/zv/personal/corkboard-tasks/sw/career/01-what/specs.md`.
+Please read these directories in order (and likewise for the files within):
 
-Before starting in earnest:
-
-* confirm that you can follow the `edges` key
-* the list of projects we'll be looking at
+```sh
+├── /Users/zach/Documents/zv/projects/data/rdd/context
+│   └── belief/
+│   └── camino/
+│   └── exec/
+```
 
 Then ask me which project we're going to start with, please.
