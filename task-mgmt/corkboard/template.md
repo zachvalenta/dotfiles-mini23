@@ -22,8 +22,16 @@ status = ""
 +++
 
 # 🏮 WORKLOG
+
+- [ ] esquisse
+- [ ] eval
+- [ ] spec
+- [ ] ticket
+- [ ] grok
+- [ ] impl
+
 # 💡 IDEA
-# 📝 SPECS
+# 📝 STACK
 ## small
 ## medium
 ## large
