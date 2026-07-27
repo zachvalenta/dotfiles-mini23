@@ -18,7 +18,10 @@ tags = []
 edges = []
 
 [when]
-status = ""
+stage = "eval"
+active = true
+status = "next"
+prio = "mid"
 +++
 
 # 🏮 WORKLOG
