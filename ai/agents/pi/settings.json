@@ -3,5 +3,8 @@
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.5",
   "quietStartup": true,
-  "defaultThinkingLevel": "medium"
+  "defaultThinkingLevel": "medium",
+  "prompts": [
+    "/Users/zach/Documents/denv/dotfiles/ai/lib/cmds"
+  ]
 }
