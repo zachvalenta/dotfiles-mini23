@@ -5,17 +5,17 @@ description = ""
 repo = ""
 skills = []
 
+[rel]
+project = ""
+tags = []
+edges = []
+
 [criteria]
 skills = 0
 marginal = 0
 timeline = 0
 personal = 0
 useful = 0
-
-[rel]
-project = ""
-tags = []
-edges = []
 
 [when]
 stage = "eval"
