@@ -2,8 +2,9 @@
 [what]
 title = ""
 description = ""
-repo = ""
+blurb = ""
 skills = []
+repo = ""
 
 [rel]
 project = ""
