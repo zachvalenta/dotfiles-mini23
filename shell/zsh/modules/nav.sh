@@ -32,7 +32,13 @@ alias cv="cd_quiet $ZV_DIR/projects/tools/resume; t content; t -d employers; t s
 alias kd="cd_quiet /Users/zach/Documents/zv/projects/data/rdd; t"
 alias dk="clear; cd_quiet /Users/zach/Documents/zv/projects/data/rdd/context; t"
 alias emo="cd_quiet /Users/zach/Documents/zv/projects/ml/emopic; t"
+
+###
+# PROJECTS
+###
+
 alias ligo="cd_quiet /Users/zach/Documents/zv/work/colligo; t 2"
+alias cl="cd_quiet /Users/zach/Documents/zv/work/colligo/docs/worklogs; t 2"
 
 ###
 # PERSONAL
