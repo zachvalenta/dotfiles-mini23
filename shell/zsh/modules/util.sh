@@ -5,7 +5,7 @@ alias menu="vim /Users/zach/Documents/zv/materials/art/cooking/menu-planning.md"
 # alias fu="clear; rg -A 100 'dawn path' $PER_DIR/logs/schedule.md | glow -"
 # alias fu="clear; rg -A 100 'evening' $PER_DIR/logs/schedule.md | glow -"
 # alias fu="clear; rg -A 100 'essex' $PER_DIR/logs/schedule.md | glow -"
-alias fu="clear; rg -A 100 'now' $PER_DIR/logs/schedule.md | glow -"
+alias fu="clear; rg -A 100 'essex' $PER_DIR/logs/schedule.md | glow -"
 
 alias bpy="bpython -q"
 alias ipy="ipython"
