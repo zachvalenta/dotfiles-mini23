@@ -18,7 +18,7 @@ logs = "/Users/zach/Documents/denv/logs"
 [colligo]
 worklogs = "/Users/zach/Documents/zv/work/colligo/docs/worklogs"
 eng = "/Users/zach/Documents/zv/work/colligo/docs/eng"
-agentic = "/Users/zach/Documents/zv/work/colligo/docs/agentic"
+org = "/Users/zach/Documents/zv/work/colligo/docs/org"
 
 [kero]
 # agentic = "/Users/zach/Documents/zv/work/kero/docs/agentic"
