@@ -15,6 +15,14 @@
 			"```"
 		]
 	},
+    "nb": {
+		"prefix": "mdnb",
+		"description": "md nb",
+		"body": [
+			"> [!NOTE]",
+			"> $1"
+		]
+	},
     "filetree": {
 		"prefix": "mft",
 		"description": "file tree",
