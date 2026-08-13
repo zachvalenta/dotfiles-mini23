@@ -1,10 +1,4 @@
-# howto
-
-* link to other notes / headers: `🗄️ /path/to/note > header`
-* blockquote: `>`
-* horizontal rules (`---`) split a header into stuff that is more polished (above the horizontal rule) and stuff that's more of a mess (below the horizontal rule)
-
-# example
+# EXAMPLE
 
 Here's an example of how I write Markdown:
 
@@ -23,6 +17,7 @@ TYPES
 You'll notice:
 
 * italics (not bold) for entities like _event_ and _rmg_
+* no use of bold via __this is bold__ | **this is bold**
 * all caps [not followed by a colon] to create something akin to a separate namespace w/in a doubly nested header
 * top-level headers are all caps
 * second-level headers are only capitalized if they contain a proper noun
@@ -35,7 +30,7 @@ $ ext OLTP.md  # tool I wrote to extract headers from Markdown files
 	🐯 TigerBeetle
 ```
 
-# nesting
+# NESTING
 
 * I disagree w/ the idea of a single top-level header per file. That is a waste of namespace. The file name itself tells one the main topic. No need to repeat with a single top-level header.
 * Instead, treat headers like a file system. Top-level, second-level and so on.
@@ -63,7 +58,41 @@ All notes follow this structure:
 # <TOPIC SECTIONS>
 ```
 
-CONVENTIONS
+# PALIMPSEST
+
+`pali.md` is a turn-based conversation projection. Its top-level headers are reserved for turns:
+
+```markdown
+# 🗿 zjv 2026.08.12 @ 15:14:40
+# 👾 model 2026.08.12 @ 15:15:03
+# ⏭️ NEXT
+```
+
+Within a turn:
+
+* use `##` for normal sections
+* do not use `#` except for turn headers and the cursor
+* avoid numbered-list sections with indented bullets when a mini namespace is clearer
+* prefer ALL CAPS namespace labels with flush-left bullets
+
+```markdown
+IDENTIFY CURRENT BACKEND LOGGING
+* Where logs are written now: e.g. `/var/log/...`, stdout/stderr, systemd journal, Docker logs.
+* Log format: plain text vs JSON.
+* Rotation setup: `logrotate`, Docker log driver, app-level rotation.
+```
+
+Avoid:
+
+```markdown
+1. Identify current backend logging
+   * Where logs are written now: e.g. `/var/log/...`, stdout/stderr, systemd journal, Docker logs.
+   * Log format: plain text vs JSON.
+   * Rotation setup: `logrotate`, Docker log driver, app-level rotation.
+```
+
+# CONVENTIONS
+
 * `🗄️` cross-reference to other notes
 * `📙` inline book reference with page: `📙 Author [page]`
 * `📻` music example
@@ -71,3 +100,9 @@ CONVENTIONS
 * `>` blockquotes for passages/quotes
 * `---` horizontal rule separates subsections
 * ALL CAPS for categorical labels within sections
+
+# howto
+
+* link to other notes / headers: `🗄️ /path/to/note > header`
+* blockquote: `>`
+* horizontal rules (`---`) split a header into stuff that is more polished (above the horizontal rule) and stuff that's more of a mess (below the horizontal rule)

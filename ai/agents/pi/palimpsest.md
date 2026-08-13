@@ -31,6 +31,9 @@ Pi - or any other agent! - doesn't need its session tree, branching, or any othe
 
 # structure
 
+> [!NOTE]
+> Something of a clash here w/ `/Users/zach/Documents/denv/dotfiles/ai/lib/rules/markdown.md`, just noting for now.
+
 The document would be structured thus:
 
 ```md
