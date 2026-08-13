@@ -11,8 +11,6 @@ alias denv="cd $DENV_DIR"
 alias bin="cd_quiet $DENV_DIR/bin; t"
 alias logs="cd $DENV_DIR/logs"
 alias dot="cd_quiet $DOT_DIR; t -d"
-alias ccc="cd_quiet $DOT_DIR/ai/claude; t"
-alias pic="cd_quiet /Users/zach/.pi/agent; t 2"
 
 ###
 # NOTES

@@ -7,6 +7,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # 🚀 LOAD MODULES
 ###
 
+source "$ZSH_CONF_DIR/modules/agents.sh"
 source "$ZSH_CONF_DIR/modules/broot.sh"
 source "$ZSH_CONF_DIR/modules/corkboard.sh"
 source "$ZSH_CONF_DIR/modules/docker.sh"

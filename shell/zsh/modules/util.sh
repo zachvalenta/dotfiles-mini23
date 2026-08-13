@@ -36,14 +36,6 @@ function kai(){
 }
 
 ###
-# AGENTS
-###
-
-alias cc="claude"
-alias oa="codex"
-alias oc="opencode"
-
-###
 # WORKFLOW
 ###
 
