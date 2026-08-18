@@ -38,7 +38,7 @@ alias emo="cd_quiet /Users/zach/Documents/zv/projects/ml/emopic; t"
 alias ligo="cd_quiet /Users/zach/Documents/zv/work/colligo; t 2"
 alias cl="cd_quiet /Users/zach/Documents/zv/work/colligo/docs/worklogs; t 2"
 alias mob="cd_quiet /Users/zach/Documents/zv/work/colligo/src/mobile; eza -l"
-alias ce="cd_quiet /Users/zach/Documents/zv/work/colligo/docs/eng; t 2"
+alias ce="clear; cd_quiet /Users/zach/Documents/zv/work/colligo/docs/eng; t 3"
 alias org="cd_quiet /Users/zach/Documents/zv/work/colligo/docs/org; t 2"
 
 ###
