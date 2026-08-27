@@ -17,7 +17,7 @@ alias dot="cd_quiet $DOT_DIR; t -d"
 ###
 
 alias dom="clear; cd_quiet $DOMAINS_DIR; t -d; jb"
-alias sw="clear; cd_quiet $SW_DIR; t -d; jb"
+alias sw="clear; cd_quiet $SW_DIR; { t 1 --color=always data; t 2 --color=always design; } | align_eza_size_columns; jb"
 alias shu="cd_quiet $ZV_DIR/notes/bookcase; eza -al"
 
 ###
@@ -38,6 +38,7 @@ alias emo="cd_quiet /Users/zach/Documents/zv/projects/ml/emopic; t"
 alias ligo="cd_quiet /Users/zach/Documents/zv/work/colligo; t 2"
 alias cl="cd_quiet /Users/zach/Documents/zv/work/colligo/docs/worklogs; t 2"
 alias mob="cd_quiet /Users/zach/Documents/zv/work/colligo/src/mobile; eza -l"
+alias cb="cd_quiet /Users/zach/Documents/zv/work/colligo/src/backend; eza -l"
 alias ce="clear; cd_quiet /Users/zach/Documents/zv/work/colligo/docs/eng; t 3"
 alias org="cd_quiet /Users/zach/Documents/zv/work/colligo/docs/org; t 2"
 

@@ -77,6 +77,44 @@ function t() {
 # tree + show gitignore
 ###
 
+function align_eza_size_columns() {
+    python3 -c '
+import re
+import sys
+
+ansi = re.compile(r"\x1b\[[0-9;]*m")
+lines = sys.stdin.read().splitlines(True)
+stripped = [ansi.sub("", line.rstrip("\n")) for line in lines]
+matches = [re.match(r"^(\S+)(\s+)(\S+)( .*)$", line) for line in stripped]
+width = max((len(m.group(3)) for m in matches if m), default=0)
+
+def byte_offset_for_visible_col(s, col):
+    visible = 0
+    i = 0
+    while i < len(s):
+        m = ansi.match(s, i)
+        if m:
+            i = m.end()
+            continue
+        if visible == col:
+            return i
+        i += 1
+        visible += 1
+    return len(s)
+
+for original, clean, m in zip(lines, stripped, matches):
+    if not m:
+        sys.stdout.write(original)
+        continue
+    pad = width - len(m.group(3))
+    field_start_col = len(m.group(1))
+    size_col = field_start_col + len(m.group(2))
+    field_start = byte_offset_for_visible_col(original, field_start_col)
+    size_start = byte_offset_for_visible_col(original, size_col)
+    sys.stdout.write(original[:field_start] + (" " * (1 + pad)) + original[size_start:])
+'
+}
+
 function ti(){
     eza -al --icons --tree --no-quotes --no-user --no-time -I "$EZA_IGNORE"
 }
