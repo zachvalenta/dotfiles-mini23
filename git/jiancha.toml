@@ -1,8 +1,8 @@
 [context]
 sw = "/Users/zach/Documents/zv/notes/sw"
 domains = "/Users/zach/Documents/zv/notes/domains"
-bookcase ="/Users/zach/Documents/zv/notes/bookcase"
-site = "/Users/zach/Documents/zv/projects/design/ux/myblog"
+bookcase = "/Users/zach/Documents/zv/notes/bookcase"
+worldview = "/Users/zach/Documents/zv/personal/worldview"
 
 [rdd]
 corkboard = "/Users/zach/Documents/zv/projects/tools/corkboard"
@@ -19,6 +19,8 @@ logs = "/Users/zach/Documents/denv/logs"
 worklogs = "/Users/zach/Documents/zv/work/colligo/docs/worklogs"
 eng = "/Users/zach/Documents/zv/work/colligo/docs/eng"
 org = "/Users/zach/Documents/zv/work/colligo/docs/org"
+
+# site = "/Users/zach/Documents/zv/projects/design/ux/myblog"
 
 [kero]
 # agentic = "/Users/zach/Documents/zv/work/kero/docs/agentic"
