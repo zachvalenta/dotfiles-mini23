@@ -24,7 +24,7 @@ GOAL: Help iterate through admired sites by first creating a faithful local base
 
 3. For `layout` or `full page`, first create a local baseline mirror:
 ```sh
-python /Users/zach/Documents/denv/dotfiles/ai/claude/commands/impl/site_clone.py \
+python /Users/zach/Documents/denv/dotfiles/ai/lib/tools/site_clone.py \
   --url "<URL>" \
   --out /tmp/site-clone-artifacts \
   --mirror-local
@@ -38,7 +38,7 @@ Open/screenshot the local baseline at the same viewport and hash before applying
 
 For narrow elements like `typography`, `colors`, `blockquotes`, `code blocks`, or `links`, the normal scanner is enough:
 ```sh
-python /Users/zach/Documents/denv/dotfiles/ai/claude/commands/impl/site_clone.py \
+python /Users/zach/Documents/denv/dotfiles/ai/lib/tools/site_clone.py \
   --url "<URL>" \
   --out /tmp/site-clone-artifacts
 ```
