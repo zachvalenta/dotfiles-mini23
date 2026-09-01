@@ -1,5 +1,6 @@
 ---
 description: replicate visual system from a reference site
+argument-hint: "<URL>"
 ---
 
 # META
@@ -7,6 +8,13 @@ description: replicate visual system from a reference site
 Extract and apply visual patterns from a reference URL.
 
 GOAL: Help iterate through admired sites by first creating a faithful local baseline, then cherry-picking small elements or applying a full-page visual system with evidence.
+
+# INPUT
+
+REFERENCE_URL: $ARGUMENTS
+
+If `REFERENCE_URL` is empty, ask: "Please provide the reference URL."
+In all commands below, replace `<REFERENCE_URL>` with `REFERENCE_URL`.
 
 # INSTRUCTIONS
 
@@ -25,7 +33,7 @@ GOAL: Help iterate through admired sites by first creating a faithful local base
 3. For `layout` or `full page`, first create a local baseline mirror:
 ```sh
 python /Users/zach/Documents/denv/dotfiles/ai/lib/tools/site_clone.py \
-  --url "<URL>" \
+  --url "<REFERENCE_URL>" \
   --out /tmp/site-clone-artifacts \
   --mirror-local
 ```
@@ -39,7 +47,7 @@ Open/screenshot the local baseline at the same viewport and hash before applying
 For narrow elements like `typography`, `colors`, `blockquotes`, `code blocks`, or `links`, the normal scanner is enough:
 ```sh
 python /Users/zach/Documents/denv/dotfiles/ai/lib/tools/site_clone.py \
-  --url "<URL>" \
+  --url "<REFERENCE_URL>" \
   --out /tmp/site-clone-artifacts
 ```
 This produces:
@@ -79,7 +87,7 @@ Prefer comparing against the local baseline mirror, not just the live site. The 
 # CONTEXT
 
 * PROJECT: `/Users/zach/Documents/zv/projects/design/ux/myblog`
-* SCANNER: `/Users/zach/Documents/denv/dotfiles/ai/claude/commands/impl/site_clone.py`
+* SCANNER: `/Users/zach/Documents/denv/dotfiles/ai/lib/tools/site_clone.py`
 * SSG: Zola (use `zola build`, `zola serve --port XXXX`)
 * STYLES: `sass/styles.scss`
 * TEMPLATES: `templates/*.html` (base.html has nav)
