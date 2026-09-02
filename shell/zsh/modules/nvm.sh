@@ -2,7 +2,7 @@
 _load_nvm() {
     export NVM_DIR="$HOME/.config/nvm"
     # rm placeholders
-    unset -f nvm node npm gemini claude codex _load_nvm
+    unset -f nvm node npm gemini claude codex mmdc _load_nvm
     # load nvm
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 }
@@ -30,4 +30,8 @@ claude() {
 codex() {
     _load_nvm
     codex "$@"
+}
+mmdc() {
+    _load_nvm
+    mmdc "$@"
 }
