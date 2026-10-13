@@ -28,8 +28,7 @@ alias xm="cd_quiet $ZV_DIR/projects; t 2"
 alias blog="cd_quiet $ZV_DIR/projects/design/ux/myblog; t -d"
 alias cv="cd_quiet $ZV_DIR/projects/tools/resume; t content; t -d employers; t src; t static"
 alias kd="cd_quiet /Users/zach/Documents/zv/projects/data/rdd; t"
-alias dk="clear; cd_quiet /Users/zach/Documents/zv/projects/data/rdd/context; t"
-alias emo="cd_quiet /Users/zach/Documents/zv/projects/ml/emopic; t"
+alias tb="clear; cd_quiet /Users/zach/Documents/zv/projects/design/tracer-bullet; t"
 
 ###
 # COLLIGO
