@@ -29,6 +29,7 @@ alias blog="cd_quiet $ZV_DIR/projects/design/ux/myblog; t -d"
 alias cv="cd_quiet $ZV_DIR/projects/tools/resume; t content; t -d employers; t src; t static"
 alias kd="cd_quiet /Users/zach/Documents/zv/projects/data/rdd; t"
 alias tb="clear; cd_quiet /Users/zach/Documents/zv/projects/design/tracer-bullet; t"
+alias fan="cd_quiet /Users/zach/Documents/zv/notes/cooking"
 
 ###
 # COLLIGO
