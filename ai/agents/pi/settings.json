@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "0.78.0",
+  "lastChangelogVersion": "1.2.0",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.5",
+  "defaultModel": "gpt-5.6-terra",
   "quietStartup": true,
   "defaultThinkingLevel": "medium",
   "prompts": [
