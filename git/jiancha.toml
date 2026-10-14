@@ -3,11 +3,12 @@ sw = "/Users/zach/Documents/zv/notes/sw"
 domains = "/Users/zach/Documents/zv/notes/domains"
 bookcase = "/Users/zach/Documents/zv/notes/bookcase"
 worldview = "/Users/zach/Documents/zv/personal/worldview"
-
-[rdd]
-corkboard = "/Users/zach/Documents/zv/projects/tools/corkboard"
 tasks = "/Users/zach/Documents/zv/personal/corkboard-tasks"
-db = "/Users/zach/Documents/zv/projects/data/rdd"
+
+[projects]
+# corkboard = "/Users/zach/Documents/zv/projects/tools/corkboard"
+# db = "/Users/zach/Documents/zv/projects/data/rdd"
+# site = "/Users/zach/Documents/zv/projects/design/ux/myblog"
 
 [denv]
 worklogs = "/Users/zach/Documents/zv/personal/worklogs"
@@ -16,11 +17,10 @@ bin = "/Users/zach/Documents/denv/bin"
 logs = "/Users/zach/Documents/denv/logs"
 
 [colligo]
+tracer = "/Users/zach/Documents/zv/projects/design/tracer-bullet"
 worklogs = "/Users/zach/Documents/zv/work/colligo/docs/worklogs"
 eng = "/Users/zach/Documents/zv/work/colligo/docs/eng"
-org = "/Users/zach/Documents/zv/work/colligo/docs/org"
-
-# site = "/Users/zach/Documents/zv/projects/design/ux/myblog"
+# org = "/Users/zach/Documents/zv/work/colligo/docs/org"
 
 [kero]
 # agentic = "/Users/zach/Documents/zv/work/kero/docs/agentic"
