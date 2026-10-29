@@ -48,7 +48,7 @@ alias org="cd_quiet /Users/zach/Documents/zv/work/colligo/docs/org; t 2"
 
 alias per="cd_quiet $PER_DIR; eza -l"
 alias rb="cd $PER_DIR/logs"
-alias wl="cd_quiet $WORKLOGS_DIR; t"
+alias wl="cd_quiet $WORKLOGS_DIR; t 2; gl"
 alias falu="cd_quiet $PER_DIR/.falu; ti"
 alias wv="cd_quiet $PER_DIR/worldview; t 2"
 
