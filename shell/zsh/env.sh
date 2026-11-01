@@ -48,6 +48,7 @@ export MANPAGER=bat
 export HOMEBREW_NO_AUTO_UPDATE=1
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONSTARTUP="$DOT_DIR/python/python_startup.py"
+export TYPST_FONT_PATHS="/Users/zach/Library/Fonts/"
 
 # CONFIG PATHS
 export RIPGREP_CONFIG_PATH="$DOT_DIR/cli/.ripgreprc"
