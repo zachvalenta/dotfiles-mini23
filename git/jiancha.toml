@@ -6,6 +6,8 @@ worldview = "/Users/zach/Documents/zv/personal/worldview"
 tasks = "/Users/zach/Documents/zv/personal/corkboard-tasks"
 
 [projects]
+resume = "/Users/zach/Documents/zv/projects/tools/resume-typst"
+tracer = "/Users/zach/Documents/zv/projects/design/tracer-bullet"
 # corkboard = "/Users/zach/Documents/zv/projects/tools/corkboard"
 # db = "/Users/zach/Documents/zv/projects/data/rdd"
 # site = "/Users/zach/Documents/zv/projects/design/ux/myblog"
@@ -17,9 +19,8 @@ bin = "/Users/zach/Documents/denv/bin"
 logs = "/Users/zach/Documents/denv/logs"
 
 [colligo]
-tracer = "/Users/zach/Documents/zv/projects/design/tracer-bullet"
-worklogs = "/Users/zach/Documents/zv/work/colligo/docs/worklogs"
-eng = "/Users/zach/Documents/zv/work/colligo/docs/eng"
+# worklogs = "/Users/zach/Documents/zv/work/colligo/docs/worklogs"
+# eng = "/Users/zach/Documents/zv/work/colligo/docs/eng"
 # org = "/Users/zach/Documents/zv/work/colligo/docs/org"
 
 [kero]
