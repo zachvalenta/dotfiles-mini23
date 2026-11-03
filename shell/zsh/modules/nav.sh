@@ -26,7 +26,7 @@ alias shu="cd_quiet $ZV_DIR/notes/bookcase; eza -al"
 
 alias xm="cd_quiet $ZV_DIR/projects; t 2"
 alias blog="cd_quiet $ZV_DIR/projects/design/ux/myblog; t -d"
-alias cv="cd_quiet $ZV_DIR/projects/tools/resume; t content; t -d employers; t src; t static"
+alias cv="cd_quiet $ZV_DIR/projects/tools/resume; t content; t src; t static"
 alias cvt="cd_quiet $ZV_DIR/projects/tools/resume-typst; t"
 alias kd="cd_quiet /Users/zach/Documents/zv/projects/data/rdd; t"
 alias tb="clear; cd_quiet /Users/zach/Documents/zv/projects/design/tracer-bullet; t"
