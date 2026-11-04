@@ -25,12 +25,14 @@ alias shu="cd_quiet $ZV_DIR/notes/bookcase; eza -al"
 ###
 
 alias xm="cd_quiet $ZV_DIR/projects; t 2"
-alias blog="cd_quiet $ZV_DIR/projects/design/ux/myblog; t -d"
+alias blog="cd_quiet $ZV_DIR/projects/design/ux/myblog; t 2"
 alias cv="cd_quiet $ZV_DIR/projects/tools/resume; t content; t src; t static"
 alias cvt="cd_quiet $ZV_DIR/projects/tools/resume-typst; t"
+alias alt="cd_quiet /Users/zach/Documents/zv/projects/toys/altman; t"
 alias kd="cd_quiet /Users/zach/Documents/zv/projects/data/rdd; t"
 alias tb="clear; cd_quiet /Users/zach/Documents/zv/projects/design/tracer-bullet; t"
 alias fan="cd_quiet /Users/zach/Documents/zv/notes/cooking"
+alias ats="cd_quiet /Users/zach/Documents/zv/projects/tools/ats; t"
 
 ###
 # COLLIGO
@@ -52,7 +54,7 @@ alias rb="cd $PER_DIR/logs"
 alias wl="cd_quiet $WORKLOGS_DIR; t 2"
 alias falu="cd_quiet $PER_DIR/.falu; ti"
 alias wv="cd_quiet $PER_DIR/worldview; t 2"
-alias qt="cd_quiet $PER_DIR/worldview/career/context; t"
+alias qt="cd_quiet $PER_DIR/worldview/career/process; t"
 
 ###
 # ZA
