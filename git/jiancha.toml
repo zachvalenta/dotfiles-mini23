@@ -8,6 +8,8 @@ tasks = "/Users/zach/Documents/zv/personal/corkboard-tasks"
 [projects]
 resume = "/Users/zach/Documents/zv/projects/tools/resume-typst"
 tracer = "/Users/zach/Documents/zv/projects/design/tracer-bullet"
+altman = "/Users/zach/Documents/zv/projects/toys/altman"
+ats = "/Users/zach/Documents/zv/projects/tools/ats"
 # corkboard = "/Users/zach/Documents/zv/projects/tools/corkboard"
 # db = "/Users/zach/Documents/zv/projects/data/rdd"
 # site = "/Users/zach/Documents/zv/projects/design/ux/myblog"
