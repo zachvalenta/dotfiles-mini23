@@ -33,6 +33,7 @@ alias kd="cd_quiet /Users/zach/Documents/zv/projects/data/rdd; t"
 alias tb="clear; cd_quiet /Users/zach/Documents/zv/projects/design/tracer-bullet; t"
 alias fan="cd_quiet /Users/zach/Documents/zv/notes/cooking"
 alias ats="cd_quiet /Users/zach/Documents/zv/projects/tools/ats; t"
+alias li="cd_quiet /Users/zach/Documents/zv/notes/domains/stem/documentation/linkage; t"
 
 ###
 # COLLIGO
