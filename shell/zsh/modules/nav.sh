@@ -55,7 +55,7 @@ alias rb="cd $PER_DIR/logs"
 alias wl="cd_quiet $WORKLOGS_DIR; t 2"
 alias falu="cd_quiet $PER_DIR/.falu; ti"
 alias wv="cd_quiet $PER_DIR/worldview; t 2"
-alias qt="cd_quiet $PER_DIR/worldview/career/process; t"
+alias qt="cd_quiet $PER_DIR/worldview/career; t 2"
 
 ###
 # ZA
