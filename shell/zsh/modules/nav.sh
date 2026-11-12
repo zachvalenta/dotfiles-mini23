@@ -34,6 +34,7 @@ alias tb="clear; cd_quiet /Users/zach/Documents/zv/projects/design/tracer-bullet
 alias fan="cd_quiet /Users/zach/Documents/zv/notes/cooking"
 alias ats="cd_quiet /Users/zach/Documents/zv/projects/tools/ats; t"
 alias li="cd_quiet /Users/zach/Documents/zv/notes/domains/stem/documentation/linkage; t"
+alias lt="cd_quiet /Users/zach/Documents/zv/personal/lifetime; t"
 
 ###
 # COLLIGO
@@ -55,7 +56,7 @@ alias rb="cd $PER_DIR/logs"
 alias wl="cd_quiet $WORKLOGS_DIR; t 2"
 alias falu="cd_quiet $PER_DIR/.falu; ti"
 alias wv="cd_quiet $PER_DIR/worldview; t 2"
-alias qt="cd_quiet $PER_DIR/worldview/career/process; t"
+alias qt="cd_quiet $PER_DIR/worldview/career; t 2"
 
 ###
 # ZA
