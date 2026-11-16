@@ -17,7 +17,8 @@ alias dot="cd_quiet $DOT_DIR; t -d"
 ###
 
 alias dom="clear; cd_quiet $DOMAINS_DIR; t -d; jb"
-alias sw="clear; cd_quiet $SW_DIR; { t 1 --color=always data; t 2 --color=always design; } | align_eza_size_columns; jb"
+# alias sw="clear; cd_quiet $SW_DIR; { t 1 --color=always data; t 2 --color=always design; } | align_eza_size_columns; jb"
+alias sw="clear; cd_quiet $SW_DIR; t 2; jb"
 alias shu="cd_quiet $ZV_DIR/notes/bookcase; eza -al"
 
 ###
@@ -35,6 +36,7 @@ alias fan="cd_quiet /Users/zach/Documents/zv/notes/cooking"
 alias ats="cd_quiet /Users/zach/Documents/zv/projects/tools/ats; t"
 alias li="cd_quiet /Users/zach/Documents/zv/notes/domains/stem/documentation/linkage; t"
 alias lt="cd_quiet /Users/zach/Documents/zv/personal/lifetime; t"
+alias cs="cd_quiet /Users/zach/Desktop/card-scan; t"
 
 ###
 # COLLIGO
@@ -54,7 +56,7 @@ alias org="cd_quiet /Users/zach/Documents/zv/work/colligo/docs/org; t 2"
 alias per="cd_quiet $PER_DIR; eza -l"
 alias rb="cd $PER_DIR/logs"
 alias wl="cd_quiet $WORKLOGS_DIR; t 2"
-alias falu="cd_quiet $PER_DIR/.falu; ti"
+alias falu="cd_quiet $PER_DIR/.falu"
 alias wv="cd_quiet $PER_DIR/worldview; t 2"
 alias qt="cd_quiet $PER_DIR/worldview/career; t 2"
 

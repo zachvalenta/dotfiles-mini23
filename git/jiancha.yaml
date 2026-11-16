@@ -18,11 +18,12 @@ notes:
 denv:
   worklogs: /Users/zach/Documents/zv/personal/worklogs
   dot: /Users/zach/Documents/denv/dotfiles
-  bin: /Users/zach/Documents/denv/bin
-  logs: /Users/zach/Documents/denv/logs
+  # bin: /Users/zach/Documents/denv/bin
+  # logs: /Users/zach/Documents/denv/logs
 
 projects:
-  resume: /Users/zach/Documents/zv/projects/tools/resume-typst
-  tracer: /Users/zach/Documents/zv/projects/design/tracer-bullet
-  alt: /Users/zach/Documents/zv/projects/tools/altman
-  lifetime: /Users/zach/Documents/zv/personal/lifetime
+  card scan: /Users/zach/Desktop/card-scan
+  # resume: /Users/zach/Documents/zv/projects/tools/resume-typst
+  # tracer: /Users/zach/Documents/zv/projects/design/tracer-bullet
+  # alt: /Users/zach/Documents/zv/projects/tools/altman
+  # lifetime: /Users/zach/Documents/zv/personal/lifetime
