@@ -30,9 +30,8 @@
             "```yaml",
             "desc: $1",
             "related:",
-            "tags:",
-            "```",
-            ""
+            "resources:",
+            "```"
         ]
     },
     "filetree": {
