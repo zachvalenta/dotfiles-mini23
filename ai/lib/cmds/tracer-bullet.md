@@ -6,6 +6,9 @@ Delineate how the big pieces connect in small, linear steps via code snippets, l
 
 * `/Users/zach/Documents/zv/projects/toys/semantic-search`
 * `/Users/zach/Documents/zv/projects/toys/sqlite-arch`
+
+If we decide to do an example implementation, it should be small as well:
+
 * `/Users/zach/Documents/zv/projects/toys/markup-lang`
 
 # PRINCIPLES

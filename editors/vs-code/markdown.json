@@ -28,8 +28,8 @@
 		"description": "YAML metadata",
 		"body": [
             "```yaml",
-            "desc: $1",
-            "related:",
+            "desc:",
+            "related: $1",
             "resources:",
             "```"
         ]
@@ -67,12 +67,14 @@
 		"prefix": "mdn",
 		"description": "note template",
 		"body": [
-            "# ⛩️",
+            "---",
+            "desc: $1",
+            "related:",
+            "resources:",
+            "done:",
+            "todo:",
+            "---",
             "",
-            "## 参考",
-            "",
-			"## 进步",
-			"",
 			"# 🟨 ZA",
             ""
         ]
